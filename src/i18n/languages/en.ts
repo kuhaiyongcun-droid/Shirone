@@ -2,6 +2,24 @@ import Key from "../i18nKey-runtime.mjs";
 import type { Translation } from "../translation.ts";
 
 export const en: Translation = {
+	[Key.languageSwitch]: "Switch to Chinese",
+	[Key.languageSwitchTarget]: "中文",
+	[Key.menu]: "Menu",
+	[Key.mainNavigation]: "Main navigation",
+	[Key.navigationDrawer]: "Navigation drawer",
+	[Key.displaySettings]: "Display settings",
+	[Key.themeMode]: "Theme mode",
+	[Key.resetToDefault]: "Reset to default",
+	[Key.profileAvatar]: "Author avatar",
+	[Key.breadcrumb]: "Breadcrumb",
+	[Key.featured]: "Featured",
+	[Key.sitemap]: "Sitemap",
+	[Key.allRightsReserved]: "All rights reserved.",
+	[Key.poweredBy]: "Powered by",
+	[Key.version]: "Version",
+	[Key.searchDevTitle]: "Search preview",
+	[Key.searchDevDescription]: "Search is available after building the site.",
+
 	[Key.home]: "Home",
 	[Key.about]: "About",
 	[Key.archive]: "Archive",

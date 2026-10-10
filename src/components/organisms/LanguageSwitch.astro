@@ -1,0 +1,59 @@
+---
+import I18nKey from "@i18n/i18nKey";
+import { i18n } from "@i18n/translation";
+import { languageSwitchUrl } from "@utils/language-switch.mjs";
+import { siteConfig } from "@/config/siteConfig";
+
+const targetLanguage = siteConfig.lang === "en" ? "zh_CN" : "en";
+---
+
+<a
+	id="language-switch"
+	class="language-switch m3-state-layer"
+	href={languageSwitchUrl(Astro.url, targetLanguage)}
+	data-target-language={targetLanguage}
+	data-no-swup
+	hreflang={targetLanguage === "en" ? "en" : "zh-CN"}
+	lang={targetLanguage === "en" ? "en" : "zh-CN"}
+	aria-label={i18n(I18nKey.languageSwitch)}
+	title={i18n(I18nKey.languageSwitch)}
+>{i18n(I18nKey.languageSwitchTarget)}</a>
+
+<script>
+	import { languageSwitchUrl } from "@utils/language-switch.mjs";
+
+	// The app bar survives Swup navigation. A full document navigation on
+	// language change also replaces hydrated islands with the correct locale.
+	function syncLanguageSwitch() {
+		const link = document.querySelector<HTMLAnchorElement>("#language-switch");
+		if (!link) return;
+		const targetLanguage = link.dataset.targetLanguage === "en" ? "en" : "zh_CN";
+		link.href = languageSwitchUrl(window.location.href, targetLanguage);
+	}
+
+	syncLanguageSwitch();
+	document.addEventListener("swup:content:replace", syncLanguageSwitch);
+	document.addEventListener("swup:page:view", syncLanguageSwitch);
+	window.addEventListener("popstate", syncLanguageSwitch);
+	document.addEventListener("click", (event) => {
+		if (event.target instanceof Element && event.target.closest("#language-switch")) {
+			syncLanguageSwitch();
+		}
+	}, { capture: true });
+</script>
+
+<style>
+	.language-switch {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		flex-shrink: 0;
+		min-width: calc(var(--m3e-space-3) * 4);
+		min-height: calc(var(--m3e-space-3) * 4);
+		padding-inline: var(--m3e-space-2);
+		border-radius: var(--shape-corner-full);
+		color: var(--on-surface);
+		font: var(--m3e-type-label-large);
+		text-decoration: none;
+	}
+</style>

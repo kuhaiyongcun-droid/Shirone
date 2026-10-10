@@ -2,6 +2,25 @@ import Key from "../i18nKey-runtime.mjs";
 import type { Translation } from "../translation.ts";
 
 export const es: Translation = {
+	[Key.languageSwitch]: "Cambiar a chino",
+	[Key.languageSwitchTarget]: "中文",
+	[Key.menu]: "Menú",
+	[Key.mainNavigation]: "Navegación principal",
+	[Key.navigationDrawer]: "Panel de navegación",
+	[Key.displaySettings]: "Ajustes de apariencia",
+	[Key.themeMode]: "Modo de tema",
+	[Key.resetToDefault]: "Restablecer valores predeterminados",
+	[Key.profileAvatar]: "Avatar del autor",
+	[Key.breadcrumb]: "Ruta de navegación",
+	[Key.featured]: "Destacado",
+	[Key.sitemap]: "Mapa del sitio",
+	[Key.allRightsReserved]: "Todos los derechos reservados.",
+	[Key.poweredBy]: "Creado con",
+	[Key.version]: "Versión",
+	[Key.searchDevTitle]: "Vista previa de búsqueda",
+	[Key.searchDevDescription]:
+		"La búsqueda está disponible después de compilar el sitio.",
+
 	[Key.home]: "Inicio",
 	[Key.about]: "Sobre mí",
 	[Key.archive]: "Archivo",

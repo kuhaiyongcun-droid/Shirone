@@ -1,3 +1,4 @@
+import { isEnglishInterface } from "./siteConfig";
 import type { ProfileConfig } from "@/types/config";
 import { withUserConfig } from "../utils/config-overlay.ts";
 
@@ -8,7 +9,9 @@ import { withUserConfig } from "../utils/config-overlay.ts";
 export const profileConfig: ProfileConfig = withUserConfig("profile", {
 	avatar: "assets/images/demo-avatar.webp", // Relative to the /src directory. Relative to the /public directory if it starts with '/'
 	name: "Shirone",
-	bio: "The rain remembers what the sky forgot to say.",
+	bio: isEnglishInterface
+		? "Writing down life, sharing what I learn."
+		: "记录生活，分享学习与发现。",
 	links: [
 		{
 			name: "X",
@@ -25,7 +28,7 @@ export const profileConfig: ProfileConfig = withUserConfig("profile", {
 		{
 			name: "GitHub",
 			icon: "fa7-brands:github",
-			url: "https://github.com/LyraVoid/Shirone",
+			url: "https://github.com/kuhaiyongcun-droid/Shirone",
 		},
 	],
 });

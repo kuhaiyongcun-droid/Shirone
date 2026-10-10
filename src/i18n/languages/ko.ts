@@ -2,6 +2,24 @@ import Key from "../i18nKey-runtime.mjs";
 import type { Translation } from "../translation.ts";
 
 export const ko: Translation = {
+	[Key.languageSwitch]: "중국어로 전환",
+	[Key.languageSwitchTarget]: "中文",
+	[Key.menu]: "메뉴",
+	[Key.mainNavigation]: "주 탐색",
+	[Key.navigationDrawer]: "탐색 서랍",
+	[Key.displaySettings]: "화면 설정",
+	[Key.themeMode]: "테마 모드",
+	[Key.resetToDefault]: "기본 설정 복원",
+	[Key.profileAvatar]: "작성자 아바타",
+	[Key.breadcrumb]: "탐색 경로",
+	[Key.featured]: "주요 이정표",
+	[Key.sitemap]: "사이트맵",
+	[Key.allRightsReserved]: "모든 권리 보유.",
+	[Key.poweredBy]: "사용 프로젝트",
+	[Key.version]: "버전",
+	[Key.searchDevTitle]: "검색 미리보기",
+	[Key.searchDevDescription]: "사이트 빌드 후 전체 검색을 사용할 수 있습니다.",
+
 	[Key.home]: "홈",
 	[Key.about]: "소개",
 	[Key.archive]: "아카이브",

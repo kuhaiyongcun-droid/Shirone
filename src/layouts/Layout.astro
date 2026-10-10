@@ -104,7 +104,8 @@ const favicons: Favicon[] =
 if (!lang) {
 	lang = `${siteConfig.lang}`;
 }
-const siteLang = lang.replace("_", "-");
+// Interface language belongs to the shell; article language is scoped to its content.
+const siteLang = siteConfig.lang.replace("_", "-");
 const fontRoleStyle = createFontRoleStyle(resolvedFontOptions);
 const customFontsEnabled = resolvedFontOptions.mode === "custom";
 const hasBodyFont =

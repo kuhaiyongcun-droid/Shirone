@@ -43,7 +43,7 @@
 		"anime:sync": "node scripts/anime/sync.mjs",
 		"fonts:check": "node scripts/fonts/check-fonts.mjs",
 		"fonts:subset": "node scripts/fonts/subset-fonts.mjs",
-		"build": "node scripts/content/sync.mjs && astro build && npx pagefind --site dist && node scripts/fonts/check-fonts.mjs",
+		"build": "node scripts/build-localized.mjs",
 		"preview": "astro preview",
 		"lighthouse:collect": "lhci collect --config=lighthouserc.cjs",
 		"lighthouse:assert": "lhci assert --config=lighthouserc.cjs",
@@ -58,7 +58,9 @@
 		"lint": "biome check --write ./src",
 		"preinstall": "npx only-allow pnpm",
 		"test": "playwright test",
-		"perf:measure": "node scripts/perf/measure.mjs"
+		"perf:measure": "node scripts/perf/measure.mjs",
+		"build:single": "node scripts/content/sync.mjs && astro build && npx pagefind --site dist && node scripts/fonts/check-fonts.mjs",
+		"check:localization": "node scripts/check-localization.mjs"
 	},
 	"dependencies": {
 		"@astrojs/check": "^0.9.10",

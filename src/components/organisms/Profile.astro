@@ -1,4 +1,6 @@
 ---
+import I18nKey from "@i18n/i18nKey";
+import { i18n } from "@i18n/translation";
 import { getImage } from "astro:assets";
 import Button from "@components/atoms/action/Button.svelte";
 import IconButton from "@components/atoms/action/IconButton.svelte";
@@ -57,7 +59,7 @@ if (typeof avatarAsset !== "string") {
 ---
 <div class={className} style={style}>
 	<Card color="var(--card-bg)" radius="l" class="m3-profile p-3">
-    <a aria-label="Go to About Page" href={url('/about/')}
+    <a aria-label={i18n(I18nKey.about)} href={url('/about/')}
        class="m3-profile__avatar-link group">
         <div class="m3-profile__avatar-overlay">
             <Icon name="fa7-solid:address-card"
@@ -71,7 +73,7 @@ if (typeof avatarAsset !== "string") {
 			height={avatarHeight}
 			loading={priority ? "eager" : "lazy"}
 			fetchPriority={priority ? "high" : undefined}
-            alt="Profile Image of the Author"
+            alt={i18n(I18nKey.profileAvatar)}
             size={176}
             shape="rounded"
             class="mx-auto lg:!w-full"

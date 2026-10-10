@@ -12,6 +12,7 @@ let {
 	open = $bindable(false),
 	title = "",
 	showCloseButton = true,
+	closeLabel = "",
 	children,
 	actions,
 	class: className = "",
@@ -19,6 +20,7 @@ let {
 	open?: boolean;
 	title?: string;
 	showCloseButton?: boolean;
+	closeLabel?: string;
 	children?: import("svelte").Snippet;
 	actions?: import("svelte").Snippet;
 	class?: string;
@@ -111,7 +113,7 @@ $effect(() => {
 					<button
 						type="button"
 						class="m3-dialog__close-btn m3-state-layer"
-						aria-label="Close"
+						aria-label={closeLabel}
 						onclick={close}
 					>
 						<Icon icon="material-symbols:close-rounded" />

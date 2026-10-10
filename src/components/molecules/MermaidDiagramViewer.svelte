@@ -138,6 +138,7 @@ $effect(() => {
 </div>
 
 <Dialog
+	closeLabel={labels.closeFullscreen}
 	bind:open={fullscreenOpen}
 	title={labels.fullscreenDiagram}
 	class="mermaid-viewer__dialog"

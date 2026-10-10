@@ -1,12 +1,12 @@
 import { readdir, readFile, stat } from "node:fs/promises";
-import { basename, extname, join } from "node:path";
+import { basename, extname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { resolvedFontOptions } from "../../src/config/fontConfig.ts";
 import { siteConfig } from "../../src/config/siteConfig.ts";
 import { resolveFontAssetPath } from "./asset-path.mjs";
 
 const projectRoot = fileURLToPath(new URL("../../", import.meta.url));
-const dist = join(projectRoot, "dist");
+const dist = resolve(projectRoot, process.env.FONT_DIST_DIR || "dist");
 const maxTotalBytes = Number(
 	process.env.FONT_MAX_TOTAL_BYTES ?? resolvedFontOptions.budget.maxTotalBytes,
 );

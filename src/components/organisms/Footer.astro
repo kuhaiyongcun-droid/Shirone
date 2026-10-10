@@ -1,4 +1,6 @@
 ---
+import I18nKey from "@i18n/i18nKey";
+import { i18n } from "@i18n/translation";
 /**
  * 页脚（消费 blog/FooterBar 原子）。
  * 只负责配置数据：版权名称/年份、RSS/Atom/Sitemap 链接、Powered by、FooterConfig.html 文件注入。
@@ -14,7 +16,11 @@ const currentYear = new Date().getFullYear();
 const links = [
 	{ label: "RSS", href: url("rss/") },
 	{ label: "Atom", href: url("atom/") },
-	{ label: "Sitemap", href: url("sitemap-index.xml"), external: true },
+	{
+		label: i18n(I18nKey.sitemap),
+		href: url("sitemap-index.xml"),
+		external: true,
+	},
 ];
 const isShironesPackage = packageMetadata.name === "shirones";
 const poweredBy = [
@@ -59,6 +65,7 @@ if (footerConfig.enable) {
 
 <FooterBar
 	name={profileConfig.name}
+	labels={{ rightsReserved: i18n(I18nKey.allRightsReserved), poweredBy: i18n(I18nKey.poweredBy), version: i18n(I18nKey.version) }}
 	year={currentYear}
 	links={links}
 	poweredBy={poweredBy}

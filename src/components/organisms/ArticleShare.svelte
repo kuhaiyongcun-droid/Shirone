@@ -246,7 +246,7 @@ function downloadPoster() {
 
 	<!-- Share Dialog -->
 	{#if shareDialogOpen}
-		<Dialog bind:open={shareDialogOpen} title={i18n(I18nKey.shareArticle)} class="article-share-dialog">
+		<Dialog closeLabel={i18n(I18nKey.close)} bind:open={shareDialogOpen} title={i18n(I18nKey.shareArticle)} class="article-share-dialog">
 			<div class="share-dialog-content">
 				{#if posterState === "generating"}
 					<div class="share-poster-status share-poster-status--loading">

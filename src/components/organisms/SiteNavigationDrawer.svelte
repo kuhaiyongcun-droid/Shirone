@@ -1,4 +1,6 @@
 <script lang="ts">
+import I18nKey from "@i18n/i18nKey";
+import { i18n } from "@i18n/translation";
 /**
  * 全站导航抽屉（M3 ModalNavigationDrawer 应用，自包含实现，不改原子）。
  * 顶部栏菜单按钮派发 site-drawer:toggle 事件开合；内容：
@@ -113,7 +115,7 @@ let drawerEl: HTMLElement | undefined = $state();
 			<div class="site-drawer__subtitle">{siteConfig.subtitle}</div>
 		</div>
 
-		<nav class="site-drawer__nav" aria-label="Navigation drawer">
+		<nav class="site-drawer__nav" aria-label={i18n(I18nKey.navigationDrawer)}>
 			{#each primaryItems as item (item.value)}
 				{#if item.children}
 					<div class="site-drawer__group">

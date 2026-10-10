@@ -2,6 +2,24 @@ import Key from "../i18nKey-runtime.mjs";
 import type { Translation } from "../translation.ts";
 
 export const vi: Translation = {
+	[Key.languageSwitch]: "Chuyển sang tiếng Trung",
+	[Key.languageSwitchTarget]: "中文",
+	[Key.menu]: "Menu",
+	[Key.mainNavigation]: "Điều hướng chính",
+	[Key.navigationDrawer]: "Bảng điều hướng",
+	[Key.displaySettings]: "Cài đặt hiển thị",
+	[Key.themeMode]: "Chế độ giao diện",
+	[Key.resetToDefault]: "Khôi phục mặc định",
+	[Key.profileAvatar]: "Ảnh đại diện tác giả",
+	[Key.breadcrumb]: "Đường dẫn điều hướng",
+	[Key.featured]: "Cột mốc nổi bật",
+	[Key.sitemap]: "Sơ đồ trang",
+	[Key.allRightsReserved]: "Bảo lưu mọi quyền.",
+	[Key.poweredBy]: "Được xây dựng với",
+	[Key.version]: "Phiên bản",
+	[Key.searchDevTitle]: "Xem trước tìm kiếm",
+	[Key.searchDevDescription]: "Tìm kiếm khả dụng sau khi xây dựng trang web.",
+
 	[Key.home]: "Trang chủ",
 	[Key.about]: "Giới thiệu",
 	[Key.archive]: "Kho bài",

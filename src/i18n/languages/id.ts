@@ -2,6 +2,24 @@ import Key from "../i18nKey-runtime.mjs";
 import type { Translation } from "../translation.ts";
 
 export const id: Translation = {
+	[Key.languageSwitch]: "Beralih ke bahasa Tionghoa",
+	[Key.languageSwitchTarget]: "中文",
+	[Key.menu]: "Menu",
+	[Key.mainNavigation]: "Navigasi utama",
+	[Key.navigationDrawer]: "Panel navigasi",
+	[Key.displaySettings]: "Pengaturan tampilan",
+	[Key.themeMode]: "Mode tema",
+	[Key.resetToDefault]: "Pulihkan pengaturan bawaan",
+	[Key.profileAvatar]: "Avatar penulis",
+	[Key.breadcrumb]: "Jejak navigasi",
+	[Key.featured]: "Unggulan",
+	[Key.sitemap]: "Peta situs",
+	[Key.allRightsReserved]: "Hak cipta dilindungi.",
+	[Key.poweredBy]: "Didukung oleh",
+	[Key.version]: "Versi",
+	[Key.searchDevTitle]: "Pratinjau pencarian",
+	[Key.searchDevDescription]: "Pencarian tersedia setelah situs dibangun.",
+
 	[Key.home]: "Beranda",
 	[Key.about]: "Tentang",
 	[Key.archive]: "Arsip",
