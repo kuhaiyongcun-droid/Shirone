@@ -1,0 +1,116 @@
+{
+  "schema_version": 1,
+  "project": "kuhai personal website",
+  "revision": "material-study-01",
+  "created_date": "2026-10-10",
+  "status": "Local material and production study; not final flagship art",
+  "base_geometry": "blockout-02",
+  "base_repository_commit": "74edf8b5e9ef6bb86814ee37a15d94369c8c5620",
+  "repository": "https://github.com/kuhaiyongcun-droid/Shirone",
+  "package": {
+    "filename": "kuhai-flagship-material-study-01.zip",
+    "container_checksum_location": "Repository copy of this delivery record after ZIP assembly",
+    "bytes": 12763838,
+    "sha256": "f3e47d222774589b581b78d4e6aea85fc1ea9b714d943ba68ccab5af8ebf4bcd",
+    "files": 48
+  },
+  "source": {
+    "path": "scenes/shoulder-material-study.blend",
+    "bytes": 913759,
+    "sha256": "277d938c6292c4df995e97efb0068d3ce205b6458cb22fcc8f66fc0b62e1d486"
+  },
+  "source_stats": {
+    "SHIP_HULL": {
+      "objects": 95,
+      "evaluated_mesh_triangles": 15968
+    },
+    "MATERIAL_DETAILS": {
+      "objects": 330,
+      "evaluated_mesh_triangles": 75300
+    }
+  },
+  "textures": [
+    {
+      "path": "textures/source/blue_metal_plate_rough_4k.jpg",
+      "bytes": 6219260,
+      "sha256": "668f46c12a5ff663f2e7c96d909e1c5664f2fab53c24544ac512600b16ad650e"
+    },
+    {
+      "path": "scenes/textures/blue_metal_plate_rough_1k.png",
+      "bytes": 487419,
+      "sha256": "e1b9c362a70d73d293805c6ea3070088dc75c21b4a8fb0f6ed1ff6f7c013d533"
+    }
+  ],
+  "web_swatch": {
+    "path": "web-swatch/armor-material-swatch.glb",
+    "bytes": 339752,
+    "sha256": "defcf8e92db8bcd937643d69ac2e034e84ebb7052390af02135c706cc62a45bf",
+    "meshes": 1,
+    "materials": 1,
+    "images": 3,
+    "triangles": 2,
+    "scope": "2.5m paint plane only"
+  },
+  "runtime": {
+    "blender": "4.5.14 LTS",
+    "python_cloud": "3.11.17",
+    "device": "CPU",
+    "threads": 6
+  },
+  "benchmarks": {
+    "revision": "material-study-01",
+    "baseline": false,
+    "devices": [
+      {
+        "type": "CPU",
+        "name": "x86_64"
+      }
+    ],
+    "device": "cpu",
+    "width": 960,
+    "height": 600,
+    "samples": 32,
+    "threads": 6,
+    "denoise": true,
+    "blender": "4.5.14 LTS",
+    "renders": [
+      {
+        "view": "shoulder",
+        "seconds": 10.576,
+        "peak_process_rss_mib": 931.51
+      },
+      {
+        "view": "engine",
+        "seconds": 16.555,
+        "peak_process_rss_mib": 989.9
+      },
+      {
+        "view": "armor",
+        "seconds": 15.212,
+        "peak_process_rss_mib": 1001.64
+      }
+    ],
+    "note": "Offline sample, not browser FPS or measured GPU memory"
+  },
+  "validation": {
+    "source": true,
+    "relocation_without_adjacent_texture": true,
+    "web_bake_and_actual_glb_reimport": true,
+    "astro_check": {
+      "files": 283,
+      "errors": 0,
+      "warnings": 0,
+      "hints": 0
+    },
+    "browser_tested": false,
+    "windows_tested": false,
+    "local_gpu_accessed": false
+  },
+  "entrypoint": "tools/flagship/MATERIAL_STUDY.md",
+  "constraints": [
+    "Source and web assets remain separate",
+    "Preview quality is not the final quality target",
+    "No deployment or blog UI change",
+    "No full shoulder UV/LOD or browser performance acceptance"
+  ]
+}

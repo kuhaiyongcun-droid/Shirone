@@ -1,0 +1,23 @@
+{
+  "revision": "material-study-01",
+  "base_geometry": "blockout-02",
+  "status": "Local shoulder and nozzle material study; not final ship art or engineering",
+  "preview": {"width": 960, "height": 600, "samples": 32, "threads": 6},
+  "roughness_asset": {
+    "title": "Blue Metal Plate - roughness",
+    "author": "Rob Tuytel / Poly Haven",
+    "page": "https://polyhaven.com/a/blue_metal_plate",
+    "download": "https://dl.polyhaven.org/file/ph-assets/Textures/jpg/4k/blue_metal_plate/blue_metal_plate_rough_4k.jpg",
+    "license": "CC0",
+    "license_url": "https://polyhaven.com/license",
+    "tile_width_m": 2.5,
+    "preview_size": 1024,
+    "use": "Small roughness variation only; not a copied color, normal or geometry asset"
+  },
+  "cameras": {
+    "shoulder": {"position": [355, -349, 196], "target": [143, -106, 15], "lens": 57},
+    "engine": {"position": [350, -168, 80], "target": [229, -93, 27], "lens": 62},
+    "armor": {"position": [70, -247, 61], "target": [129, -150, 7], "lens": 58}
+  },
+  "limits": ["No canon dimensions or drive physics claim", "No full-ship material approval", "No browser performance result"]
+}
