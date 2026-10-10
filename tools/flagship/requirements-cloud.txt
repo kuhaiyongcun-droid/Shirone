@@ -1,0 +1,4 @@
+# Optional headless cloud route. Desktop Blender needs no pip packages.
+# Python 3.11; these are the versions used for this study.
+bpy==4.5.14
+numpy==1.26.4

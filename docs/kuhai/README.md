@@ -15,13 +15,18 @@
 | [首批设定与素材研究](references/2026-10-10-hyperion-research.md) | 官方资料、工程依据、二创与设计推演 |
 | [素材登记表](assets/registry.csv) | 作者、来源、使用条件、采用状态 |
 | [项目范围决策](decisions/0001-personal-site-scope.md) | 已确认要求与仍待实施的选择 |
+| [云端与本地制作分工](decisions/0002-cloud-local-production.md) | 资源核实、授权边界、迁移包及质量目标 |
+| [云端结构草模 01](flagship/cloud-study-01.md) | 可编辑草模、局部材质、CPU 实测、预览与交付记录 |
+| [草模参考与推演边界](references/2026-10-10-proportion-study.md) | 已看到的图像、未读资料、比例假设与待修改造型 |
+| [建模与渲染工具](../../tools/flagship/README.md) | 生成、检查、CPU 小样与后续本地启动步骤 |
 
 ## 当前状态
 
 - 交互草案已获得认可：主动旋转舰船、舰体舱区高亮、局部剖视与点击靠近。
 - 最终舰体造型、结构比例和美术质量尚未定稿；草案不等于正式 3D 资产。
+- 已在本会话实际配置 Blender 4.5.14 并完成可编辑结构草模、独立 GLB、程序化材质样板与低分辨率 CPU 渲染。造型未获最终确认。
 - 战舰入口尚未替换已发布的中文博客。
-- 已发布中文博客的源码包含独立中文化提交；本批文档以 GitHub main 的 `557ccf1af924defc30271900100d7d124d48e459` 为基线，不包含该提交。
+- 中文化源码已保存到 `sync/localized-blog` 分支与 [草稿 PR #1](https://github.com/kuhaiyongcun-droid/Shirone/pull/1)，尚未合入 main；实际浏览器交互验证仍待补充。
 - 本目录归档已确认的项目定位与设计研究；代码拆分、路由迁移与仓库重命名均未实施。中文化代码的保存分支与验证状态以 GitHub 分支、PR 和检查记录为准。
 
 ## 资料归档方法

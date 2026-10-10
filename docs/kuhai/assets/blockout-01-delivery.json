@@ -1,0 +1,36 @@
+{
+  "revision": "blockout-01",
+  "date": "2026-10-10",
+  "stage": "Editable structural study; final ship art is not approved",
+  "package": {
+    "filename": "kuhai-flagship-blockout-01.zip",
+    "bytes": 5661748,
+    "sha256": "38a4bc5a44a465569118d6e41fa78dd493354306ed881d4eb968a2e93b3fc9a7",
+    "files": 41,
+    "delivery": "Saved as a persistent downloadable file in the project conversation; locate by the exact filename.",
+    "contains": ["editable blend", "separate GLB", "procedural materials", "scripts", "versions", "settings", "previews", "benchmarks", "startup instructions", "SHA256SUMS"]
+  },
+  "source_scene": {
+    "filename": "flagship-blockout.blend",
+    "bytes": 1450606,
+    "sha256": "b93ef983abbe85ac92a771f61ce76199e8f9084f700cb633aa10e6053c08fde7"
+  },
+  "web_study": {
+    "filename": "flagship-web-study.glb",
+    "bytes": 4282512,
+    "sha256": "ad994432700b1ad9ae66d182bf9d2755788b915cf195746c33dda03dfa34303b",
+    "triangles": 64400,
+    "meshes": 18,
+    "materials": 10,
+    "external_textures": 0,
+    "browser_performance_tested": false
+  },
+  "blender": "4.5.14 LTS",
+  "source_generator": "tools/flagship/build_scene.py",
+  "render_script": "tools/flagship/render_study.py",
+  "startup_instructions": "tools/flagship/README.md",
+  "gpu_used": false,
+  "local_machine_accessed": false,
+  "cloud_resource_bottleneck_observed": false,
+  "final_quality_target_changed": false
+}

@@ -10,3 +10,8 @@
 "metal-plate","Blue Metal Plate","Rob Tuytel / Poly Haven","https://polyhaven.com/a/blue_metal_plate","喷涂金属 PBR 候选","candidate_not_downloaded","页面标注 CC0","","待确认风格、纹理尺度与网页压缩效果"
 "moon-kit","CGI Moon Kit","NASA Scientific Visualization Studio","https://svs.gsfc.nasa.gov/4720/","月球或明确的月球参考环境","candidate_not_downloaded","采用前核对具体文件署名与页面条款","","真实月球数据不作为其他行星事实"
 "star-maps","Deep Star Maps 2020","NASA Scientific Visualization Studio","https://svs.gsfc.nasa.gov/4851/","星空环境候选","candidate_not_downloaded","采用前核对具体文件署名与页面条款","","按网页视角与性能需求选择分辨率"
+"hyperion-dev-render","Hyperion_SC2_DevRend2.jpg","社区索引；原始发布页待追溯","https://img2.wikia.nocookie.net/__cb20091123030613/starcraft/images/8/82/Hyperion_SC2_DevRend2.jpg","轮廓与装甲层次观察","viewed_reference_only","不随任务包再分发；未取得资产采用许可","","2048×1160 已目视；不是正投影或官方尺寸证据"
+"hyperion-unit-render","Hyperion_SC2_Rend1.jpg","社区索引；原始发布页待追溯","https://img2.wikia.nocookie.net/__cb20131219183540/starcraft/images/f/f6/Hyperion_SC2_Rend1.jpg","单位轮廓与电影表现比较","viewed_reference_only","不随任务包再分发；未取得资产采用许可","","448×410 已目视；不混同电影模型比例"
+"blockout-01-source","kuhai 主舰可编辑结构草模","kuhai 项目程序化制作","tools/flagship/build_scene.py","比例与局部剖视验证","editable_study","项目制作资产；StarCraft 灵感造型不等于独立原创 IP","任务包 scenes/flagship-blockout.blend","非游戏导出模型；造型未定稿；材质无外部依赖"
+"blockout-01-web","kuhai 主舰网页结构样本","kuhai 项目程序化制作","tools/flagship/build_scene.py","独立网页模型生产链验证","web_study_not_integrated","同 blockout-01-source","任务包 scenes/flagship-web-study.glb","64400 三角形；18 网格；10 材质；未做浏览器性能验收"
+"blockout-01-coupon","局部装甲材质样板","kuhai 项目程序化制作","tools/flagship/build_scene.py","金属漆面管线与工作灯反应","procedural_study","项目制作；无外部图片贴图","任务包源场景 COUPON 集合","未做最终磨损图或纹理烘焙"
