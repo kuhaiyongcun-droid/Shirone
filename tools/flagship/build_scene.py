@@ -144,6 +144,63 @@ def cylinder(name, loc, radius, depth, mat="edge", axis="Z", group="SHIP_HULL", 
     return obj
 
 
+def loft(name, sections, mat="armor", edge=0.8):
+    """Closed octagonal hull with changing width/height along X.
+
+    Sections are (x, half_width, bottom, top, center_y). Broad planar faces and
+    sloped chines define mass without subdivision or a stack of flat slabs.
+    """
+    vertices = []
+    for x, w, bottom, top, cy in sections:
+        chamfer = min((top - bottom) * 0.22, w * 0.25)
+        ring = [(-w * .72, bottom), (w * .72, bottom), (w, bottom + chamfer),
+                (w, top - chamfer), (w * .76, top), (-w * .76, top),
+                (-w, top - chamfer), (-w, bottom + chamfer)]
+        vertices.extend((x, y + cy, z) for y, z in ring)
+    faces = [tuple(reversed(range(8))), tuple(range(len(vertices) - 8, len(vertices)))]
+    for a in range(len(sections) - 1):
+        for i in range(8):
+            faces.append((a * 8 + i, a * 8 + (i + 1) % 8,
+                          (a + 1) * 8 + (i + 1) % 8, (a + 1) * 8 + i))
+    mesh = bpy.data.meshes.new(name)
+    mesh.from_pydata(vertices, [], faces)
+    mesh.update()
+    obj = bpy.data.objects.new(name, mesh)
+    COLLECTIONS["SHIP_HULL"].objects.link(obj)
+    mesh.materials.append(MATERIALS[mat])
+    obj["role"] = "hull"
+    bevel(obj, edge)
+    return obj
+
+
+def tapered_plate(name, outline, levels, mat="armor", edge=0.8):
+    """Closed layered shoulder volume; levels contain (z, plan_scale)."""
+    points = list(outline)
+    area = sum(points[i][0] * points[(i + 1) % len(points)][1]
+               - points[(i + 1) % len(points)][0] * points[i][1] for i in range(len(points)))
+    if area < 0:
+        points.reverse()
+    cx = sum(x for x, y in points) / len(points)
+    cy = sum(y for x, y in points) / len(points)
+    n = len(points)
+    vertices = [(cx + (x - cx) * scale, cy + (y - cy) * scale, z)
+                for z, scale in levels for x, y in points]
+    faces = [tuple(reversed(range(n))), tuple(range(len(vertices) - n, len(vertices)))]
+    for a in range(len(levels) - 1):
+        for i in range(n):
+            faces.append((a * n + i, a * n + (i + 1) % n,
+                          (a + 1) * n + (i + 1) % n, (a + 1) * n + i))
+    mesh = bpy.data.meshes.new(name)
+    mesh.from_pydata(vertices, [], faces)
+    mesh.update()
+    obj = bpy.data.objects.new(name, mesh)
+    COLLECTIONS["SHIP_HULL"].objects.link(obj)
+    mesh.materials.append(MATERIALS[mat])
+    obj["role"] = "hull"
+    bevel(obj, edge)
+    return obj
+
+
 def torus(name, loc, major, minor, mat="edge", axis="Z", group="SHIP_HULL"):
     bpy.ops.mesh.primitive_torus_add(major_segments=40, minor_segments=8,
                                    major_radius=major, minor_radius=minor, location=loc)
@@ -228,7 +285,7 @@ def setup():
     material("room", (0.15, 0.18, 0.19), 0.3, 0.5)
     material("person", (0.8, 0.61, 0.29), 0.05, 0.45)
     scene = bpy.context.scene
-    scene.name = "KUHAI — Structural Study 01"
+    scene.name = "KUHAI — Structural Study 02"
     scene.unit_settings.system = "METRIC"
     scene.unit_settings.scale_length = 1
     scene["status"] = CONFIG["status"]
@@ -271,82 +328,130 @@ def setup():
 
 
 def hull():
-    # Long central keel; broad rear shoulders and stepped paired engine housings.
-    outline = [(-250, -29), (-235, -44), (-165, -43), (-90, -34), (30, -38),
-               (112, -58), (221, -49), (239, -32), (239, 32), (221, 49),
-               (112, 58), (30, 38), (-90, 34), (-165, 43), (-235, 44), (-250, 29)]
-    prism("Longitudinal pressure / service keel", outline, -23, 8)
-    prism("Ventral armored spine", [(-245, -20), (190, -26), (231, -13), (231, 13), (190, 26), (-245, 20)], -34, -22, "dark")
-    box("Forecastle pressure body", (-204, 0, 16), (79, 68, 25), "armor", edge=4)
-    box("Bridge pedestal", (-172, 0, 34), (52, 39, 20), "paint", edge=3)
-    prism("Bridge armored brow", [(-207, -18), (-195, -29), (-159, -29), (-145, -16), (-145, 16), (-159, 29), (-195, 29), (-207, 18)], 44, 54, "armor", edge=1.4)
-    # Windows are restrained strips; no giant glass facade across the warship.
+    # Cinematic-informed mass study. Dimensions and six-nozzle arrangement remain
+    # creative interpretations, not measured or canonically verified schematics.
+    loft("Continuous armored keel", [(-250, 24, -12, 10, 0), (-230, 43, -25, 19, 0),
+         (-169, 40, -28, 18, 0), (-121, 31, -22, 8, 0), (9, 33, -24, 8, 0),
+         (73, 48, -34, 14, 0), (174, 50, -33, 19, 0), (235, 26, -17, 13, 0)], edge=1.6)
+    loft("Ventral structural keel", [(-237, 12, -24, -13, 0), (-185, 23, -37, -23, 0),
+         (-50, 19, -31, -19, 0), (103, 29, -43, -27, 0), (216, 20, -29, -18, 0)], "dark")
+    loft("Sloped forecastle", [(-246, 24, 5, 17, 0), (-222, 38, 5, 35, 0),
+         (-178, 36, 9, 39, 0), (-136, 24, 8, 19, 0)], edge=1.1)
+    loft("Bridge lower armored terrace", [(-204, 23, 29, 34, 0), (-191, 30, 30, 44, 0),
+         (-151, 26, 22, 41, 0), (-132, 18, 15, 23, 0)], "paint")
+    loft("Bridge recessed dark glazing belt", [(-194, 21, 39, 46, 0), (-183, 28, 39, 50, 0),
+         (-156, 24, 34, 48, 0), (-146, 18, 30, 40, 0)], "dark", edge=.3)
+    loft("Bridge swept armored canopy", [(-199, 21, 46, 49, 0), (-182, 30, 49, 57, 0),
+         (-155, 26, 45, 56, 0), (-140, 15, 31, 37, 0)], edge=.7)
     for side in (-1, 1):
-        box("Bridge amber glazing", (-180, side * 29.15, 48), (33, 0.45, 2.6), "amber", edge=0.1)
-        box("Forecastle lateral sill", (-217, side * 51, 6), (61, 22, 18), "paint", edge=2.5)
-        box("Forecastle cyan navigation strip", (-225, side * 62.1, 9), (12, 0.45, 0.8), "cyan", edge=0.05)
-    cylinder("Communications mast", (-161, 0, 63), 0.65, 21)
-    box("Communications crossbar", (-161, 0, 69), (0.8, 13, 0.8), "edge", edge=0.1)
+        for x in (-184, -178, -172, -166):
+            box("Recessed bridge window", (x, side * (28 - (x + 183) * .148), 46.2),
+                (4.1, .5, 1.2), "amber", edge=.04)
+        # Broad, tapered forward outriggers replace small cuboid side blocks.
+        fore = [(-246, 37), (-226, 90), (-211, 103), (-173, 94), (-155, 47), (-175, 33)]
+        fore = [(x, y * side) for x, y in fore]
+        tapered_plate("Fore shoulder load-bearing body", fore, [(-17, .84), (-6, 1), (16, 1), (27, .84)], edge=1.3)
+        tapered_plate("Fore shoulder upper armor", fore, [(27, .83), (31, .70)], "paint", .5)
+        loft("Fore shoulder outer shield", [(-231, 5, -7, 16, side * 85),
+             (-210, 8, -9, 28, side * 96), (-178, 5, -3, 31, side * 88)], edge=.6)
+        box("Forward navigation slit", (-228, side * 86, 20), (8, 1, 1.1), "cyan", edge=.08)
+        for x, y in ((-219, 87), (-204, 91), (-189, 87)):
+            box("Fore shoulder recessed deck band", (x, side * y, 1), (12, 1, 4), "dark", edge=.08)
+            box("Fore shoulder porthole group", (x, side * (y + .6), 2), (8, .25, .7), "amber", edge=.03)
+        # Layered bow cheek plates and longitudinal equipment recesses.
+        for x in (-226, -211, -196):
+            box("Bow armored cheek", (x, side * 39, -3), (12, 4, 17), "paint", edge=.8)
+        cylinder("Bow lateral circular equipment", (-160, side * 35, 10), 10, 4, "dark", "Y", vertices=32)
+        cylinder("Bow lateral equipment cover", (-160, side * 37.4, 10), 7.3, 1.2, "edge", "Y", vertices=24)
+    cylinder("Communications mast", (-158, 0, 63), .55, 17)
+    box("Communications crossbar", (-158, 0, 68), (.8, 11, .6), "edge", edge=.1)
 
-    for x in (-125, -102, -79, -56, -33, -10, 13):
-        box("Dorsal service trunk", (x, 0, 14), (19, 33, 13), "dark", edge=1)
-        box("Transverse armor rib", (x, 0, 22), (6, 47, 6), "paint", edge=0.8)
-        for side in (-1, 1):
-            cylinder("Protected longitudinal utility conduit", (x, side * 29, 12), 2, 20, "edge", axis="X", vertices=12)
-
-    wing = [(6, 35), (32, 66), (56, 139), (160, 145), (197, 123), (170, 60), (119, 37)]
+    # A lower, recessed dorsal spine leaves the archive roof and view corridor clear.
+    loft("Dorsal service channel", [(-130, 16, 8, 14, 0), (-104, 17, 8, 18, 0),
+         (0, 18, 8, 18, 0), (34, 23, 8, 25, 0)], "dark", .6)
     for side in (-1, 1):
-        points = [(x, y * side) for x, y in wing]
-        prism("Aft shoulder armored volume", points, -10, 20, "armor", edge=3)
-        prism("Shoulder upper plating", [(x + 4, y * side * 0.93) for x, y in wing], 20, 25, "paint", edge=1)
-        # Stepped upright side fins are silhouette features, not random decoration.
-        fin = [(53, 137 * side), (58, 149 * side), (171, 149 * side), (189, 138 * side), (174, 132 * side)]
-        prism("Outer shoulder shield", fin, -9, 45, "armor", edge=1.5)
-        for x in (66, 90, 114, 138, 162):
-            box("Shoulder shield reinforcement", (x, side * 146, 21), (5, 11, 47), "paint", edge=1)
-        cylinder("Circular shoulder equipment housing", (104, side * 97, 28), 24, 9, "dark", vertices=48)
-        torus("Equipment housing armor ring", (104, side * 97, 33), 20, 2.2)
-        cylinder("Circular housing cover", (104, side * 97, 33), 16, 3, "paint", vertices=40)
-        torus("Equipment status band", (104, side * 97, 35), 11.5, 0.4, "cyan")
-        cylinder("Equipment housing center", (104, side * 97, 35), 8, 2, "dark")
-        # Three-dimensional fin vents and panel seams, limited to visible scale.
-        for x in (62, 81, 100, 119, 138):
-            box("Outer vent recess", (x, side * 150, 6), (12, 0.6, 4), "dark", edge=0.15)
-            box("Sparse equipment running light", (x, side * 150.5, 19), (5, 0.4, 0.6), "amber", edge=0.05)
-        for x in (35, 59, 83, 107, 131):
-            box("Wing underside structural rib", (x, side * 85, -13), (5, 81, 6), "edge", edge=0.6)
-
-    # Paired upper/lower engine banks; engines share a physical aft direction.
-    for y in (-29, 29):
-        for z, radius, length in ((35, 22, 90), (-19, 16, 64)):
-            center = 194 if z > 0 else 207
-            cylinder("Octagonal engine pressure casing", (center, y, z), radius + 4, length, "armor", "X", vertices=8)
-            for x in (164, 190, 216):
-                if z < 0 and x == 164:
-                    continue
-                torus("Engine casing retaining ring", (x, y, z), radius + 3, 1.1, "edge", "X")
-            nozzle_shroud((245, y, z), radius, 14)
-            torus("Nozzle lip", (247, y, z), radius - 1, 1.1, "edge", "X")
-            cylinder("Engine luminous throat", (246, y, z), radius * 0.79, 0.65, "cyan", "X", vertices=40)
-            cylinder("Engine center cone", (248, y, z), radius * 0.22, 3, "edge", "X")
-            if z > 0:
-                box("Engine dorsal armored rail", (195, y, z + radius + 2), (66, 19, 6), "paint", edge=2)
-                box("Engine dorsal status strip", (207, y, z + radius + 5.2), (24, 2, 0.5), "cyan", edge=0.1)
-
-    # Large armor breaks define scale; micro-greebles are deliberately deferred.
-    for x in (-234, -217, -200):
-        for side in (-1, 1):
-            box("Forecastle deck plate", (x, side * 17, 30), (15.5, 30, 2.2), "paint", edge=0.3)
+        for y in (6, 12):
+            cylinder("Dorsal protected utility main", (-49, side * y, 18), 1.2, 140, "edge", "X", vertices=12)
+    for x in (-123, -102, -81, -60, -39, -18, 3, 24):
+        loft("Chamfered transverse spine rib", [(x - 3, 21, 11, 25, 0), (x + 3, 21, 11, 25, 0)], "paint", .55)
     for side in (-1, 1):
-        for x in (56, 78, 100, 122):
-            box("Midship exposed maintenance bay", (x, side * 43, 5), (17, 8, 12), "dark", edge=0.6)
-            box("Midship amber slit", (x, side * 47.5, 9), (8, 0.45, 0.7), "amber", edge=0.08)
-        for x, y, z in ((-227, 32, 33), (33, 65, 29), (159, 115, 29)):
+        for x in (-117, -91, -65, -39, -13):
+            box("Recessed lateral service panel", (x, side * 32, -5), (20, 3, 12), "dark", edge=.6)
+            box("Service panel upper armor lip", (x, side * 34, 2), (21, 4, 2), "paint", edge=.25)
+            box("Lower longitudinal armor belt", (x, side * 32, -17), (23, 5, 5), "paint", edge=.5)
+
+    # Rear shoulders carry meaningful depth, recessed decks and a sloping apron.
+    wing = [(13, 31), (38, 57), (58, 134), (77, 151), (194, 151),
+            (220, 125), (214, 61), (173, 38), (82, 30)]
+    for side in (-1, 1):
+        points = [(x, side * y) for x, y in wing]
+        tapered_plate("Shoulder lower chamfered armor", points, [(-34, .70), (-22, .94), (-11, 1)], "armor", 1.1)
+        tapered_plate("Shoulder recessed equipment deck", points, [(-10, .94), (6, .96)], "dark", .5)
+        tapered_plate("Shoulder upper pressure volume", points, [(7, 1), (26, .95), (38, .78)], "armor", 1.2)
+        # Offset armor leaves the equipment layer visible on the perimeter.
+        tapered_plate("Shoulder upper armor apron", points, [(38, .77), (41, .68)], "paint", .6)
+        # Tall outer mass now grows from the shoulder, instead of being a fence.
+        loft("Outboard layered pressure block", [(61, 6, -19, 19, side * 136),
+             (86, 14, -29, 38, side * 137), (176, 14, -28, 44, side * 137),
+             (209, 7, -11, 27, side * 132)], "armor", 1)
+        for x in (91, 118, 145, 172):
+            for z in (-13, 3, 20):
+                box("Outboard recessed deck strip", (x, side * 151.15, z), (22, .8, 5), "dark", edge=.15)
+                for dx in (-7, -2, 4, 8):
+                    box("Grouped inhabited deck light", (x + dx, side * 151.65, z + .4),
+                        (2.5, .22, .65), "amber", edge=.03)
+            box("Outboard horizontal armor ledge", (x, side * 151, 12), (24, 3.5, 2.7), "paint", edge=.3)
+        # Strong deck hatch, no giant self-lit decorative rings.
+        cylinder("Circular shoulder equipment well", (91, side * 92, 40), 22, 7, "dark", vertices=40)
+        torus("Shoulder equipment armor rim", (91, side * 92, 44), 19, 1.8)
+        cylinder("Shoulder equipment hatch", (91, side * 92, 44), 15.3, 2.4, "armor", vertices=32)
+        torus("Shoulder hatch inner seal", (91, side * 92, 45.5), 10.5, .55, "edge")
+        box("Hatch status indicator", (91, side * 92, 46.9), (3, 1, .2), "cyan", edge=.04)
+        for x in (58, 84, 110, 136, 162):
+            loft("Ventral shoulder load path", [(x - 2, 37, -29, -21, side * 89),
+                 (x + 2, 37, -29, -21, side * 89)], "edge", .5)
+        for x in (90, 128, 166):
+            cylinder("Ventral maneuvering unit", (x, side * 110, -30), 7, 3, "dark", vertices=24)
+            torus("Ventral maneuvering unit rim", (x, side * 110, -32), 5.2, .6)
+
+        # One large and two smaller nozzles per shoulder: provisional visual
+        # interpretation. Not a claim about named drives, thrust or canon count.
+        for offset, z, radius in ((0, 30, 24), (-20, -13, 11), (22, -13, 11)):
+            y = side * (92 + offset)
+            cylinder("Shoulder propulsion casing", (179, y, z), radius + 4, 76, "armor", "X", vertices=12)
+            for x in (151, 181, 213):
+                torus("Propulsion casing retaining band", (x, y, z), radius + 3, 1, "edge", "X")
+            nozzle_shroud((228, y, z), radius, 18)
+            torus("Recessed nozzle lip", (234, y, z), radius - 1, 1.2, "edge", "X")
+            cylinder("Engine luminous throat", (231, y, z), radius * .79, .65, "cyan", "X", vertices=40)
+            cylinder("Engine center cone", (233, y, z), radius * .19, 3, "edge", "X")
+            if radius > 20:
+                loft("Propulsion dorsal armor", [(140, 11, z + 20, z + 24, y),
+                     (163, 15, z + 22, z + 29, y), (209, 12, z + 22, z + 28, y)], "paint", .7)
+        # Fore/aft continuous armor above machinery, with angled roots.
+        loft("Shoulder inboard armor spar", [(37, 5, 15, 28, side * 45),
+             (105, 8, 18, 45, side * 51), (191, 7, 12, 37, side * 51)], "armor", .8)
+
+    # A low central stern closes the structural loop without a second engine bank.
+    loft("Stern central engineering spine", [(30, 22, 10, 20, 0), (84, 26, 12, 39, 0),
+         (165, 24, 12, 43, 0), (220, 16, 8, 25, 0)], "armor", 1.1)
+    def stern_roof(x):
+        if x < 84:
+            return 20 + (x - 30) * 19 / 54
+        if x < 165:
+            return 39 + (x - 84) * 4 / 81
+        return 43 - (x - 165) * 18 / 55
+    for x in (84, 106, 128, 150, 172, 194):
+        loft("Fitted engineering access lid", [(xx, 12, stern_roof(xx) - .3,
+             stern_roof(xx) + 2.7, 0) for xx in (x - 8.5, x + 8.5)], "paint", .5)
+    for side in (-1, 1):
+        for x, y, z in ((-213, 66, 31), (49, 62, 30), (175, 136, 46)):
             cylinder("Turret mounting ring", (x, side * y, z), 6.5, 3, "dark", vertices=24)
-            box("Turret armored cradle", (x, side * y, z + 4), (12, 9, 6), "paint", edge=1)
+            loft("Sloped turret cradle", [(x - 6, 4, z + 1, z + 6, side * y),
+                 (x + 5, 5, z + 1, z + 8, side * y)], "paint", .6)
             for dy in (-2, 2):
-                cylinder("Turret barrel placeholder", (x - 11, side * y + dy, z + 4), 0.7, 19, "edge", "X", vertices=12)
-    # Mirror the archive's broad pod on starboard as an unassigned service volume.
+                cylinder("Turret barrel placeholder", (x - 11, side * y + dy, z + 5), .7, 19, "edge", "X", vertices=12)
+    # Fixed archive reservation; exterior revisions do not relocate its interior.
     box("Unassigned starboard service bay", (-80, 37, 9), (70, 35, 36), "armor", edge=3)
     box("Starboard service roof", (-80, 37, 28), (69, 34, 2), "paint", edge=1)
 
@@ -510,19 +615,22 @@ def export_web(path, source_scene):
                 continue
             mat = obj.data.materials[0]
             key = (obj["role"], mat.name)
-            verts, faces = grouped.setdefault(key, ([], []))
+            verts, faces, normals = grouped.setdefault(key, ([], [], []))
             evaluated = obj.evaluated_get(depsgraph)
             mesh = evaluated.to_mesh()
             mesh.calc_loop_triangles()
             offset = len(verts)
             verts.extend([tuple(obj.matrix_world @ v.co) for v in mesh.vertices])
             faces.extend([tuple(offset + i for i in tri.vertices) for tri in mesh.loop_triangles])
+            normal_matrix = obj.matrix_world.to_3x3().inverted().transposed()
+            normals.extend(tuple((normal_matrix @ mesh.corner_normals[i].vector).normalized())
+                           for tri in mesh.loop_triangles for i in tri.loops)
             evaluated.to_mesh_clear()
     web_scene = bpy.data.scenes.new("WEB_EXPORT — simple PBR / no scene lighting")
     web_scene["status"] = "Uncompressed structure export; procedural materials deliberately simplified; not web performance approved"
     bpy.context.window.scene = web_scene
     web_materials = {}
-    for (role, name), (vertices, faces) in grouped.items():
+    for (role, name), (vertices, faces, normals) in grouped.items():
         if name not in web_materials:
             source = MATERIALS[name]
             mat = bpy.data.materials.new("WEB_" + name)
@@ -538,6 +646,11 @@ def export_web(path, source_scene):
         mesh = bpy.data.meshes.new(role + "__" + name)
         mesh.from_pydata(vertices, [], faces)
         mesh.update()
+        # Preserve the evaluated bevel/weighted corner normals when merging.
+        # Rebuilding triangles without these makes smooth nozzle rings faceted.
+        for polygon in mesh.polygons:
+            polygon.use_smooth = True
+        mesh.normals_split_custom_set(normals)
         mesh.materials.append(web_materials[name])
         obj = bpy.data.objects.new(mesh.name, mesh)
         obj["role"] = role
@@ -547,9 +660,10 @@ def export_web(path, source_scene):
     bpy.ops.export_scene.gltf(filepath=str(path), export_format="GLB", use_active_scene=True,
                               export_extras=True, export_cameras=False, export_lights=False,
                               export_animations=False, export_apply=True, export_yup=True)
-    result = {"batches": len(grouped), "triangles": sum(len(f) for v, f in grouped.values()),
+    result = {"batches": len(grouped), "triangles": sum(len(f) for v, f, n in grouped.values()),
               "materials": len(web_materials), "bytes": path.stat().st_size,
-              "textures": 0, "compressed": False, "browser_performance_tested": False}
+              "textures": 0, "custom_corner_normals_preserved": True,
+              "compressed": False, "browser_performance_tested": False}
     bpy.context.window.scene = source_scene
     # Keep the export scene inside the .blend for inspection, physically separate.
     return result

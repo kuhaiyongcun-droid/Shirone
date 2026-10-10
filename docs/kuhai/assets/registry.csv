@@ -15,3 +15,7 @@
 "blockout-01-source","kuhai 主舰可编辑结构草模","kuhai 项目程序化制作","tools/flagship/build_scene.py","比例与局部剖视验证","editable_study","项目制作资产；StarCraft 灵感造型不等于独立原创 IP","任务包 scenes/flagship-blockout.blend","非游戏导出模型；造型未定稿；材质无外部依赖"
 "blockout-01-web","kuhai 主舰网页结构样本","kuhai 项目程序化制作","tools/flagship/build_scene.py","独立网页模型生产链验证","web_study_not_integrated","同 blockout-01-source","任务包 scenes/flagship-web-study.glb","64400 三角形；18 网格；10 材质；未做浏览器性能验收"
 "blockout-01-coupon","局部装甲材质样板","kuhai 项目程序化制作","tools/flagship/build_scene.py","金属漆面管线与工作灯反应","procedural_study","项目制作；无外部图片贴图","任务包源场景 COUPON 集合","未做最终磨损图或纹理烘焙"
+"hyperion-choices-frame","Choices 载入舰船腹部画面","Blizzard 画面；Blizzplanet 转载","https://www.blizzplanet.com/blog/comments/cinematic-choices-starcraft-ii-heart-of-the-swarm-single-player-transcript","与顶部渲染对照厚肩和推进组件","viewed_reference_only","参考图不随包再分发","","1682×947 已目视；不是官方结构图；原始官方图片地址取得失败"
+"fan-behemoth-2019","Behemoth Class Battlecruiser","Seung Hyup Nam","https://peterdisney.artstation.com/projects/gJ66eL","记录电影风格二创的制作入口","text_read_images_pending","作者保留版权；无采用授权","","作者自述为 2019 韩国 Blizzard 比赛创作；不能称为官方模型"
+"blockout-02-source","kuhai 主舰结构草模 02","kuhai 项目程序化制作","tools/flagship/build_scene.py","变截面舰体与分层肩部验证","editable_study","项目制作资产；StarCraft 灵感造型不等于独立原创 IP","任务包 scenes/flagship-blockout.blend","349 舰体对象；喷口配置暂定；无游戏提取资产"
+"blockout-02-web","kuhai 主舰网页结构样本 02","kuhai 项目程序化制作","tools/flagship/build_scene.py","保留角点法线的独立网页导出","web_study_not_integrated","同 blockout-02-source","任务包 scenes/flagship-web-study.glb","98652 三角形；18 网格；10 材质；4473756 bytes；无浏览器性能验收"

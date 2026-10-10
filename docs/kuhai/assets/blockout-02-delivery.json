@@ -1,0 +1,49 @@
+{
+  "revision": "blockout-02",
+  "date": "2026-10-10",
+  "stage": "Editable form study; final ship art is not approved",
+  "package": {
+    "filename": "kuhai-flagship-blockout-02.zip",
+    "delivery": "Saved as a persistent downloadable file in the project conversation; locate by exact filename.",
+    "contains": [
+      "editable blend",
+      "separate GLB",
+      "procedural materials",
+      "scripts",
+      "versions",
+      "settings",
+      "previews",
+      "benchmarks",
+      "startup instructions",
+      "SHA256SUMS"
+    ],
+    "checksum_note": "Container SHA-256 is recorded in the GitHub delivery record after packaging. Package contents are covered by SHA256SUMS.",
+    "bytes": 7554637,
+    "sha256": "18c6ecdf109ffb6d5468af9069f6fa376a67bf9223958de9de2c23f6e163758c",
+    "files": 53
+  },
+  "source_scene": {
+    "filename": "flagship-blockout.blend",
+    "bytes": 2263246,
+    "sha256": "81f085d5cb24dc8a0ee3b28e7202018f3700599c4e0552fafa7d045b21aba127"
+  },
+  "web_study": {
+    "filename": "flagship-web-study.glb",
+    "bytes": 4473756,
+    "sha256": "013ad0d6bba3b0ff6566292b37badf96aad311323953984bebaea884f43bac2f",
+    "triangles": 98652,
+    "meshes": 18,
+    "materials": 10,
+    "external_textures": 0,
+    "custom_corner_normals_preserved": true,
+    "browser_performance_tested": false
+  },
+  "blender": "4.5.14 LTS",
+  "source_generator": "tools/flagship/build_scene.py",
+  "render_script": "tools/flagship/render_study.py",
+  "startup_instructions": "tools/flagship/README.md",
+  "gpu_used": false,
+  "local_machine_accessed": false,
+  "cloud_resource_bottleneck_observed": false,
+  "final_quality_target_changed": false
+}

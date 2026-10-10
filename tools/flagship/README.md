@@ -1,12 +1,13 @@
-# 主舰结构草模任务包 · blockout-01
+# 主舰结构草模任务包 · blockout-02
 
 这是 kuhai 个人网站主舰的**结构验证草模**，不是最终造型、高精度母版或已上线首页。制作目标仍是高质量的休伯利安号式战舰；本轮以低成本检查比例、局部剖视、材质反应和迁移流程。
 
 ## 先看什么
 
-- `previews/blockout-01.webp`：整舰、俯视、尾部、档案室和材质样板总览。
+- `previews/blockout-02-comparison.webp`：第一版与第二版相同机位、光照下的整舰和尾部对比，左旧右新。
+- `previews/blockout-02-views.webp`：新版俯视、侧面、腹部和档案室所在舱区。
 - `scenes/flagship-blockout.blend`：可编辑草模。主场景保留对象、倒角修改器、程序化材质、灯光和 8 个机位。
-- `scenes/flagship-web-study.glb`：独立网页结构样本，约 4.08 MiB、64,400 三角形、18 个按角色/材质合并的网格。尚未做 UV、烘焙、LOD、压缩或浏览器性能验收。
+- `scenes/flagship-web-study.glb`：独立网页结构样本，约 4.27 MiB、98,652 三角形、18 个按角色/材质合并的网格。导出保留倒角后的角点法线。尚未做 UV、烘焙、LOD、压缩或浏览器性能验收。
 - `scenes/scene-manifest.json`：坐标约定、舱室尺度、对象统计与缺失工作。
 - `previews/renders/`：8 张 720×450 检查图；`evidence/` 包含环境记录、渲染耗时和迁移检查。
 
@@ -26,7 +27,7 @@
 
 ## 在 Blender 中查看
 
-1. 打开 `scenes/flagship-blockout.blend`，选择 `KUHAI — Structural Study 01` 场景。
+1. 打开 `scenes/flagship-blockout.blend`，选择 `KUHAI — Structural Study 02` 场景。
 2. `SHIP_HULL` 是外部舰体，`ARCHIVE_INTERIOR` 是独立舱室，`ARCHIVE_SHELL` 是可移除的局部屋顶和外壁。隐藏 `ARCHIVE_SHELL` 可检查剖视；舰体与相机保持原位。
 3. `CAMERAS` 保存 `hero`、`top`、`side`、`rear`、`belly`、`archive_context`、`archive`、`coupon`。渲染脚本会设置每个机位所需的集合可见性。
 4. `COUPON` / `COUPON_LIGHTS` 是局部装甲样板，默认隐藏，位于主舰旁的独立制作区域。
@@ -85,7 +86,18 @@ blender --background --python-exit-code 1 --python tools/flagship/build_scene.py
 | `render_study.py --views hero,archive,coupon` | 三张 PNG、逐帧耗时 JSON；不改写源 `.blend` |
 | `inspect_scene.py` | 外部依赖、剖视变换、舱室范围、GLB 角色与容器检查 |
 | `preflight.py` | 目标机器、软件、CPU/容器限制、可发现的显卡与驱动信息 |
+| `review_sheet.py` | 用相同规格的现有渲染图排出修改前后对比；不修改图像光影 |
 
 迁移测试已把 `.blend` 和 `.glb` 复制到另一目录重新打开、检查并渲染。此验证不等同于已在 Windows 或用户的 3060 Ti 上运行。
 
-当前主要造型问题：侧面层次偏平、肩翼偏板状、舰桥仍为体块；内部只有一处占位档案室，未做全舰工程设计。下一轮先校正电影参考与多视角轮廓，再细化外壳结构和局部材质。全舰微细节、高清整舰渲染、真实星图与星体贴图留待结构方向确认后。
+本轮已改成变截面龙骨、展开的前肩、倾斜舰桥、分层厚肩与两侧推进组件。各喷口的具体数量、功能和比例均为暂定视觉解释。当前腹部细节不足、舱区外壳较方、喷口发光过均匀；内部只有一处占位档案室，未做全舰工程设计。下一轮先继续核对轮廓，再制作一个有代表性的装甲/推进组件材质样板。全舰微细节、高清整舰渲染、真实星图与星体贴图留待结构方向确认后。
+
+可选的对比板工具使用 Python + `Pillow==12.3.0`（`requirements-review.txt`），不依赖 Blender，也不是打开模型的必需依赖：
+
+```bash
+python tools/flagship/review_sheet.py --before previews/baseline-01 --after previews/renders --output previews
+```
+
+对比板用的上一版 `hero.png` / `rear.png` 已随包提供。若需重新核对相机、灯光及档案室原始几何，可从 `kuhai-flagship-blockout-01.zip` 解出旧场景，再为 `inspect_scene.py` 添加 `--baseline <旧场景路径>`。检查会忽略球体生成时无关的面顺序差异，仍比较顶点、面连接、材质名和对象变换。
+
+第一版脚本保留于 [GitHub 历史版本](https://github.com/kuhaiyongcun-droid/Shirone/tree/ee771c1c6be389f8402fd1b1583ead55b62490ca/tools/flagship)。当前脚本默认重建第二版；不要用它覆盖第一版或手工精修的文件。

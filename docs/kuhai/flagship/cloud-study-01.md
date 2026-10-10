@@ -72,7 +72,7 @@ Blender Python 模块来自 [Blender Foundation 发布的 bpy](https://pypi.org/
 | `flagship-blockout.blend` | `b93ef983abbe85ac92a771f61ce76199e8f9084f700cb633aa10e6053c08fde7` |
 | `flagship-web-study.glb` | `ad994432700b1ad9ae66d182bf9d2755788b915cf195746c33dda03dfa34303b` |
 
-仓库中的 [生成与启动说明](../../../tools/flagship/README.md) 可重建草模。脚本不自动使用本地电脑、云 GPU 服务或收费资产。
+第一版的 [生成脚本与启动说明](https://github.com/kuhaiyongcun-droid/Shirone/tree/ee771c1c6be389f8402fd1b1583ead55b62490ca/tools/flagship) 已固定于历史版本；当前工具目录可能继续迭代。脚本不自动使用本地电脑、云 GPU 服务或收费资产。
 
 ## 下一轮重点
 
