@@ -1,3 +1,19 @@
+# kuhai 的个人网站
+
+以休伯利安号式战舰为主入口的个人空间。**Shirone 是档案室（博客）模块的基础**，用于文章列表、阅读、目录与搜索；整个网站以 kuhai 的身份与创意表达为中心。
+
+- [项目与研究文档](./docs/kuhai/README.md)
+- [模块架构与迁移方案](./docs/kuhai/project-architecture.md)
+- [主舰美术方向](./docs/kuhai/flagship/art-direction.md)
+- [画质与设备性能方案](./docs/kuhai/flagship/performance.md)
+
+当前工程仍保留 Shirone 的源码组织方式。主舰交互方向已确认，正式模型、代码拆分与路由迁移尚在设计阶段。仓库名称暂为 `kuhaiyongcun-droid/Shirone`，仓库改名将单独处理。
+
+下方保留上游 Shirone 的说明；其中主题演示、原始风格和基准成绩属于上游项目，不代表 kuhai 个人网站的新主舰版本。上游作者信息与许可证继续保留，美术资产按各自来源记录使用条件。
+
+---
+
+
 <div align="center">
 
 <img src="./public/logo/icon.webp" width="88" height="88" alt="Shirone logo" />
