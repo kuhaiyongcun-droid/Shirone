@@ -9,11 +9,29 @@ import { withUserConfig } from "../utils/config-overlay.ts";
  * 站点核心配置：标题 / 语言 / 主题色（HCT 动态配色）/ 横幅 / 目录 / 进度条 / favicon。
  * 类型见 src/types/config.ts。
  */
+// Public build variables are read by both the Node integration and Vite.
+// The bilingual build supplies these values without changing source files.
+const buildLanguage =
+	import.meta.env?.PUBLIC_SHIRONE_LOCALE ??
+	(typeof process !== "undefined"
+		? process.env.PUBLIC_SHIRONE_LOCALE
+		: undefined);
+const buildBase =
+	import.meta.env?.PUBLIC_SHIRONE_BASE ??
+	(typeof process !== "undefined"
+		? process.env.PUBLIC_SHIRONE_BASE
+		: undefined);
+export const isEnglishInterface: boolean = buildLanguage === "en";
+
 export const siteConfig: SiteConfig = withUserConfig("site", {
-	site: "https://shirone.mysqil.com/",
-	base: "/",
+	site: "https://shirone-kuhaiyongcun.kuhaiyongcun.chatgpt.site/",
+	base: buildBase || "/",
+	// Requires the bilingual build (`pnpm build`); disable for single-locale hosting.
+	languageSwitch: true,
 	title: "Shirone",
-	subtitle: "A Material 3 anime blog",
+	subtitle: isEnglishInterface
+		? "A Material 3 personal blog"
+		: "记录生活，分享技术与灵感",
 	// 电脑端顶栏标题与导航内容区域："left" 左对齐，"center" 居中。
 	topAppBar: {
 		contentAlign: "center",
@@ -27,7 +45,7 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 		reduceMotion: true, // 是否展示减少动效切换
 		texture: true, // 是否展示背景纹理选择
 	},
-	lang: "en", // Language code, e.g. 'en', 'zh_CN', 'ja', etc.
+	lang: isEnglishInterface ? "en" : "zh_CN", // Language code, e.g. 'en', 'zh_CN', 'ja', etc.
 	// IANA time zone for precise post and moment timestamps. It is independent of lang.
 	timeZone: "Asia/Shanghai",
 	themeColor: {
@@ -71,13 +89,17 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 			// 仅在首页 Banner 中显示，标题与副标题会上下居中排列。
 			enable: true,
 			title: "Shirone",
-			subtitle: [
-				"特別なことはないけど、君がいると十分です",
-				"今でもあなたは私の光",
-				"君ってさ、知らないうちに私の毎日になってたよ",
-				"君と話すと、なんか毎日がちょっと楽しくなるんだ",
-				"今日はなんでもない日。でも、ちょっとだけいい日",
-			],
+			subtitle: isEnglishInterface
+				? [
+						"An ordinary day, a little inspiration.",
+						"Writing down life, sharing what I learn.",
+						"A quiet corner for thoughts and stories.",
+					]
+				: [
+						"平凡的日子，也有值得记录的灵感。",
+						"记录生活，分享每一次学习与发现。",
+						"在这里，收藏思考与故事。",
+					],
 			typewriter: {
 				// 副标题逐字显示；关闭后直接显示完整副标题。
 				enable: true,

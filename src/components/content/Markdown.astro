@@ -1,10 +1,11 @@
 ---
 interface Props {
 	class: string;
+	lang?: string;
 }
 const className = Astro.props.class;
 ---
-<div data-pagefind-body class={`prose dark:prose-invert prose-base !max-w-none custom-md markdown-content ${className}`}>
+<div lang={Astro.props.lang?.replace("_", "-")} data-pagefind-body class={`prose dark:prose-invert prose-base !max-w-none custom-md markdown-content ${className}`}>
 	<slot />
 </div>
 

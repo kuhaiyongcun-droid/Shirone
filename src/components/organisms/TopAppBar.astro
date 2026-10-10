@@ -1,4 +1,6 @@
 ---
+import I18nKey from "@i18n/i18nKey";
+import { i18n } from "@i18n/translation";
 /**
  * M3 Top App Bar — 全站顶栏（替代 Fuwari 卡片式 Navbar）。
  * fixed 全宽、surface 底色 + 底部细分隔线；左侧菜单按钮（开全端导航抽屉）、
@@ -12,6 +14,7 @@ import { Icon } from "astro-icon/components";
 import { siteConfig } from "@/config";
 import { navBarConfig } from "@/config/navBarConfig";
 import DisplaySettings from "./DisplaySettings.svelte";
+import LanguageSwitch from "./LanguageSwitch.astro";
 import LightDarkSwitch from "./LightDarkSwitch.svelte";
 import Search from "./Search.svelte";
 
@@ -39,7 +42,7 @@ function isActive(link: (typeof links)[number]): boolean {
 	]}
 >
 	<div class="relative max-w-[var(--page-width)] mx-auto h-16 px-3 md:px-5 flex items-center gap-1">
-		<IconButton id="nav-drawer-switch" label="Menu" class="shrink-0 lg:!hidden">
+		<IconButton id="nav-drawer-switch" label={i18n(I18nKey.menu)} class="shrink-0 lg:!hidden">
 			<Icon name="material-symbols:menu-rounded" class="text-[1.25rem]"></Icon>
 		</IconButton>
 		<a
@@ -49,7 +52,7 @@ function isActive(link: (typeof links)[number]): boolean {
 			<span class="h-5 w-1 rounded-full bg-[var(--primary)] transition-all group-hover:h-7"></span>
 			<span class="text-lg font-bold group-hover:text-[var(--primary)]">{siteConfig.title}</span>
 		</a>
-		<nav class:list={["top-app-bar__nav hidden h-full items-center gap-1 lg:flex", siteConfig.topAppBar.contentAlign === "center" ? "lg:absolute lg:left-1/2 lg:-translate-x-1/2" : "ml-4"]} aria-label="Main navigation">
+		<nav class:list={["top-app-bar__nav hidden h-full items-center gap-1 lg:flex", siteConfig.topAppBar.contentAlign === "center" ? "lg:absolute lg:left-1/2 lg:-translate-x-1/2" : "ml-4"]} aria-label={i18n(I18nKey.mainNavigation)}>
 			{links.map((link) => {
 				const href = link.external ? link.url : hrefFor(link.url);
 				const active = isActive(link);
@@ -85,9 +88,10 @@ function isActive(link: (typeof links)[number]): boolean {
 			})}
 		</nav>
 		<div class="flex-1"></div>
+		{siteConfig.languageSwitch && <LanguageSwitch />}
 		<Search client:only="svelte"></Search>
 		{!siteConfig.themeColor.fixed && (
-			<IconButton id="display-settings-switch" label="Display Settings" class="shrink-0">
+			<IconButton id="display-settings-switch" label={i18n(I18nKey.displaySettings)} class="shrink-0">
 				<Icon name="material-symbols:palette-outline" class="text-[1.25rem]"></Icon>
 			</IconButton>
 		)}
@@ -181,14 +185,15 @@ function isActive(link: (typeof links)[number]): boolean {
 	loadTopAppBar();
 </script>
 
-{import.meta.env.PROD && <script is:inline define:vars={{scriptUrl: url('/pagefind/pagefind.js')}}>
+{import.meta.env.PROD && <script is:inline define:vars={{scriptUrl: url('/pagefind/pagefind.js'), searchBaseUrl: url('/')}}>
 window.__loadPagefind = function() {
 	if (window.__pagefindLoadingPromise) return window.__pagefindLoadingPromise;
 	window.__pagefindLoadingPromise = (async () => {
 		try {
 			const pagefind = await import(scriptUrl);
 			await pagefind.options({
-				excerptLength: 20
+				excerptLength: 20,
+				baseUrl: searchBaseUrl
 			});
 			window.pagefind = pagefind;
 			document.dispatchEvent(new CustomEvent('pagefindready'));

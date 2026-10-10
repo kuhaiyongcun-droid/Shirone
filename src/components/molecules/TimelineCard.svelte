@@ -1,4 +1,6 @@
 <script lang="ts">
+import I18nKey from "@i18n/i18nKey";
+import { i18n } from "@i18n/translation";
 /**
  * 时间线节点卡片（分子）：
  * - 纯 M3E 设计令牌驱动（--card-bg、--outline-variant、--primary 等）；
@@ -59,7 +61,7 @@ const markerIcon = $derived(
 			{#if item.featured}
 				<span class="timeline-card__featured-pill">
 					<Icon icon="material-symbols:star-rounded" aria-hidden="true" />
-					<span>Featured</span>
+					<span>{i18n(I18nKey.featured)}</span>
 				</span>
 			{/if}
 		</div>
@@ -102,7 +104,7 @@ const markerIcon = $derived(
 
 		<!-- 技术栈 / 关联标签 -->
 		{#if item.tags && item.tags.length > 0}
-			<ul class="timeline-card__tags" aria-label="Tags">
+			<ul class="timeline-card__tags" aria-label={i18n(I18nKey.tags)}>
 				{#each item.tags as tag (tag)}
 					<li>{tag}</li>
 				{/each}

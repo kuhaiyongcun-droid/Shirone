@@ -2,6 +2,24 @@ import Key from "../i18nKey-runtime.mjs";
 import type { Translation } from "../translation.ts";
 
 export const th: Translation = {
+	[Key.languageSwitch]: "เปลี่ยนเป็นภาษาจีน",
+	[Key.languageSwitchTarget]: "中文",
+	[Key.menu]: "เมนู",
+	[Key.mainNavigation]: "การนำทางหลัก",
+	[Key.navigationDrawer]: "แผงนำทาง",
+	[Key.displaySettings]: "การตั้งค่าการแสดงผล",
+	[Key.themeMode]: "โหมดธีม",
+	[Key.resetToDefault]: "คืนค่าเริ่มต้น",
+	[Key.profileAvatar]: "รูปผู้เขียน",
+	[Key.breadcrumb]: "เส้นทางนำทาง",
+	[Key.featured]: "เหตุการณ์สำคัญ",
+	[Key.sitemap]: "แผนผังเว็บไซต์",
+	[Key.allRightsReserved]: "สงวนลิขสิทธิ์",
+	[Key.poweredBy]: "ขับเคลื่อนโดย",
+	[Key.version]: "เวอร์ชัน",
+	[Key.searchDevTitle]: "ตัวอย่างการค้นหา",
+	[Key.searchDevDescription]: "การค้นหาจะพร้อมใช้งานหลังจากสร้างเว็บไซต์",
+
 	[Key.home]: "หน้าแรก",
 	[Key.about]: "เกี่ยวกับ",
 	[Key.archive]: "คลัง",

@@ -90,6 +90,9 @@ export type SiteConfig = {
 	/** 显示设置浮层各切换项的前端可见性控制 */
 	displaySettings?: DisplaySettingsConfig;
 
+	/** Show the Chinese/English switch; use the bilingual build when enabled. */
+	languageSwitch?: boolean;
+
 	lang:
 		| "en"
 		| "zh_CN"

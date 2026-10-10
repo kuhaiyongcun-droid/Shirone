@@ -12,6 +12,7 @@ interface FooterLink {
 interface Props {
 	/** 站点 / 作者名 */
 	name: string;
+	labels: { rightsReserved: string; poweredBy: string; version: string };
 	/** 版权年份（默认当前年） */
 	year?: number;
 	links?: FooterLink[];
@@ -25,6 +26,7 @@ interface Props {
 
 const {
 	name,
+	labels,
 	year = new Date().getFullYear(),
 	links = [],
 	poweredBy = [],
@@ -40,7 +42,7 @@ const {
 	<div class="m3-blog-footer__inner">
 		{customHtml && <div class="m3-blog-footer__custom" set:html={customHtml} />}
 		<p class="m3-blog-footer__text">
-			&copy; {year} {name}. All Rights Reserved.
+			&copy; {year} {name}. {labels.rightsReserved}
 			{links.map((l) => (
 				<Fragment>
 					<span class="m3-blog-footer__sep" aria-hidden="true">/</span>
@@ -55,7 +57,7 @@ const {
 		</p>
 		{poweredBy.length > 0 && (
 			<p class="m3-blog-footer__text">
-				Powered by{" "}
+				{labels.poweredBy}{" "}
 				{poweredBy.map((l, i) => (
 					<Fragment>
 						{i > 0 && <span class="m3-blog-footer__sep" aria-hidden="true">&amp;</span>}
@@ -71,7 +73,7 @@ const {
 					<Fragment>
 						<span class="m3-blog-footer__sep" aria-hidden="true">/</span>
 						<span class="m3-blog-footer__version">
-							<span>Version</span>
+							<span>{labels.version}</span>
 							{versionHref ? (
 								<a
 									class="m3-blog-footer__link"

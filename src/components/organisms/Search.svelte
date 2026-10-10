@@ -25,18 +25,8 @@ $: panelResults = result.map((r) => ({
 const fakeResult: SearchResult[] = [
 	{
 		url: url("/"),
-		meta: {
-			title: "This Is a Fake Search Result",
-		},
-		excerpt:
-			"Because the search cannot work in the <mark>dev</mark> environment.",
-	},
-	{
-		url: url("/"),
-		meta: {
-			title: "If You Want to Test the Search",
-		},
-		excerpt: "Try running <mark>npm build && npm preview</mark> instead.",
+		meta: { title: i18n(I18nKey.searchDevTitle) },
+		excerpt: i18n(I18nKey.searchDevDescription),
 	},
 ];
 
@@ -166,7 +156,7 @@ $: if (initialized) {
 <!-- toggle btn for phone/tablet view -->
 <IconButton
     icon="material-symbols:search"
-    label="Search Panel"
+    label={i18n(I18nKey.search)}
     id="search-switch"
     size="small"
     shape="round"

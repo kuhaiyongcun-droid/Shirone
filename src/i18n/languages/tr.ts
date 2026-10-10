@@ -2,6 +2,24 @@ import Key from "../i18nKey-runtime.mjs";
 import type { Translation } from "../translation.ts";
 
 export const tr: Translation = {
+	[Key.languageSwitch]: "Çinceye geç",
+	[Key.languageSwitchTarget]: "中文",
+	[Key.menu]: "Menü",
+	[Key.mainNavigation]: "Ana gezinme",
+	[Key.navigationDrawer]: "Gezinme paneli",
+	[Key.displaySettings]: "Görünüm ayarları",
+	[Key.themeMode]: "Tema modu",
+	[Key.resetToDefault]: "Varsayılan ayarları geri yükle",
+	[Key.profileAvatar]: "Yazar avatarı",
+	[Key.breadcrumb]: "Gezinme yolu",
+	[Key.featured]: "Öne çıkan",
+	[Key.sitemap]: "Site haritası",
+	[Key.allRightsReserved]: "Tüm hakları saklıdır.",
+	[Key.poweredBy]: "Destekleyen",
+	[Key.version]: "Sürüm",
+	[Key.searchDevTitle]: "Arama önizlemesi",
+	[Key.searchDevDescription]: "Arama, site derlendikten sonra kullanılabilir.",
+
 	[Key.home]: "Anasayfa",
 	[Key.about]: "Hakkında",
 	[Key.archive]: "Arşiv",

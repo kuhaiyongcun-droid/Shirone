@@ -2,6 +2,24 @@ import Key from "../i18nKey-runtime.mjs";
 import type { Translation } from "../translation.ts";
 
 export const zh_TW: Translation = {
+	[Key.languageSwitch]: "切換到英文介面",
+	[Key.languageSwitchTarget]: "EN",
+	[Key.menu]: "選單",
+	[Key.mainNavigation]: "主導覽",
+	[Key.navigationDrawer]: "導覽抽屜",
+	[Key.displaySettings]: "顯示設定",
+	[Key.themeMode]: "主題模式",
+	[Key.resetToDefault]: "恢復預設設定",
+	[Key.profileAvatar]: "作者頭像",
+	[Key.breadcrumb]: "麵包屑導覽",
+	[Key.featured]: "重點里程碑",
+	[Key.sitemap]: "網站地圖",
+	[Key.allRightsReserved]: "保留所有權利。",
+	[Key.poweredBy]: "由以下專案驅動",
+	[Key.version]: "版本",
+	[Key.searchDevTitle]: "搜尋預覽",
+	[Key.searchDevDescription]: "完成網站建置後即可使用全文搜尋。",
+
 	[Key.home]: "首頁",
 	[Key.about]: "關於",
 	[Key.archive]: "彙整",
