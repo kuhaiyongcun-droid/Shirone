@@ -16,6 +16,8 @@
 
 舰桥侧后方装甲、检修硬件和实际盖板的 UV／PBR 烘焙见 [bridge-study-02 制作与启动说明](BRIDGE_FINISH.md)，含独立可编辑材质样板、内嵌贴图 GLB 和迁移检查。
 
+舰尾连接、喷口根部、分瓣外护板与少量管路见 [stern-study-01 制作与启动说明](STERN_STUDY.md)，含同机位对照、喷口抽样射线和完整源场景迁移包。
+
 ## 先看什么
 
 - `previews/blockout-02-comparison.webp`：第一版与第二版相同机位、光照下的整舰和尾部对比，左旧右新。
