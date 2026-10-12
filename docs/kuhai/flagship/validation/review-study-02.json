@@ -1,0 +1,118 @@
+{
+  "revision": "review-study-02",
+  "source_revision": "home-look-01",
+  "source_sha256": "e05803fd34da6ccff0fb680bf3953165aabf742bd659342f5680de1022d0e9a7",
+  "review_tests": {
+    "passed": 8,
+    "failed": 0
+  },
+  "repository_tests": {
+    "passed": 411,
+    "failed": 0
+  },
+  "astro": {
+    "files": 283,
+    "errors": 0,
+    "warnings": 0,
+    "hints": 0
+  },
+  "manifest": "passed",
+  "changed_locales_biome": "passed; 10 files",
+  "full_repository_biome": {
+    "status": "pre-existing failure",
+    "baseline_commit": "931484f4233942c43a1fbe5ad8b802c1373a2993",
+    "baseline_errors": 51,
+    "baseline_warnings": 2,
+    "baseline_infos": 5,
+    "current_errors": 51,
+    "current_warnings": 2,
+    "current_infos": 5
+  },
+  "geometry": {
+    "geometry_checks": [
+      {
+        "width": 1440,
+        "height": 900,
+        "beacon": [
+          661.07,
+          470.05
+        ],
+        "visible": true,
+        "occlusion": true
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "beacon": [
+          173.5,
+          429.32
+        ],
+        "visible": true,
+        "occlusion": true
+      }
+    ],
+    "browser_tested": false
+  },
+  "decoded_models": {
+    "flagship.glb": {
+      "hull": {
+        "triangles": 157571,
+        "meshes": 22,
+        "invalid_normals": 0,
+        "bounds_min": [
+          -2.629999876022339,
+          -1.5605002641677856,
+          -0.429999977350235
+        ],
+        "bounds_max": [
+          2.3959999084472656,
+          1.5605000257492065,
+          0.6900011301040649
+        ]
+      },
+      "archive_shell": {
+        "triangles": 2032,
+        "meshes": 9,
+        "invalid_normals": 0,
+        "bounds_min": [
+          -1.1399999856948853,
+          -0.5602498650550842,
+          0.15699999034404755
+        ],
+        "bounds_max": [
+          -0.4316876530647278,
+          -0.19889657199382782,
+          0.30010008811950684
+        ]
+      }
+    },
+    "archive.glb": {
+      "archive_interior": {
+        "triangles": 10107,
+        "meshes": 9,
+        "invalid_normals": 0,
+        "bounds_min": [
+          -0.9829999804496765,
+          -0.4600001573562622,
+          0.16825000941753387
+        ],
+        "bounds_max": [
+          -0.6169999837875366,
+          -0.27799999713897705,
+          0.22499997913837433
+        ]
+      }
+    }
+  },
+  "deployment": {
+    "project_id": "appgprj_6acc4c2793588191964a2dd918107384",
+    "version_id": "appgprj_6acc4c2793588191964a2dd918107384~appgver_a5325e699edc8191b62231695f4dd5ff",
+    "status": "succeeded",
+    "url": "https://kuhai-flagship-review.kuhaiyongcun.chatgpt.site",
+    "source_commit": "14045dca30cf926d1cb07a1f2c175b00022f8800",
+    "audience": "owner-private"
+  },
+  "browser_tested": false,
+  "live_blog_updated": false,
+  "source_blend_unchanged": true
+}

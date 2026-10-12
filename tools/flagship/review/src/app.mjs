@@ -41,13 +41,13 @@ function updateUI() {
   document.body.dataset.room = state.mode;
   $('room-title').textContent = t(room ? 'Archive' : 'Title');
   $('description').textContent = t(room ? 'ArchiveDesc' : 'Subtitle');
-  $('eyebrow').textContent = room ? t('RoomStudy') : 'KUHAI / 01';
+  $('eyebrow').textContent = room ? t('RoomStudy') : 'KUHAI / 02';
   $('back').hidden = !room;
   $('enter').hidden = room;
   $('enter').firstElementChild.textContent = t(state.selected ? 'Enter' : 'Archive');
   $('hint').textContent = room ? t('RoomStudy') : staticMode ? t('Static') : t(touch ? 'TouchHint' : 'DesktopHint');
   $('poster').alt = t(room ? 'RoomAlt' : 'PosterAlt');
-  $('poster').src = room ? './assets/archive.webp' : './assets/overview.webp';
+  $('poster').src = room ? './assets/archive.webp?v=review-study-02' : './assets/overview.webp?v=review-study-02';
   hotspot.setAttribute('aria-expanded', String(cutawayOpen(state)));
   if (room || staticMode) hotspot.hidden = true;
   document.title = `kuhai · ${t(room ? 'Archive' : 'Title')}`;

@@ -16,7 +16,7 @@ export function makeSpace() {
   geometry.setAttribute('color', new THREE.Float32BufferAttribute(colors, 3));
   const stars = new THREE.Points(geometry, new THREE.PointsMaterial({ size: .13, vertexColors: true, depthWrite: false }));
   space.add(stars);
-  const sun = new THREE.Vector3(-.32, .57, -.75).normalize();
+  const sun = new THREE.Vector3(.12, .49, -.86).normalize();
   const vertexShader = `varying vec3 vNormal; varying vec3 vPosition;
     void main(){ vNormal=normalize(mat3(modelMatrix)*normal); vPosition=(modelMatrix*vec4(position,1.)).xyz; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.); }`;
   const noise = `float hash(vec3 p){p=fract(p*.3183099+vec3(.1,.2,.3));p*=17.;return fract(p.x*p.y*p.z*(p.x+p.y+p.z));}
@@ -40,11 +40,14 @@ export function makeSpace() {
         #include <colorspace_fragment>
       }`
   });
-  const sphere = new THREE.SphereGeometry(22.3, 64, 40);
+  const sphere = new THREE.SphereGeometry(15.8333, 64, 40);
   const planet = new THREE.Mesh(sphere, material);
   // Preserve the source study's angular scale and direction, compress distance
   // solely for stable WebGL depth precision. This isn't a physical orbit model.
-  planet.position.set(79.2, -29.6, -52.3);
+  const forward = new THREE.Vector3(5.77, -3.18, -7.15).normalize();
+  const right = forward.clone().cross(new THREE.Vector3(0, 1, 0)).normalize();
+  const up = right.clone().cross(forward);
+  planet.position.copy(forward).addScaledVector(right, .22).addScaledVector(up, .155).normalize().multiplyScalar(100);
   space.add(planet);
   const atmosphere = new THREE.Mesh(sphere, new THREE.ShaderMaterial({
     uniforms: { sun: { value: sun } }, vertexShader, transparent: true, depthWrite: false,

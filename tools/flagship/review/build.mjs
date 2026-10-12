@@ -44,7 +44,7 @@ html = html.replace(/\{\{(\w+)\}\}/g, (_, key) => {
 });
 await writeFile(path.join(destination, 'index.html'), html);
 await writeFile(path.join(destination, 'build-manifest.json'), JSON.stringify({
-  revision: 'review-study-01', three: '0.186.1', assets: result.metafile.outputs,
+  revision: 'review-study-02', three: '0.186.1', assets: result.metafile.outputs,
   browser_verified: false, source: 'tools/flagship/review', locales: ['zh_CN', 'en'],
 }, null, 2) + '\n');
 console.log(`Built ${destination}`);

@@ -4,7 +4,7 @@ import type { Translation } from "../translation.ts";
 export const ko: Translation = {
 	[Key.flagshipReviewTitle]: "기함",
 	[Key.flagshipReviewSubtitle]: "계속 넓어지는 나만의 우주",
-	[Key.flagshipReviewBadge]: "함체 및 조작 검토 · 01",
+	[Key.flagshipReviewBadge]: "함체 및 조작 검토 · 02",
 	[Key.flagshipReviewArchive]: "기록실",
 	[Key.flagshipReviewArchiveDesc]: "이야기, 생각, 항해의 기록",
 	[Key.flagshipReviewDesktopHint]:

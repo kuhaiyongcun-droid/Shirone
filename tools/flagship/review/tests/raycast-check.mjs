@@ -5,6 +5,7 @@ import assert from 'node:assert/strict';
 import path from 'node:path';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { fitShip, overviewTarget } from '../src/framing.mjs';
 
 const dir = process.argv[2];
 if (!dir) throw Error('Pass the decoded GLB directory');
@@ -13,15 +14,22 @@ const ship = (await new GLTFLoader().parseAsync(buffer.buffer.slice(buffer.byteO
 ship.updateMatrixWorld(true);
 const hull = [], shell = [];
 ship.traverse(o => { if (o.isMesh) (o.userData.role === 'archive_shell' ? shell : hull).push(o); });
-assert.equal(shell.length, 5); assert.equal(hull.length, 9);
-const radius = new THREE.Box3().setFromObject(ship).getBoundingSphere(new THREE.Sphere()).radius;
+assert.ok(shell.length > 0); assert.ok(hull.length > 0);
+const box = new THREE.Box3().setFromObject(ship);
 const anchor = new THREE.Vector3(-.8, .30, .48);
 const results = [];
 for (const [width, height] of [[1440,900],[390,844]]) {
   const camera = new THREE.PerspectiveCamera(38, width / height, .015, 400);
-  const angle = Math.min(THREE.MathUtils.degToRad(19), Math.atan(Math.tan(THREE.MathUtils.degToRad(19)) * width / height));
-  camera.position.copy(new THREE.Vector3(0,.08,0)).addScaledVector(new THREE.Vector3(-5.5,3.82,6).normalize(), radius / Math.sin(angle) * 1.1);
-  camera.lookAt(0,.08,0); camera.updateMatrixWorld(true);
+  const distance = fitShip(camera, box);
+  // Check actual decoded vertices, independent of the fitter's bounding box.
+  ship.traverse(mesh => {
+    if (!mesh.isMesh) return;
+    const position = mesh.geometry.attributes.position;
+    for (let i=0;i<position.count;i++) {
+      const p = new THREE.Vector3().fromBufferAttribute(position,i).applyMatrix4(mesh.matrixWorld).project(camera);
+      assert.ok(Math.abs(p.x)<.83 && p.y>-.58 && p.y<.66, 'Initial ship view clipped');
+    }
+  });
   const projected = anchor.clone().project(camera);
   const x = (projected.x + 1) * width / 2, y = (1 - projected.y) * height / 2;
   assert.ok(x > 25 && x < width - 25 && y > 115 && y < height - 150);

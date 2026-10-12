@@ -4,7 +4,7 @@ import type { Translation } from "../translation.ts";
 export const ja: Translation = {
 	[Key.flagshipReviewTitle]: "旗艦",
 	[Key.flagshipReviewSubtitle]: "広がり続ける、個人の宇宙",
-	[Key.flagshipReviewBadge]: "船体・操作レビュー · 01",
+	[Key.flagshipReviewBadge]: "船体・操作レビュー · 02",
 	[Key.flagshipReviewArchive]: "資料室",
 	[Key.flagshipReviewArchiveDesc]: "物語、思考、航海の記録",
 	[Key.flagshipReviewDesktopHint]:

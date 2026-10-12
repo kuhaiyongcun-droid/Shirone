@@ -5,18 +5,18 @@ import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { cutawayOpen, renderScale } from './interaction.mjs';
 import { makeSpace } from './space.mjs';
+import { fitShip, overviewTarget } from './framing.mjs';
 
 const anchor = new THREE.Vector3(-.80, .30, .48);
 const archiveTarget = new THREE.Vector3(-.80, .20, .37);
-const overviewDirection = new THREE.Vector3(-5.5, 3.82, 6).normalize();
 
 export async function createViewer({ viewport, hotspot, quality, state, onError, onLoading, signal }) {
   const scene = new THREE.Scene();
   scene.background = new THREE.Color(0x070b0f);
   const camera = new THREE.PerspectiveCamera(38, 1, .015, 400);
   const renderer = new THREE.WebGLRenderer({ antialias: quality !== 'light', powerPreference: 'default' });
-  renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.toneMappingExposure = 1.2;
+  renderer.toneMapping = THREE.AgXToneMapping;
+  renderer.toneMappingExposure = 1.25;
   renderer.outputColorSpace = THREE.SRGBColorSpace;
   renderer.shadowMap.enabled = quality !== 'light';
   renderer.shadowMap.type = THREE.PCFSoftShadowMap;
@@ -38,7 +38,7 @@ export async function createViewer({ viewport, hotspot, quality, state, onError,
   const loader = new GLTFLoader().setDRACOLoader(draco);
   let dead = false, raf = 0, ready = false, currentMode = 'ship';
   let interior = null, interiorPromise = null, savedView = null;
-  let ship = null, shipRadius = 2.6;
+  let ship = null, shipBounds = null;
   const hull = [], shell = [];
   const outline = new THREE.Group(); outline.visible = false; scene.add(outline);
   const space = makeSpace(); scene.add(space);
@@ -50,14 +50,15 @@ export async function createViewer({ viewport, hotspot, quality, state, onError,
   scene.environmentIntensity = .32;
   environment.dispose(); pmrem.dispose();
   scene.add(new THREE.HemisphereLight(0xa8c6d6, 0x192426, .55));
-  const sun = new THREE.DirectionalLight(0xffecd5, 3.2);
-  sun.position.set(-3.2, 5.7, -7.5);
+  const sun = new THREE.DirectionalLight(new THREE.Color(1, .8, .6), 4.5);
+  sun.position.set(1.2, 4.9, -8.6);
   sun.castShadow = quality !== 'light';
   sun.shadow.mapSize.set(768, 768);
   Object.assign(sun.shadow.camera, { left: -4, right: 4, top: 4, bottom: -4, near: .1, far: 24 });
   sun.shadow.bias = -.0003; sun.shadow.normalBias = .003;
   scene.add(sun);
-  const rim = new THREE.DirectionalLight(0x78b6d6, .9); rim.position.set(2, -1, 5); scene.add(rim);
+  const rim = new THREE.DirectionalLight(new THREE.Color(.3, .48, .7), 1.1);
+  rim.position.set(-4.8, 3.1, 6.2); scene.add(rim);
   const archiveLight = new THREE.PointLight(0xffc789, .15, .6, 2);
   archiveLight.position.set(-.81, .32, .35); archiveLight.visible = false; scene.add(archiveLight);
 
@@ -81,12 +82,9 @@ export async function createViewer({ viewport, hotspot, quality, state, onError,
     renderer.render(scene, camera);
   }
   function fitOverview() {
-    controls.target.set(0, .08, 0);
-    const vertical = THREE.MathUtils.degToRad(camera.fov / 2);
-    const limiting = Math.min(vertical, Math.atan(Math.tan(vertical) * camera.aspect));
-    const distance = shipRadius / Math.sin(limiting) * 1.1;
+    controls.target.copy(overviewTarget);
+    const distance = fitShip(camera, shipBounds);
     controls.maxDistance = Math.max(20, distance * 1.5);
-    camera.position.copy(controls.target).addScaledVector(overviewDirection, distance);
     controls.update(); request();
   }
   function resize() {
@@ -116,7 +114,9 @@ export async function createViewer({ viewport, hotspot, quality, state, onError,
     try {
       return await Promise.race([
         (async () => {
-          const response = await fetch(new URL(`./assets/${name}`, document.baseURI), { signal: controller.signal });
+          const url = new URL(`./assets/${name}`, document.baseURI);
+          url.searchParams.set('v', 'review-study-02');
+          const response = await fetch(url, { signal: controller.signal });
           if (!response.ok) throw Error(`Model HTTP ${response.status}`);
           const data = await loader.parseAsync(await response.arrayBuffer(), '');
           if (dead) { disposeObject(data.scene); throw Error('Viewer disposed'); }
@@ -228,7 +228,7 @@ export async function createViewer({ viewport, hotspot, quality, state, onError,
     signal?.addEventListener('abort', dispose, { once: true });
     resize(); ship = await loadModel('flagship.glb');
     prepare(ship); scene.add(ship); scene.updateMatrixWorld(true);
-    shipRadius = new THREE.Box3().setFromObject(ship).getBoundingSphere(new THREE.Sphere()).radius;
+    shipBounds = new THREE.Box3().setFromObject(ship);
     ship.traverse((mesh) => {
       if (!mesh.isMesh) return;
       if (mesh.userData.role === 'archive_shell') {

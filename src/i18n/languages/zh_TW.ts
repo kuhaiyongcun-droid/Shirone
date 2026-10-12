@@ -4,7 +4,7 @@ import type { Translation } from "../translation.ts";
 export const zh_TW: Translation = {
 	[Key.flagshipReviewTitle]: "主艦",
 	[Key.flagshipReviewSubtitle]: "一個仍在生長的個人宇宙",
-	[Key.flagshipReviewBadge]: "艦體與互動審閱 · 01",
+	[Key.flagshipReviewBadge]: "艦體與互動審閱 · 02",
 	[Key.flagshipReviewArchive]: "檔案室",
 	[Key.flagshipReviewArchiveDesc]: "故事、思考與航行中的記錄",
 	[Key.flagshipReviewDesktopHint]: "拖曳旋轉 · 滾輪縮放 · 探索艦體上的光點",
