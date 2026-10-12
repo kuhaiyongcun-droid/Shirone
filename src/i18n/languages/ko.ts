@@ -2,6 +2,35 @@ import Key from "../i18nKey-runtime.mjs";
 import type { Translation } from "../translation.ts";
 
 export const ko: Translation = {
+	[Key.flagshipReviewTitle]: "기함",
+	[Key.flagshipReviewSubtitle]: "계속 넓어지는 나만의 우주",
+	[Key.flagshipReviewBadge]: "함체 및 조작 검토 · 01",
+	[Key.flagshipReviewArchive]: "기록실",
+	[Key.flagshipReviewArchiveDesc]: "이야기, 생각, 항해의 기록",
+	[Key.flagshipReviewDesktopHint]:
+		"드래그로 회전 · 스크롤로 확대 · 함체의 빛을 탐색",
+	[Key.flagshipReviewTouchHint]:
+		"드래그로 회전 · 두 손가락으로 확대 · 빛을 눌러 선실 선택",
+	[Key.flagshipReviewEnter]: "기록실 입장",
+	[Key.flagshipReviewBack]: "기함으로 돌아가기",
+	[Key.flagshipReviewReset]: "시점 초기화",
+	[Key.flagshipReviewSettings]: "표시 설정",
+	[Key.flagshipReviewQuality]: "화질",
+	[Key.flagshipReviewAuto]: "자동",
+	[Key.flagshipReviewStandard]: "표준",
+	[Key.flagshipReviewLight]: "경량",
+	[Key.flagshipReviewStatic]: "정지 화면",
+	[Key.flagshipReviewLoading]: "기함에 접근 중…",
+	[Key.flagshipReviewFailed]:
+		"3D 장면을 사용할 수 없어 정지 화면을 표시합니다.",
+	[Key.flagshipReviewRoomStudy]: "선실 내부 공간 시안",
+	[Key.flagshipReviewKeyboardHelp]:
+		"장면에 초점을 맞춘 후 방향키로 회전, ＋／－로 확대, Esc로 복귀합니다.",
+	[Key.flagshipReviewLanguage]: "언어",
+	[Key.flagshipReviewSelect]: "기록실 선택",
+	[Key.flagshipReviewClose]: "설정 닫기",
+	[Key.flagshipReviewPosterAlt]: "행성 옆을 항해하는 기함의 정지 화면",
+	[Key.flagshipReviewRoomAlt]: "기록실 내부 구조의 정지 화면",
 	[Key.home]: "홈",
 	[Key.about]: "소개",
 	[Key.archive]: "아카이브",

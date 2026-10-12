@@ -1,0 +1,5 @@
+node_modules/
+dist/
+.catalog-*.mjs
+public/assets/*.glb
+public/assets/*.webp

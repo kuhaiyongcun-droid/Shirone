@@ -1,0 +1,136 @@
+{
+  "revision": "review-study-01",
+  "date": "2026-10-12",
+  "tests": {
+    "node": {
+      "passed": 8,
+      "failed": 0
+    },
+    "astro": {
+      "files": 283,
+      "errors": 0,
+      "warnings": 0,
+      "hints": 0
+    },
+    "gltf": {
+      "errors": 0,
+      "warnings": 0
+    }
+  },
+  "blender_decoder": {
+    "flagship.glb": {
+      "hull": {
+        "triangles": 122255,
+        "meshes": 9,
+        "invalid_normals": 0,
+        "bounds_min": [
+          -2.629999876022339,
+          -1.5605002641677856,
+          -0.429999977350235
+        ],
+        "bounds_max": [
+          2.394559860229492,
+          1.5605000257492065,
+          0.6900010108947754
+        ]
+      },
+      "archive_shell": {
+        "triangles": 464,
+        "meshes": 5,
+        "invalid_normals": 0,
+        "bounds_min": [
+          -1.1399999856948853,
+          -0.5602498650550842,
+          0.15699999034404755
+        ],
+        "bounds_max": [
+          -0.4316876530647278,
+          -0.19889657199382782,
+          0.296000212430954
+        ]
+      }
+    },
+    "archive.glb": {
+      "archive_interior": {
+        "triangles": 10107,
+        "meshes": 9,
+        "invalid_normals": 0,
+        "bounds_min": [
+          -0.9829999804496765,
+          -0.4600001573562622,
+          0.16825000941753387
+        ],
+        "bounds_max": [
+          -0.6169999837875366,
+          -0.27799999713897705,
+          0.22499997913837433
+        ]
+      }
+    }
+  },
+  "projection_and_raycast": {
+    "geometry_checks": [
+      {
+        "width": 1440,
+        "height": 900,
+        "beacon": [
+          682.57,
+          475.5
+        ],
+        "visible": true,
+        "occlusion": true
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "beacon": [
+          178.87,
+          432.99
+        ],
+        "visible": true,
+        "occlusion": true
+      }
+    ],
+    "browser_tested": false
+  },
+  "browser_qa": {
+    "status": "not_run",
+    "reason": "Sites managed profile: required control-browser skill unavailable; no alternate browser or server started."
+  },
+  "gpu_benchmark": {
+    "status": "not_run"
+  },
+  "source": {
+    "revision": "review-study-01",
+    "source_revision": "form-study-03",
+    "source_sha256": "126e2b183a39a34ba1c4113e190358cf7b0d3f48d36802a28f4f5359d8092259",
+    "blender": "4.5.14 LTS",
+    "units": "100 source meters per web unit; Y-up, bow -X, port +Z",
+    "files": {
+      "flagship.glb": {
+        "batches": 14,
+        "triangles": 122719,
+        "triangles_before_encoding": 122719,
+        "bytes": 937808,
+        "sha256": "2d1e271b6586a386b2322c9498c4fa41587eb3a3185ac820c78e9035e2b7e01b"
+      },
+      "archive.glb": {
+        "batches": 9,
+        "triangles": 10107,
+        "triangles_before_encoding": 10112,
+        "bytes": 132076,
+        "sha256": "cbddeb5548d445715a83eba1f05ba53151f1f0b12d96fcfbd9ca4e45b3d9c170"
+      }
+    },
+    "source_file_unchanged": true,
+    "materials": "Simple untextured PBR; procedural paint and roughness not baked",
+    "compression": "KHR_draco_mesh_compression; position 20 bits, normal 10 bits; local decoder",
+    "degenerate_source_triangles_removed": 193,
+    "archive_anchor": [
+      -0.8,
+      0.3,
+      0.48
+    ],
+    "browser_performance_tested": false
+  }
+}

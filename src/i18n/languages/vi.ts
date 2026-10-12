@@ -2,6 +2,35 @@ import Key from "../i18nKey-runtime.mjs";
 import type { Translation } from "../translation.ts";
 
 export const vi: Translation = {
+	[Key.flagshipReviewTitle]: "Soái hạm",
+	[Key.flagshipReviewSubtitle]: "Một vũ trụ riêng vẫn đang lớn lên",
+	[Key.flagshipReviewBadge]: "Nghiên cứu hình dáng và tương tác · 01",
+	[Key.flagshipReviewArchive]: "Phòng lưu trữ",
+	[Key.flagshipReviewArchiveDesc]:
+		"Câu chuyện, suy nghĩ và ghi chép hành trình",
+	[Key.flagshipReviewDesktopHint]:
+		"Kéo để xoay · Cuộn để phóng to · Khám phá ánh sáng trên thân tàu",
+	[Key.flagshipReviewTouchHint]:
+		"Kéo để xoay · Chụm để thu phóng · Chạm ánh sáng để chọn phòng",
+	[Key.flagshipReviewEnter]: "Vào phòng lưu trữ",
+	[Key.flagshipReviewBack]: "Trở về tàu chính",
+	[Key.flagshipReviewReset]: "Đặt lại góc nhìn",
+	[Key.flagshipReviewSettings]: "Cài đặt hiển thị",
+	[Key.flagshipReviewQuality]: "Chất lượng",
+	[Key.flagshipReviewAuto]: "Tự động",
+	[Key.flagshipReviewStandard]: "Tiêu chuẩn",
+	[Key.flagshipReviewLight]: "Nhẹ",
+	[Key.flagshipReviewStatic]: "Ảnh tĩnh",
+	[Key.flagshipReviewLoading]: "Đang tiếp cận soái hạm…",
+	[Key.flagshipReviewFailed]: "Không thể hiển thị cảnh 3D. Đang dùng ảnh tĩnh.",
+	[Key.flagshipReviewRoomStudy]: "Bản thử không gian bên trong",
+	[Key.flagshipReviewKeyboardHelp]:
+		"Đặt tiêu điểm vào cảnh: phím mũi tên để xoay, + / − để thu phóng, Esc để trở về.",
+	[Key.flagshipReviewLanguage]: "Ngôn ngữ",
+	[Key.flagshipReviewSelect]: "Chọn phòng lưu trữ",
+	[Key.flagshipReviewClose]: "Đóng cài đặt",
+	[Key.flagshipReviewPosterAlt]: "Ảnh tĩnh soái hạm cạnh một hành tinh",
+	[Key.flagshipReviewRoomAlt]: "Ảnh tĩnh cấu trúc bên trong phòng lưu trữ",
 	[Key.home]: "Trang chủ",
 	[Key.about]: "Giới thiệu",
 	[Key.archive]: "Kho bài",

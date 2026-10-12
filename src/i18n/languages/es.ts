@@ -2,6 +2,36 @@ import Key from "../i18nKey-runtime.mjs";
 import type { Translation } from "../translation.ts";
 
 export const es: Translation = {
+	[Key.flagshipReviewTitle]: "Nave insignia",
+	[Key.flagshipReviewSubtitle]: "Un universo personal que sigue creciendo",
+	[Key.flagshipReviewBadge]: "Estudio de forma e interacción · 01",
+	[Key.flagshipReviewArchive]: "Archivo",
+	[Key.flagshipReviewArchiveDesc]: "Historias, ideas y registros del viaje",
+	[Key.flagshipReviewDesktopHint]:
+		"Arrastra para girar · Desplaza para ampliar · Explora la luz del casco",
+	[Key.flagshipReviewTouchHint]:
+		"Arrastra para girar · Pellizca para ampliar · Toca la luz para elegir una sala",
+	[Key.flagshipReviewEnter]: "Entrar al archivo",
+	[Key.flagshipReviewBack]: "Volver a la nave",
+	[Key.flagshipReviewReset]: "Restablecer vista",
+	[Key.flagshipReviewSettings]: "Ajustes de pantalla",
+	[Key.flagshipReviewQuality]: "Calidad",
+	[Key.flagshipReviewAuto]: "Automática",
+	[Key.flagshipReviewStandard]: "Estándar",
+	[Key.flagshipReviewLight]: "Ligera",
+	[Key.flagshipReviewStatic]: "Imagen fija",
+	[Key.flagshipReviewLoading]: "Acercándonos a la nave…",
+	[Key.flagshipReviewFailed]:
+		"La escena 3D no está disponible. Se muestra una imagen fija.",
+	[Key.flagshipReviewRoomStudy]: "Estudio del espacio interior",
+	[Key.flagshipReviewKeyboardHelp]:
+		"Con el foco en la escena: flechas para girar, + / − para ampliar, Esc para volver.",
+	[Key.flagshipReviewLanguage]: "Idioma",
+	[Key.flagshipReviewSelect]: "Seleccionar archivo",
+	[Key.flagshipReviewClose]: "Cerrar ajustes",
+	[Key.flagshipReviewPosterAlt]:
+		"Imagen de la nave insignia junto a un planeta",
+	[Key.flagshipReviewRoomAlt]: "Imagen del interior del archivo",
 	[Key.home]: "Inicio",
 	[Key.about]: "Sobre mí",
 	[Key.archive]: "Archivo",

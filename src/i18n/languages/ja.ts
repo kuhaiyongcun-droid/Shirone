@@ -2,6 +2,34 @@ import Key from "../i18nKey-runtime.mjs";
 import type { Translation } from "../translation.ts";
 
 export const ja: Translation = {
+	[Key.flagshipReviewTitle]: "旗艦",
+	[Key.flagshipReviewSubtitle]: "広がり続ける、個人の宇宙",
+	[Key.flagshipReviewBadge]: "船体・操作レビュー · 01",
+	[Key.flagshipReviewArchive]: "資料室",
+	[Key.flagshipReviewArchiveDesc]: "物語、思考、航海の記録",
+	[Key.flagshipReviewDesktopHint]:
+		"ドラッグで回転 · スクロールで拡大 · 船体の光を探す",
+	[Key.flagshipReviewTouchHint]:
+		"ドラッグで回転 · ピンチで拡大 · 光をタップして部屋を選択",
+	[Key.flagshipReviewEnter]: "資料室に入る",
+	[Key.flagshipReviewBack]: "旗艦に戻る",
+	[Key.flagshipReviewReset]: "視点をリセット",
+	[Key.flagshipReviewSettings]: "表示設定",
+	[Key.flagshipReviewQuality]: "画質",
+	[Key.flagshipReviewAuto]: "自動",
+	[Key.flagshipReviewStandard]: "標準",
+	[Key.flagshipReviewLight]: "軽量",
+	[Key.flagshipReviewStatic]: "静止画",
+	[Key.flagshipReviewLoading]: "旗艦に接近中…",
+	[Key.flagshipReviewFailed]: "3Dシーンを表示できません。静止画を表示します。",
+	[Key.flagshipReviewRoomStudy]: "室内空間の試作",
+	[Key.flagshipReviewKeyboardHelp]:
+		"シーンにフォーカス：矢印キーで回転、＋／－で拡大、Escで戻る。",
+	[Key.flagshipReviewLanguage]: "言語",
+	[Key.flagshipReviewSelect]: "資料室を選択",
+	[Key.flagshipReviewClose]: "設定を閉じる",
+	[Key.flagshipReviewPosterAlt]: "惑星のそばを航行する旗艦の静止画",
+	[Key.flagshipReviewRoomAlt]: "資料室の内部構造の静止画",
 	[Key.home]: "Home",
 	[Key.about]: "About",
 	[Key.archive]: "Archive",

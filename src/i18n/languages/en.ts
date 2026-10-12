@@ -2,6 +2,37 @@ import Key from "../i18nKey-runtime.mjs";
 import type { Translation } from "../translation.ts";
 
 export const en: Translation = {
+	[Key.flagshipReviewTitle]: "Flagship",
+	[Key.flagshipReviewSubtitle]: "A personal universe, still unfolding",
+	[Key.flagshipReviewBadge]: "Form & interaction study · 01",
+	[Key.flagshipReviewArchive]: "Archive",
+	[Key.flagshipReviewArchiveDesc]:
+		"Stories, thoughts and records of the voyage",
+	[Key.flagshipReviewDesktopHint]:
+		"Drag to orbit · Scroll to zoom · Explore the light on the hull",
+	[Key.flagshipReviewTouchHint]:
+		"Drag to orbit · Pinch to zoom · Tap the light to select a room",
+	[Key.flagshipReviewEnter]: "Enter archive",
+	[Key.flagshipReviewBack]: "Return to flagship",
+	[Key.flagshipReviewReset]: "Reset view",
+	[Key.flagshipReviewSettings]: "Display settings",
+	[Key.flagshipReviewQuality]: "Quality",
+	[Key.flagshipReviewAuto]: "Auto",
+	[Key.flagshipReviewStandard]: "Standard",
+	[Key.flagshipReviewLight]: "Light",
+	[Key.flagshipReviewStatic]: "Still",
+	[Key.flagshipReviewLoading]: "Approaching the flagship…",
+	[Key.flagshipReviewFailed]:
+		"The 3D scene is unavailable. Showing a still preview.",
+	[Key.flagshipReviewRoomStudy]: "Interior space study",
+	[Key.flagshipReviewKeyboardHelp]:
+		"Focus the scene: arrow keys orbit, + / − zoom, Esc returns.",
+	[Key.flagshipReviewLanguage]: "Language",
+	[Key.flagshipReviewSelect]: "Select archive",
+	[Key.flagshipReviewClose]: "Close settings",
+	[Key.flagshipReviewPosterAlt]:
+		"Still preview of the flagship beside a planet",
+	[Key.flagshipReviewRoomAlt]: "Still preview of the archive interior",
 	[Key.home]: "Home",
 	[Key.about]: "About",
 	[Key.archive]: "Archive",

@@ -2,6 +2,35 @@ import Key from "../i18nKey-runtime.mjs";
 import type { Translation } from "../translation.ts";
 
 export const id: Translation = {
+	[Key.flagshipReviewTitle]: "Kapal utama",
+	[Key.flagshipReviewSubtitle]: "Semesta pribadi yang terus berkembang",
+	[Key.flagshipReviewBadge]: "Studi bentuk dan interaksi · 01",
+	[Key.flagshipReviewArchive]: "Ruang arsip",
+	[Key.flagshipReviewArchiveDesc]: "Cerita, pikiran, dan catatan pelayaran",
+	[Key.flagshipReviewDesktopHint]:
+		"Seret untuk memutar · Gulir untuk memperbesar · Jelajahi cahaya pada lambung",
+	[Key.flagshipReviewTouchHint]:
+		"Seret untuk memutar · Cubit untuk memperbesar · Ketuk cahaya untuk memilih ruang",
+	[Key.flagshipReviewEnter]: "Masuk ruang arsip",
+	[Key.flagshipReviewBack]: "Kembali ke kapal",
+	[Key.flagshipReviewReset]: "Atur ulang tampilan",
+	[Key.flagshipReviewSettings]: "Pengaturan tampilan",
+	[Key.flagshipReviewQuality]: "Kualitas",
+	[Key.flagshipReviewAuto]: "Otomatis",
+	[Key.flagshipReviewStandard]: "Standar",
+	[Key.flagshipReviewLight]: "Ringan",
+	[Key.flagshipReviewStatic]: "Gambar diam",
+	[Key.flagshipReviewLoading]: "Mendekati kapal utama…",
+	[Key.flagshipReviewFailed]:
+		"Adegan 3D tidak tersedia. Menampilkan gambar diam.",
+	[Key.flagshipReviewRoomStudy]: "Studi ruang interior",
+	[Key.flagshipReviewKeyboardHelp]:
+		"Fokus pada adegan: tombol panah memutar, + / − memperbesar, Esc kembali.",
+	[Key.flagshipReviewLanguage]: "Bahasa",
+	[Key.flagshipReviewSelect]: "Pilih ruang arsip",
+	[Key.flagshipReviewClose]: "Tutup pengaturan",
+	[Key.flagshipReviewPosterAlt]: "Gambar kapal utama di dekat sebuah planet",
+	[Key.flagshipReviewRoomAlt]: "Gambar struktur interior ruang arsip",
 	[Key.home]: "Beranda",
 	[Key.about]: "Tentang",
 	[Key.archive]: "Arsip",

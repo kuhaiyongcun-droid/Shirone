@@ -2,6 +2,37 @@ import Key from "../i18nKey-runtime.mjs";
 import type { Translation } from "../translation.ts";
 
 export const tr: Translation = {
+	[Key.flagshipReviewTitle]: "Amiral gemisi",
+	[Key.flagshipReviewSubtitle]: "Büyümeye devam eden kişisel bir evren",
+	[Key.flagshipReviewBadge]: "Gövde ve etkileşim incelemesi · 01",
+	[Key.flagshipReviewArchive]: "Arşiv",
+	[Key.flagshipReviewArchiveDesc]:
+		"Yolculuğun hikâyeleri, düşünceleri ve kayıtları",
+	[Key.flagshipReviewDesktopHint]:
+		"Döndürmek için sürükle · Yakınlaşmak için kaydır · Gövdedeki ışığı keşfet",
+	[Key.flagshipReviewTouchHint]:
+		"Döndürmek için sürükle · Yakınlaşmak için kıstır · Oda seçmek için ışığa dokun",
+	[Key.flagshipReviewEnter]: "Arşive gir",
+	[Key.flagshipReviewBack]: "Ana gemiye dön",
+	[Key.flagshipReviewReset]: "Görünümü sıfırla",
+	[Key.flagshipReviewSettings]: "Görüntü ayarları",
+	[Key.flagshipReviewQuality]: "Kalite",
+	[Key.flagshipReviewAuto]: "Otomatik",
+	[Key.flagshipReviewStandard]: "Standart",
+	[Key.flagshipReviewLight]: "Hafif",
+	[Key.flagshipReviewStatic]: "Durağan",
+	[Key.flagshipReviewLoading]: "Ana gemiye yaklaşılıyor…",
+	[Key.flagshipReviewFailed]:
+		"3B sahne kullanılamıyor. Durağan bir önizleme gösteriliyor.",
+	[Key.flagshipReviewRoomStudy]: "İç mekân çalışması",
+	[Key.flagshipReviewKeyboardHelp]:
+		"Sahneye odaklan: ok tuşlarıyla döndür, + / − ile yakınlaş, Esc ile dön.",
+	[Key.flagshipReviewLanguage]: "Dil",
+	[Key.flagshipReviewSelect]: "Arşivi seç",
+	[Key.flagshipReviewClose]: "Ayarları kapat",
+	[Key.flagshipReviewPosterAlt]:
+		"Bir gezegenin yanındaki ana geminin durağan önizlemesi",
+	[Key.flagshipReviewRoomAlt]: "Arşiv iç yapısının durağan önizlemesi",
 	[Key.home]: "Anasayfa",
 	[Key.about]: "Hakkında",
 	[Key.archive]: "Arşiv",
