@@ -8,6 +8,8 @@
 
 舰首、前肩和中段连接的后续修订见 [form-study-03 制作与启动说明](FORM_STUDY.md)，含同灯光对比、档案室外壳开合与局部空间检查。
 
+局部板层、档案室检修口与真实检修盖烘焙见 [surface-study-02 制作与启动说明](SURFACE_STUDY.md)，使用形体 03 为固定输入，不改动已发布审阅站点。
+
 ## 先看什么
 
 - `previews/blockout-02-comparison.webp`：第一版与第二版相同机位、光照下的整舰和尾部对比，左旧右新。
