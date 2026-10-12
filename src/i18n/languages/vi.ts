@@ -4,7 +4,7 @@ import type { Translation } from "../translation.ts";
 export const vi: Translation = {
 	[Key.flagshipReviewTitle]: "Soái hạm",
 	[Key.flagshipReviewSubtitle]: "Một vũ trụ riêng vẫn đang lớn lên",
-	[Key.flagshipReviewBadge]: "Nghiên cứu hình dáng và tương tác · 02",
+	[Key.flagshipReviewBadge]: "Nghiên cứu hình dáng và tương tác · 03",
 	[Key.flagshipReviewArchive]: "Phòng lưu trữ",
 	[Key.flagshipReviewArchiveDesc]:
 		"Câu chuyện, suy nghĩ và ghi chép hành trình",

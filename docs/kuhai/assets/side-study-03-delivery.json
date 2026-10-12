@@ -1,0 +1,30 @@
+{
+  "revision": "side-study-03",
+  "source_sha256": "14a58708c990193d989f298f3f628b5a89dc7b2b82c476281630187a5494d57a",
+  "input_sha256": "e05803fd34da6ccff0fb680bf3953165aabf742bd659342f5680de1022d0e9a7",
+  "artifacts": [
+    {
+      "filename": "kuhai-flagship-side-study-03.webp",
+      "library_file_id": "libfile_fd0fb808df788191819c919b510aa671",
+      "bytes": 46050,
+      "sha256": "bca856b0ed38ccef9981fe289b11fbf778abe1d2ddbaad15c2645b1f0d63050b"
+    },
+    {
+      "filename": "kuhai-flagship-side-study-03-comparison.webp",
+      "library_file_id": "libfile_0eb3a346336c8191b6a67b62064ddc02",
+      "bytes": 130952,
+      "sha256": "6b1a5624f514dda937000d5eac8f8ef1a4d81e1179dace3b24767e94f13d08e4"
+    },
+    {
+      "filename": "kuhai-flagship-side-study-03.zip",
+      "library_file_id": "libfile_eab614d8cab8819197df4cf041853f84",
+      "bytes": 9868659,
+      "sha256": "1c7f7a8085544bbef2492a269510e98a7e139007db0e0a8f446ba662641db438"
+    }
+  ],
+  "preview_url": "https://kuhai-flagship-review.kuhaiyongcun.chatgpt.site",
+  "local_view_url": "https://kuhai-flagship-review.kuhaiyongcun.chatgpt.site/?view=bridge",
+  "site_source_commit": "39ccc8a20ef219438909226eeb543c20ca33c172",
+  "deployment_id": "appgdep_6accadca24a48191a11afb375a6c3540",
+  "browser_tested": false
+}

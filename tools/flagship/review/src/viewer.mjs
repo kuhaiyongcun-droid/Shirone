@@ -5,12 +5,13 @@ import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { cutawayOpen, renderScale } from './interaction.mjs';
 import { makeSpace } from './space.mjs';
-import { fitShip, overviewTarget } from './framing.mjs';
+import { fitShip, overviewTarget, fitBridgeStudy, bridgeStudyTarget } from './framing.mjs';
 
 const anchor = new THREE.Vector3(-.80, .30, .48);
 const archiveTarget = new THREE.Vector3(-.80, .20, .37);
 
 export async function createViewer({ viewport, hotspot, quality, state, onError, onLoading, signal }) {
+  const bridgeStudy = new URL(location.href).searchParams.get('view') === 'bridge';
   const scene = new THREE.Scene();
   scene.background = new THREE.Color(0x070b0f);
   const camera = new THREE.PerspectiveCamera(38, 1, .015, 400);
@@ -29,7 +30,7 @@ export async function createViewer({ viewport, hotspot, quality, state, onError,
   controls.autoRotate = false;
   controls.rotateSpeed = .65;
   controls.minPolarAngle = .06; controls.maxPolarAngle = Math.PI - .06;
-  controls.minDistance = 3.6; controls.maxDistance = 20;
+  controls.minDistance = bridgeStudy ? .70 : 3.6; controls.maxDistance = 20;
   const abort = new AbortController();
   const draco = new DRACOLoader();
   draco.setDecoderPath(new URL('./assets/draco/', document.baseURI).href);
@@ -82,6 +83,11 @@ export async function createViewer({ viewport, hotspot, quality, state, onError,
     renderer.render(scene, camera);
   }
   function fitOverview() {
+    if (bridgeStudy) {
+      controls.target.copy(bridgeStudyTarget);
+      fitBridgeStudy(camera);
+      controls.update(); request(); return;
+    }
     controls.target.copy(overviewTarget);
     const distance = fitShip(camera, shipBounds);
     controls.maxDistance = Math.max(20, distance * 1.5);
@@ -115,7 +121,7 @@ export async function createViewer({ viewport, hotspot, quality, state, onError,
       return await Promise.race([
         (async () => {
           const url = new URL(`./assets/${name}`, document.baseURI);
-          url.searchParams.set('v', 'review-study-02');
+          url.searchParams.set('v', 'review-study-03');
           const response = await fetch(url, { signal: controller.signal });
           if (!response.ok) throw Error(`Model HTTP ${response.status}`);
           const data = await loader.parseAsync(await response.arrayBuffer(), '');
@@ -161,7 +167,7 @@ export async function createViewer({ viewport, hotspot, quality, state, onError,
         const distance = camera.aspect < .85 ? 1.35 : .92;
         camera.position.copy(archiveTarget).addScaledVector(new THREE.Vector3(-.68, .69, .89).normalize(), distance);
       } else {
-        controls.minDistance = 3.6; controls.maxDistance = savedView?.maxDistance || 20;
+        controls.minDistance = bridgeStudy ? .70 : 3.6; controls.maxDistance = savedView?.maxDistance || 20;
         if (savedView) { camera.position.copy(savedView.position); controls.target.copy(savedView.target); }
         else fitOverview();
       }

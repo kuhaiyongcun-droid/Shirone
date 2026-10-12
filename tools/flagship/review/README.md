@@ -1,8 +1,10 @@
-# kuhai 主舰交互审阅 02
+# kuhai 主舰交互审阅 03
 
-基于 `home-look-01` 的独立审阅页面。Shirone 仍是档案室的博客框架，本目录没有接入博客路由、改变博客页面或复制文章。
+基于 `side-study-03` 的独立审阅页面。Shirone 仍是档案室的博客框架，本目录没有接入博客路由、改变博客页面或复制文章。
 
 ## 使用
+
+`?view=bridge` 可从本轮左舷舰桥附近开始观察，缩放下限相应调整；普通 URL 继续使用整舰初始视角。
 
 - 拖动绕舰旋转，滚轮或双指缩放；没有自动旋转、惯性或鼠标跟随。
 - 鼠标停在实际档案室外壳或光点上，加载内部后隐藏局部外壳、显示轮廓和内部。舰体及相机不因悬停移动。
@@ -30,12 +32,12 @@ Windows 使用 `pnpm.cmd`。输出 `dist/`，应通过 HTTP 静态服务打开�
 
 ## 从制作源模型重新导出
 
-制作源保存在既有 `kuhai-flagship-home-look-01.zip`，SHA256 和获取记录见 `docs/kuhai/assets/home-look-01-delivery.json`。本轮不修改源 `.blend`。
+制作源保存在既有 `kuhai-flagship-side-study-03.zip`，SHA256 和获取记录见 `docs/kuhai/assets/side-study-03-delivery.json`。本轮不修改源 `.blend`。
 
 在仓库根目录，使用已安装 `bpy==4.5.14` 的 Python 环境：
 
 ```sh
-python tools/flagship/export_review.py --source /path/to/scenes/flagship-home-look-01.blend --output tools/flagship/review/public/assets
+python tools/flagship/export_review.py --source /path/to/scenes/flagship-side-study-03.blend --output tools/flagship/review/public/assets
 python tools/flagship/inspect_review.py --assets tools/flagship/review/public/assets --output decoder-check.json --decoded /path/to/temporary-decoded
 node tools/flagship/review/tests/raycast-check.mjs /path/to/temporary-decoded
 ```
@@ -44,9 +46,9 @@ node tools/flagship/review/tests/raycast-check.mjs /path/to/temporary-decoded
 
 ## 资产与质量边界
 
-`public/assets/model-manifest.json` 记录模型版本、文件大小、面数和校验值。网页主舰 159,603 三角面、31 批次、1,286,648 字节；档案室延迟加载 10,107 三角面、9 批次、132,040 字节。轮廓线、星体和阴影另有绘制开销，不能把批次直接当浏览器总 draw calls。
+`public/assets/model-manifest.json` 记录模型版本、文件大小、面数和校验值。网页主舰 169,867 三角面、40 批次、1,415,256 字节；档案室延迟加载 10,107 三角面、9 批次、132,040 字节。轮廓线、星体和阴影另有绘制开销，不能把批次直接当浏览器总 draw calls。
 
-当前使用简化 PBR，尚未烘焙制作源的漆面/粗糙度节点。星体、云层和大气为轻量程序化近似，沿用源场景恒星方向；星体距离压缩只服务画面和深度精度，不作为真实轨道模拟。当前整舰静态预览来自 home-look-01 的 CPU 渲染，档案室静态预览沿用此前渲染；它们不是浏览器截图；其中粗糙度纹理的 CC0 来源沿用该阶段登记。
+当前使用简化 PBR，尚未烘焙制作源的漆面/粗糙度节点。星体、云层和大气为轻量程序化近似，沿用源场景恒星方向；星体距离压缩只服务画面和深度精度，不作为真实轨道模拟。当前整舰静态预览来自 side-study-03 的 CPU 渲染，档案室静态预览沿用此前渲染；它们不是浏览器截图；其中粗糙度纹理的 CC0 来源沿用该阶段登记。
 
 Three.js 为 MIT；Draco 为 Apache-2.0。构建复制各自许可文件。字体使用系统回退，不加载外部字体。
 
@@ -58,4 +60,6 @@ Node 手势与像素预算测试、Khronos glTF 校验、Blender 实际解码、
 
 ## 本轮更新
 
-纳入舰桥 01/02、舰尾 01、装甲分区 03 和首页漆面 01 的制作结果。主光与星球共享新的逆光方向，采用 AgX；材质仍为未经全舰烘焙的轻量近似。起始视角按当前画幅和舰体包围盒求解，保留顶部和底部界面空间，避免只用包围球导致主舰显示过小。前述检查已用当前导出重跑，浏览器验证边界仍不变。
+保留首页配色与星光方向，纳入 side-study-03 的左舷设备凹舱、支撑边框、安装臂和管路。原支撑保存在源文件隐藏集合中，网页只导出可见的新结构。新增局部初始视角，桌面和窄屏对新增区域的实际解码顶点检查通过；原舱区的交互与遮挡检查仍通过。
+
+整体材质继续使用基础 PBR，成品质感样板仍在深化。本轮源模型、GLB 回读和静帧检查不等于真实浏览器验收。

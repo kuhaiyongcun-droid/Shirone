@@ -4,7 +4,7 @@ import type { Translation } from "../translation.ts";
 export const th: Translation = {
 	[Key.flagshipReviewTitle]: "ยานธง",
 	[Key.flagshipReviewSubtitle]: "จักรวาลส่วนตัวที่ยังคงเติบโต",
-	[Key.flagshipReviewBadge]: "ศึกษารูปทรงและการโต้ตอบ · 02",
+	[Key.flagshipReviewBadge]: "ศึกษารูปทรงและการโต้ตอบ · 03",
 	[Key.flagshipReviewArchive]: "ห้องจดหมายเหตุ",
 	[Key.flagshipReviewArchiveDesc]: "เรื่องราว ความคิด และบันทึกการเดินทาง",
 	[Key.flagshipReviewDesktopHint]: "ลากเพื่อหมุน · เลื่อนเพื่อซูม · สำรวจแสงบนตัวยาน",

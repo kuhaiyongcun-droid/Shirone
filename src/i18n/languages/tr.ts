@@ -4,7 +4,7 @@ import type { Translation } from "../translation.ts";
 export const tr: Translation = {
 	[Key.flagshipReviewTitle]: "Amiral gemisi",
 	[Key.flagshipReviewSubtitle]: "Büyümeye devam eden kişisel bir evren",
-	[Key.flagshipReviewBadge]: "Gövde ve etkileşim incelemesi · 02",
+	[Key.flagshipReviewBadge]: "Gövde ve etkileşim incelemesi · 03",
 	[Key.flagshipReviewArchive]: "Arşiv",
 	[Key.flagshipReviewArchiveDesc]:
 		"Yolculuğun hikâyeleri, düşünceleri ve kayıtları",

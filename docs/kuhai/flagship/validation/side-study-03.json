@@ -1,0 +1,108 @@
+{
+  "revision": "side-study-03",
+  "source_sha256": "14a58708c990193d989f298f3f628b5a89dc7b2b82c476281630187a5494d57a",
+  "review_tests": {
+    "passed": 8,
+    "failed": 0
+  },
+  "gltf_validation": {
+    "errors": 0,
+    "warnings": 0
+  },
+  "astro": {
+    "files": 283,
+    "errors": 0,
+    "warnings": 0,
+    "hints": 0
+  },
+  "source_checks": {
+    "input_sha": true,
+    "original_objects": true,
+    "archive": true,
+    "lighting": true,
+    "materials": true,
+    "closed_meshes": true,
+    "portable_images": true,
+    "old_hidden": true,
+    "new_visible": true
+  },
+  "projection_checks": {
+    "geometry_checks": [
+      {
+        "width": 1440,
+        "height": 900,
+        "beacon": [
+          661.07,
+          470.05
+        ],
+        "visible": true,
+        "occlusion": true
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "beacon": [
+          173.5,
+          429.32
+        ],
+        "visible": true,
+        "occlusion": true
+      }
+    ],
+    "bridge_checks": [
+      {
+        "width": 1440,
+        "height": 900,
+        "sampleVertices": 20544,
+        "visible": true
+      },
+      {
+        "width": 390,
+        "height": 844,
+        "sampleVertices": 20544,
+        "visible": true
+      }
+    ],
+    "browser_tested": false
+  },
+  "source_render": {
+    "revision": "side-study-03",
+    "previous": false,
+    "neutral": true,
+    "width": 960,
+    "height": 600,
+    "samples": 32,
+    "device": "cpu",
+    "devices": [
+      {
+        "type": "CPU",
+        "name": "x86_64"
+      }
+    ],
+    "renders": [
+      {
+        "view": "side03_detail",
+        "seconds": 25.606,
+        "rss_mib": 1196.23
+      },
+      {
+        "view": "side03_context",
+        "seconds": 18.234,
+        "rss_mib": 1267.75
+      },
+      {
+        "view": "side03_reverse",
+        "seconds": 25.472,
+        "rss_mib": 1274.27
+      }
+    ]
+  },
+  "browser_webgl_and_fps_tested": false,
+  "blog_unchanged": true,
+  "new_materials": "simple PBR; full coating/bake still pending",
+  "migration": {
+    "identical_pixels": true,
+    "mean_absolute_rgb_8bit": 0.0,
+    "scene_sha256": "14a58708c990193d989f298f3f628b5a89dc7b2b82c476281630187a5494d57a"
+  }
+}

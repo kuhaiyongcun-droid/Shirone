@@ -15,12 +15,14 @@ import bpy
 SOURCE_REVISIONS = {
     "126e2b183a39a34ba1c4113e190358cf7b0d3f48d36802a28f4f5359d8092259": "form-study-03",
     "e05803fd34da6ccff0fb680bf3953165aabf742bd659342f5680de1022d0e9a7": "home-look-01",
+    "14a58708c990193d989f298f3f628b5a89dc7b2b82c476281630187a5494d57a": "side-study-03",
 }
 GROUPS = {
     "SHIP_HULL": "hull", "PORT_DETAILS": "hull", "STARBOARD_DETAILS": "hull",
     "ARCHIVE_SHELL": "archive_shell", "ARCHIVE_INTERIOR": "archive_interior",
     "SURFACE03_HULL": "hull", "BRIDGE01_EXTERIOR": "hull",
     "BRIDGE02_DETAILS": "hull", "STERN01_DETAILS": "hull",
+    "SIDE03_STRUCTURE": "hull",
 }
 
 
@@ -164,7 +166,7 @@ def export(source, output):
                            "triangles_before_encoding": triangles, "bytes": path.stat().st_size,
                            "sha256": digest(path)}
     assert digest(source) == before
-    report = {"revision": "review-study-02", "source_revision": SOURCE_REVISIONS[before],
+    report = {"revision": "review-study-03", "source_revision": SOURCE_REVISIONS[before],
               "source_sha256": before, "blender": bpy.app.version_string,
               "units": "100 source meters per web unit; Y-up, bow -X, port +Z",
               "files": files, "source_file_unchanged": True,

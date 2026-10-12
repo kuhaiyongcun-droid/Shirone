@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 import path from 'node:path';
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { fitShip, overviewTarget } from '../src/framing.mjs';
+import { fitShip, overviewTarget, fitBridgeStudy } from '../src/framing.mjs';
 
 const dir = process.argv[2];
 if (!dir) throw Error('Pass the decoded GLB directory');
@@ -62,4 +62,21 @@ for (const [width, height] of [[1440,900],[390,844]]) {
   assert.ok(hull.includes(ray.intersectObjects([...hull,...shell],false)[0]?.object));
   results.push({width,height,beacon:[+x.toFixed(2),+y.toFixed(2)],visible:true,occlusion:true});
 }
-console.log(JSON.stringify({geometry_checks:results,browser_tested:false},null,2));
+const bridgeResults = [];
+for (const [width,height] of [[1440,900],[390,844]]) {
+  const camera = new THREE.PerspectiveCamera(38,width/height,.015,400);
+  fitBridgeStudy(camera);
+  let count = 0;
+  ship.traverse(mesh => {
+    if (!mesh.isMesh || !mesh.name.includes('SIDE03')) return;
+    const position=mesh.geometry.attributes.position;
+    for(let i=0;i<position.count;i++) {
+      const p=new THREE.Vector3().fromBufferAttribute(position,i).applyMatrix4(mesh.matrixWorld).project(camera);
+      assert.ok(Math.abs(p.x)<.86 && p.y>-.60 && p.y<.66, 'Bridge sample clipped in study view');
+      count++;
+    }
+  });
+  assert.ok(count>100, 'Missing new sample geometry');
+  bridgeResults.push({width,height,sampleVertices:count,visible:true});
+}
+console.log(JSON.stringify({geometry_checks:results,bridge_checks:bridgeResults,browser_tested:false},null,2));

@@ -4,7 +4,7 @@ import type { Translation } from "../translation.ts";
 export const es: Translation = {
 	[Key.flagshipReviewTitle]: "Nave insignia",
 	[Key.flagshipReviewSubtitle]: "Un universo personal que sigue creciendo",
-	[Key.flagshipReviewBadge]: "Estudio de forma e interacción · 02",
+	[Key.flagshipReviewBadge]: "Estudio de forma e interacción · 03",
 	[Key.flagshipReviewArchive]: "Archivo",
 	[Key.flagshipReviewArchiveDesc]: "Historias, ideas y registros del viaje",
 	[Key.flagshipReviewDesktopHint]:

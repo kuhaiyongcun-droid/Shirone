@@ -27,7 +27,7 @@ for (const [filename, expected] of Object.entries(manifest.files)) {
 test('web budget and protected source fingerprint are explicit', () => {
   assert.ok(manifest.files['flagship.glb'].bytes < 2000000);
   assert.ok(manifest.files['archive.glb'].bytes < 150000);
-  assert.equal(manifest.source_sha256, 'e05803fd34da6ccff0fb680bf3953165aabf742bd659342f5680de1022d0e9a7');
+  assert.equal(manifest.source_sha256, '14a58708c990193d989f298f3f628b5a89dc7b2b82c476281630187a5494d57a');
   assert.equal(manifest.object_material_overrides_respected, true);
   assert.equal(manifest.browser_performance_tested, false);
 });

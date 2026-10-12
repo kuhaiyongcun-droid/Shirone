@@ -1,16 +1,16 @@
 {
-  "revision": "review-study-02",
-  "source_revision": "home-look-01",
-  "source_sha256": "e05803fd34da6ccff0fb680bf3953165aabf742bd659342f5680de1022d0e9a7",
+  "revision": "review-study-03",
+  "source_revision": "side-study-03",
+  "source_sha256": "14a58708c990193d989f298f3f628b5a89dc7b2b82c476281630187a5494d57a",
   "blender": "4.5.14 LTS",
   "units": "100 source meters per web unit; Y-up, bow -X, port +Z",
   "files": {
     "flagship.glb": {
-      "batches": 31,
-      "triangles": 159603,
-      "triangles_before_encoding": 159603,
-      "bytes": 1286648,
-      "sha256": "c116bc7bc76e0c40593fb5e5c851fe82a665e162a6c62c1a0757f1e4b2b4f226"
+      "batches": 40,
+      "triangles": 169867,
+      "triangles_before_encoding": 169883,
+      "bytes": 1415256,
+      "sha256": "3b71227de8be181fd9f1c1834ccc7afdf473d20a29f616133358cda53bbbf490"
     },
     "archive.glb": {
       "batches": 9,
@@ -23,8 +23,8 @@
   "source_file_unchanged": true,
   "materials": "Simple untextured PBR; procedural paint and roughness not baked",
   "compression": "KHR_draco_mesh_compression; position 20 bits, normal 10 bits; local decoder",
-  "degenerate_source_triangles_removed": 1285,
-  "visible_source_objects": 1365,
+  "degenerate_source_triangles_removed": 1333,
+  "visible_source_objects": 1537,
   "object_material_overrides_respected": true,
   "archive_anchor": [
     -0.8,

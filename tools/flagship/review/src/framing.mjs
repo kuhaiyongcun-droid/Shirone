@@ -4,6 +4,16 @@ import * as THREE from 'three';
 export const overviewTarget = new THREE.Vector3(.12, .12, 0);
 const overviewDirection = new THREE.Vector3(-5.77, 3.18, 7.15).normalize();
 
+export const bridgeStudyTarget = new THREE.Vector3(-1.72, .38, .24);
+
+export function fitBridgeStudy(camera) {
+  const direction = new THREE.Vector3(-.23, .22, .77).normalize();
+  const distance = 1.2 * Math.max(1, 1 / camera.aspect);
+  camera.position.copy(bridgeStudyTarget).addScaledVector(direction, distance);
+  camera.lookAt(bridgeStudyTarget); camera.updateMatrixWorld(true);
+  return distance;
+}
+
 export function fitShip(camera, box) {
   const corners = [];
   for (const x of [box.min.x, box.max.x])
