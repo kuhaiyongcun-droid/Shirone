@@ -6,6 +6,8 @@
 
 整舰材质与星体照明的后续整合见 [integration-study-01 制作与启动说明](INTEGRATION_STUDY.md)。该任务包保留前序输入，并将高精度源场景与网页资产继续分开维护。
 
+舰首、前肩和中段连接的后续修订见 [form-study-03 制作与启动说明](FORM_STUDY.md)，含同灯光对比、档案室外壳开合与局部空间检查。
+
 ## 先看什么
 
 - `previews/blockout-02-comparison.webp`：第一版与第二版相同机位、光照下的整舰和尾部对比，左旧右新。

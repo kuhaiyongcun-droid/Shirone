@@ -1,0 +1,149 @@
+{
+  "revision": "form-study-03",
+  "date": "2026-10-12",
+  "repository": "https://github.com/kuhaiyongcun-droid/Shirone",
+  "repository_input_commit": "ee591ddd999488fef01f8f1f3328c3cc120f6b53",
+  "source": {
+    "file": "scenes/flagship-form-study-03.blend",
+    "bytes": 3576714,
+    "sha256": "126e2b183a39a34ba1c4113e190358cf7b0d3f48d36802a28f4f5359d8092259"
+  },
+  "input": {
+    "file": "inputs/integration-01/flagship-orbit-study.blend",
+    "sha256": "4a17cfdda709c9f7d82a08e73b27c2c2159d93c80ed1bada1509a2cf94521d4c"
+  },
+  "stats": {
+    "SHIP_HULL": {
+      "objects": 267,
+      "evaluated_mesh_triangles": 52356
+    },
+    "ARCHIVE_SHELL": {
+      "objects": 9,
+      "evaluated_mesh_triangles": 1084
+    },
+    "ARCHIVE_INTERIOR": {
+      "objects": 225,
+      "evaluated_mesh_triangles": 24608
+    },
+    "PORT_DETAILS": {
+      "objects": 330,
+      "evaluated_mesh_triangles": 75300
+    },
+    "STARBOARD_DETAILS": {
+      "objects": 330,
+      "evaluated_mesh_triangles": 75300
+    }
+  },
+  "validation_passed": true,
+  "relocation_passed": true,
+  "website_export": false,
+  "status": "Unapproved editable shape study; not final production art",
+  "package_checksum_record": "GitHub docs/kuhai/assets/form-study-03-delivery.json (container hash is external to avoid self-reference)",
+  "package": {
+    "filename": "kuhai-flagship-form-study-03.zip",
+    "bytes": 21905503,
+    "sha256": "9cc9aba506586364bd812726113772320f752284373bcec75a01dbbff707827d",
+    "files": 53,
+    "retrieval": "Same-named persistent task package in the project conversation"
+  },
+  "benchmarks": {
+    "current": {
+      "revision": "form-study-03",
+      "baseline": false,
+      "cutaway": false,
+      "source_sha256": "126e2b183a39a34ba1c4113e190358cf7b0d3f48d36802a28f4f5359d8092259",
+      "width": 960,
+      "height": 600,
+      "samples": 32,
+      "threads": 6,
+      "device": "cpu",
+      "devices": [
+        {
+          "type": "CPU",
+          "name": "x86_64"
+        }
+      ],
+      "blender": "4.5.14 LTS",
+      "renders": [
+        {
+          "view": "overview",
+          "seconds": 11.885,
+          "peak_process_rss_mib": 1123.74
+        },
+        {
+          "view": "port",
+          "seconds": 6.26,
+          "peak_process_rss_mib": 1157.36
+        },
+        {
+          "view": "form_close",
+          "seconds": 10.388,
+          "peak_process_rss_mib": 1174.14
+        },
+        {
+          "view": "form_top",
+          "seconds": 8.155,
+          "peak_process_rss_mib": 1187.32
+        },
+        {
+          "view": "form_archive",
+          "seconds": 16.949,
+          "peak_process_rss_mib": 1199.52
+        }
+      ],
+      "browser_tested": false
+    },
+    "cutaway": {
+      "revision": "form-study-03",
+      "baseline": false,
+      "cutaway": true,
+      "source_sha256": "126e2b183a39a34ba1c4113e190358cf7b0d3f48d36802a28f4f5359d8092259",
+      "width": 960,
+      "height": 600,
+      "samples": 32,
+      "threads": 6,
+      "device": "cpu",
+      "devices": [
+        {
+          "type": "CPU",
+          "name": "x86_64"
+        }
+      ],
+      "blender": "4.5.14 LTS",
+      "renders": [
+        {
+          "view": "form_archive",
+          "seconds": 17.306,
+          "peak_process_rss_mib": 1116.78
+        }
+      ],
+      "browser_tested": false
+    },
+    "relocation": {
+      "revision": "form-study-03",
+      "baseline": false,
+      "cutaway": false,
+      "source_sha256": "126e2b183a39a34ba1c4113e190358cf7b0d3f48d36802a28f4f5359d8092259",
+      "width": 640,
+      "height": 400,
+      "samples": 16,
+      "threads": 6,
+      "device": "cpu",
+      "devices": [
+        {
+          "type": "CPU",
+          "name": "x86_64"
+        }
+      ],
+      "blender": "4.5.14 LTS",
+      "renders": [
+        {
+          "view": "overview",
+          "seconds": 5.344,
+          "peak_process_rss_mib": 877.58
+        }
+      ],
+      "browser_tested": false
+    }
+  }
+}
