@@ -1,0 +1,33 @@
+{
+  "revision": "review-study-01",
+  "date": "2026-10-12",
+  "github_source_commit": "a427aebae1c0fb6f8baaa49e454f2bdc8f2da1a2",
+  "site": {
+    "project_id": "appgprj_6acc4c2793588191964a2dd918107384",
+    "version_id": "appgprj_6acc4c2793588191964a2dd918107384~appgver_463c4caa63388191abee5a87b1102dee",
+    "deployment_id": "appgdep_6acc53f8427c8191937c7aedd9f64399",
+    "source_commit": "cde42d88de34abaef0aca896d834b33c488900b3",
+    "status": "succeeded",
+    "url": "https://kuhai-flagship-review.kuhaiyongcun.chatgpt.site",
+    "audience": "owner-private"
+  },
+  "assets": {
+    "url": "https://kuhai-flagship-review.kuhaiyongcun.chatgpt.site/review-assets.zip",
+    "bytes": 787694,
+    "sha256": "6c36ed56dcfc0eb5dd74c59a5d913a1769890631609a201a75d3be06488f97ae",
+    "github_binary_upload": "rejected by tool approval; no specific reason returned; not retried via another GitHub channel"
+  },
+  "validation": {
+    "node_tests_passed": 8,
+    "gltf_errors": 0,
+    "gltf_warnings": 0,
+    "blender_decode": "passed",
+    "projection_and_occlusion": "passed at 1440x900 and 390x844",
+    "astro_errors": 0,
+    "astro_warnings": 0,
+    "browser": "not run: required browser skill unavailable",
+    "device_fps": "not measured"
+  },
+  "blog_replaced": false,
+  "local_gpu_accessed": false
+}
