@@ -4,6 +4,8 @@
 
 后续局部材质试验独立保存，见 [material-study-01 制作与启动说明](MATERIAL_STUDY.md)。其源文件和网页漆面试片不替代这里的整舰结构模型。
 
+整舰材质与星体照明的后续整合见 [integration-study-01 制作与启动说明](INTEGRATION_STUDY.md)。该任务包保留前序输入，并将高精度源场景与网页资产继续分开维护。
+
 ## 先看什么
 
 - `previews/blockout-02-comparison.webp`：第一版与第二版相同机位、光照下的整舰和尾部对比，左旧右新。

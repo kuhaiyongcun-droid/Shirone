@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "project": "kuhai personal website",
+  "revision": "integration-study-01",
+  "created_date": "2026-10-12",
+  "status": "Whole-ship material and lighting study; final form and art unapproved",
+  "repository": "https://github.com/kuhaiyongcun-droid/Shirone",
+  "base_repository_commit": "597147460305ae6bf1bffcbfbcc9ac87fa3404ac",
+  "package": {
+    "filename": "kuhai-flagship-integration-study-01.zip",
+    "container_checksum_location": "Repository copy of this record after ZIP assembly",
+    "bytes": 19706599,
+    "sha256": "00f4ccfdc0750a0c59022163cd813ffbe03613ff3019e54fcf71ba4d2a2eae93",
+    "files": 43
+  },
+  "source": {
+    "path": "scenes/flagship-orbit-study.blend",
+    "bytes": 5356219,
+    "sha256": "4a17cfdda709c9f7d82a08e73b27c2c2159d93c80ed1bada1509a2cf94521d4c"
+  },
+  "inputs": [
+    {
+      "path": "inputs/blockout-02/flagship-blockout.blend",
+      "bytes": 2263246,
+      "sha256": "81f085d5cb24dc8a0ee3b28e7202018f3700599c4e0552fafa7d045b21aba127"
+    },
+    {
+      "path": "inputs/material-01/shoulder-material-study.blend",
+      "bytes": 913759,
+      "sha256": "277d938c6292c4df995e97efb0068d3ce205b6458cb22fcc8f66fc0b62e1d486"
+    }
+  ],
+  "textures": [
+    {
+      "path": "textures/source/blue_metal_plate_rough_4k.jpg",
+      "bytes": 6219260,
+      "sha256": "668f46c12a5ff663f2e7c96d909e1c5664f2fab53c24544ac512600b16ad650e"
+    },
+    {
+      "path": "scenes/textures/blue_metal_plate_rough_1k.png",
+      "bytes": 487419,
+      "sha256": "e1b9c362a70d73d293805c6ea3070088dc75c21b4a8fb0f6ed1ff6f7c013d533"
+    }
+  ],
+  "ship_source_stats": {
+    "SHIP_HULL": {
+      "objects": 237,
+      "evaluated_mesh_triangles": 42716
+    },
+    "ARCHIVE_SHELL": {
+      "objects": 6,
+      "evaluated_mesh_triangles": 648
+    },
+    "ARCHIVE_INTERIOR": {
+      "objects": 225,
+      "evaluated_mesh_triangles": 24608
+    },
+    "PORT_DETAILS": {
+      "objects": 330,
+      "evaluated_mesh_triangles": 75300
+    },
+    "STARBOARD_DETAILS": {
+      "objects": 330,
+      "evaluated_mesh_triangles": 75300
+    }
+  },
+  "ship_mesh_triangles_excluding_fonts_environment_baseline": 218572,
+  "removed_repeating_lights": 64,
+  "benchmark": {
+    "revision": "integration-study-01",
+    "baseline": false,
+    "width": 960,
+    "height": 600,
+    "samples": 32,
+    "threads": 6,
+    "device": "cpu",
+    "devices": [
+      {
+        "type": "CPU",
+        "name": "x86_64"
+      }
+    ],
+    "blender": "4.5.14 LTS",
+    "renders": [
+      {
+        "view": "overview",
+        "seconds": 12.064,
+        "peak_process_rss_mib": 1116.34
+      },
+      {
+        "view": "stern",
+        "seconds": 8.806,
+        "peak_process_rss_mib": 1149.71
+      },
+      {
+        "view": "port",
+        "seconds": 6.416,
+        "peak_process_rss_mib": 1150.98
+      },
+      {
+        "view": "detail",
+        "seconds": 17.224,
+        "peak_process_rss_mib": 1172.42
+      }
+    ],
+    "browser_performance_tested": false
+  },
+  "runtime": {
+    "blender": "4.5.14 LTS",
+    "python_cloud": "3.11.17",
+    "device": "CPU",
+    "threads": 6,
+    "view_transform": "AgX",
+    "exposure": 0.65,
+    "denoising": true,
+    "max_bounces": 4,
+    "transparent_max_bounces": 8
+  },
+  "validation": {
+    "source": true,
+    "checks": {
+      "independent_closed_positive_ship_meshes": true,
+      "archive_geometry_materials_transforms_preserved": true,
+      "images_packed_and_relative": true,
+      "mirrored_details_match_world_geometry": true,
+      "no_linked_libraries": true,
+      "relative_render_path": true,
+      "comparison_keeps_all_transforms": true,
+      "archive_shell_separate": true,
+      "cutaway_keeps_all_transforms": true,
+      "one_shared_stellar_direction": true,
+      "limb_uses_shared_stellar_direction": true,
+      "overview_whole_ship_in_frame": true,
+      "stern_whole_ship_in_frame": true,
+      "port_whole_ship_in_frame": true
+    },
+    "relocation_without_adjacent_images": true,
+    "relocation_render": {
+      "view": "overview",
+      "seconds": 3.768,
+      "peak_process_rss_mib": 875.57
+    },
+    "astro_check": {
+      "files": 283,
+      "errors": 0,
+      "warnings": 0,
+      "hints": 0
+    }
+  },
+  "web_asset": {
+    "new_whole_ship_glb": false,
+    "browser_tested": false,
+    "note": "Offline source and future optimized website assets remain separate"
+  },
+  "local_gpu_accessed": false,
+  "entrypoint": "tools/flagship/INTEGRATION_STUDY.md",
+  "limits": [
+    "Fictional planet and creative ship proportions",
+    "Approximate atmosphere and art fill, not physical scattering simulation",
+    "No Windows/local GPU test",
+    "No deployment or blog UI change"
+  ]
+}
