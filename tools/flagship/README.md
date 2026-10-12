@@ -14,6 +14,8 @@
 
 舰桥观察窗、装甲挑檐与后掠支撑的局部细化见 [bridge-study-01 制作与启动说明](BRIDGE_STUDY.md)，含保留的旧桥楼、同机位对比与窗格凹进射线检查。
 
+舰桥侧后方装甲、检修硬件和实际盖板的 UV／PBR 烘焙见 [bridge-study-02 制作与启动说明](BRIDGE_FINISH.md)，含独立可编辑材质样板、内嵌贴图 GLB 和迁移检查。
+
 ## 先看什么
 
 - `previews/blockout-02-comparison.webp`：第一版与第二版相同机位、光照下的整舰和尾部对比，左旧右新。

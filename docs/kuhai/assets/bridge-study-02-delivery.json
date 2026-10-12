@@ -1,0 +1,23 @@
+{
+  "revision": "bridge-study-02",
+  "created": "2026-10-12",
+  "package_filename": "kuhai-flagship-bridge-study-02.zip",
+  "package_bytes": 22520205,
+  "package_sha256": "6424877a4b816c540441c4548cd177b9eb39e433523818547651d9afb711f1c4",
+  "package_files": 69,
+  "source_sha256": "1902afeb0228679ff5f8027f8a5adcf86cd4b4e07cfb4c4b1ba6c21b5a786e95",
+  "sample_glb_sha256": "496122fb0b5dff55ea80508b0389c5359c9aa53fab3b4afb7863b3cea6dfdab6",
+  "sample_glb_bytes": 499828,
+  "portable_validation": "passed",
+  "github_scope": "Scripts and research text; no binary model upload",
+  "cloud_cpu_only": true,
+  "new_web_export": "Isolated coating sample only; no full ship export",
+  "live_site_updated": false,
+  "blog_updated": false,
+  "browser_performance_tested": false,
+  "preview_filename": "kuhai-flagship-bridge-study-02.webp",
+  "preview_sha256": "479e5d1fdcc6882c4f3da06e0b0859071653debec2d0305e4faa14da4e0ecf32",
+  "comparison_filename": "kuhai-flagship-bridge-study-02-comparison.webp",
+  "comparison_sha256": "c8f44e91084d5b8091fa0b9e4d8b8912e2ac1424fa7fb3022d3a3b5ce9bc9ab9",
+  "asset_delivery_status": "saved; previews and versioned task package available in project conversation"
+}
