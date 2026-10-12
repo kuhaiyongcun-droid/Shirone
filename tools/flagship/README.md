@@ -10,6 +10,8 @@
 
 局部板层、档案室检修口与真实检修盖烘焙见 [surface-study-02 制作与启动说明](SURFACE_STUDY.md)，使用形体 03 为固定输入，不改动已发布审阅站点。
 
+后续远近景、板件节奏和微细节省略试验见 [surface-study-03 制作与启动说明](SURFACE_LAYOUT.md)，保留上一版输入、硬件和隐藏的前后对照集合。
+
 ## 先看什么
 
 - `previews/blockout-02-comparison.webp`：第一版与第二版相同机位、光照下的整舰和尾部对比，左旧右新。

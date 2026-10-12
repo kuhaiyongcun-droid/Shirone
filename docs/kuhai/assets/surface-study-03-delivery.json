@@ -1,0 +1,19 @@
+{
+  "revision": "surface-study-03",
+  "created": "2026-10-12",
+  "package_filename": "kuhai-flagship-surface-study-03.zip",
+  "package_bytes": 20302785,
+  "package_sha256": "c645c4c2106cc9acaeec6de274461cc9f26af84a15abf29644700afa1cb26576",
+  "package_files": 60,
+  "source_sha256": "b14004497af8b87412687fdef43f497c8b8be09acf7f7e23a1b5288f69a866cb",
+  "preview_filename": "kuhai-flagship-surface-study-03.webp",
+  "preview_sha256": "ff46ea269112b01c9b5b64ea81ed456bf704ad8ad9f8277120d67d6bd43593a7",
+  "portable_validation": "passed",
+  "asset_delivery_status": "saved; preview and versioned task package available in project conversation",
+  "github_scope": "Scripts and research text; no binary model upload",
+  "cloud_cpu_only": true,
+  "new_web_export": false,
+  "live_site_updated": false,
+  "blog_updated": false,
+  "browser_performance_tested": false
+}
