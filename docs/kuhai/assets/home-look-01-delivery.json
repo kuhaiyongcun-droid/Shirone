@@ -1,0 +1,32 @@
+{
+  "revision": "home-look-01",
+  "created": "2026-10-12",
+  "package_filename": "kuhai-flagship-home-look-01.zip",
+  "package_bytes": 14143616,
+  "package_files": 54,
+  "package_sha256": "e35aacfdeb097ede96663e527eecf827b6f679601a8ad435a00295466f67b88b",
+  "source_sha256": "e05803fd34da6ccff0fb680bf3953165aabf742bd659342f5680de1022d0e9a7",
+  "input_sha256": "b141b562047614d2a5819a1a67936fa6af81ba611d7e292890ed95cee5f0254c",
+  "exterior_objects_reassigned": 689,
+  "cloned_exterior_materials": 14,
+  "selected_lighting": "rim",
+  "portable_validation": "passed; relocated home pixels identical",
+  "cloud_cpu_only": true,
+  "hero_render_seconds": 24.921,
+  "hero_render_size": [
+    1280,
+    800
+  ],
+  "hero_samples": 48,
+  "peak_process_rss_mib": 1529.23,
+  "new_web_export": false,
+  "live_site_updated": false,
+  "blog_updated": false,
+  "browser_performance_tested": false,
+  "github_scope": "Scripts and research text; no binary model upload",
+  "preview_filename": "kuhai-flagship-home-look-01.webp",
+  "preview_sha256": "5a78212b6d54df32c8ea71ba7da11a2cfd39435d9d09f097dd18d0942fea71d2",
+  "comparison_filename": "kuhai-flagship-home-look-01-comparison.webp",
+  "comparison_sha256": "6d777b8b4231649e4d1a41a431ba2b3bca835386f825b486958e9763b24a9f66",
+  "asset_delivery_status": "saved; previews and versioned task package available in project conversation"
+}

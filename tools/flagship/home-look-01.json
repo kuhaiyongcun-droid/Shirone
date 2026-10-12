@@ -1,0 +1,33 @@
+{
+  "revision": "home-look-01",
+  "input_sha256": "b141b562047614d2a5819a1a67936fa6af81ba611d7e292890ed95cee5f0254c",
+  "status": "Offline whole-ship look study; not final art or a web performance result",
+  "selected_profile": "rim",
+  "planet": {"distance": 4800000, "radius": 760000, "right_offset": 0.22, "up_offset": 0.155},
+  "paint": {
+    "STUDY_naval_paint": [0.048, 0.068, 0.083],
+    "STUDY_light_paint": [0.11, 0.145, 0.166],
+    "SURFACE02_paint_0": [0.059, 0.081, 0.101],
+    "SURFACE02_paint_1": [0.078, 0.101, 0.123],
+    "SURFACE02_paint_2": [0.10, 0.124, 0.14]
+  },
+  "profiles": {
+    "day": {
+      "stellar_direction": [-0.58, 0.58, 0.57], "energy": 3.5,
+      "color": [1, 0.91, 0.80], "angle": 0.018,
+      "fill_energy": 2200000, "fill_color": [0.38, 0.55, 0.74],
+      "planet_fill_energy": 1100000, "exposure": 0.7
+    },
+    "rim": {
+      "stellar_direction": [0.12, 0.86, 0.49], "energy": 4.5,
+      "color": [1, 0.80, 0.60], "angle": 0.018,
+      "fill_energy": 3500000, "fill_color": [0.30, 0.48, 0.70],
+      "planet_fill_energy": 1200000, "exposure": 0.65
+    }
+  },
+  "cameras": {
+    "home": {"position": [-565, -715, 330], "target": [12, 0, 12], "lens": 48},
+    "home_portrait": {"position": [-625, -810, 475], "target": [12, 0, 12], "lens": 44, "roll": -0.45},
+    "finish_detail": {"position": [-244, -143, 117], "target": [-133, -6, 42], "lens": 54}
+  }
+}
