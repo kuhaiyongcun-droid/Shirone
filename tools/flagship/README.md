@@ -12,6 +12,8 @@
 
 后续远近景、板件节奏和微细节省略试验见 [surface-study-03 制作与启动说明](SURFACE_LAYOUT.md)，保留上一版输入、硬件和隐藏的前后对照集合。
 
+舰桥观察窗、装甲挑檐与后掠支撑的局部细化见 [bridge-study-01 制作与启动说明](BRIDGE_STUDY.md)，含保留的旧桥楼、同机位对比与窗格凹进射线检查。
+
 ## 先看什么
 
 - `previews/blockout-02-comparison.webp`：第一版与第二版相同机位、光照下的整舰和尾部对比，左旧右新。

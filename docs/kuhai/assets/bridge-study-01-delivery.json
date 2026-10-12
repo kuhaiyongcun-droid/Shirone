@@ -1,0 +1,21 @@
+{
+  "revision": "bridge-study-01",
+  "created": "2026-10-12",
+  "package_filename": "kuhai-flagship-bridge-study-01.zip",
+  "package_bytes": 19044142,
+  "package_sha256": "25de3358271d772d4210296919d5d33a2e58c0056a0b727eb822900066e0047e",
+  "package_files": 45,
+  "source_sha256": "3897040bdd78990d704e5b3ae0a82023e7c81f380762a2c72aa36d2b1d3e2bab",
+  "preview_filename": "kuhai-flagship-bridge-study-01.webp",
+  "preview_sha256": "87fc7d6642dcc39a6389281728d3e788b401e3f4d04bf91bdc3164fd6ce8642f",
+  "comparison_filename": "kuhai-flagship-bridge-study-01-comparison.webp",
+  "comparison_sha256": "1c0bcc2c06c504f87d862eb3b2035e1ae477afc1a7c4b64b021736bcf3520402",
+  "portable_validation": "passed",
+  "asset_delivery_status": "saved; previews and versioned task package available in project conversation",
+  "github_scope": "Scripts and research text; no binary model upload",
+  "cloud_cpu_only": true,
+  "new_web_export": false,
+  "live_site_updated": false,
+  "blog_updated": false,
+  "browser_performance_tested": false
+}

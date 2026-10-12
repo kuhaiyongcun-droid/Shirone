@@ -1,0 +1,15 @@
+{
+  "revision": "bridge-study-01",
+  "input_sha256": "b14004497af8b87412687fdef43f497c8b8be09acf7f7e23a1b5288f69a866cb",
+  "status": "Editable exterior interpretation; not a canonical blueprint or final art",
+  "center_x_m": -193,
+  "radius_x_m": 32.8,
+  "radius_y_m": 25.2,
+  "observation_arc_deg": [60, 300],
+  "observation_bays": 16,
+  "preview": {"width": 960, "height": 600, "samples": 32, "threads": 6},
+  "cameras": {
+    "bridge_close": {"location": [-326, -153, 123], "target": [-186, 0, 41], "lens": 57},
+    "bridge_low": {"location": [-316, -143, 79], "target": [-190, 0, 40], "lens": 62}
+  }
+}
