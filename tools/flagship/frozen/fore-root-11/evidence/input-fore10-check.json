@@ -1,0 +1,182 @@
+{
+  "revision": "fore-lighting-10",
+  "source_sha256": "993d1dfada15902cc4d5d208986fbc0756a9463d771919bcd487deddfae867b2",
+  "baseline_sha256": "23df549788eb4e29b2394fd6529c7cb8c0602092273c264b3385923dbfe073f3",
+  "input_validation_sha256": "db75bdc7246983306160369c29fd2321345ce4d39a643119acc67c11d4fc5ee2",
+  "config_sha256": "24d393e72ae7f93d8c3ce1ecddb9587cc5d6d78e01329428d3974362c79d6416",
+  "checks": {
+    "input_validated": true,
+    "prior_content_preserved": true,
+    "fore_geometry_connections_unchanged": true,
+    "bridge_geometry_unchanged": true,
+    "prior_lights_unchanged": true,
+    "declared_additions_only": true,
+    "fixture_solids_closed": true,
+    "fixture_contacts_attached": true,
+    "fixtures_clear_of_equipment": true,
+    "beams_match_config": true,
+    "beam_paths_clear": true,
+    "inspection_depths_preserved": true,
+    "portable_images": true
+  },
+  "passed": true,
+  "fore_objects": 100,
+  "bridge_objects": 342,
+  "fixture_contacts": [
+    {
+      "object": "FORE10 / F1 / wall shoe",
+      "target": "FORE09 / Outboard continuous sill",
+      "attached": true
+    },
+    {
+      "object": "FORE10 / F1 / shielded housing",
+      "target": "FORE10 / F1 / wall shoe",
+      "attached": true
+    },
+    {
+      "object": "FORE10 / F1 / inset downward diffuser",
+      "target": "FORE10 / F1 / shielded housing",
+      "attached": true
+    },
+    {
+      "object": "FORE10 / F1 / sealed rear feed",
+      "target": "FORE10 / F1 / wall shoe",
+      "attached": true
+    },
+    {
+      "object": "FORE10 / F1 / left captive lock",
+      "target": "FORE10 / F1 / shielded housing",
+      "attached": true
+    },
+    {
+      "object": "FORE10 / F1 / right captive lock",
+      "target": "FORE10 / F1 / shielded housing",
+      "attached": true
+    },
+    {
+      "object": "FORE10 / F2 / wall shoe",
+      "target": "FORE09 / Outboard continuous sill",
+      "attached": true
+    },
+    {
+      "object": "FORE10 / F2 / shielded housing",
+      "target": "FORE10 / F2 / wall shoe",
+      "attached": true
+    },
+    {
+      "object": "FORE10 / F2 / inset downward diffuser",
+      "target": "FORE10 / F2 / shielded housing",
+      "attached": true
+    },
+    {
+      "object": "FORE10 / F2 / sealed rear feed",
+      "target": "FORE10 / F2 / wall shoe",
+      "attached": true
+    },
+    {
+      "object": "FORE10 / F2 / left captive lock",
+      "target": "FORE10 / F2 / shielded housing",
+      "attached": true
+    },
+    {
+      "object": "FORE10 / F2 / right captive lock",
+      "target": "FORE10 / F2 / shielded housing",
+      "attached": true
+    },
+    {
+      "object": "FORE10 / F3 / wall shoe",
+      "target": "FORE09 / Outboard continuous sill",
+      "attached": true
+    },
+    {
+      "object": "FORE10 / F3 / shielded housing",
+      "target": "FORE10 / F3 / wall shoe",
+      "attached": true
+    },
+    {
+      "object": "FORE10 / F3 / inset downward diffuser",
+      "target": "FORE10 / F3 / shielded housing",
+      "attached": true
+    },
+    {
+      "object": "FORE10 / F3 / sealed rear feed",
+      "target": "FORE10 / F3 / wall shoe",
+      "attached": true
+    },
+    {
+      "object": "FORE10 / F3 / left captive lock",
+      "target": "FORE10 / F3 / shielded housing",
+      "attached": true
+    },
+    {
+      "object": "FORE10 / F3 / right captive lock",
+      "target": "FORE10 / F3 / shielded housing",
+      "attached": true
+    }
+  ],
+  "fixture_bad_meshes": [],
+  "fixture_collisions": [],
+  "lights": [
+    {
+      "id": "F1",
+      "matches_config": true,
+      "ship_fixed": true,
+      "lens_distance": 0.06800813698403624,
+      "within_fixture": true,
+      "clear_to_target": true,
+      "first_receiver": "FORE09 / U1 fluid union",
+      "declared_receiver_prefix": "FORE09 / U1 ",
+      "first_block_distance": 3.9250295162200928
+    },
+    {
+      "id": "F2",
+      "matches_config": true,
+      "ship_fixed": true,
+      "lens_distance": 0.06800813698403624,
+      "within_fixture": true,
+      "clear_to_target": true,
+      "first_receiver": null,
+      "declared_receiver_prefix": null,
+      "first_block_distance": null
+    },
+    {
+      "id": "F3",
+      "matches_config": true,
+      "ship_fixed": true,
+      "lens_distance": 0.06800813698403624,
+      "within_fixture": true,
+      "clear_to_target": true,
+      "first_receiver": "FORE09 / U2 fluid union.001",
+      "declared_receiver_prefix": "FORE09 / U2 ",
+      "first_block_distance": 3.978560447692871
+    }
+  ],
+  "inspection_views": [
+    {
+      "camera": "fore08_detail",
+      "unit_x": -205.8,
+      "samples": 121,
+      "unchanged": true
+    },
+    {
+      "camera": "fore08_detail",
+      "unit_x": -195.4,
+      "samples": 121,
+      "unchanged": true
+    },
+    {
+      "camera": "fore08_reverse",
+      "unit_x": -205.8,
+      "samples": 121,
+      "unchanged": true
+    },
+    {
+      "camera": "fore08_reverse",
+      "unit_x": -195.4,
+      "samples": 121,
+      "unchanged": true
+    }
+  ],
+  "browser_tested": false,
+  "published": false
+}

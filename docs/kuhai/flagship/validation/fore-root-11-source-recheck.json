@@ -1,0 +1,757 @@
+{
+  "revision": "fore-root-11",
+  "source_sha256": "a1dd93fddd59a605ad4d7c2788d218542874a8386b0cf0e9bbb27f9454654970",
+  "baseline_sha256": "993d1dfada15902cc4d5d208986fbc0756a9463d771919bcd487deddfae867b2",
+  "input_validation_sha256": "0f7b2fb24d15530d440e619a4d2934942f5d316a9b55ba2e5277d544f6cc962a",
+  "config_sha256": "0e4da9afafd90a68daaab3bf37efc602420d8d4c28fb8e0d792610f34e0bc179",
+  "checks": {
+    "validated_fore10_input": true,
+    "prior_content_preserved": true,
+    "fore09_geometry_connections_preserved": true,
+    "bridge_geometry_preserved": true,
+    "fore10_fixture_geometry_metadata_preserved": true,
+    "lighting_preserved": true,
+    "declared_visibility_only": true,
+    "new_solids_closed": true,
+    "all_declared_contacts_attached": true,
+    "all_parts_anchored_to_hull": true,
+    "functional_parts_clear_of_prior_geometry": true,
+    "link_clear_of_clevis_cheeks": true,
+    "pin_axes_aligned": true,
+    "old_inspection_depths_preserved": true,
+    "new_link_and_floor_visible": true,
+    "seams_open_to_common_seats": true,
+    "turret_seat_depth_preserved": true,
+    "portable_images": true
+  },
+  "passed": true,
+  "new_meshes": 38,
+  "preserved_counts": [
+    100,
+    342,
+    18
+  ],
+  "contacts": [
+    {
+      "object": "FORE11 / Forward armor segment",
+      "target": "FORE11 / Joint 1 common seat 1",
+      "point": [
+        -203.7,
+        -41,
+        22.4
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Forward armor segment",
+      "target": "FORE11 / Joint 1 common seat 2",
+      "point": [
+        -203.7,
+        -53,
+        22.4
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Service armor segment",
+      "target": "FORE11 / Joint 1 common seat 1",
+      "point": [
+        -202.3,
+        -41,
+        22.4
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Service armor segment",
+      "target": "FORE11 / Joint 1 common seat 2",
+      "point": [
+        -202.3,
+        -53,
+        22.4
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Service armor segment",
+      "target": "FORE11 / Joint 2 common seat 1",
+      "point": [
+        -180.2,
+        -41,
+        22.4
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Service armor segment",
+      "target": "FORE11 / Joint 2 common seat 2",
+      "point": [
+        -180.2,
+        -53,
+        22.4
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Heel armor segment",
+      "target": "FORE11 / Joint 2 common seat 1",
+      "point": [
+        -178.8,
+        -41,
+        22.4
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Heel armor segment",
+      "target": "FORE11 / Joint 2 common seat 2",
+      "point": [
+        -178.8,
+        -53,
+        22.4
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Joint 1 common seat 1",
+      "target": "FORE09 / Swept forward shoulder body",
+      "point": [
+        -203.0,
+        -41,
+        21.93
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Joint 1 common seat 2",
+      "target": "FORE09 / Swept forward shoulder body",
+      "point": [
+        -203.0,
+        -53,
+        21.93
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Joint 2 common seat 1",
+      "target": "FORE09 / Swept forward shoulder body",
+      "point": [
+        -179.5,
+        -41,
+        21.93
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Joint 2 common seat 2",
+      "target": "FORE09 / Swept forward shoulder body",
+      "point": [
+        -179.5,
+        -53,
+        21.93
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Root inspection pan",
+      "target": "FORE09 / Swept forward shoulder body",
+      "point": [
+        -191.5,
+        -49.70000076293945,
+        21.950000762939453
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Root opening retaining rim",
+      "target": "FORE11 / Service armor segment",
+      "point": [
+        -193.1410675048828,
+        -45.83388137817383,
+        24.940000534057617
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Root opening retaining rim",
+      "target": "FORE11 / Service armor segment",
+      "point": [
+        -189.8589324951172,
+        -53.56612014770508,
+        24.940000534057617
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Pan edge stiffener -1",
+      "target": "FORE11 / Root inspection pan",
+      "point": [
+        -190.39422607421875,
+        -52.30502700805664,
+        22.149999618530273
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Pan edge stiffener 1",
+      "target": "FORE11 / Root inspection pan",
+      "point": [
+        -192.60577392578125,
+        -47.094970703125,
+        22.149999618530273
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Clevis 1 seated base",
+      "target": "FORE11 / Root inspection pan",
+      "point": [
+        -197.0230255126953,
+        -52.04438781738281,
+        22.15999984741211
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Clevis 1 cheek 1",
+      "target": "FORE11 / Clevis 1 seated base",
+      "point": [
+        -196.5619659423828,
+        -53.13058090209961,
+        22.479999542236328
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Clevis 1 cheek 2",
+      "target": "FORE11 / Clevis 1 seated base",
+      "point": [
+        -197.4840850830078,
+        -50.95819091796875,
+        22.479999542236328
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Clevis 1 captive transverse pin",
+      "target": "FORE11 / Clevis 1 cheek 1",
+      "point": [
+        -196.5619659423828,
+        -53.13058090209961,
+        23.520000457763672
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Clevis 1 captive transverse pin",
+      "target": "FORE11 / Clevis 1 cheek 2",
+      "point": [
+        -197.4840850830078,
+        -50.95819091796875,
+        23.520000457763672
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Clevis 1 pin retainer -1",
+      "target": "FORE11 / Clevis 1 captive transverse pin",
+      "point": [
+        -196.4213104248047,
+        -53.46196365356445,
+        23.520000457763672
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Clevis 1 pin retainer 1",
+      "target": "FORE11 / Clevis 1 captive transverse pin",
+      "point": [
+        -197.624755859375,
+        -50.626808166503906,
+        23.520000457763672
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Clevis 1 base lock -1.15 -1.63",
+      "target": "FORE11 / Clevis 1 seated base",
+      "point": [
+        -197.44471740722656,
+        -53.9941520690918,
+        22.510000228881836
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Clevis 1 base lock -1.15 1.63",
+      "target": "FORE11 / Clevis 1 seated base",
+      "point": [
+        -198.718505859375,
+        -50.99330520629883,
+        22.510000228881836
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Clevis 1 base lock 1.15 -1.63",
+      "target": "FORE11 / Clevis 1 seated base",
+      "point": [
+        -195.3275604248047,
+        -53.0954704284668,
+        22.510000228881836
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Clevis 1 base lock 1.15 1.63",
+      "target": "FORE11 / Clevis 1 seated base",
+      "point": [
+        -196.60133361816406,
+        -50.09462356567383,
+        22.510000228881836
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Clevis 2 seated base",
+      "target": "FORE11 / Root inspection pan",
+      "point": [
+        -185.9769744873047,
+        -47.355613708496094,
+        22.15999984741211
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Clevis 2 cheek 1",
+      "target": "FORE11 / Clevis 2 seated base",
+      "point": [
+        -185.5159149169922,
+        -48.441810607910156,
+        22.479999542236328
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Clevis 2 cheek 2",
+      "target": "FORE11 / Clevis 2 seated base",
+      "point": [
+        -186.4380340576172,
+        -46.26941680908203,
+        22.479999542236328
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Clevis 2 captive transverse pin",
+      "target": "FORE11 / Clevis 2 cheek 1",
+      "point": [
+        -185.5159149169922,
+        -48.441810607910156,
+        23.520000457763672
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Clevis 2 captive transverse pin",
+      "target": "FORE11 / Clevis 2 cheek 2",
+      "point": [
+        -186.4380340576172,
+        -46.26941680908203,
+        23.520000457763672
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Clevis 2 pin retainer -1",
+      "target": "FORE11 / Clevis 2 captive transverse pin",
+      "point": [
+        -185.375244140625,
+        -48.773189544677734,
+        23.520000457763672
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Clevis 2 pin retainer 1",
+      "target": "FORE11 / Clevis 2 captive transverse pin",
+      "point": [
+        -186.5786895751953,
+        -45.93803405761719,
+        23.520000457763672
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Clevis 2 base lock -1.15 -1.63",
+      "target": "FORE11 / Clevis 2 seated base",
+      "point": [
+        -186.39866638183594,
+        -49.30537796020508,
+        22.510000228881836
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Clevis 2 base lock -1.15 1.63",
+      "target": "FORE11 / Clevis 2 seated base",
+      "point": [
+        -187.6724395751953,
+        -46.30453109741211,
+        22.510000228881836
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Clevis 2 base lock 1.15 -1.63",
+      "target": "FORE11 / Clevis 2 seated base",
+      "point": [
+        -184.281494140625,
+        -48.40669631958008,
+        22.510000228881836
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Clevis 2 base lock 1.15 1.63",
+      "target": "FORE11 / Clevis 2 seated base",
+      "point": [
+        -185.55528259277344,
+        -45.40584945678711,
+        22.510000228881836
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Captured longitudinal shear link",
+      "target": "FORE11 / Clevis 1 captive transverse pin",
+      "point": [
+        -197.0230255126953,
+        -52.04438781738281,
+        23.520000457763672
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Captured longitudinal shear link",
+      "target": "FORE11 / Clevis 2 captive transverse pin",
+      "point": [
+        -185.9769744873047,
+        -47.355613708496094,
+        23.520000457763672
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Armor captive lock 1",
+      "target": "FORE11 / Forward armor segment",
+      "point": [
+        -204.4,
+        -41,
+        24.98
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Armor captive lock 2",
+      "target": "FORE11 / Forward armor segment",
+      "point": [
+        -204.4,
+        -53,
+        24.98
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Armor captive lock 3",
+      "target": "FORE11 / Service armor segment",
+      "point": [
+        -201.6,
+        -41,
+        24.98
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Armor captive lock 4",
+      "target": "FORE11 / Service armor segment",
+      "point": [
+        -201.6,
+        -53,
+        24.98
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Armor captive lock 5",
+      "target": "FORE11 / Heel armor segment",
+      "point": [
+        -178.1,
+        -41,
+        24.98
+      ],
+      "attached": true
+    },
+    {
+      "object": "FORE11 / Armor captive lock 6",
+      "target": "FORE11 / Heel armor segment",
+      "point": [
+        -178.1,
+        -53,
+        24.98
+      ],
+      "attached": true
+    }
+  ],
+  "unanchored_parts": [],
+  "bad_solids": [],
+  "collisions": [],
+  "link_clearance": [
+    {
+      "link": "FORE11 / Captured longitudinal shear link",
+      "cheek": "FORE11 / Clevis 1 cheek 1",
+      "crossings": 0,
+      "contained": false
+    },
+    {
+      "link": "FORE11 / Captured longitudinal shear link",
+      "cheek": "FORE11 / Clevis 1 cheek 2",
+      "crossings": 0,
+      "contained": false
+    },
+    {
+      "link": "FORE11 / Captured longitudinal shear link",
+      "cheek": "FORE11 / Clevis 2 cheek 1",
+      "crossings": 0,
+      "contained": false
+    },
+    {
+      "link": "FORE11 / Captured longitudinal shear link",
+      "cheek": "FORE11 / Clevis 2 cheek 2",
+      "crossings": 0,
+      "contained": false
+    }
+  ],
+  "pin_axes": [
+    {
+      "pin": "FORE11 / Clevis 1 captive transverse pin",
+      "cosine": 0.9999999701976776,
+      "aligned": true
+    },
+    {
+      "pin": "FORE11 / Clevis 2 captive transverse pin",
+      "cosine": 0.9999999701976776,
+      "aligned": true
+    }
+  ],
+  "old_views": [
+    {
+      "camera": "fore08_detail",
+      "panel": "fore U1",
+      "rays": 121,
+      "unchanged": true
+    },
+    {
+      "camera": "fore08_detail",
+      "panel": "fore U2",
+      "rays": 121,
+      "unchanged": true
+    },
+    {
+      "camera": "fore08_reverse",
+      "panel": "fore U1",
+      "rays": 121,
+      "unchanged": true
+    },
+    {
+      "camera": "fore08_reverse",
+      "panel": "fore U2",
+      "rays": 121,
+      "unchanged": true
+    },
+    {
+      "camera": "side03_detail",
+      "panel": "SIDE06 / Inset module face",
+      "rays": 121,
+      "unchanged": true
+    },
+    {
+      "camera": "side03_reverse",
+      "panel": "SIDE06 / Inset module face",
+      "rays": 121,
+      "unchanged": true
+    },
+    {
+      "camera": "side05_front",
+      "panel": "SIDE06 / Inset module face",
+      "rays": 121,
+      "unchanged": true
+    },
+    {
+      "camera": "side03_detail",
+      "panel": "SIDE06 / Inset module face.001",
+      "rays": 121,
+      "unchanged": true
+    },
+    {
+      "camera": "side03_reverse",
+      "panel": "SIDE06 / Inset module face.001",
+      "rays": 121,
+      "unchanged": true
+    },
+    {
+      "camera": "side05_front",
+      "panel": "SIDE06 / Inset module face.001",
+      "rays": 121,
+      "unchanged": true
+    },
+    {
+      "camera": "side03_detail",
+      "panel": "SIDE06 / Inset module face.002",
+      "rays": 121,
+      "unchanged": true
+    },
+    {
+      "camera": "side03_reverse",
+      "panel": "SIDE06 / Inset module face.002",
+      "rays": 121,
+      "unchanged": true
+    },
+    {
+      "camera": "side05_front",
+      "panel": "SIDE06 / Inset module face.002",
+      "rays": 121,
+      "unchanged": true
+    },
+    {
+      "camera": "side03_detail",
+      "panel": "SIDE06 / Canister instrument saddle",
+      "rays": 121,
+      "unchanged": true
+    },
+    {
+      "camera": "side03_reverse",
+      "panel": "SIDE06 / Canister instrument saddle",
+      "rays": 121,
+      "unchanged": true
+    },
+    {
+      "camera": "side05_front",
+      "panel": "SIDE06 / Canister instrument saddle",
+      "rays": 121,
+      "unchanged": true
+    },
+    {
+      "camera": "side03_detail",
+      "panel": "SIDE06 / Canister instrument saddle.001",
+      "rays": 121,
+      "unchanged": true
+    },
+    {
+      "camera": "side03_reverse",
+      "panel": "SIDE06 / Canister instrument saddle.001",
+      "rays": 121,
+      "unchanged": true
+    },
+    {
+      "camera": "side05_front",
+      "panel": "SIDE06 / Canister instrument saddle.001",
+      "rays": 121,
+      "unchanged": true
+    },
+    {
+      "camera": "side03_detail",
+      "panel": "SIDE06 / Canister instrument saddle.002",
+      "rays": 121,
+      "unchanged": true
+    },
+    {
+      "camera": "side03_reverse",
+      "panel": "SIDE06 / Canister instrument saddle.002",
+      "rays": 121,
+      "unchanged": true
+    },
+    {
+      "camera": "side05_front",
+      "panel": "SIDE06 / Canister instrument saddle.002",
+      "rays": 121,
+      "unchanged": true
+    }
+  ],
+  "new_views": [
+    {
+      "camera": "root11_detail",
+      "surface": "load link",
+      "rays": 85,
+      "visible": 85,
+      "visible_fraction": 1.0,
+      "in_frame": 85,
+      "passed": true
+    },
+    {
+      "camera": "root11_detail",
+      "surface": "inspection pan",
+      "rays": 10,
+      "visible": 9,
+      "visible_fraction": 0.9,
+      "in_frame": 10,
+      "passed": true
+    },
+    {
+      "camera": "root11_reverse",
+      "surface": "load link",
+      "rays": 85,
+      "visible": 85,
+      "visible_fraction": 1.0,
+      "in_frame": 85,
+      "passed": true
+    },
+    {
+      "camera": "root11_reverse",
+      "surface": "inspection pan",
+      "rays": 10,
+      "visible": 10,
+      "visible_fraction": 1.0,
+      "in_frame": 10,
+      "passed": true
+    }
+  ],
+  "seams": [
+    {
+      "xy": [
+        -203.0,
+        -41
+      ],
+      "open_to_seat": true,
+      "z": 22.799999237060547
+    },
+    {
+      "xy": [
+        -203.0,
+        -53
+      ],
+      "open_to_seat": true,
+      "z": 22.799999237060547
+    },
+    {
+      "xy": [
+        -179.5,
+        -41
+      ],
+      "open_to_seat": true,
+      "z": 22.799999237060547
+    },
+    {
+      "xy": [
+        -179.5,
+        -53
+      ],
+      "open_to_seat": true,
+      "z": 22.799999237060547
+    }
+  ],
+  "turret_seat_rays": 32,
+  "browser_tested": false,
+  "published": false,
+  "scope": "Declared attachment points, clevis/link clearance, existing equipment views and two new cameras. Not a global engineering, stress or all-angle collision certification."
+}

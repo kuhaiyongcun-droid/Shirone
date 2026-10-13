@@ -1,0 +1,87 @@
+{
+  "rejected_candidate_sha256": "631a6eb00e2e8d9a18573758917fc8c61b322029cc15a664a8c69017c5f2f559",
+  "final_source_sha256": "a1dd93fddd59a605ad4d7c2788d218542874a8386b0cf0e9bbb27f9454654970",
+  "rejected_due_to_retained_overlay": {
+    "collision_count": 6,
+    "new_views": [
+      {
+        "camera": "root11_detail",
+        "surface": "load link",
+        "rays": 85,
+        "visible": 0,
+        "visible_fraction": 0.0,
+        "in_frame": 85,
+        "passed": false
+      },
+      {
+        "camera": "root11_detail",
+        "surface": "inspection pan",
+        "rays": 10,
+        "visible": 0,
+        "visible_fraction": 0.0,
+        "in_frame": 10,
+        "passed": false
+      },
+      {
+        "camera": "root11_reverse",
+        "surface": "load link",
+        "rays": 85,
+        "visible": 0,
+        "visible_fraction": 0.0,
+        "in_frame": 85,
+        "passed": false
+      },
+      {
+        "camera": "root11_reverse",
+        "surface": "inspection pan",
+        "rays": 10,
+        "visible": 0,
+        "visible_fraction": 0.0,
+        "in_frame": 10,
+        "passed": false
+      }
+    ],
+    "seams": [
+      {
+        "xy": [
+          -203.0,
+          -41
+        ],
+        "open_to_seat": false,
+        "z": 25.399999618530273
+      },
+      {
+        "xy": [
+          -203.0,
+          -53
+        ],
+        "open_to_seat": false,
+        "z": 25.399999618530273
+      },
+      {
+        "xy": [
+          -179.5,
+          -41
+        ],
+        "open_to_seat": false,
+        "z": 25.399999618530273
+      },
+      {
+        "xy": [
+          -179.5,
+          -53
+        ],
+        "open_to_seat": false,
+        "z": 25.399999618530273
+      }
+    ]
+  },
+  "fix": "Five SURFACE03 port-shoulder overlays explicitly retained in hidden FORE11_PREVIOUS together with the replaced base island. Forward armor uses evaluated old outline before cuts to keep its turret-bearing surface.",
+  "final_checks": {
+    "functional_parts_clear_of_prior_geometry": true,
+    "new_link_and_floor_visible": true,
+    "seams_open_to_common_seats": true,
+    "turret_seat_depth_preserved": true
+  },
+  "thresholds_not_relaxed": true
+}

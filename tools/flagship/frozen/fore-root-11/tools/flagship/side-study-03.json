@@ -1,0 +1,12 @@
+{
+  "revision": "side-study-03",
+  "input_sha256": "e05803fd34da6ccff0fb680bf3953165aabf742bd659342f5680de1022d0e9a7",
+  "status": "Port bridge structural sample; original fictional service layout, not final whole-ship art",
+  "host": "BRIDGE01 / Swept bridge abutment",
+  "cameras": {
+    "side03_context": {"position": [-270, -185, 106], "target": [-177, -5, 39], "lens": 66},
+    "side03_detail": {"position": [-194, -101, 58], "target": [-171, -24, 36], "lens": 65},
+    "side03_reverse": {"position": [-118, -100, 61], "target": [-169, -23, 36], "lens": 60}
+  }
+}
+

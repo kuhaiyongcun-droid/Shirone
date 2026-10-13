@@ -1,0 +1,19 @@
+{
+  "revision": "integration-study-01",
+  "status": "Whole-ship material and orbital lighting preview; shape and final art unapproved",
+  "seed": 112,
+  "preview": {"width": 960, "height": 600, "samples": 32, "threads": 6},
+  "stellar_direction": [-0.32, 0.75, 0.57],
+  "stellar_energy": 3.2,
+  "planet": {
+    "center_m": [3732000, 2464000, -1397000],
+    "radius_m": 1050000,
+    "status": "Fictional body; creative radius and distance, no orbital or canon claim"
+  },
+  "cameras": {
+    "overview": {"position": [-550, -600, 390], "target": [0, 0, 8], "lens": 44},
+    "stern": {"position": [710, -320, 240], "target": [45, 0, 10], "lens": 49},
+    "port": {"position": [-10, -870, 135], "target": [0, 0, 10], "lens": 47},
+    "detail": {"position": [345, -310, 155], "target": [150, -99, 15], "lens": 54}
+  }
+}

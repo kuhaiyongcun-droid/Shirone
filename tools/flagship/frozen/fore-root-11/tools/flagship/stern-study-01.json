@@ -1,0 +1,18 @@
+{
+  "revision": "stern-study-01",
+  "input_sha256": "1902afeb0228679ff5f8027f8a5adcf86cd4b4e07cfb4c4b1ba6c21b5a786e95",
+  "status": "Editable aft connection study; not canonical propulsion engineering",
+  "main_centers_y": [-92, 92],
+  "main_z": 30,
+  "main_radius": 24,
+  "small_centers_y": [-114, -72, 72, 114],
+  "small_z": -13,
+  "small_radius": 11,
+  "guard_sectors": 12,
+  "guard_gap_rad": 0.045,
+  "root_collar_top_clearance_rad": 0.35,
+  "cameras": {
+    "stern_connection": {"position": [291, 217, 119], "target": [196, 98, 29], "lens": 57},
+    "stern_nozzle": {"position": [312, 137, 66], "target": [221, 92, 25], "lens": 60}
+  }
+}

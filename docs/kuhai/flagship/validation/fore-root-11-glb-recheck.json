@@ -1,0 +1,122 @@
+{
+  "source_sha256": "a1dd93fddd59a605ad4d7c2788d218542874a8386b0cf0e9bbb27f9454654970",
+  "glb_sha256": "bbe6a3cea14393844f9950b9b4027bbf6302157b3d5efb1e295f09927147922a",
+  "rows": [
+    {
+      "view": "fore08_detail",
+      "target": "fore09 U1 lid",
+      "rays": 121,
+      "within_0_1_source_m": 121,
+      "max_error_source_m": 2.8800332776148795e-05,
+      "passed": true
+    },
+    {
+      "view": "fore08_detail",
+      "target": "fore09 U2 lid",
+      "rays": 121,
+      "within_0_1_source_m": 121,
+      "max_error_source_m": 4.840308204822357e-05,
+      "passed": true
+    },
+    {
+      "view": "fore08_detail",
+      "target": "fore09 channel floor",
+      "rays": 35,
+      "within_0_1_source_m": 35,
+      "max_error_source_m": 3.4332275390625e-05,
+      "passed": true
+    },
+    {
+      "view": "fore08_reverse",
+      "target": "fore09 U1 lid",
+      "rays": 121,
+      "within_0_1_source_m": 121,
+      "max_error_source_m": 3.4332275390625e-05,
+      "passed": true
+    },
+    {
+      "view": "fore08_reverse",
+      "target": "fore09 U2 lid",
+      "rays": 121,
+      "within_0_1_source_m": 121,
+      "max_error_source_m": 2.8800332776148795e-05,
+      "passed": true
+    },
+    {
+      "view": "fore08_reverse",
+      "target": "fore09 channel floor",
+      "rays": 35,
+      "within_0_1_source_m": 35,
+      "max_error_source_m": 2.8800332776148795e-05,
+      "passed": true
+    },
+    {
+      "view": "root11_detail",
+      "target": "fore11 load link",
+      "rays": 85,
+      "within_0_1_source_m": 85,
+      "max_error_source_m": 4.448663249851456e-05,
+      "passed": true
+    },
+    {
+      "view": "root11_detail",
+      "target": "fore11 inspection pan",
+      "rays": 10,
+      "within_0_1_source_m": 10,
+      "max_error_source_m": 2.6428997918226276e-05,
+      "passed": true
+    },
+    {
+      "view": "root11_reverse",
+      "target": "fore11 load link",
+      "rays": 85,
+      "within_0_1_source_m": 85,
+      "max_error_source_m": 2.7771415288087914e-05,
+      "passed": true
+    },
+    {
+      "view": "root11_reverse",
+      "target": "fore11 inspection pan",
+      "rays": 10,
+      "within_0_1_source_m": 10,
+      "max_error_source_m": 2.8546580404464274e-05,
+      "passed": true
+    },
+    {
+      "view": "vertical",
+      "target": "shared armor seat",
+      "rays": 1,
+      "within_0_1_source_m": 1,
+      "max_error_source_m": 1.1444091796875e-05,
+      "passed": true
+    },
+    {
+      "view": "vertical",
+      "target": "shared armor seat",
+      "rays": 1,
+      "within_0_1_source_m": 1,
+      "max_error_source_m": 1.1444091796875e-05,
+      "passed": true
+    },
+    {
+      "view": "vertical",
+      "target": "shared armor seat",
+      "rays": 1,
+      "within_0_1_source_m": 1,
+      "max_error_source_m": 1.1444091796875e-05,
+      "passed": true
+    },
+    {
+      "view": "vertical",
+      "target": "shared armor seat",
+      "rays": 1,
+      "within_0_1_source_m": 1,
+      "max_error_source_m": 1.1444091796875e-05,
+      "passed": true
+    }
+  ],
+  "total_rays": 748,
+  "passed": true,
+  "browser_tested": false,
+  "scope": "Two old fore09 cameras plus two root11 cameras and four vertical seam samples. Actual Draco-decoded GLB, no browser."
+}

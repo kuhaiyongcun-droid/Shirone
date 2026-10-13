@@ -1,0 +1,28 @@
+{
+  "system": "Linux-6.18.44-x86_64-with-glibc2.39",
+  "architecture": "x86_64",
+  "python": "3.11.17",
+  "logical_cpu_count": 9,
+  "cgroup_cpu_max": "800000 100000",
+  "cgroup_memory_max_bytes": "8589934592",
+  "blender_executable_on_path": null,
+  "nvidia_smi_on_path": null,
+  "authorization_note": "Inventory is not authorization. Verify user-connected target before local workload.",
+  "render_started": false,
+  "blender": "4.5.14 LTS",
+  "blender_build_hash": "62c1db4208e8",
+  "cycles_compiled": true,
+  "cycles_devices": [
+    {
+      "name": "Intel Xeon Platinum 8370C CPU @ 2.80GHz",
+      "type": "CPU"
+    }
+  ],
+  "python_packages": {
+    "Cython": "3.3.0",
+    "requests": "2.34.2",
+    "zstandard": "0.25.0",
+    "bpy": "4.5.14",
+    "numpy": "1.26.4"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "revision": "surface-study-02",
+  "input_sha256": "126e2b183a39a34ba1c4113e190358cf7b0d3f48d36802a28f4f5359d8092259",
+  "status": "Local armor and maintenance material sample; not approved final art or canon engineering",
+  "seed": 207,
+  "plate_lift_m": 0.12,
+  "plate_thickness_m": 0.28,
+  "panel_inset_ratio": 0.035,
+  "preview": {"width": 960, "height": 600, "samples": 32, "threads": 6},
+  "cameras": {
+    "surface_bow": {"position": [-297, -93, 107], "target": [-230, -4, 22], "lens": 60},
+    "surface_shoulder": {"position": [-254, -125, 96], "target": [-204, -51, 23], "lens": 60},
+    "surface_archive": {"position": [-135, -116, 101], "target": [-80, -38, 27], "lens": 57},
+    "surface_hatch": {"position": [-84, -46, 38], "target": [-80, -39, 29.8], "lens": 62}
+  }
+}

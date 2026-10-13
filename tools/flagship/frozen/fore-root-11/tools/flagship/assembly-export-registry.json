@@ -1,0 +1,6 @@
+{
+  "validated_sources": {
+    "845cbc31ca00a14b0f0f9d2ce4a87e6e081a0f63fe9cf5697d9c2c3d93ff3892": "side-assembly-05"
+  },
+  "validation": "assembly_check.py: prior content, closed volume, equipment/hull interference, pipe endpoints, load supports, panel visibility, images"
+}

@@ -1,0 +1,8 @@
+{
+  "validated_sources": {
+    "587ddbff0f1ffb7326b2298a2158699e4b3215d29c3a6a0b68b843d6486dda4f": "recovered-side03",
+    "2b5bbd664279a5bf210fcc9916aa2b797069271801db414a030d7e37b57b4911": "side-finish-04"
+  },
+  "validation": "evidence/final-inspection.json and evidence/recovered-side03-inspection.json",
+  "procedural_texture_baked": false
+}
