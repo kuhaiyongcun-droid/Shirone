@@ -1,0 +1,19 @@
+{
+  "revision": "bridge-study-02",
+  "input_sha256": "3897040bdd78990d704e5b3ae0a82023e7c81f380762a2c72aa36d2b1d3e2bab",
+  "status": "Local side structure and coating study; not final art",
+  "side_panel_inset_m": 0.65,
+  "side_panel_lift_m": 0.14,
+  "side_panel_thickness_m": 0.42,
+  "paint_roughness": 0.47,
+  "metal_roughness": 0.3,
+  "edge_chip_reach_m": 0.12,
+  "primer_margin_m": 0.035,
+  "micro_height_m": 0.0007,
+  "cameras": {
+    "bridge_side": {"location": [-219, 176, 99], "target": [-155, 1, 41], "lens": 62},
+    "bridge_rear": {"location": [-64, 155, 102], "target": [-149, 0, 38], "lens": 62},
+    "bridge_finish": {"location": [-165, -32, 56], "target": [-155, -14.8, 49.4], "lens": 70},
+    "bridge_finish_lit": {"location": [-144, 32, 56], "target": [-155, 14.8, 49.4], "lens": 70}
+  }
+}

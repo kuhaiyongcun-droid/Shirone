@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "tests": [
+    "ownership, regional selection and idempotent disposal",
+    "invalid duplicate light IDs rejected, ownership released",
+    "abort while loading does not attach or retain resources"
+  ],
+  "browser_tested": false,
+  "three_executed": false,
+  "profile_sha256": "56c26a639029a283085311ccd5d30e30a4b8b1018f62ceb0ad56c9ad0c21e15c",
+  "adapter_sha256": "957c997a956b71277c5dd5461583ffb4e37e2f862329b2d09140a84b4de022be"
+}

@@ -1,0 +1,17 @@
+{
+  "recovery_source": "Verified home-look-01 and side_study.py at 9fac8402a09effaadef454450859dd9f8199778e",
+  "recovered_scene_sha256": "587ddbff0f1ffb7326b2298a2158699e4b3215d29c3a6a0b68b843d6486dda4f",
+  "historical_scene_sha256_unavailable": "14a58708c990193d989f298f3f628b5a89dc7b2b82c476281630187a5494d57a",
+  "damaged_archive_sha256": "1c7f7a8085544bbef2492a269510e98a7e139007db0e0a8f446ba662641db438",
+  "historical_input_sha256": "e05803fd34da6ccff0fb680bf3953165aabf742bd659342f5680de1022d0e9a7",
+  "image_comparison": {
+    "image_size": [
+      960,
+      600
+    ],
+    "mean_absolute_channel_difference_0_255": 0.0001579861111111111,
+    "note": "Rebuilt same geometry and render configuration; not a claim to recovered historical blend bytes"
+  },
+  "user_authorized_reconstruction": true,
+  "historical_blend_restored": false
+}

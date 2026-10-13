@@ -1,0 +1,31 @@
+{
+  "revision": "blockout-02",
+  "status": "Proportion and cutaway study; not an approved Hyperion reconstruction",
+  "blender_version": "4.5.14 LTS",
+  "random_seed": 27,
+  "units": "metres; all whole-ship dimensions are provisional creative assumptions",
+  "ship_length_target_m": 500,
+  "preview": {
+    "engine": "CYCLES",
+    "device": "CPU",
+    "width": 720,
+    "height": 450,
+    "samples": 24,
+    "threads": 6,
+    "denoise": true,
+    "max_bounces": 4
+  },
+  "local_sample": {
+    "width": 960,
+    "height": 600,
+    "samples": 32,
+    "device": "select only after local machine and GPU verification"
+  },
+  "archive": {
+    "room_id": "archive",
+    "origin_m": [-80, -37, 17],
+    "interior_size_m": [36, 18, 5],
+    "reference_person_m": 1.8,
+    "status": "Original website room, not a canonical Hyperion compartment"
+  }
+}

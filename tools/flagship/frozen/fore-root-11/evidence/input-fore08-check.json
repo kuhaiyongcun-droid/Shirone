@@ -1,0 +1,1258 @@
+{
+  "checks": {
+    "prior_content_preserved": true,
+    "closed_solids": true,
+    "equipment_and_routes_clear_of_hull": true,
+    "all_functional_endpoints_in_fittings": true,
+    "mounts_and_tees_attached": true,
+    "inspection_panels_visible": true,
+    "portable_images": true,
+    "repaired_geometry_unchanged": true,
+    "existing_lighting_unchanged": true,
+    "fore_closed_solids": true,
+    "fore_host_clearance": true,
+    "fore_connections_attached": true,
+    "fore_connector_axes_aligned": true,
+    "fore_corner_joints_closed": true,
+    "fore_inspection_panels_visible": true,
+    "declared_visibility_changes": true
+  },
+  "passed": true,
+  "source_sha256": "c0df9ec63433548bd751438c71b9f237c2de7445248d1e691589153875b3f405",
+  "collisions": [],
+  "invalid_meshes": [],
+  "route_endpoints": [
+    {
+      "route": "SIDE06 / Cassette connected cable 1",
+      "side": "start",
+      "target": "SIDE06 / Cassette sealed plug",
+      "inside_fitting": true,
+      "nearest_surface": 0.061249
+    },
+    {
+      "route": "SIDE06 / Cassette connected cable 1",
+      "side": "end",
+      "target": "SIDE06 / Junction inlet 1",
+      "inside_fitting": true,
+      "nearest_surface": 0.095001
+    },
+    {
+      "route": "SIDE06 / Cassette connected cable 2",
+      "side": "start",
+      "target": "SIDE06 / Cassette sealed plug.001",
+      "inside_fitting": true,
+      "nearest_surface": 0.061249
+    },
+    {
+      "route": "SIDE06 / Cassette connected cable 2",
+      "side": "end",
+      "target": "SIDE06 / Junction inlet 2",
+      "inside_fitting": true,
+      "nearest_surface": 0.095001
+    },
+    {
+      "route": "SIDE06 / Cassette connected cable 3",
+      "side": "start",
+      "target": "SIDE06 / Cassette sealed plug.002",
+      "inside_fitting": true,
+      "nearest_surface": 0.061249
+    },
+    {
+      "route": "SIDE06 / Cassette connected cable 3",
+      "side": "end",
+      "target": "SIDE06 / Junction inlet 3",
+      "inside_fitting": true,
+      "nearest_surface": 0.095001
+    },
+    {
+      "route": "SIDE06 / Junction hull cable",
+      "side": "start",
+      "target": "SIDE06 / Junction rear gland",
+      "inside_fitting": true,
+      "nearest_surface": 0.084999
+    },
+    {
+      "route": "SIDE06 / Junction hull cable",
+      "side": "end",
+      "target": "SIDE06 / Electronics hull entry socket",
+      "inside_fitting": true,
+      "nearest_surface": 0.139999
+    },
+    {
+      "route": "SIDE06 / Upper supply manifold",
+      "side": "start",
+      "target": "SIDE06 / Supply bulkhead socket",
+      "inside_fitting": true,
+      "nearest_surface": 0.15
+    },
+    {
+      "route": "SIDE06 / Upper supply manifold",
+      "side": "end",
+      "target": "SIDE06 / Supply removable blind cap",
+      "inside_fitting": true,
+      "nearest_surface": 0.119996
+    },
+    {
+      "route": "SIDE06 / Cylinder supply 1",
+      "side": "start",
+      "target": "SIDE06 / Canister top coupling",
+      "inside_fitting": true,
+      "nearest_surface": 0.215
+    },
+    {
+      "route": "SIDE06 / Cylinder supply 1",
+      "side": "end",
+      "target": "SIDE06 / Supply branch tee 1",
+      "inside_fitting": true,
+      "nearest_surface": 0.297431
+    },
+    {
+      "route": "SIDE06 / Cylinder supply 2",
+      "side": "start",
+      "target": "SIDE06 / Canister top coupling.001",
+      "inside_fitting": true,
+      "nearest_surface": 0.215
+    },
+    {
+      "route": "SIDE06 / Cylinder supply 2",
+      "side": "end",
+      "target": "SIDE06 / Supply branch tee 2",
+      "inside_fitting": true,
+      "nearest_surface": 0.297431
+    },
+    {
+      "route": "SIDE06 / Cylinder supply 3",
+      "side": "start",
+      "target": "SIDE06 / Canister top coupling.002",
+      "inside_fitting": true,
+      "nearest_surface": 0.215
+    },
+    {
+      "route": "SIDE06 / Cylinder supply 3",
+      "side": "end",
+      "target": "SIDE06 / Supply branch tee 3",
+      "inside_fitting": true,
+      "nearest_surface": 0.297426
+    },
+    {
+      "route": "SIDE06 / Lower return manifold",
+      "side": "start",
+      "target": "SIDE06 / Return header blind cap",
+      "inside_fitting": true,
+      "nearest_surface": 0.099986
+    },
+    {
+      "route": "SIDE06 / Lower return manifold",
+      "side": "end",
+      "target": "SIDE06 / Return bulkhead socket",
+      "inside_fitting": true,
+      "nearest_surface": 0.15
+    },
+    {
+      "route": "SIDE06 / Cylinder return 1",
+      "side": "start",
+      "target": "SIDE06 / Canister bottom coupling",
+      "inside_fitting": true,
+      "nearest_surface": 0.165001
+    },
+    {
+      "route": "SIDE06 / Cylinder return 1",
+      "side": "end",
+      "target": "SIDE06 / Return branch tee 1",
+      "inside_fitting": true,
+      "nearest_surface": 0.22803
+    },
+    {
+      "route": "SIDE06 / Cylinder return 2",
+      "side": "start",
+      "target": "SIDE06 / Canister bottom coupling.001",
+      "inside_fitting": true,
+      "nearest_surface": 0.165001
+    },
+    {
+      "route": "SIDE06 / Cylinder return 2",
+      "side": "end",
+      "target": "SIDE06 / Return branch tee 2",
+      "inside_fitting": true,
+      "nearest_surface": 0.228028
+    },
+    {
+      "route": "SIDE06 / Cylinder return 3",
+      "side": "start",
+      "target": "SIDE06 / Canister bottom coupling.002",
+      "inside_fitting": true,
+      "nearest_surface": 0.165001
+    },
+    {
+      "route": "SIDE06 / Cylinder return 3",
+      "side": "end",
+      "target": "SIDE06 / Return branch tee 3",
+      "inside_fitting": true,
+      "nearest_surface": 0.228026
+    }
+  ],
+  "support_endpoints": [
+    {
+      "support": "SIDE06 / Cassette wall support",
+      "side": "start",
+      "target": "SIDE06 / Isolated cassette cradle",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Cassette wall support",
+      "side": "end",
+      "target": "BRIDGE01 / Tapered bridge plinth",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Cassette wall support.001",
+      "side": "start",
+      "target": "SIDE06 / Isolated cassette cradle",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Cassette wall support.001",
+      "side": "end",
+      "target": "BRIDGE01 / Tapered bridge plinth",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Cassette wall support.002",
+      "side": "start",
+      "target": "SIDE06 / Isolated cassette cradle.001",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Cassette wall support.002",
+      "side": "end",
+      "target": "BRIDGE01 / Tapered bridge plinth",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Cassette wall support.003",
+      "side": "start",
+      "target": "SIDE06 / Isolated cassette cradle.001",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Cassette wall support.003",
+      "side": "end",
+      "target": "BRIDGE01 / Tapered bridge plinth",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Cassette wall support.004",
+      "side": "start",
+      "target": "SIDE06 / Isolated cassette cradle.002",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Cassette wall support.004",
+      "side": "end",
+      "target": "BRIDGE01 / Tapered bridge plinth",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Cassette wall support.005",
+      "side": "start",
+      "target": "SIDE06 / Isolated cassette cradle.002",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Cassette wall support.005",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 0",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support",
+      "side": "start",
+      "target": "SIDE06 / Manifold mounting shoe",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support",
+      "side": "end",
+      "target": "FORM03 / Prow upper wedge",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.001",
+      "side": "start",
+      "target": "SIDE06 / Manifold mounting shoe",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.001",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 1",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.002",
+      "side": "start",
+      "target": "SIDE06 / Manifold mounting shoe",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.002",
+      "side": "end",
+      "target": "BRIDGE01 / Tapered bridge plinth",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.003",
+      "side": "start",
+      "target": "SIDE06 / Manifold mounting shoe",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.003",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 1",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.004",
+      "side": "start",
+      "target": "SIDE06 / Manifold mounting shoe.001",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.004",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 1",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.005",
+      "side": "start",
+      "target": "SIDE06 / Manifold mounting shoe.001",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.005",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 1",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.006",
+      "side": "start",
+      "target": "SIDE06 / Manifold mounting shoe.001",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.006",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 1",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.007",
+      "side": "start",
+      "target": "SIDE06 / Manifold mounting shoe.001",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.007",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 1",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.008",
+      "side": "start",
+      "target": "SIDE06 / Manifold mounting shoe.002",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.008",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 1",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.009",
+      "side": "start",
+      "target": "SIDE06 / Manifold mounting shoe.002",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.009",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 1",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.010",
+      "side": "start",
+      "target": "SIDE06 / Manifold mounting shoe.002",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.010",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 1",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.011",
+      "side": "start",
+      "target": "SIDE06 / Manifold mounting shoe.002",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.011",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 1",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Guard support to carrier",
+      "side": "start",
+      "target": "SIDE06 / Removable equipment shield",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Guard support to carrier",
+      "side": "end",
+      "target": "SIDE06 / Manifold mounting shoe",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Guard support to carrier.001",
+      "side": "start",
+      "target": "SIDE06 / Removable equipment shield",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Guard support to carrier.001",
+      "side": "end",
+      "target": "SIDE06 / Manifold mounting shoe.001",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Supply manifold wall support",
+      "side": "start",
+      "target": "SIDE06 / Upper supply manifold",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Supply manifold wall support",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 1",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Supply manifold wall support.001",
+      "side": "start",
+      "target": "SIDE06 / Upper supply manifold",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Supply manifold wall support.001",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 1",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Return manifold wall support",
+      "side": "start",
+      "target": "SIDE06 / Lower return manifold",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Return manifold wall support",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 1",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Return manifold wall support.001",
+      "side": "start",
+      "target": "SIDE06 / Lower return manifold",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Return manifold wall support.001",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 1",
+      "attached": true
+    }
+  ],
+  "manifold_tees": [
+    {
+      "tee": "SIDE06 / Supply branch tee 1",
+      "manifold": "SIDE06 / Upper supply manifold",
+      "attached": true
+    },
+    {
+      "tee": "SIDE06 / Supply branch tee 2",
+      "manifold": "SIDE06 / Upper supply manifold",
+      "attached": true
+    },
+    {
+      "tee": "SIDE06 / Supply branch tee 3",
+      "manifold": "SIDE06 / Upper supply manifold",
+      "attached": true
+    },
+    {
+      "tee": "SIDE06 / Return branch tee 1",
+      "manifold": "SIDE06 / Lower return manifold",
+      "attached": true
+    },
+    {
+      "tee": "SIDE06 / Return branch tee 2",
+      "manifold": "SIDE06 / Lower return manifold",
+      "attached": true
+    },
+    {
+      "tee": "SIDE06 / Return branch tee 3",
+      "manifold": "SIDE06 / Lower return manifold",
+      "attached": true
+    }
+  ],
+  "panel_visibility": [
+    {
+      "panel": "E1",
+      "camera": "side03_detail",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Inset module face": 179,
+        "SIDE06 / Cassette removable header": 32,
+        "SIDE06 / Module face protective rib.001": 17,
+        "SIDE06 / Module face protective rib.002": 17
+      }
+    },
+    {
+      "panel": "E1",
+      "camera": "side03_reverse",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Inset module face": 184,
+        "SIDE06 / Cassette removable header": 30,
+        "SIDE06 / Module face protective rib.001": 17,
+        "SIDE06 / Module face protective rib.002": 17
+      }
+    },
+    {
+      "panel": "E1",
+      "camera": "side05_front",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Inset module face": 212,
+        "SIDE06 / Module face protective rib.001": 17,
+        "SIDE06 / Module face protective rib.002": 17,
+        "SIDE06 / Module face protective rib.003": 17
+      }
+    },
+    {
+      "panel": "E2",
+      "camera": "side03_detail",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Inset module face.001": 180,
+        "SIDE06 / Cassette removable header.001": 31,
+        "SIDE06 / Module face protective rib.006": 17,
+        "SIDE06 / Module face protective rib.007": 17
+      }
+    },
+    {
+      "panel": "E2",
+      "camera": "side03_reverse",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Inset module face.001": 184,
+        "SIDE06 / Cassette removable header.001": 28,
+        "SIDE06 / Module face protective rib.006": 17,
+        "SIDE06 / Module face protective rib.007": 17
+      }
+    },
+    {
+      "panel": "E2",
+      "camera": "side05_front",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Inset module face.001": 213,
+        "SIDE06 / Module face protective rib.006": 17,
+        "SIDE06 / Module face protective rib.007": 17,
+        "SIDE06 / Module face protective rib.008": 17
+      }
+    },
+    {
+      "panel": "E3",
+      "camera": "side03_detail",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Inset module face.002": 182,
+        "SIDE06 / Cassette removable header.002": 30,
+        "SIDE06 / Module face protective rib.011": 17,
+        "SIDE06 / Module face protective rib.012": 17
+      }
+    },
+    {
+      "panel": "E3",
+      "camera": "side03_reverse",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Inset module face.002": 184,
+        "SIDE06 / Cassette removable header.002": 27,
+        "SIDE06 / Module face protective rib.011": 17,
+        "SIDE06 / Module face protective rib.012": 17
+      }
+    },
+    {
+      "panel": "E3",
+      "camera": "side05_front",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Inset module face.002": 213,
+        "SIDE06 / Module face protective rib.011": 17,
+        "SIDE06 / Module face protective rib.012": 17,
+        "SIDE06 / Module face protective rib.013": 17
+      }
+    },
+    {
+      "panel": "P1",
+      "camera": "side03_detail",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Canister instrument saddle": 210,
+        "SIDE06 / Recessed diagnostic port": 52,
+        "SIDE06 / Diagnostic port inset": 24,
+        "SIDE06 / stencil P1": 3
+      }
+    },
+    {
+      "panel": "P1",
+      "camera": "side03_reverse",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Canister instrument saddle": 198,
+        "SIDE06 / Recessed diagnostic port": 60,
+        "SIDE06 / Diagnostic port inset": 25,
+        "SIDE06 / stencil P1": 6
+      }
+    },
+    {
+      "panel": "P1",
+      "camera": "side05_front",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Canister instrument saddle": 210,
+        "SIDE06 / Recessed diagnostic port": 52,
+        "SIDE06 / Diagnostic port inset": 21,
+        "SIDE06 / stencil P1": 6
+      }
+    },
+    {
+      "panel": "P2",
+      "camera": "side03_detail",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Canister instrument saddle.001": 205,
+        "SIDE06 / Recessed diagnostic port.001": 51,
+        "SIDE06 / Diagnostic port inset.001": 26,
+        "SIDE06 / stencil P2": 7
+      }
+    },
+    {
+      "panel": "P2",
+      "camera": "side03_reverse",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Canister instrument saddle.001": 202,
+        "SIDE06 / Recessed diagnostic port.001": 58,
+        "SIDE06 / Diagnostic port inset.001": 24,
+        "SIDE06 / stencil P2": 5
+      }
+    },
+    {
+      "panel": "P2",
+      "camera": "side05_front",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Canister instrument saddle.001": 210,
+        "SIDE06 / Recessed diagnostic port.001": 50,
+        "SIDE06 / Diagnostic port inset.001": 23,
+        "SIDE06 / stencil P2": 6
+      }
+    },
+    {
+      "panel": "P3",
+      "camera": "side03_detail",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Canister instrument saddle.002": 203,
+        "SIDE06 / Recessed diagnostic port.002": 53,
+        "SIDE06 / Diagnostic port inset.002": 25,
+        "SIDE06 / stencil P3": 8
+      }
+    },
+    {
+      "panel": "P3",
+      "camera": "side03_reverse",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Canister instrument saddle.002": 206,
+        "SIDE06 / Recessed diagnostic port.002": 52,
+        "SIDE06 / Diagnostic port inset.002": 27,
+        "SIDE06 / stencil P3": 4
+      }
+    },
+    {
+      "panel": "P3",
+      "camera": "side05_front",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Canister instrument saddle.002": 209,
+        "SIDE06 / Recessed diagnostic port.002": 51,
+        "SIDE06 / Diagnostic port inset.002": 23,
+        "SIDE06 / stencil P3": 6
+      }
+    }
+  ],
+  "images": [
+    {
+      "name": "Blue Metal Plate roughness 1024 - CC0",
+      "packed": true,
+      "relative": true,
+      "exists": true
+    }
+  ],
+  "browser_tested": false,
+  "fore_invalid_meshes": [],
+  "fore_collisions": [],
+  "fore_routes": [
+    {
+      "object": "FORE08 / U1 attached lifting handle",
+      "end": "start",
+      "target": "FORE08 / U1 removable top panel",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U1 attached lifting handle",
+      "end": "end",
+      "target": "FORE08 / U1 removable top panel",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U1 attached lifting handle.001",
+      "end": "start",
+      "target": "FORE08 / U1 removable top panel",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U1 attached lifting handle.001",
+      "end": "end",
+      "target": "FORE08 / U1 removable top panel",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U2 attached lifting handle",
+      "end": "start",
+      "target": "FORE08 / U2 removable top panel",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U2 attached lifting handle",
+      "end": "end",
+      "target": "FORE08 / U2 removable top panel",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U2 attached lifting handle.001",
+      "end": "start",
+      "target": "FORE08 / U2 removable top panel",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U2 attached lifting handle.001",
+      "end": "end",
+      "target": "FORE08 / U2 removable top panel",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / Closed coolant link 1",
+      "end": "start",
+      "target": "FORE08 / Supply bulkhead sleeve",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / Closed coolant link 1",
+      "end": "end",
+      "target": "FORE08 / U1 fluid union",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / Closed coolant link 2",
+      "end": "start",
+      "target": "FORE08 / U1 fluid union.001",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / Closed coolant link 2",
+      "end": "end",
+      "target": "FORE08 / U2 fluid union",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / Closed coolant link 3",
+      "end": "start",
+      "target": "FORE08 / U2 fluid union.001",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / Closed coolant link 3",
+      "end": "end",
+      "target": "FORE08 / Return bulkhead sleeve",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U1 connected power cable",
+      "end": "start",
+      "target": "FORE08 / U1 sealed wall power socket",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U1 connected power cable",
+      "end": "end",
+      "target": "FORE08 / U1 power gland",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U2 connected power cable",
+      "end": "start",
+      "target": "FORE08 / U2 sealed wall power socket",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U2 connected power cable",
+      "end": "end",
+      "target": "FORE08 / U2 power gland",
+      "attached": true
+    }
+  ],
+  "fore_supports": [
+    {
+      "object": "FORE08 / U1 bolted support",
+      "end": "start",
+      "target": "FORE08 / Sealed channel bed",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U1 bolted support",
+      "end": "end",
+      "target": "FORE08 / U1 conditioning casing",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U1 bolted support.001",
+      "end": "start",
+      "target": "FORE08 / Sealed channel bed",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U1 bolted support.001",
+      "end": "end",
+      "target": "FORE08 / U1 conditioning casing",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U1 bolted support.002",
+      "end": "start",
+      "target": "FORE08 / Sealed channel bed",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U1 bolted support.002",
+      "end": "end",
+      "target": "FORE08 / U1 conditioning casing",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U1 bolted support.003",
+      "end": "start",
+      "target": "FORE08 / Sealed channel bed",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U1 bolted support.003",
+      "end": "end",
+      "target": "FORE08 / U1 conditioning casing",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U2 bolted support",
+      "end": "start",
+      "target": "FORE08 / Sealed channel bed",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U2 bolted support",
+      "end": "end",
+      "target": "FORE08 / U2 conditioning casing",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U2 bolted support.001",
+      "end": "start",
+      "target": "FORE08 / Sealed channel bed",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U2 bolted support.001",
+      "end": "end",
+      "target": "FORE08 / U2 conditioning casing",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U2 bolted support.002",
+      "end": "start",
+      "target": "FORE08 / Sealed channel bed",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U2 bolted support.002",
+      "end": "end",
+      "target": "FORE08 / U2 conditioning casing",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U2 bolted support.003",
+      "end": "start",
+      "target": "FORE08 / Sealed channel bed",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U2 bolted support.003",
+      "end": "end",
+      "target": "FORE08 / U2 conditioning casing",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / Tapered terminal load web 1",
+      "end": "start",
+      "target": "FORE08 / Terminal load foot 1",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / Tapered terminal load web 1",
+      "end": "end",
+      "target": "FORM03 / Raised shoulder terminal",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / Tapered terminal load web 2",
+      "end": "start",
+      "target": "FORE08 / Terminal load foot 2",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / Tapered terminal load web 2",
+      "end": "end",
+      "target": "FORM03 / Raised shoulder terminal",
+      "attached": true
+    }
+  ],
+  "fore_attachments": [
+    {
+      "object": "FORE08 / Sealed channel bed",
+      "target": "FORE08 / Swept forward shoulder body",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / Inboard continuous sill",
+      "target": "FORE08 / Sealed channel bed",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / Outboard continuous sill",
+      "target": "FORE08 / Sealed channel bed",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / Fore pressure bulkhead",
+      "target": "FORE08 / Sealed channel bed",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / Aft pressure bulkhead",
+      "target": "FORE08 / Sealed channel bed",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / Armor opening retaining flange",
+      "target": "FORE08 / Forward outer armor island",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / Armor opening retaining flange.001",
+      "target": "FORE08 / Forward outer armor island",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U1 fluid flange",
+      "target": "FORE08 / U1 conditioning casing",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U1 fluid union",
+      "target": "FORE08 / U1 fluid flange",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U1 fluid flange.001",
+      "target": "FORE08 / U1 conditioning casing",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U1 fluid union.001",
+      "target": "FORE08 / U1 fluid flange.001",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U1 power gland",
+      "target": "FORE08 / U1 conditioning casing",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U2 fluid flange",
+      "target": "FORE08 / U2 conditioning casing",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U2 fluid union",
+      "target": "FORE08 / U2 fluid flange",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U2 fluid flange.001",
+      "target": "FORE08 / U2 conditioning casing",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U2 fluid union.001",
+      "target": "FORE08 / U2 fluid flange.001",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U2 power gland",
+      "target": "FORE08 / U2 conditioning casing",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / Supply bulkhead sleeve",
+      "target": "FORE08 / Fore pressure bulkhead",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / Return bulkhead sleeve",
+      "target": "FORE08 / Aft pressure bulkhead",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U1 sealed wall power socket",
+      "target": "FORE08 / Inboard continuous sill",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / U2 sealed wall power socket",
+      "target": "FORE08 / Inboard continuous sill",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / Terminal load foot 1",
+      "target": "FORE08 / Forward outer armor island",
+      "attached": true
+    },
+    {
+      "object": "FORE08 / Terminal load foot 2",
+      "target": "FORE08 / Forward outer armor island",
+      "attached": true
+    }
+  ],
+  "fore_visibility": [
+    {
+      "panel": "FORE08 / U1 removable top panel",
+      "camera": "fore08_detail",
+      "visible_fraction": 0.9587,
+      "occluders": {
+        "FORE08 / U1 removable top panel": 95,
+        "FORE08 / U1 recessed status plate": 18,
+        "FORE08 / U1 attached lifting handle": 3,
+        "FORE08 / U1 identity stripe": 3,
+        "FORE08 / U1 attached lifting handle.001": 2
+      }
+    },
+    {
+      "panel": "FORE08 / U1 removable top panel",
+      "camera": "fore08_reverse",
+      "visible_fraction": 0.9587,
+      "occluders": {
+        "FORE08 / U1 removable top panel": 89,
+        "FORE08 / U1 recessed status plate": 24,
+        "FORE08 / U1 identity stripe": 3,
+        "FORE08 / U1 attached lifting handle.001": 3,
+        "FORE08 / U1 attached lifting handle": 2
+      }
+    },
+    {
+      "panel": "FORE08 / U2 removable top panel",
+      "camera": "fore08_detail",
+      "visible_fraction": 0.9587,
+      "occluders": {
+        "FORE08 / U2 removable top panel": 95,
+        "FORE08 / U2 recessed status plate": 18,
+        "FORE08 / U2 attached lifting handle": 3,
+        "FORE08 / U2 identity stripe": 3,
+        "FORE08 / U2 attached lifting handle.001": 2
+      }
+    },
+    {
+      "panel": "FORE08 / U2 removable top panel",
+      "camera": "fore08_reverse",
+      "visible_fraction": 0.9587,
+      "occluders": {
+        "FORE08 / U2 removable top panel": 89,
+        "FORE08 / U2 recessed status plate": 24,
+        "FORE08 / U2 identity stripe": 3,
+        "FORE08 / U2 attached lifting handle.001": 3,
+        "FORE08 / U2 attached lifting handle": 2
+      }
+    }
+  ],
+  "fore_connector_alignment": [
+    {
+      "route": "FORE08 / Closed coolant link 1",
+      "end": "start",
+      "fitting": "FORE08 / Supply bulkhead sleeve",
+      "axis_cosine": 1.0,
+      "aligned": true
+    },
+    {
+      "route": "FORE08 / Closed coolant link 1",
+      "end": "end",
+      "fitting": "FORE08 / U1 fluid union",
+      "axis_cosine": 1.0,
+      "aligned": true
+    },
+    {
+      "route": "FORE08 / Closed coolant link 2",
+      "end": "start",
+      "fitting": "FORE08 / U1 fluid union.001",
+      "axis_cosine": 1.0,
+      "aligned": true
+    },
+    {
+      "route": "FORE08 / Closed coolant link 2",
+      "end": "end",
+      "fitting": "FORE08 / U2 fluid union",
+      "axis_cosine": 1.0,
+      "aligned": true
+    },
+    {
+      "route": "FORE08 / Closed coolant link 3",
+      "end": "start",
+      "fitting": "FORE08 / U2 fluid union.001",
+      "axis_cosine": 1.0,
+      "aligned": true
+    },
+    {
+      "route": "FORE08 / Closed coolant link 3",
+      "end": "end",
+      "fitting": "FORE08 / Return bulkhead sleeve",
+      "axis_cosine": 1.0,
+      "aligned": true
+    },
+    {
+      "route": "FORE08 / U1 connected power cable",
+      "end": "start",
+      "fitting": "FORE08 / U1 sealed wall power socket",
+      "axis_cosine": 1.0,
+      "aligned": true
+    },
+    {
+      "route": "FORE08 / U1 connected power cable",
+      "end": "end",
+      "fitting": "FORE08 / U1 power gland",
+      "axis_cosine": 1.0,
+      "aligned": true
+    },
+    {
+      "route": "FORE08 / U2 connected power cable",
+      "end": "start",
+      "fitting": "FORE08 / U2 sealed wall power socket",
+      "axis_cosine": 1.0,
+      "aligned": true
+    },
+    {
+      "route": "FORE08 / U2 connected power cable",
+      "end": "end",
+      "fitting": "FORE08 / U2 power gland",
+      "axis_cosine": 1.0,
+      "aligned": true
+    }
+  ],
+  "fore_corner_joints": [
+    {
+      "members": [
+        "FORE08 / Fore pressure bulkhead",
+        "FORE08 / Outboard continuous sill"
+      ],
+      "point": [
+        -211.65,
+        -82.7,
+        23.2
+      ],
+      "closed": true
+    },
+    {
+      "members": [
+        "FORE08 / Fore pressure bulkhead",
+        "FORE08 / Inboard continuous sill"
+      ],
+      "point": [
+        -211.65,
+        -73.8,
+        23.2
+      ],
+      "closed": true
+    },
+    {
+      "members": [
+        "FORE08 / Aft pressure bulkhead",
+        "FORE08 / Outboard continuous sill"
+      ],
+      "point": [
+        -189.35,
+        -82.7,
+        23.2
+      ],
+      "closed": true
+    },
+    {
+      "members": [
+        "FORE08 / Aft pressure bulkhead",
+        "FORE08 / Inboard continuous sill"
+      ],
+      "point": [
+        -189.35,
+        -73.8,
+        23.2
+      ],
+      "closed": true
+    }
+  ],
+  "hidden_prior_objects": [
+    "FORM03 / Fore armor maintenance recess",
+    "FORM03 / Fore armor maintenance recess.001",
+    "FORM03 / Fore armor maintenance recess.002",
+    "FORM03 / Forward outer armor island",
+    "FORM03 / Swept forward shoulder body"
+  ],
+  "fore_visible_object_count": 100,
+  "baseline_sha256": "e3854304e9a2b4ffe01cccb0b8d96daf52bd6f5f5af9a20d8cb73a6f47c7801c",
+  "published": false
+}

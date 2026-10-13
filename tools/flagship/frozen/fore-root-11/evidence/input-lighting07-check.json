@@ -1,0 +1,743 @@
+{
+  "checks": {
+    "prior_content_preserved": true,
+    "closed_solids": true,
+    "equipment_and_routes_clear_of_hull": true,
+    "all_functional_endpoints_in_fittings": true,
+    "mounts_and_tees_attached": true,
+    "inspection_panels_visible": true,
+    "portable_images": true,
+    "repaired_geometry_unchanged": true,
+    "declared_lights_only": true,
+    "lighting_configuration": true
+  },
+  "passed": true,
+  "source_sha256": "e3854304e9a2b4ffe01cccb0b8d96daf52bd6f5f5af9a20d8cb73a6f47c7801c",
+  "collisions": [],
+  "invalid_meshes": [],
+  "route_endpoints": [
+    {
+      "route": "SIDE06 / Cassette connected cable 1",
+      "side": "start",
+      "target": "SIDE06 / Cassette sealed plug",
+      "inside_fitting": true,
+      "nearest_surface": 0.061249
+    },
+    {
+      "route": "SIDE06 / Cassette connected cable 1",
+      "side": "end",
+      "target": "SIDE06 / Junction inlet 1",
+      "inside_fitting": true,
+      "nearest_surface": 0.095001
+    },
+    {
+      "route": "SIDE06 / Cassette connected cable 2",
+      "side": "start",
+      "target": "SIDE06 / Cassette sealed plug.001",
+      "inside_fitting": true,
+      "nearest_surface": 0.061249
+    },
+    {
+      "route": "SIDE06 / Cassette connected cable 2",
+      "side": "end",
+      "target": "SIDE06 / Junction inlet 2",
+      "inside_fitting": true,
+      "nearest_surface": 0.095001
+    },
+    {
+      "route": "SIDE06 / Cassette connected cable 3",
+      "side": "start",
+      "target": "SIDE06 / Cassette sealed plug.002",
+      "inside_fitting": true,
+      "nearest_surface": 0.061249
+    },
+    {
+      "route": "SIDE06 / Cassette connected cable 3",
+      "side": "end",
+      "target": "SIDE06 / Junction inlet 3",
+      "inside_fitting": true,
+      "nearest_surface": 0.095001
+    },
+    {
+      "route": "SIDE06 / Junction hull cable",
+      "side": "start",
+      "target": "SIDE06 / Junction rear gland",
+      "inside_fitting": true,
+      "nearest_surface": 0.084999
+    },
+    {
+      "route": "SIDE06 / Junction hull cable",
+      "side": "end",
+      "target": "SIDE06 / Electronics hull entry socket",
+      "inside_fitting": true,
+      "nearest_surface": 0.139999
+    },
+    {
+      "route": "SIDE06 / Upper supply manifold",
+      "side": "start",
+      "target": "SIDE06 / Supply bulkhead socket",
+      "inside_fitting": true,
+      "nearest_surface": 0.15
+    },
+    {
+      "route": "SIDE06 / Upper supply manifold",
+      "side": "end",
+      "target": "SIDE06 / Supply removable blind cap",
+      "inside_fitting": true,
+      "nearest_surface": 0.119996
+    },
+    {
+      "route": "SIDE06 / Cylinder supply 1",
+      "side": "start",
+      "target": "SIDE06 / Canister top coupling",
+      "inside_fitting": true,
+      "nearest_surface": 0.215
+    },
+    {
+      "route": "SIDE06 / Cylinder supply 1",
+      "side": "end",
+      "target": "SIDE06 / Supply branch tee 1",
+      "inside_fitting": true,
+      "nearest_surface": 0.297431
+    },
+    {
+      "route": "SIDE06 / Cylinder supply 2",
+      "side": "start",
+      "target": "SIDE06 / Canister top coupling.001",
+      "inside_fitting": true,
+      "nearest_surface": 0.215
+    },
+    {
+      "route": "SIDE06 / Cylinder supply 2",
+      "side": "end",
+      "target": "SIDE06 / Supply branch tee 2",
+      "inside_fitting": true,
+      "nearest_surface": 0.297431
+    },
+    {
+      "route": "SIDE06 / Cylinder supply 3",
+      "side": "start",
+      "target": "SIDE06 / Canister top coupling.002",
+      "inside_fitting": true,
+      "nearest_surface": 0.215
+    },
+    {
+      "route": "SIDE06 / Cylinder supply 3",
+      "side": "end",
+      "target": "SIDE06 / Supply branch tee 3",
+      "inside_fitting": true,
+      "nearest_surface": 0.297426
+    },
+    {
+      "route": "SIDE06 / Lower return manifold",
+      "side": "start",
+      "target": "SIDE06 / Return header blind cap",
+      "inside_fitting": true,
+      "nearest_surface": 0.099986
+    },
+    {
+      "route": "SIDE06 / Lower return manifold",
+      "side": "end",
+      "target": "SIDE06 / Return bulkhead socket",
+      "inside_fitting": true,
+      "nearest_surface": 0.15
+    },
+    {
+      "route": "SIDE06 / Cylinder return 1",
+      "side": "start",
+      "target": "SIDE06 / Canister bottom coupling",
+      "inside_fitting": true,
+      "nearest_surface": 0.165001
+    },
+    {
+      "route": "SIDE06 / Cylinder return 1",
+      "side": "end",
+      "target": "SIDE06 / Return branch tee 1",
+      "inside_fitting": true,
+      "nearest_surface": 0.22803
+    },
+    {
+      "route": "SIDE06 / Cylinder return 2",
+      "side": "start",
+      "target": "SIDE06 / Canister bottom coupling.001",
+      "inside_fitting": true,
+      "nearest_surface": 0.165001
+    },
+    {
+      "route": "SIDE06 / Cylinder return 2",
+      "side": "end",
+      "target": "SIDE06 / Return branch tee 2",
+      "inside_fitting": true,
+      "nearest_surface": 0.228028
+    },
+    {
+      "route": "SIDE06 / Cylinder return 3",
+      "side": "start",
+      "target": "SIDE06 / Canister bottom coupling.002",
+      "inside_fitting": true,
+      "nearest_surface": 0.165001
+    },
+    {
+      "route": "SIDE06 / Cylinder return 3",
+      "side": "end",
+      "target": "SIDE06 / Return branch tee 3",
+      "inside_fitting": true,
+      "nearest_surface": 0.228026
+    }
+  ],
+  "support_endpoints": [
+    {
+      "support": "SIDE06 / Cassette wall support",
+      "side": "start",
+      "target": "SIDE06 / Isolated cassette cradle",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Cassette wall support",
+      "side": "end",
+      "target": "BRIDGE01 / Tapered bridge plinth",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Cassette wall support.001",
+      "side": "start",
+      "target": "SIDE06 / Isolated cassette cradle",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Cassette wall support.001",
+      "side": "end",
+      "target": "BRIDGE01 / Tapered bridge plinth",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Cassette wall support.002",
+      "side": "start",
+      "target": "SIDE06 / Isolated cassette cradle.001",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Cassette wall support.002",
+      "side": "end",
+      "target": "BRIDGE01 / Tapered bridge plinth",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Cassette wall support.003",
+      "side": "start",
+      "target": "SIDE06 / Isolated cassette cradle.001",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Cassette wall support.003",
+      "side": "end",
+      "target": "BRIDGE01 / Tapered bridge plinth",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Cassette wall support.004",
+      "side": "start",
+      "target": "SIDE06 / Isolated cassette cradle.002",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Cassette wall support.004",
+      "side": "end",
+      "target": "BRIDGE01 / Tapered bridge plinth",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Cassette wall support.005",
+      "side": "start",
+      "target": "SIDE06 / Isolated cassette cradle.002",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Cassette wall support.005",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 0",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support",
+      "side": "start",
+      "target": "SIDE06 / Manifold mounting shoe",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support",
+      "side": "end",
+      "target": "FORM03 / Prow upper wedge",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.001",
+      "side": "start",
+      "target": "SIDE06 / Manifold mounting shoe",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.001",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 1",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.002",
+      "side": "start",
+      "target": "SIDE06 / Manifold mounting shoe",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.002",
+      "side": "end",
+      "target": "BRIDGE01 / Tapered bridge plinth",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.003",
+      "side": "start",
+      "target": "SIDE06 / Manifold mounting shoe",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.003",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 1",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.004",
+      "side": "start",
+      "target": "SIDE06 / Manifold mounting shoe.001",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.004",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 1",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.005",
+      "side": "start",
+      "target": "SIDE06 / Manifold mounting shoe.001",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.005",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 1",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.006",
+      "side": "start",
+      "target": "SIDE06 / Manifold mounting shoe.001",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.006",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 1",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.007",
+      "side": "start",
+      "target": "SIDE06 / Manifold mounting shoe.001",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.007",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 1",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.008",
+      "side": "start",
+      "target": "SIDE06 / Manifold mounting shoe.002",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.008",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 1",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.009",
+      "side": "start",
+      "target": "SIDE06 / Manifold mounting shoe.002",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.009",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 1",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.010",
+      "side": "start",
+      "target": "SIDE06 / Manifold mounting shoe.002",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.010",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 1",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.011",
+      "side": "start",
+      "target": "SIDE06 / Manifold mounting shoe.002",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Equipment rear support.011",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 1",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Guard support to carrier",
+      "side": "start",
+      "target": "SIDE06 / Removable equipment shield",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Guard support to carrier",
+      "side": "end",
+      "target": "SIDE06 / Manifold mounting shoe",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Guard support to carrier.001",
+      "side": "start",
+      "target": "SIDE06 / Removable equipment shield",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Guard support to carrier.001",
+      "side": "end",
+      "target": "SIDE06 / Manifold mounting shoe.001",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Supply manifold wall support",
+      "side": "start",
+      "target": "SIDE06 / Upper supply manifold",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Supply manifold wall support",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 1",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Supply manifold wall support.001",
+      "side": "start",
+      "target": "SIDE06 / Upper supply manifold",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Supply manifold wall support.001",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 1",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Return manifold wall support",
+      "side": "start",
+      "target": "SIDE06 / Lower return manifold",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Return manifold wall support",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 1",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Return manifold wall support.001",
+      "side": "start",
+      "target": "SIDE06 / Lower return manifold",
+      "attached": true
+    },
+    {
+      "support": "SIDE06 / Return manifold wall support.001",
+      "side": "end",
+      "target": "SIDE06 / Service bay pressure boundary 1",
+      "attached": true
+    }
+  ],
+  "manifold_tees": [
+    {
+      "tee": "SIDE06 / Supply branch tee 1",
+      "manifold": "SIDE06 / Upper supply manifold",
+      "attached": true
+    },
+    {
+      "tee": "SIDE06 / Supply branch tee 2",
+      "manifold": "SIDE06 / Upper supply manifold",
+      "attached": true
+    },
+    {
+      "tee": "SIDE06 / Supply branch tee 3",
+      "manifold": "SIDE06 / Upper supply manifold",
+      "attached": true
+    },
+    {
+      "tee": "SIDE06 / Return branch tee 1",
+      "manifold": "SIDE06 / Lower return manifold",
+      "attached": true
+    },
+    {
+      "tee": "SIDE06 / Return branch tee 2",
+      "manifold": "SIDE06 / Lower return manifold",
+      "attached": true
+    },
+    {
+      "tee": "SIDE06 / Return branch tee 3",
+      "manifold": "SIDE06 / Lower return manifold",
+      "attached": true
+    }
+  ],
+  "panel_visibility": [
+    {
+      "panel": "E1",
+      "camera": "side03_detail",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Inset module face": 179,
+        "SIDE06 / Cassette removable header": 32,
+        "SIDE06 / Module face protective rib.001": 17,
+        "SIDE06 / Module face protective rib.002": 17
+      }
+    },
+    {
+      "panel": "E1",
+      "camera": "side03_reverse",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Inset module face": 184,
+        "SIDE06 / Cassette removable header": 30,
+        "SIDE06 / Module face protective rib.001": 17,
+        "SIDE06 / Module face protective rib.002": 17
+      }
+    },
+    {
+      "panel": "E1",
+      "camera": "side05_front",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Inset module face": 212,
+        "SIDE06 / Module face protective rib.001": 17,
+        "SIDE06 / Module face protective rib.002": 17,
+        "SIDE06 / Module face protective rib.003": 17
+      }
+    },
+    {
+      "panel": "E2",
+      "camera": "side03_detail",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Inset module face.001": 180,
+        "SIDE06 / Cassette removable header.001": 31,
+        "SIDE06 / Module face protective rib.006": 17,
+        "SIDE06 / Module face protective rib.007": 17
+      }
+    },
+    {
+      "panel": "E2",
+      "camera": "side03_reverse",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Inset module face.001": 184,
+        "SIDE06 / Cassette removable header.001": 28,
+        "SIDE06 / Module face protective rib.006": 17,
+        "SIDE06 / Module face protective rib.007": 17
+      }
+    },
+    {
+      "panel": "E2",
+      "camera": "side05_front",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Inset module face.001": 213,
+        "SIDE06 / Module face protective rib.006": 17,
+        "SIDE06 / Module face protective rib.007": 17,
+        "SIDE06 / Module face protective rib.008": 17
+      }
+    },
+    {
+      "panel": "E3",
+      "camera": "side03_detail",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Inset module face.002": 182,
+        "SIDE06 / Cassette removable header.002": 30,
+        "SIDE06 / Module face protective rib.011": 17,
+        "SIDE06 / Module face protective rib.012": 17
+      }
+    },
+    {
+      "panel": "E3",
+      "camera": "side03_reverse",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Inset module face.002": 184,
+        "SIDE06 / Cassette removable header.002": 27,
+        "SIDE06 / Module face protective rib.011": 17,
+        "SIDE06 / Module face protective rib.012": 17
+      }
+    },
+    {
+      "panel": "E3",
+      "camera": "side05_front",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Inset module face.002": 213,
+        "SIDE06 / Module face protective rib.011": 17,
+        "SIDE06 / Module face protective rib.012": 17,
+        "SIDE06 / Module face protective rib.013": 17
+      }
+    },
+    {
+      "panel": "P1",
+      "camera": "side03_detail",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Canister instrument saddle": 210,
+        "SIDE06 / Recessed diagnostic port": 52,
+        "SIDE06 / Diagnostic port inset": 24,
+        "SIDE06 / stencil P1": 3
+      }
+    },
+    {
+      "panel": "P1",
+      "camera": "side03_reverse",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Canister instrument saddle": 198,
+        "SIDE06 / Recessed diagnostic port": 60,
+        "SIDE06 / Diagnostic port inset": 25,
+        "SIDE06 / stencil P1": 6
+      }
+    },
+    {
+      "panel": "P1",
+      "camera": "side05_front",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Canister instrument saddle": 210,
+        "SIDE06 / Recessed diagnostic port": 52,
+        "SIDE06 / Diagnostic port inset": 21,
+        "SIDE06 / stencil P1": 6
+      }
+    },
+    {
+      "panel": "P2",
+      "camera": "side03_detail",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Canister instrument saddle.001": 204,
+        "SIDE06 / Recessed diagnostic port.001": 52,
+        "SIDE06 / Diagnostic port inset.001": 26,
+        "SIDE06 / stencil P2": 7
+      }
+    },
+    {
+      "panel": "P2",
+      "camera": "side03_reverse",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Canister instrument saddle.001": 202,
+        "SIDE06 / Recessed diagnostic port.001": 58,
+        "SIDE06 / Diagnostic port inset.001": 24,
+        "SIDE06 / stencil P2": 5
+      }
+    },
+    {
+      "panel": "P2",
+      "camera": "side05_front",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Canister instrument saddle.001": 210,
+        "SIDE06 / Recessed diagnostic port.001": 50,
+        "SIDE06 / Diagnostic port inset.001": 23,
+        "SIDE06 / stencil P2": 6
+      }
+    },
+    {
+      "panel": "P3",
+      "camera": "side03_detail",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Canister instrument saddle.002": 203,
+        "SIDE06 / Recessed diagnostic port.002": 53,
+        "SIDE06 / Diagnostic port inset.002": 25,
+        "SIDE06 / stencil P3": 8
+      }
+    },
+    {
+      "panel": "P3",
+      "camera": "side03_reverse",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Canister instrument saddle.002": 206,
+        "SIDE06 / Recessed diagnostic port.002": 52,
+        "SIDE06 / Diagnostic port inset.002": 27,
+        "SIDE06 / stencil P3": 4
+      }
+    },
+    {
+      "panel": "P3",
+      "camera": "side05_front",
+      "visible_fraction": 1.0,
+      "occluders": {
+        "SIDE06 / Canister instrument saddle.002": 209,
+        "SIDE06 / Recessed diagnostic port.002": 51,
+        "SIDE06 / Diagnostic port inset.002": 23,
+        "SIDE06 / stencil P3": 6
+      }
+    }
+  ],
+  "images": [
+    {
+      "name": "Blue Metal Plate roughness 1024 - CC0",
+      "packed": true,
+      "relative": true,
+      "exists": true
+    }
+  ],
+  "browser_tested": false,
+  "baseline_sha256": "ac058470306dcb827f15f23945160b6558cb08024a79fab8b51e9365b0827f7c",
+  "config_sha256": "6c0d57df2abc2ba5f450897e3d144111fe64f377ba9be54c40160f843bd9d06b",
+  "geometry_sha256": "cbfb0cad62dac096be283ec638d35ec2c3835988a27f4167be5236c5ed590d54",
+  "geometry_object_count": 342,
+  "lights": [
+    {
+      "name": "LIGHT07 / Electronics hood task light",
+      "matches_config": true,
+      "distance_from_existing_emitter": 0.32761027915914603,
+      "ship_fixed": true
+    },
+    {
+      "name": "LIGHT07 / Fluid bay hood task light",
+      "matches_config": true,
+      "distance_from_existing_emitter": 0.3330017380146401,
+      "ship_fixed": true
+    },
+    {
+      "name": "LIGHT07 / Local cool reflected fill",
+      "matches_config": true,
+      "distance_from_existing_emitter": null,
+      "ship_fixed": true
+    }
+  ]
+}

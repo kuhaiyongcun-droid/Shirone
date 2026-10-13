@@ -1,0 +1,82 @@
+{
+  "revision": "fore-lighting-10",
+  "source_sha256": "23df549788eb4e29b2394fd6529c7cb8c0602092273c264b3385923dbfe073f3",
+  "prefix": "FORE10 / ",
+  "fixture_collection": "FORE10_FIXTURES",
+  "light_collection": "FORE10_LIGHTS",
+  "fixtures": [
+    {
+      "id": "F1",
+      "x": -210.0,
+      "position": [
+        -210.0,
+        -82.17,
+        24.66
+      ],
+      "target": [
+        -208.98,
+        -79.2,
+        22.12
+      ],
+      "energy_w": 900,
+      "color_linear": [
+        1.0,
+        0.88,
+        0.71
+      ],
+      "cone_degrees": 92,
+      "blend": 0.8,
+      "radius": 0.14,
+      "receiver_prefix": "FORE09 / U1 "
+    },
+    {
+      "id": "F2",
+      "x": -200.6,
+      "position": [
+        -200.6,
+        -82.17,
+        24.66
+      ],
+      "target": [
+        -200.6,
+        -78.3,
+        20.0
+      ],
+      "energy_w": 2600,
+      "color_linear": [
+        1.0,
+        0.88,
+        0.71
+      ],
+      "cone_degrees": 96,
+      "blend": 0.8,
+      "radius": 0.14
+    },
+    {
+      "id": "F3",
+      "x": -191.0,
+      "position": [
+        -191.0,
+        -82.17,
+        24.66
+      ],
+      "target": [
+        -192.22,
+        -79.2,
+        22.12
+      ],
+      "energy_w": 900,
+      "color_linear": [
+        1.0,
+        0.88,
+        0.71
+      ],
+      "cone_degrees": 92,
+      "blend": 0.8,
+      "radius": 0.14,
+      "receiver_prefix": "FORE09 / U2 "
+    }
+  ],
+  "intent": "Shielded fixtures on the existing outboard inner wall, fed through the wall. No camera-follow light, bloom or exposure change.",
+  "web_shadow_map": 512
+}

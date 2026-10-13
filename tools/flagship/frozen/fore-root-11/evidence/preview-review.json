@@ -1,0 +1,69 @@
+{
+  "revision": "fore-root-11",
+  "source_sha256": "a1dd93fddd59a605ad4d7c2788d218542874a8386b0cf0e9bbb27f9454654970",
+  "selected_candidate": "C",
+  "views": [
+    {
+      "path": "neutral/root11_detail.png",
+      "sha256": "6e9fe66f839e1523dcde33a856d21c685ca2b11a4d10b7ec4b452de05e70ff39",
+      "visually_inspected": true,
+      "observations": "Three armor segments and actual recess wall thickness read clearly; established fore09 equipment bay remains intact."
+    },
+    {
+      "path": "neutral/root11_reverse.png",
+      "sha256": "901e9f7b54cf1ed0b8cd784a32df7c2035c82da1f49c80e37eff22ba3c38775c",
+      "visually_inspected": true,
+      "observations": "Raised reverse view exposes the two clevis bases, captured link and pan; no detached component observed."
+    },
+    {
+      "path": "closeup/root11_joint.png",
+      "sha256": "a40a12417c1b1ebdbeca553647504d0f8476160f255a64f1e3eae2f3c418628d",
+      "visually_inspected": true,
+      "observations": "Pin heads, paired cheeks, link clearance and base contact points are visible. Static fitted assembly, not tolerance-certified CAD."
+    },
+    {
+      "path": "atmosphere/root11_detail.png",
+      "sha256": "61398518fe84d7140efd664af858a0a7ecda88f858d30fd4cd04b31ff674ce53",
+      "visually_inspected": true,
+      "observations": "New opening remains real but bridge shadow reduces interior readability. Global lights unchanged; atmosphere fill remains future work."
+    },
+    {
+      "path": "atmosphere/fore08_context.png",
+      "sha256": "b4b295ed6059e9b2bc3e98d07ffa1e3140fc53c684b07b3f5e8b0085078eec21",
+      "visually_inspected": true,
+      "observations": "Armor segmentation stays subordinate to the forebody silhouette. New recess is readable as structure at middle distance; small joints remain mostly shaded."
+    },
+    {
+      "path": "atmosphere/home.png",
+      "sha256": "d95e7d313316ffcde0b123f6ab69e6a2267bfb143147b340a174186f2be5ed23",
+      "visually_inspected": true,
+      "observations": "Whole-ship outline and space framing retained; regional details appropriately recede at this scale."
+    },
+    {
+      "path": "before-neutral/root11_detail.png",
+      "sha256": "87f8668b52cfbe1408b7d65bbf050fe427c16742b31080586fea2f3752f851a1",
+      "visually_inspected": true,
+      "observations": "Exact retained prior armor island and five overlays shown under matching neutral lights/camera for geometry comparison."
+    },
+    {
+      "path": "before-atmosphere/root11_detail.png",
+      "sha256": "b092143a41bc64be1850281083986de973f94988333c1a61463d723c05541517",
+      "visually_inspected": true,
+      "observations": "Prior six-piece coverage restored with the same atmosphere and camera."
+    },
+    {
+      "path": "web-decoded/root11_detail.png",
+      "sha256": "7803ebb5656b85511b7ce7caa0c899eb89d7a927974b4946339305ad5b4ea52f",
+      "visually_inspected": true,
+      "observations": "Actual Draco GLB retains both recesses and segmented armor. Punctual-light shadows and approximate materials visibly differ; browser matching untested."
+    }
+  ],
+  "comparison": "Matched neutral and atmosphere pairs; same camera, existing global lights and exposure. New armor uses the existing base-island paint palette; replaced thin overlays had their own prior surface tones.",
+  "not_acceptance": [
+    "final user art approval",
+    "whole-ship completion",
+    "browser or real-device testing"
+  ],
+  "browser_tested": false,
+  "published": false
+}

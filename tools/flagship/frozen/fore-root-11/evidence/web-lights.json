@@ -1,0 +1,71 @@
+{
+  "lights_sha256": "a756d820cd8a0c8f99fce44033ae7942f7cb528ba1ad8dba02a73dd956340059",
+  "model_sha256": "bbe6a3cea14393844f9950b9b4027bbf6302157b3d5efb1e295f09927147922a",
+  "config_sha256": "24d393e72ae7f93d8c3ce1ecddb9587cc5d6d78e01329428d3974362c79d6416",
+  "lights": [
+    {
+      "id": "Electronics hood task light",
+      "position_error_m": 4.264961199760036e-06,
+      "direction_dot": 1.0000000175787136,
+      "energy_error_w": 6.705522537231445e-06,
+      "cone_error": 8.83178130628437e-09,
+      "blend_error": 1.1920928910669204e-08,
+      "color_error": 1.4305114759416426e-08,
+      "passed": true
+    },
+    {
+      "id": "Fluid bay hood task light",
+      "position_error_m": 1.9073486328125e-06,
+      "direction_dot": 0.9999999329447746,
+      "energy_error_w": 3.5762786865234375e-05,
+      "cone_error": 2.896192019541388e-08,
+      "blend_error": 1.1920928910669204e-08,
+      "color_error": 1.4305114759416426e-08,
+      "passed": true
+    },
+    {
+      "id": "Local cool reflected fill",
+      "position_error_m": 3.814697265625e-06,
+      "direction_dot": 0.999999962747097,
+      "energy_error_w": 0.0,
+      "cone_error": 4.644647622065179e-08,
+      "blend_error": 2.384185793236071e-08,
+      "color_error": 1.0728836041806744e-08,
+      "passed": true
+    },
+    {
+      "id": "F1",
+      "position_error_m": 1.5377536293599222e-05,
+      "direction_dot": 0.9999998658895493,
+      "energy_error_w": 3.5762786865234375e-05,
+      "cone_error": 3.479010546314498e-08,
+      "blend_error": 1.1920928910669204e-08,
+      "color_error": 2.1457672083613488e-08,
+      "passed": true
+    },
+    {
+      "id": "F2",
+      "position_error_m": 1.9073486328125e-06,
+      "direction_dot": 0.9999999403953552,
+      "energy_error_w": 9.5367431640625e-05,
+      "cone_error": 4.6625482585938016e-08,
+      "blend_error": 1.1920928910669204e-08,
+      "color_error": 2.1457672083613488e-08,
+      "passed": true
+    },
+    {
+      "id": "F3",
+      "position_error_m": 1.9073486328125e-06,
+      "direction_dot": 0.999999925494194,
+      "energy_error_w": 3.5762786865234375e-05,
+      "cone_error": 3.479010546314498e-08,
+      "blend_error": 1.1920928910669204e-08,
+      "color_error": 2.1457672083613488e-08,
+      "passed": true
+    }
+  ],
+  "count": 6,
+  "passed": true,
+  "finite_radius_preserved": false,
+  "browser_tested": false
+}

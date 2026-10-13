@@ -1,0 +1,42 @@
+{
+  "revision": "fore-root-11",
+  "source_sha256": "a1dd93fddd59a605ad4d7c2788d218542874a8386b0cf0e9bbb27f9454654970",
+  "baseline_sha256": "993d1dfada15902cc4d5d208986fbc0756a9463d771919bcd487deddfae867b2",
+  "web_source_sha256": "88ab5faf06384900ac6d64749258aa54b32404098999d842f01e2fa3aa9d5593",
+  "model_sha256": "bbe6a3cea14393844f9950b9b4027bbf6302157b3d5efb1e295f09927147922a",
+  "new_root_meshes": 38,
+  "replaced_prior_objects": [
+    "FORM03 / Forward root armor island",
+    "SURFACE03 / shoulder plate 00",
+    "SURFACE03 / shoulder plate 01",
+    "SURFACE03 / shoulder plate 02",
+    "SURFACE03 / shoulder plate 03",
+    "SURFACE03 / shoulder plate 04"
+  ],
+  "prior_finished_regions_preserved": [
+    100,
+    342,
+    18
+  ],
+  "next_work": [
+    "Adjacent prow edge and shoulder underside structural transitions",
+    "Root-region coating, wear and maintenance marking",
+    "Whole-ship environment fill preserving physical recess depth"
+  ],
+  "required_before_future_surface_work": [
+    "Inventory all overlapping legacy coverage layers",
+    "Declare attachments and functional contacts",
+    "Check existing equipment view depths",
+    "Validate actual decoded GLB openings"
+  ],
+  "outstanding": [
+    "Root material baking and whole-ship material completeness",
+    "Atmosphere readability beneath bridge shadow",
+    "Runtime LOD and mobile texture memory",
+    "Supported browser visual, touch and real-device performance checks",
+    "Archive routes and bilingual blog integration"
+  ],
+  "original_side03_bytes_recovered": false,
+  "browser_tested": false,
+  "published": false
+}

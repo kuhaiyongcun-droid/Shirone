@@ -1,0 +1,122 @@
+{
+  "rejected_closed_aperture_fixture": true,
+  "accepted_fixed_export": true,
+  "rejected_glb_sha256": "d9d31edf7f1cc55546f480ccf573ce132e439190e9ba6e321cfc0f21304a0b09",
+  "accepted_glb_sha256": "a5d059554bf71baa37d5e6ee99c26b77d6cfea1a9691cb1a4f7a56ac1d21e0e7",
+  "cause": "The editable boolean cutter datablock was loaded but its collection was not linked into the derived export scene.",
+  "fix": "Append FORE08_CUTTERS together with FORE09_BAKED and retain hidden visibility; boolean host aperture evaluates in the export dependency graph.",
+  "negative_rows": [
+    {
+      "view": "fore08_detail",
+      "target": "U1 lid",
+      "rays": 121,
+      "within_0_1_source_meter": 0,
+      "fraction": 0.0,
+      "max_distance_source_m": 2.3742097368034756,
+      "passed": false
+    },
+    {
+      "view": "fore08_detail",
+      "target": "U2 lid",
+      "rays": 121,
+      "within_0_1_source_meter": 0,
+      "fraction": 0.0,
+      "max_distance_source_m": 2.510712559991471,
+      "passed": false
+    },
+    {
+      "view": "fore08_detail",
+      "target": "channel floor",
+      "rays": 35,
+      "within_0_1_source_meter": 20,
+      "fraction": 0.5714285714285714,
+      "max_distance_source_m": 8.271181254591962,
+      "passed": false
+    },
+    {
+      "view": "fore08_reverse",
+      "target": "U1 lid",
+      "rays": 121,
+      "within_0_1_source_meter": 0,
+      "fraction": 0.0,
+      "max_distance_source_m": 2.6332015251015597,
+      "passed": false
+    },
+    {
+      "view": "fore08_reverse",
+      "target": "U2 lid",
+      "rays": 121,
+      "within_0_1_source_meter": 0,
+      "fraction": 0.0,
+      "max_distance_source_m": 2.4687193373695338,
+      "passed": false
+    },
+    {
+      "view": "fore08_reverse",
+      "target": "channel floor",
+      "rays": 35,
+      "within_0_1_source_meter": 20,
+      "fraction": 0.5714285714285714,
+      "max_distance_source_m": 8.577821152939219,
+      "passed": false
+    }
+  ],
+  "positive_rows": [
+    {
+      "view": "fore08_detail",
+      "target": "U1 lid",
+      "rays": 121,
+      "within_0_1_source_meter": 121,
+      "fraction": 1.0,
+      "max_distance_source_m": 2.8800332776148795e-05,
+      "passed": true
+    },
+    {
+      "view": "fore08_detail",
+      "target": "U2 lid",
+      "rays": 121,
+      "within_0_1_source_meter": 121,
+      "fraction": 1.0,
+      "max_distance_source_m": 4.840308204822357e-05,
+      "passed": true
+    },
+    {
+      "view": "fore08_detail",
+      "target": "channel floor",
+      "rays": 35,
+      "within_0_1_source_meter": 35,
+      "fraction": 1.0,
+      "max_distance_source_m": 3.4332275390625e-05,
+      "passed": true
+    },
+    {
+      "view": "fore08_reverse",
+      "target": "U1 lid",
+      "rays": 121,
+      "within_0_1_source_meter": 121,
+      "fraction": 1.0,
+      "max_distance_source_m": 3.4332275390625e-05,
+      "passed": true
+    },
+    {
+      "view": "fore08_reverse",
+      "target": "U2 lid",
+      "rays": 121,
+      "within_0_1_source_meter": 121,
+      "fraction": 1.0,
+      "max_distance_source_m": 2.8800332776148795e-05,
+      "passed": true
+    },
+    {
+      "view": "fore08_reverse",
+      "target": "channel floor",
+      "rays": 35,
+      "within_0_1_source_meter": 35,
+      "fraction": 1.0,
+      "max_distance_source_m": 2.8800332776148795e-05,
+      "passed": true
+    }
+  ],
+  "total_rays": 554,
+  "browser_tested": false
+}

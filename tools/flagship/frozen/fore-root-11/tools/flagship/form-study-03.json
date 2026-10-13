@@ -1,0 +1,15 @@
+{
+  "revision": "form-study-03",
+  "status": "Forebody and midship shape study; unapproved interpretation, not a canonical replica",
+  "input_sha256": "4a17cfdda709c9f7d82a08e73b27c2c2159d93c80ed1bada1509a2cf94521d4c",
+  "preview": {"width": 960, "height": 600, "samples": 32, "threads": 6},
+  "extra_cameras": {
+    "form_top": {"position": [0, 0, 940], "target": [0, 0, 0], "ortho": 590},
+    "form_front": {"position": [-790, -345, 190], "target": [-145, 0, 17], "lens": 58},
+    "form_close": {"position": [-402, -370, 226], "target": [-159, 0, 21], "lens": 57},
+    "form_archive": {"position": [-166, -172, 133], "target": [-80, -36, 18], "lens": 58}
+  },
+  "archive_protected_bounds_m": [[-99, -47, 16.6], [-61, -27, 22.8]],
+  "provisional_dimensions": true,
+  "website_export": false
+}

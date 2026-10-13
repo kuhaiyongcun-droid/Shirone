@@ -1,0 +1,51 @@
+{
+  "revision": "side-lighting-07",
+  "source_sha256": "ac058470306dcb827f15f23945160b6558cb08024a79fab8b51e9365b0827f7c",
+  "collection": "LIGHT07_SERVICE",
+  "prefix": "LIGHT07 / ",
+  "coordinate_system": "Blender Z up, source meters; lights are fixed to the ship, never to the camera or pointer",
+  "lights": [
+    {
+      "name": "Electronics hood task light",
+      "position": [-181.2, -30.04, 39.24],
+      "target": [-181.4, -27.7, 34.4],
+      "energy_w": 300,
+      "color_linear": [1.0, 0.82, 0.61],
+      "cone_degrees": 100,
+      "blend": 0.7,
+      "radius": 0.30,
+      "fixture": "SIDE06 / Shielded service emitter",
+      "max_fixture_distance": 0.6,
+      "cast_shadow": true,
+      "web_shadow_map": 512
+    },
+    {
+      "name": "Fluid bay hood task light",
+      "position": [-162.2, -27.14, 43.39],
+      "target": [-164.5, -24.5, 35.1],
+      "energy_w": 900,
+      "color_linear": [1.0, 0.82, 0.61],
+      "cone_degrees": 104,
+      "blend": 0.7,
+      "radius": 0.36,
+      "fixture": "SIDE06 / Shielded service emitter.001",
+      "max_fixture_distance": 0.6,
+      "cast_shadow": true,
+      "web_shadow_map": 512
+    },
+    {
+      "name": "Local cool reflected fill",
+      "position": [-178.0, -88.0, 54.0],
+      "target": [-172.0, -24.0, 35.0],
+      "energy_w": 40000,
+      "color_linear": [0.48, 0.62, 0.76],
+      "cone_degrees": 68,
+      "blend": 0.85,
+      "radius": 14.0,
+      "fixture": null,
+      "cast_shadow": true,
+      "web_shadow_map": 512,
+      "note": "Art-directed reflected light proxy, not a physical lamp or a claimed orbital light simulation"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "revision": "side-finish-04",
+  "recovered_input_sha256": "587ddbff0f1ffb7326b2298a2158699e4b3215d29c3a6a0b68b843d6486dda4f",
+  "historical_unavailable_side03_sha256": "14a58708c990193d989f298f3f628b5a89dc7b2b82c476281630187a5494d57a",
+  "home_input_sha256": "e05803fd34da6ccff0fb680bf3953165aabf742bd659342f5680de1022d0e9a7",
+  "generator_commit": "9fac8402a09effaadef454450859dd9f8199778e",
+  "status": "local finish study; not approved art; web procedural shading not baked"
+}

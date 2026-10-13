@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-13",
+  "revision": "fore-root-11",
+  "zip_crc_passed": true,
+  "manifest_verified_files": 229,
+  "manifest_mismatches": [],
+  "source_sha256": "a1dd93fddd59a605ad4d7c2788d218542874a8386b0cf0e9bbb27f9454654970",
+  "source_original_evidence": {
+    "file": "tools/flagship/frozen/fore-root-11/evidence/check-c.json",
+    "passed": true,
+    "checks": 18,
+    "declared_contacts": 47,
+    "verified_binding_to_actual_bytes": true
+  },
+  "source_full_rerun": {
+    "status": "passed",
+    "checks": 18,
+    "declared_contacts": 47,
+    "report": "fore-root-11-source-recheck.json",
+    "note": "Completed before termination request reached process; full report exists and all checks passed."
+  },
+  "glb_recheck": {
+    "passed": true,
+    "actual_draco_decode": true,
+    "rays": 748,
+    "report": "fore-root-11-glb-recheck.json"
+  },
+  "adapter_tests": {
+    "passed": true,
+    "tests": [
+      "ownership and disposal",
+      "duplicate light IDs",
+      "abort while loading"
+    ],
+    "browser_tested": false,
+    "three_executed": false
+  },
+  "python_syntax": "all frozen Python files AST parsed",
+  "secret_scan": "private-key and common GitHub/OpenAI token patterns: no matches; explicit text-only file allowlist",
+  "local_astro_check": {
+    "status": "blocked",
+    "reason": "pnpm dependency downloads from registry.npmjs.org failed (error 23); install interrupted, Astro executable unavailable"
+  },
+  "windows_tested": false,
+  "browser_tested": false,
+  "published": false,
+  "binary_uploaded_to_github": false,
+  "unrelated_work_modified": false
+}

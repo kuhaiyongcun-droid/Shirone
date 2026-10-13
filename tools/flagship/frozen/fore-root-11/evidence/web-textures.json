@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "flagship_sha256": "bbe6a3cea14393844f9950b9b4027bbf6302157b3d5efb1e295f09927147922a",
+  "prior_sha256": "f9d5a8f531e8a53f57a64caffdc1c9e2a5782dcc676977f6851e75d25870919b",
+  "embedded_texture_sha256": {
+    "structure-normal": "12463c7f27847d0a53ae20a302b5214bb0c8c8180b91f67f94f6f1bcdb4d0362",
+    "structure-basecolor": "9bcbabe4a9f9ed48b8a33fe83023ab94a85ad13d295d1a027562c65aebcaa456",
+    "structure-orm": "a4fc5d6e587be0a66a0ffe5caf2fad2c5c57bbb2350ca9450f253ffdcbe36cb2",
+    "equipment-normal": "8f907260db2405841aaa9c296900af919a968dc315ad636e2800e3f1bba13f87",
+    "equipment-basecolor": "9c4d0cdd0cb2b3d54585853a80b83338c23c59330c52bc67300622348b8bb7f0",
+    "equipment-orm": "c463cc7331b1e8f5457d39fe960603f7e8b31be14468664cd3758727bcf55506",
+    "fore09-service-normal": "4401bf87c1690ef3d53e9201d290a160865e232819b1b5d43bfee4a8ca71d3d0",
+    "fore09-service-basecolor": "da268f55d1a69a78b1e21561937276ee796f0966388a54ab53374164e1a74076",
+    "fore09-service-orm": "38604cb169f2a59fd6c52acfb9a86eb6c3afd873b7dfac7c1737e39a6601ba85"
+  },
+  "all_nine_atlases_unchanged": true,
+  "archive_byte_identical": true,
+  "light_profile_bound_to_model": true,
+  "browser_tested": false,
+  "unchanged_lighting_assets": {
+    "service-lights.glb": true,
+    "service-lighting.mjs": true
+  }
+}
