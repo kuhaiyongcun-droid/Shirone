@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "source": { "type": "path", "path": "../content" },
+  "mounts": { "content": "src/content", "data": "src/data", "public": "public" },
+  "keep": [],
+  "prune": true
+}

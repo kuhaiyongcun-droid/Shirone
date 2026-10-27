@@ -1,0 +1,133 @@
+kuhaiyongcun.com · Linux + Nginx 静态交付
+作者展示名：kuhai
+部署配置修订：v5（2026-10-23）。当前部署文件哈希见 DELIVERY-SHA256-v5.json；v3/v4清单和旧部署包保留，v4工具与说明另存 history/v4-http-check/。此修订补齐只读HTTP验收的失败记录；不代表服务器已部署或验收。
+
+交付边界
+本目录提供配置模板、只读发布前检查和手动版本切换工具。开发机未找到 PATH 上的 nginx，未安装 Nginx，未部署、SSH、读取证书或执行服务器命令。下面的命令由站主在自己的 Linux 服务器上执行；“模板已准备”不等于 nginx -t、TLS、真实浏览器或备案审核已通过。
+
+发布物只使用最终组装的 dist：根 / 为主舰主页，/blog/ 为完整静态博客。不得把 blog 源码目录、整个 workspace、site.json、模型母版、deployment 或 evidence 作为网站根目录。Node、pnpm、Python、Blender 不需要运行在生产网站进程中；Python 仅用于可选的离线检查。
+
+目录约定
+/srv/kuhai/releases/<版本号>/dist/index.html
+/srv/kuhai/releases/<版本号>/dist/404.html
+/srv/kuhai/releases/<版本号>/dist/blog/index.html
+/srv/kuhai/current -> /srv/kuhai/releases/<版本号>/dist
+/var/www/kuhai-acme/.well-known/acme-challenge/<实际 token>
+
+每个版本使用全新目录，例如 20261022-01；拒绝覆盖已发布版本。current 是唯一切换入口。不要把它改成真实目录。Nginx 工作用户需要只读访问静态文件、遍历上级目录；发布账号负责写新版本。不使用 chmod 777。
+
+文件用途
+nginx/cache-maps.conf：仅在 http 上下文加载一次，建议安装为 /etc/nginx/conf.d/00-kuhai-cache.conf。
+nginx/site.conf、mime.types、acme.conf：安装到 /etc/nginx/kuhai/，由站点配置引用。
+nginx/http-bootstrap.conf：没有证书时的 HTTP 引导模板。
+nginx/https-production.conf：HTTPS 正式模板，含 HTTP 跳转及 ACME 例外。
+preflight.py：只读检查组装 dist 的入口文件、逐文件 SHA256 和发布边界。
+switch-release.sh：只切换 current 符号链接，可用于上线或回滚；不上传、不删版本、不重载 Nginx。
+
+首次部署顺序
+1. 本地构建完成后检查最终 dist。示例（在 release 根目录）：
+   python deployment/preflight.py dist > deployment/dist-preflight.json
+   退出码必须为 0。此报告不是浏览器验收，也不检查服务器证书。
+   把 dist 完整上传到全新的 /srv/kuhai/releases/20261022-01/dist；不要只上传博客的独立 dist，也不要把 dist 再套一层。
+   在服务器上重新执行同一检查、对照文件清单。部署工具本身放在 webroot 之外。
+
+2. 先查看 nginx -v 和当前配置包含方式；此模板按常见的 /etc/nginx/conf.d/*.conf 在 http 中加载编写。现有服务器若采用不同布局，调整 include 路径，不替换全局 nginx.conf。
+   将 cache-maps.conf 放到 /etc/nginx/conf.d/00-kuhai-cache.conf。
+   将 site.conf、mime.types、acme.conf 放到 /etc/nginx/kuhai/。
+   将 http-bootstrap.conf 放到 /etc/nginx/conf.d/kuhai.conf。
+   HTTP 和 HTTPS 两个模板只启用一个 kuhai.conf，不同时添加两个同名 80 端口站点。已有同域名配置应先备份，再人工合并或替换；不要改其他站点。
+
+3. 在确认版本目录已检查后，手动切换：
+   sh /安全存放路径/switch-release.sh 20261022-01
+   sudo nginx -t
+   仅当 nginx -t 成功时：sudo nginx -s reload
+   若系统使用 systemd 管理 Nginx，可按该系统惯例 reload；不需要重启整台服务器。
+
+4. DNS、网络开放、证书申请由站主管理。本模板只声明 kuhaiyongcun.com，没有假定 www 已配置。默认仅监听 IPv4；确实配置了 AAAA、IPv6 网络及防火墙后，才增加相应的 listen [::]:80 和 listen [::]:443 ssl。
+   使用 ACME HTTP-01 时，客户端的 webroot 必须明确选为 /var/www/kuhai-acme；这里只提供接收 token 的路由，不安装或运行任何证书客户端。
+   HTTP 引导模板没有强制 HTTPS 跳转，因此不依赖尚不存在的证书。
+
+5. 获得实际证书后，把 https-production.conf 中两个 /REPLACE_WITH_ACTUAL_CERTIFICATE/... 替换成真实的绝对路径。证书文件应含站点证书及所需中间链，私钥保存在 webroot 之外。
+   用编辑后的 HTTPS 模板替换 kuhai.conf，再运行 sudo nginx -t，成功后 reload。
+   不要把模板中的占位路径当作已存在路径。证书续期安排、到期监控与续期后 reload 仍需站主设置。
+   未默认启用 HSTS，以免尚未验收的 HTTPS 配置被浏览器长期记住。
+
+路由、缓存与访问规则
+未知 URL 使用 try_files ... =404，并可显示 dist/404.html；不回退首页，也不把状态改为 200。/blog 跳到 /blog/ 并保留查询参数。目录不提供文件列表。404.html 作为内部错误页使用，直接请求它也返回 404；/blog/404.html 增加 exact location，同样返回真实 404 和根错误页正文。
+本地预览与生产配置有明确差异：本地统一 no-store；生产按上面的命名策略缓存并支持 gzip、静态 Range。没有 index.html 的现存目录，本地预览返回 404，Nginx 配置可以返回 403；两者都不枚举目录，也不返回首页。这一差异应分别记录，不能把本地 HTTP 检查当作 Nginx 验收。
+HTML、JSON、站点清单、XML 等默认 Cache-Control: no-cache，可以保存但每次使用前需验证。明确命中内容哈希命名的资源为一年 immutable；普通 JS、图片、GLB、字体等为一小时。哈希必须随内容改变；无法确认文件名是内容哈希时应沿用短缓存。404 等错误使用 no-store，避免把缺失的哈希资源缓存一年。
+gzip 只用于文本和文本格式；GLB、压缩图片、WOFF2 等不重复动态压缩。Range 请求仍由 Nginx 静态模块处理。
+站点级 MIME 表包含 model/gltf-binary、model/gltf+json、application/wasm 和字体格式，不依赖发行版恰好带有这些映射。
+只允许发布产物，阻断隐藏路径、源码扩展名、源码映射及部分构建配置。合法的根 /.well-known/security.txt、assetlinks.json 等可发布；不会用一个宽泛的 ^~ 绕过隐藏文件检查。ACME 仅允许 token 格式路径。编译后的公开 JS 本来就是浏览器资源，不属于被隐藏的源码工作目录。
+
+更新与回滚
+1. 从源码构建新版本并检查，上传到新的 releases/<版本号>/dist，保留上一版原样。
+2. 考虑已打开旧页面的访问者：把仍可能被旧页面请求的上一版“内容哈希资源”保留在新版本相同 URL 下。只能追加缺失文件，同路径存在时必须核对 SHA256；不能覆盖新文件。不要回拷旧 HTML、JSON、服务工作线程或未哈希资源。否则旧页面的延迟模块请求可能 404，刷新后才能恢复。仅保留旧 releases 目录不会自动让这些 URL 可达。
+3. 对实际准备发布的完整目录重新检查，记录版本名及清单，再运行 switch-release.sh <新版本号>。脚本输出上一个目标路径，留存用于回滚。静态 current 切换无需 Nginx reload；若同时改变 Nginx 配置，另做 nginx -t 和 reload。
+4. 验收失败时运行 switch-release.sh <上一版本号>，再检查主页、博客及资源。脚本采用同目录临时符号链接后重命名，不删除旧版，不更改内容。服务器需要 Linux 的 realpath、readlink、ln、GNU mv；脚本尚未在此 Windows 环境运行。
+5. 如果要删除历史版本，另行决定保留周期并核实 current 指向；本交付没有自动清理任务。
+
+后续写作与重建的版本约定
+正式交付报告必须写明实际验收通过的 ship 构建目录、sourceStage、sourceSceneSha256、snapshot、snapshotSha256，以及组合目录和对应 assembly 证据。当前维护流程固定 P26-P27 快照，正式静态版本以本次成功release报告为准，不能回退历史P25候选。
+
+只新增或修改文章：在作者原工作区 content/content/posts/ 编辑正文，按根使用与构建说明依次执行 scripts/run-pnpm.py 的 configure、content-validate、content-sync、check、type-check、check-manifest、build。每步退出码为 0 才继续。随后用 scripts/assemble.py 的 --ship-dist 指向正式报告指定、未改动的主舰构建目录，--out 选择全新的 dist-版本号。这种更新不需要重做三维或重建主舰。
+
+修改共享 site.json、页脚或主舰界面时：两部分都要重建。使用 python scripts/release.py --version 新版本 --mode shared；它固定传入P26-P27快照及其SHA256，不再依赖隐式历史P25默认值。直接调用 ship/build.mjs 仍必须明确 --snapshot、--snapshot-sha256 和全新 --out。固定计划 release-plan/p26p27-v1.json 保持原样，部署文档清单单独选择，不要重写模型基线或运行旧模型脚本。
+
+主舰命令结构（在作者原工作区执行，所有占位值必须换成正式报告中存在的值）：
+  <实际 Node 路径> ship/build.mjs --out=dist-新版本 --snapshot=public-正式快照/snapshot.json --snapshot-sha256=<该快照真实64位SHA256>
+组合命令结构：
+  <实际 Python 路径> scripts/assemble.py --ship-dist ship/正式已验收构建目录 --blog-dist blog/dist --out dist-新版本
+新组合必须通过资源、HTTP 及本次修改影响的浏览器检查，并更新真实交付报告。再执行 scripts/package-delivery.py --dist dist-新版本 --assembly-report evidence/该次实际assembly报告.json --report 本轮真实交付报告.txt --package kuhai-新包名；不要把旧报告或旧 assembly 文件作为新版本依据。
+
+静态部署 ZIP 不包含源文件和构建依赖，不能从 ZIP 内编辑文章重建。写作维护使用完整开发源码包与匹配平台依赖；ship有自己的package.json、锁文件和node_modules（esbuild 0.28.2、three 0.186.1），不再借用homepage-preview-v1。Windows依赖包不能当作Linux依赖；生产服务器只运行静态dist，无需开发工具。
+
+备案信息接入
+公开构建配置位于 release 根的 site.json；构建后由主舰与博客各自生成页脚，site.json 本身不发布。
+当前 filing.icp.approved=false，filing.icp.displayText 为空，查询地址为 https://beian.miit.gov.cn/；filing.publicSecurity.approved=false，其 displayText、url、iconPath 均为空。申请中的“2026009604”不作为正式备案号展示，不自行补省份或站点序号。
+ICP备案审核通过后，将主管部门实际核发的完整网站备案号原样填入 filing.icp.displayText，确认 filing.icp.url，再将 approved 改为 true，重建两部分页面和发布包。
+公安联网备案审核通过后，按平台提供的完整展示文字、查询链接和图标填写 filing.publicSecurity.displayText、url、iconPath，再将 approved 改为 true。图标需作为真实静态文件进入 dist；不要生成或猜测备案号、证书或官方徽标。
+本目录仅准备技术展示接口。部署、工信部备案、公安联网备案是不同事项；网站上传成功或页脚有号码均不等于审核完成。正式公网上线时机及办理要求需按所在地主管部门及接入商确认。
+
+服务器待验清单（逐项记录日期与结果）
+- nginx -t 成功，证书实际可读；HTTPS 域名/证书链匹配，HTTP 首页跳转正确。
+- /、/blog/、一篇实际文章可打开，/blog 的查询参数在跳转后保留；随机不存在路径、/404.html 和 /blog/404.html 确为 404。检测脚本应禁用自动跟随重定向，分别检查原始状态与 Location。
+- /.env、/.git/config、/package.json、/blog/src/config.ts、/site.json、任意 *.js.map 返回 404；测试不存在的路径本来就会 404，必要时在隔离副本放无敏感内容的哨兵文件验证规则。
+- /.well-known/ 中实际配置的合法文件可取；ACME 测试 token 由独立 webroot 返回，不存在的 token 为 404。
+- 对实际 GLB、wasm、woff2 文件检查 Content-Type；不存在的资源必须 404，不能把 HTML 当模型或脚本返回。
+- 检查 HTML no-cache、带内容哈希资源 immutable、未哈希资源一小时、错误 no-store；If-None-Match 可得到适用的 304。
+- 对足够大的文本响应带 Accept-Encoding: gzip 检查 Content-Encoding 和 Vary；对 GLB 检查单范围请求的 206 和 Content-Range。
+- 用真实桌面及 390×844 页面检查照明、触控、hover 相机、导航、键盘焦点、资源释放和性能；本目录不宣称完成这些检查。
+- 从一个已知正常版本切到新版本并演练回滚；确认旧页面的延迟资源不会因切版失效。
+- 审核通过后检查主舰与博客页脚的完整备案文字、链接与公安图标；申请阶段不显示虚构或未核发号码。
+
+检查命令示例（替换资源路径为本版本真实文件，不使用虚构“测试通过”结果）
+curl -I https://kuhaiyongcun.com/
+curl -I https://kuhaiyongcun.com/blog/
+curl -I https://kuhaiyongcun.com/__missing_probe__
+curl -I -H 'Accept-Encoding: gzip' https://kuhaiyongcun.com/实际文本资源路径
+curl -I -H 'Range: bytes=0-1023' https://kuhaiyongcun.com/实际模型.glb
+
+已核实的官方技术文档（2026-10-22）
+https://nginx.org/en/docs/http/ngx_http_core_module.html#try_files
+https://nginx.org/en/docs/http/ngx_http_core_module.html#location
+https://nginx.org/en/docs/http/ngx_http_core_module.html#types
+https://nginx.org/en/docs/http/ngx_http_headers_module.html#add_header
+https://nginx.org/en/docs/http/ngx_http_map_module.html#map
+https://nginx.org/en/docs/http/ngx_http_gzip_module.html#gzip_types
+https://nginx.org/en/docs/http/ngx_http_ssl_module.html#ssl_certificate
+https://nginx.org/en/docs/switches.html
+https://nginx.org/en/docs/control.html
+相关备案主来源由主协调会话核实，详见该会话备案说明；本文没有独立完成法律审核。
+
+只读HTTP验收工具（v5）
+先由站主完成自己的部署，在解压静态包根目录执行：
+  python3 deployment/server-check.py --origin https://kuhaiyongcun.com --http-origin http://kuhaiyongcun.com --manifest MANIFEST.json --out server-check-首次.json
+工具只发送HEAD/GET、不跟随跳转、不使用环境代理、不读取凭据、不写服务器；输出为新本地JSON，拒绝覆盖。输入必须是本包MANIFEST.json，非部署文件哈希清单；按清单选真实文章及GLB/wasm/woff2/JS/CSS，检查状态、308查询保留、404、MIME/长度、缓存、gzip正文哈希、GLB单段Range。HTTPS使用标准证书和主机名验证，不等于TLS配置/续期全面审核。缺少相应资产会明确列未执行。
+请求超时、TLS验证错误、连接中断或响应超出限定大小时，记录具体请求和失败原因，保留已完成检查，再继续独立检查；损坏的gzip记失败，不因解压异常丢失报告。任何失败均使最终passed=false并返回退出码1；已执行的其它检查通过不抵消失败。工具每次请求超时15秒，多个请求失败时需等待各自结束。缺少或无效的本地MANIFEST属于启动错误，须先修正输入，不是服务器验收结论。
+本轮只验证了工具的离线模拟响应测试，没有连接公网服务器。普通localhost静态服务通常无Nginx缓存/gzip/Range；其失败不能自动当作产品错误，也不能把localhost通过当成Nginx验收。nginx -t、文件权限、证书续期、真实设备与回滚仍需站主在真实服务器执行。
+
+截至 v2 的已读交付证据
+主协调已执行 dist-blogcheck 组合及 preflight：361 文件、53,203,315 字节，286 项 HTML/CSS 资源引用存在，根 404 与博客 404 的 SHA256 相同。证据为 ../evidence/assembly-dist-blogcheck-20261022T040626Z-56cf593c.json 及同名 -preflight.json。
+已读 ../evidence/http-dist-blogcheck-20261022T040715Z.json 的 24 项本地 HTTP PASS；本部署审阅未重跑 HTTP、未操作预览进程。独立审阅另指出原 audit-http.py 会自动跟随重定向，因此该旧报告不证明“原始请求没有发生跳转”，也没有涵盖 Nginx/TLS。之后的脚本修正及新报告以主协调最新交付为准。
+随后已复核修正后的审计脚本与 ../evidence/http-dist-blogcheck-20261022T040908Z.json：30 项本地 HTTP PASS，禁止自动代理和重定向，并补齐 /blog/404.html、308 Location、GLB/wasm/woff2 HEAD 类型与长度。manage-preview.py 的原子状态写入、失败时仅清理刚创建子进程、区分进程不存在与访问失败等修正也已完成静态复核；没有为审阅而启动或停止服务，没有执行故障注入。

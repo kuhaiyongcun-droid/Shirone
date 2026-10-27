@@ -1,0 +1,35 @@
+# Site-scoped table: independent of the distribution's global mime.types.
+types {
+    text/html html htm;
+    text/css css;
+    text/plain txt;
+    text/javascript js mjs;
+    application/json json;
+    application/ld+json jsonld;
+    application/xml xml;
+    application/rss+xml rss;
+    application/atom+xml atom;
+    application/manifest+json webmanifest;
+    application/wasm wasm;
+    model/gltf-binary glb;
+    model/gltf+json gltf;
+    application/octet-stream bin;
+    image/png png;
+    image/jpeg jpg jpeg;
+    image/webp webp;
+    image/avif avif;
+    image/gif gif;
+    image/svg+xml svg;
+    image/x-icon ico;
+    font/woff woff;
+    font/woff2 woff2;
+    font/ttf ttf;
+    font/otf otf;
+    application/vnd.ms-fontobject eot;
+    application/pdf pdf;
+    video/mp4 mp4;
+    video/webm webm;
+    audio/mpeg mp3;
+    audio/ogg ogg;
+    audio/wav wav;
+}

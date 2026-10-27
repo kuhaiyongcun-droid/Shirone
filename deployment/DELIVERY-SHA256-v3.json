@@ -1,0 +1,68 @@
+{
+  "revision": 3,
+  "created_utc": "2026-10-22T04:40:03.561361+00:00",
+  "scope": "Current nine deployment files. Excludes old status, all previous manifests, history and coordinator review checklist. No final release declared.",
+  "previous_manifest": "DELIVERY-SHA256-v2.json",
+  "previous_manifest_sha256": "7f0c8dfdd34d8406d6fa14732405d64ea8928fadbe02cd8f13411a6ad545d5f2",
+  "changed_files": [
+    "部署与更新说明.txt"
+  ],
+  "previous_changed_files_snapshot": "history/v2-maintenance-review/",
+  "files": [
+    {
+      "path": "nginx/acme.conf",
+      "bytes": 298,
+      "sha256": "ce6a958c83e4fa70321e525d46077f68e9cea7d2faf34b66d51653212284fde1"
+    },
+    {
+      "path": "nginx/cache-maps.conf",
+      "bytes": 869,
+      "sha256": "bbc991a7ccb8a6f5dc13fc4a1b87e954ea367b349d945000544e8bcd9f773155"
+    },
+    {
+      "path": "nginx/http-bootstrap.conf",
+      "bytes": 250,
+      "sha256": "7c234da665848b7b9f4ee716c834a7a06d480ba89d56d30c52de77852db04712"
+    },
+    {
+      "path": "nginx/https-production.conf",
+      "bytes": 780,
+      "sha256": "5758d95b842c527c5f358666f105c6bb492a92b4d3dc81a2bfc056b171ab78b3"
+    },
+    {
+      "path": "nginx/mime.types",
+      "bytes": 865,
+      "sha256": "71c69a9996200e7fbf0f14d310e40da6b7db48851cad078fde4989c504211734"
+    },
+    {
+      "path": "nginx/site.conf",
+      "bytes": 1889,
+      "sha256": "71424f48c7354c82e6476af2c676b8b966fba3b87ed8deb58e77b1723206f991"
+    },
+    {
+      "path": "preflight.py",
+      "bytes": 3663,
+      "sha256": "28fc67274761230f53834452737398e0767e0591969908f87c504f0595b6c17c"
+    },
+    {
+      "path": "switch-release.sh",
+      "bytes": 2148,
+      "sha256": "f48e8fe610fcceb516086de6f577a43f6faee80a7a9de9c3d8bfa8702cfa5794"
+    },
+    {
+      "path": "部署与更新说明.txt",
+      "bytes": 15308,
+      "sha256": "2183620a029456d5d450bee017eafec81f1e4ee425b2196b8187879476fab97f"
+    }
+  ],
+  "validation": {
+    "read_only_current_candidate": "dist-blogcheck-v3",
+    "candidate_is_final": false,
+    "candidate_files_sha256_verified": 361,
+    "candidate_bytes_sha256_verified": 53167672,
+    "nginx_test": "PENDING_ACTUAL_LINUX_SERVER",
+    "tls": "PENDING_ACTUAL_SERVER",
+    "switch_script_execution": "NOT_EXECUTED_NO_LOCAL_LINUX_SHELL",
+    "network_or_deployment_executed": false
+  }
+}

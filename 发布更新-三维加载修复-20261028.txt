@@ -1,0 +1,73 @@
+主舰／档案室：三维加载修复 3d-loading-20261028-v2
+
+适用于已有 Linux + Nginx + HTTPS 的 kuhaiyongcun.com。
+本次只生成新版静态文件；没有自动修改服务器、证书或域名解析。
+
+修复内容
+整舰模型约 22.17 MB。旧页面为整个下载与解析设置 30 秒超时；此前实测公网下载约 61 秒，因此触发“三维暂时不可用”。新版改为有持续数据时继续下载，连续 45 秒没有下载进展时停止，单个模型下载、校验与解析总计最多 5 分钟。
+增加实际下载百分比、已下载容量、校验与准备画面提示，以及取消和重试。失败后保留静态图与文章入口；键盘焦点位于消失的三维控件时回到重试按钮。
+尺寸、SHA256、对象语义检查仍保留。完整模型文件与 P26-P27 固定快照不变。RESERVED 仍封闭，其它规划舱室没有因此装舰。
+包含用户确认的“新ICP备2026009604号”及工信部官方链接；公安备案栏继续关闭，等待实际取得号码后配置。
+
+需要上传的三个文件（位于 delivery-packages/kuhai-3d-loading-20261028-v2/）
+kuhai-3d-loading-20261028-v2.zip
+MANIFEST.json
+SHA256SUMS.txt
+
+ZIP SHA256：35e5c65ca9fb5357a5109c1ef0c2e662c580043d10a3908d971334de96e6f580
+MANIFEST SHA256：ba1611db745af3edf485b7f8af3631ba3c9784c07673c4df054c742a713bc9ec
+
+一、准备新的上传目录
+在服务器终端运行：
+mkdir -m 700 /root/kuhai-upload/3d-loading-20261028-v2
+
+将上述三个文件上传到这个目录。不要只上传源码，也不要覆盖旧版目录。
+
+二、验证并切换
+以下命令依照已经使用的 root /srv/kuhai/current 与 release 目录方案编写。
+先用 readlink -f /srv/kuhai/current 记录旧目标。若当前 Nginx 根目录已改变，应先核对配置。
+任一步失败就停止，不跳过校验；mkdir 若提示目录已存在，应查看上次执行情况，不覆盖。
+
+(
+set -eu
+umask 022
+cd /root/kuhai-upload/3d-loading-20261028-v2
+sha256sum -c SHA256SUMS.txt
+unzip -tq kuhai-3d-loading-20261028-v2.zip
+release_dir=/srv/kuhai/releases/3d-loading-20261028-v2
+mkdir "$release_dir"
+unzip -q -n kuhai-3d-loading-20261028-v2.zip -d "$release_dir"
+cd "$release_dir"
+sha256sum -c PAYLOAD-SHA256SUMS.txt
+test ! -e /root/kuhai-preflight-3d-loading-20261028-v2.json
+python3 deployment/preflight.py dist > /root/kuhai-preflight-3d-loading-20261028-v2.json
+chmod 755 "$release_dir"
+find dist -type d -exec chmod 755 {} +
+find dist -type f -exec chmod 644 {} +
+nginx -t
+sh deployment/switch-release.sh 3d-loading-20261028-v2
+)
+
+切换脚本会打印旧、新目标，请保留。只切换静态目录指针，不需要重新加载 Nginx。
+ZIP 中 deployment/部署与更新说明.txt 是保留哈希的历史通用手册；其中首次安装与“备案未批准”的描述不是本轮状态。此次不重新套用 HTTP/HTTPS 配置，以本说明及新版页面为准。
+
+三、服务器与实际浏览器检查
+python3 /srv/kuhai/releases/3d-loading-20261028-v2/deployment/server-check.py --origin https://kuhaiyongcun.com --http-origin http://kuhaiyongcun.com --manifest /srv/kuhai/releases/3d-loading-20261028-v2/MANIFEST.json --out /root/kuhai-server-check-3d-loading-20261028-v2.json
+
+上面检查通过只说明路由、文件、缓存、gzip、Range、HTTPS与跳转正常，不能代替三维实测。
+在浏览器强制刷新 https://kuhaiyongcun.com/ 后点击“开启三维探索”。首次加载应显示百分比，正常低速下载超过 30 秒仍可继续。等待完整主舰出现，再进入档案室；试一次取消与重试，确认文章仍可打开。手机也检查一次。检查首页与博客页脚备案文字和链接。
+模型未做压缩减量，本次修复不会把首次下载立即变快；真实服务器性能与各设备显卡表现仍应以上线后实测为准。
+
+四、回滚
+若此前记录的旧版本确为 navigation-reviewed-v2，可运行：
+sh /srv/kuhai/releases/3d-loading-20261028-v2/deployment/switch-release.sh navigation-reviewed-v2
+如旧目标不同，应使用实际记录的旧 release ID，不猜测。所有旧发布目录保留。
+
+GitHub 保存源码与固定网页资源，不自动部署。开发入口为当前分支根 README；三维源文件在 ship/，博客在 blog/，公开内容在 content/，共享配置在 site.json。原始 Blender 母版仍单独保存在本地。
+
+本轮实际验证（2026-10-28，北京时间）
+最终源码单元检查：83 通过，0 失败，1 项旧备案基线按条件跳过。
+完整发布流程通过：博客 283 文件 Astro 检查 0 错误、0 警告；类型、依赖清单、构建、资产校验、公开元数据及 ZIP 回读均通过。
+现有无头 Firefox、本地受控流式限速：主舰完整下载 67.167 秒，内舱 22.870 秒；超过旧 30 秒限时仍继续下载，最终均进入真实 WebGL 场景。中英进度、主舰/内舱取消及重试、503 故障恢复和焦点、加载中离开并阅读文章均通过。
+390×844 触控视口补验通过：实际可信触摸事件触发开启、取消、重试及进入内舱，关闭后无残留 canvas。首次脚本误用 maxTouchPoints 导致测试前置断言失败；已修正测试判断并单独补跑，没有伪造设备属性。所有原始结果保留。
+这属于本地受控网络与浏览器模拟；尚未替代新版上线后的公网、实际手机及完整照明/性能矩阵验收。未修改固定模型的 browserAcceptance 或 lightingCalibrated 标记。
