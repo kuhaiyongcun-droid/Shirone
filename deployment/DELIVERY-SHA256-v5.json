@@ -1,0 +1,59 @@
+{
+  "revision": 5,
+  "created_utc": "2026-10-22T16:13:08.902458+00:00",
+  "scope": "Ten current deployment files; retain failed HTTP checks for corrupt gzip, timeout and disconnect; no server acceptance claimed",
+  "previous_manifest": "DELIVERY-SHA256-v4.json",
+  "previous_manifest_sha256": "5e34126704fb2843c00ca2c8f9d28e1c3d71273d7b561c6c76367147c334da3b",
+  "files": [
+    {
+      "path": "nginx/acme.conf",
+      "bytes": 298,
+      "sha256": "ce6a958c83e4fa70321e525d46077f68e9cea7d2faf34b66d51653212284fde1"
+    },
+    {
+      "path": "nginx/cache-maps.conf",
+      "bytes": 869,
+      "sha256": "bbc991a7ccb8a6f5dc13fc4a1b87e954ea367b349d945000544e8bcd9f773155"
+    },
+    {
+      "path": "nginx/http-bootstrap.conf",
+      "bytes": 250,
+      "sha256": "7c234da665848b7b9f4ee716c834a7a06d480ba89d56d30c52de77852db04712"
+    },
+    {
+      "path": "nginx/https-production.conf",
+      "bytes": 780,
+      "sha256": "5758d95b842c527c5f358666f105c6bb492a92b4d3dc81a2bfc056b171ab78b3"
+    },
+    {
+      "path": "nginx/mime.types",
+      "bytes": 865,
+      "sha256": "71c69a9996200e7fbf0f14d310e40da6b7db48851cad078fde4989c504211734"
+    },
+    {
+      "path": "nginx/site.conf",
+      "bytes": 1889,
+      "sha256": "71424f48c7354c82e6476af2c676b8b966fba3b87ed8deb58e77b1723206f991"
+    },
+    {
+      "path": "preflight.py",
+      "bytes": 3663,
+      "sha256": "28fc67274761230f53834452737398e0767e0591969908f87c504f0595b6c17c"
+    },
+    {
+      "path": "switch-release.sh",
+      "bytes": 2148,
+      "sha256": "f48e8fe610fcceb516086de6f577a43f6faee80a7a9de9c3d8bfa8702cfa5794"
+    },
+    {
+      "path": "部署与更新说明.txt",
+      "bytes": 16925,
+      "sha256": "2315b1b6c815bf3865cd45448bf19b049da4b5bcfd6284107c307464e9e1ec55"
+    },
+    {
+      "path": "server-check.py",
+      "bytes": 11049,
+      "sha256": "c8634bc556fa4435c0e83e824b9a405cec39db95b44b5d618c1d790cf5596d2c"
+    }
+  ]
+}

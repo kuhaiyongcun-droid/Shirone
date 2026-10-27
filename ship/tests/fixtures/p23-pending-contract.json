@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "revision": "production23-viewer-v4-p25-pending",
+  "status": "awaiting-final-assets",
+  "source_scene": {
+    "stage": "P25",
+    "sha256": null
+  },
+  "coordinate_system": {
+    "gltf_up_axis": "Y",
+    "source_length_unit": "meter",
+    "root_scale": 0.01,
+    "model_rotation": [
+      0,
+      0,
+      0
+    ]
+  },
+  "assets": null,
+  "documents": null,
+  "verification": {
+    "browser_verified": false,
+    "lighting_calibrated": false
+  }
+}

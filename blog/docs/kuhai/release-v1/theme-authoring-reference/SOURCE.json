@@ -1,0 +1,133 @@
+{
+  "baseline": "Shirone-baseline-998c68d",
+  "byteIdentical": true,
+  "manifestDocsRepointed": 26,
+  "files": [
+    {
+      "source": "src/content/posts/markdown-abbreviations.md",
+      "destination": "docs/kuhai/release-v1/theme-authoring-reference/markdown-abbreviations.md",
+      "bytes": 1646,
+      "sha256": "e63bf8b2fc70505bd5e5edc10685bfc87c9f057b4ff500fbec168f42efbaad66"
+    },
+    {
+      "source": "src/content/posts/video.md",
+      "destination": "docs/kuhai/release-v1/theme-authoring-reference/video.md",
+      "bytes": 947,
+      "sha256": "6950c576e5f68e3c087c8152ae104346634c191cf1e1d9163689ec16df7340a4"
+    },
+    {
+      "source": "src/content/posts/admonitions.md",
+      "destination": "docs/kuhai/release-v1/theme-authoring-reference/admonitions.md",
+      "bytes": 1698,
+      "sha256": "1b8ed1e86c25235a83b79e9be92a8149544ce5852d596f052211a9c78863e8ea"
+    },
+    {
+      "source": "src/content/posts/audio-reader.md",
+      "destination": "docs/kuhai/release-v1/theme-authoring-reference/audio-reader.md",
+      "bytes": 1358,
+      "sha256": "159da63df8f4a4ff80c4d7c030fda5a9b5df52340c06e42dd24a7c7bb3ed05e3"
+    },
+    {
+      "source": "src/content/posts/markdown-enhancements.md",
+      "destination": "docs/kuhai/release-v1/theme-authoring-reference/markdown-enhancements.md",
+      "bytes": 5658,
+      "sha256": "2c51429e4017e6a9250381b74ab37733d46ec33ed65173afefbe6b54890210bb"
+    },
+    {
+      "source": "src/content/posts/collapse-panels.md",
+      "destination": "docs/kuhai/release-v1/theme-authoring-reference/collapse-panels.md",
+      "bytes": 1986,
+      "sha256": "39b9bc699ea65701969338b0a316ef44e214bab7415cbd50d9328b0fbec968bf"
+    },
+    {
+      "source": "src/content/posts/content-annotations.md",
+      "destination": "docs/kuhai/release-v1/theme-authoring-reference/content-annotations.md",
+      "bytes": 2093,
+      "sha256": "1b009dc375085c324a0ac86eb280196c3bd10bd70747ec88951f927527bb76a7"
+    },
+    {
+      "source": "src/content/posts/expressive-code.md",
+      "destination": "docs/kuhai/release-v1/theme-authoring-reference/expressive-code.md",
+      "bytes": 7507,
+      "sha256": "24cb2514ad77d97ec473ce4a9c4f8102581f463cc986e6de96a230eeafc03495"
+    },
+    {
+      "source": "src/content/posts/markdown-fields.md",
+      "destination": "docs/kuhai/release-v1/theme-authoring-reference/markdown-fields.md",
+      "bytes": 2380,
+      "sha256": "b63bc76b5e2f0fbff65508c071fe9534dd7edc832bde67fa9eb60ff6af0a9c8d"
+    },
+    {
+      "source": "src/content/posts/markdown-extended.md",
+      "destination": "docs/kuhai/release-v1/theme-authoring-reference/markdown-extended.md",
+      "bytes": 2977,
+      "sha256": "70a1b706b8161dc29c3ff43c3aca90636d7ed4de4ba05c70f8c5bb240ce01fde"
+    },
+    {
+      "source": "src/content/posts/guide/index.md",
+      "destination": "docs/kuhai/release-v1/theme-authoring-reference/guide/index.md",
+      "bytes": 7172,
+      "sha256": "353edf69584b896addb5400429f7ab20797a361fb0893e4031df54492d20c7aa"
+    },
+    {
+      "source": "src/content/posts/image-grid-demo/index.md",
+      "destination": "docs/kuhai/release-v1/theme-authoring-reference/image-grid-demo/index.md",
+      "bytes": 16573,
+      "sha256": "a83ab78dd668d365f6868fa99ed45ae7c1af01e4996a92962938321e0cdd6bed"
+    },
+    {
+      "source": "src/content/posts/spoilers.md",
+      "destination": "docs/kuhai/release-v1/theme-authoring-reference/spoilers.md",
+      "bytes": 832,
+      "sha256": "f7b1cb4d38849356f5a2bc37cab2fb9482e50709b5e2c9c9a146c066c40a6b2d"
+    },
+    {
+      "source": "src/content/posts/markdown-includes.md",
+      "destination": "docs/kuhai/release-v1/theme-authoring-reference/markdown-includes.md",
+      "bytes": 691,
+      "sha256": "ca9af8b7ed21c49b8f6b337a90d729027c0025546b7a61c7133191864dd5562c"
+    },
+    {
+      "source": "src/content/posts/marker-highlights.md",
+      "destination": "docs/kuhai/release-v1/theme-authoring-reference/marker-highlights.md",
+      "bytes": 1545,
+      "sha256": "14e3f8697ee4deb6c2a701fee2023dd6334e467af625dd945414e85ac7d7518e"
+    },
+    {
+      "source": "src/content/posts/markdown.md",
+      "destination": "docs/kuhai/release-v1/theme-authoring-reference/markdown.md",
+      "bytes": 3564,
+      "sha256": "6f3ea3516dc73ee060bb69bc3e64a24fb497b6de8041d0d62ef76c3024603d14"
+    },
+    {
+      "source": "src/content/posts/markdown-mermaid.md",
+      "destination": "docs/kuhai/release-v1/theme-authoring-reference/markdown-mermaid.md",
+      "bytes": 8549,
+      "sha256": "3770436855bb19e8543eec6d95cafd2fe4beedf845999f695ff704b07f22aa2e"
+    },
+    {
+      "source": "src/content/posts/option-groups.md",
+      "destination": "docs/kuhai/release-v1/theme-authoring-reference/option-groups.md",
+      "bytes": 2115,
+      "sha256": "a2b94836a674d96966c78ee3045af8a34d026f9ea5ca5cb1f3514b3a67a1fb66"
+    },
+    {
+      "source": "src/content/posts/steps.md",
+      "destination": "docs/kuhai/release-v1/theme-authoring-reference/steps.md",
+      "bytes": 2276,
+      "sha256": "9013a40e75a36c2358aaf0ee9108723f8e3b235f6818538729d60007b125aae3"
+    },
+    {
+      "source": "src/content/posts/encrypted-demo.md",
+      "destination": "docs/kuhai/release-v1/theme-authoring-reference/encrypted-demo.md",
+      "bytes": 6651,
+      "sha256": "d7e95c25b386bab267516ea70636306973c5008883f053c7ffbd151cbcb63672"
+    },
+    {
+      "source": "src/content/snippets/include-example.md",
+      "destination": "docs/kuhai/release-v1/theme-authoring-reference/snippets/include-example.md",
+      "bytes": 255,
+      "sha256": "e0976a8558d16901c49f859a474fcc3274efda04dbf622c55cf8d3de2483d745"
+    }
+  ]
+}

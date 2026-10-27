@@ -1,0 +1,116 @@
+{
+  "schema": "kuhai-public-validation-summary-v1",
+  "dateBeijing": "2026-10-28",
+  "release": "3d-loading-20261028-v2",
+  "deployed": false,
+  "source": {
+    "stage": "P26-P27",
+    "sha256": "dd35a7b43c94ba22a03aa0f27e0b88de549cce594971829c9e0e6913e04d0339"
+  },
+  "snapshotSha256": "cda83ceb10a1618c23789c14df59ad12cb9957e6e9ff603216f59a6e6485154a",
+  "unitTests": {
+    "passed": 83,
+    "failed": 0,
+    "skipped": 1,
+    "skipReason": "historical unapproved ICP baseline no longer applies"
+  },
+  "releasePipelinePassed": true,
+  "htmlFilesWithIcp": 11,
+  "runtimeVersions": {
+    "node": "24.22.1",
+    "pnpm": "11.25.0",
+    "python": "3.12.9",
+    "blogDeclaredPackageManager": "pnpm@11.28.2"
+  },
+  "browser": {
+    "engine": "Firefox headless",
+    "version": "153.0",
+    "network": "localhost controlled streaming; 360000 bytes/s limit",
+    "desktop": [
+      {
+        "name": "desktop-streaming-cancel-retry-navigation",
+        "started": "2026-10-27T17:55:17.156Z",
+        "result": "PASS",
+        "finished": "2026-10-27T17:56:56.403Z"
+      },
+      {
+        "name": "controlled-http-error-recovery",
+        "started": "2026-10-27T17:56:56.404Z",
+        "result": "PASS",
+        "finished": "2026-10-27T17:57:01.271Z"
+      }
+    ],
+    "touchViewport": [
+      {
+        "name": "mobile-touch-cancel-retry",
+        "started": "2026-10-27T17:58:33.180Z",
+        "result": "PASS",
+        "finished": "2026-10-27T17:58:38.428Z"
+      }
+    ],
+    "uncaughtPageErrors": 0,
+    "mobileMethod": "390x844 hasTouch context with actual trusted touch pointerdown; not a physical phone",
+    "initialHarnessFailure": "Firefox hasTouch exposed maxTouchPoints=0; removed that assumption, verified actual touch events and reran mobile only. Original failed report retained locally.",
+    "fullModelDownloads": [
+      {
+        "scope": "exterior",
+        "bytes": 22167212,
+        "durationMs": 67167,
+        "completed": true
+      },
+      {
+        "scope": "archive",
+        "bytes": 7550636,
+        "durationMs": 22870,
+        "completed": true
+      }
+    ],
+    "notExecuted": [
+      "new release on public server",
+      "physical mobile devices",
+      "full historical lighting/performance matrix"
+    ]
+  },
+  "evidenceFingerprints": [
+    {
+      "path": "evidence/accept-3d-loading-20261028-v2/result.json",
+      "bytes": 193324,
+      "sha256": "9323a72b6ef4192aa920fc197f35a81c9bcfb45c4733a437683b70580e979cb3"
+    },
+    {
+      "path": "evidence/accept-3d-loading-20261028-v2-mobile/result.json",
+      "bytes": 58595,
+      "sha256": "c42fe0d4f49dd112e6bbb6b240dc7cfdd089603500f8de184dcea6fa62dc0be7"
+    },
+    {
+      "path": "evidence/release-3d-loading-20261028-v2/run.json",
+      "bytes": 214274,
+      "sha256": "56824a7d03a6d8848cfb164e815e60a5069c85ab1df83a160fa563c9f96136b5"
+    },
+    {
+      "path": "evidence/unit-3d-loading-20261028-v2.log",
+      "bytes": 8557,
+      "sha256": "f7a7c81d4ae0805e7efc9842eaba8cf078c94726b20a1db38ab998b2648a0beb"
+    }
+  ],
+  "deliveryFiles": [
+    {
+      "path": "delivery-packages\\kuhai-3d-loading-20261028-v2\\kuhai-3d-loading-20261028-v2.zip",
+      "bytes": 24845480,
+      "sha256": "35e5c65ca9fb5357a5109c1ef0c2e662c580043d10a3908d971334de96e6f580",
+      "crc32": "cbc92160"
+    },
+    {
+      "path": "delivery-packages\\kuhai-3d-loading-20261028-v2\\MANIFEST.json",
+      "bytes": 149446,
+      "sha256": "ba1611db745af3edf485b7f8af3631ba3c9784c07673c4df054c742a713bc9ec",
+      "crc32": "78bfa8ec"
+    },
+    {
+      "path": "delivery-packages\\kuhai-3d-loading-20261028-v2\\SHA256SUMS.txt",
+      "bytes": 179,
+      "sha256": "e168ca21aa0d3b5a83f395e9e9b98948a5980fc40c0272f603aeef5b4641d5ad",
+      "crc32": "a4f2833d"
+    }
+  ]
+}

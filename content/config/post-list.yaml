@@ -1,0 +1,8 @@
+{
+  "pageSize": 10,
+  "layout": {
+    "mode": "list",
+    "cover": "left",
+    "cardWidth": "regular"
+  }
+}

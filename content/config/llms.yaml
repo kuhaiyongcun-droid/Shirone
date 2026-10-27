@@ -1,0 +1,23 @@
+{
+  "enable": true,
+  "generateFull": true,
+  "siteSummary": "kuhai 的个人博客。主舰是网站入口，档案室用于文章阅读与归档。",
+  "corePages": [
+    {
+      "title": "档案室",
+      "url": "/",
+      "description": "文章列表"
+    },
+    {
+      "title": "归档",
+      "url": "/archive/",
+      "description": "按时间、分类和标签浏览文章"
+    },
+    {
+      "title": "关于本站",
+      "url": "/about/",
+      "description": "网站结构与阅读方式"
+    }
+  ],
+  "customSections": []
+}

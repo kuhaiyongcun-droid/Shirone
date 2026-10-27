@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#070b0f">
+  <meta name="description" content="{{SITE_DESCRIPTION}}">
+  <meta name="author" content="{{AUTHOR}}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{SITE_TITLE}}">
+  <meta property="og:description" content="{{SITE_DESCRIPTION}}">
+  <meta property="og:url" content="{{SITE_URL}}">
+  <link rel="canonical" href="{{SITE_URL}}">
+  <title>{{SITE_TITLE}} · {{AUTHOR}}</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./app.css">
+</head>
+<body data-room="ship" data-interactive="false">
+  <main id="experience" aria-labelledby="room-title">
+    <img id="poster" class="poster" src="{{POSTER_URL}}" width="1600" height="1000" fetchpriority="high" alt="{{PosterAlt}}">
+    <div id="viewport" tabindex="-1" role="region" aria-label="{{Title}}" aria-describedby="keyboard-help"></div>
+    <div class="vignette" aria-hidden="true"></div>
+    <header class="masthead">
+      <a class="identity" href="/" id="home" aria-label="{{SITE_TITLE}}"><span class="mark" aria-hidden="true">k.</span><span>{{AUTHOR}}</span></a>
+      <nav class="site-nav" aria-label="{{ShipSiteNavigation}}">
+        <a href="/blog/" data-copy="ShipArticles">{{ShipArticles}}</a>
+        <a href="/blog/archive/" data-copy="ShipArchiveLink">{{ShipArchiveLink}}</a>
+        <a href="/blog/about/" data-copy="ShipAbout">{{ShipAbout}}</a>
+      </nav>
+      <div class="header-actions">
+        <button id="language" type="button" aria-label="{{Language}}" hidden>EN</button>
+        <button id="recommend-view" type="button" hidden>推荐视角</button>
+        <button id="settings-toggle" type="button" aria-expanded="false" aria-controls="settings" aria-label="{{Settings}}" hidden><span data-copy="Settings">{{Settings}}</span></button>
+      </div>
+    </header>
+    <section id="settings" class="settings" aria-label="{{Settings}}" hidden>
+      <label for="quality" data-copy="Quality">{{Quality}}</label>
+      <select id="quality">
+        <option value="auto" data-copy="Auto">{{Auto}}</option><option value="standard" data-copy="Standard">{{Standard}}</option>
+        <option value="light" data-copy="Light">{{Light}}</option><option value="static" data-copy="Static">{{Static}}</option>
+      </select>
+      <label for="review-view" data-copy="View">{{View}}</label><select id="review-view"></select>
+      <label for="review-light" data-copy="Lighting">{{Lighting}}</label><select id="review-light"><option value="space" data-copy="Space">{{Space}}</option><option value="neutral" data-copy="Neutral">{{Neutral}}</option></select>
+      <div data-qa hidden>
+        <label class="check-row"><input type="checkbox" id="matched-frame"><span data-copy="MatchedFrame">{{MatchedFrame}}</span></label>
+        <label for="service-group" data-copy="ServiceLights">{{ServiceLights}}</label><select id="service-group"><option value="all">{{LightsAll}}</option><option value="off">{{LightsOff}}</option></select>
+        <label for="lamp-gain"><span data-copy="LampGain">{{LampGain}}</span><output id="gain-value" for="lamp-gain">1.00</output></label><input id="lamp-gain" type="range" min="0" max="3" step="0.05" value="1">
+      </div>
+      <button id="reset" type="button" data-copy="Reset">{{Reset}}</button>
+      <p id="keyboard-help" data-copy="KeyboardHelp">{{KeyboardHelp}}</p>
+      <button id="settings-close" type="button" data-copy="Close">{{Close}}</button>
+    </section>
+    <button id="hotspot" type="button" aria-label="{{Select}}" aria-expanded="false" hidden><span class="beacon" aria-hidden="true"></span><span class="hotspot-label" data-copy="Archive">{{Archive}}</span></button>
+    <section class="footer">
+      <div class="intro"><p class="eyebrow" id="eyebrow">KUHAI · LOGBOOK</p><h1 id="room-title" tabindex="-1">{{SITE_TITLE}}</h1><p id="description" data-copy="Subtitle">{{Subtitle}}</p></div>
+      <div class="journey">
+        <div class="journey-actions">
+          <a class="entry primary-entry" href="/blog/" id="read-articles"><span data-copy="ShipArticles">{{ShipArticles}}</span><span aria-hidden="true">↗</span></a>
+          <button id="enable-3d" class="entry" type="button" data-copy="ShipEnable3D" hidden>{{ShipEnable3D}}</button>
+          <button id="enter" class="entry" type="button" hidden><span data-copy="Archive">{{Archive}}</span><span aria-hidden="true">↗</span></button>
+          <button id="back" class="entry" type="button" hidden><span aria-hidden="true">↙</span><span data-copy="Back">{{Back}}</span></button>
+          <button id="disable-3d" type="button" data-copy="ShipDisable3D" hidden>{{ShipDisable3D}}</button>
+        </div>
+        <p id="hint" data-copy="ShipStaticHint">{{ShipStaticHint}}</p>
+      </div>
+    </section>
+    <p id="status" role="status" aria-live="polite"></p>
+    <p id="reference-note" data-copy="ReferenceImage">{{ReferenceImage}}</p>
+    <noscript><p class="no-script" data-copy="ShipNoScript">{{ShipNoScript}}</p></noscript>
+  </main>
+  <footer class="legal-footer">{{FOOTER_HTML}}</footer>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
+

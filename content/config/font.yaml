@@ -1,0 +1,55 @@
+{
+  "mode": "custom",
+  "fontFamilies": [
+    {
+      "id": "outfit-body",
+      "family": "Outfit",
+      "role": "body",
+      "source": "local",
+      "variants": [
+        { "file": "src/assets/fonts/kuhai-local/outfit-latin-400-normal.woff2", "weight": 400, "style": "normal" },
+        { "file": "src/assets/fonts/kuhai-local/outfit-latin-500-normal.woff2", "weight": 500, "style": "normal" },
+        { "file": "src/assets/fonts/kuhai-local/outfit-latin-700-normal.woff2", "weight": 700, "style": "normal" }
+      ],
+      "fallback": ["ui-sans-serif", "system-ui", "sans-serif"],
+      "display": "swap",
+      "preload": false,
+      "licenseFile": "src/assets/fonts/kuhai-local/LICENSE-Outfit.txt"
+    },
+    {
+      "id": "yozai-cjk",
+      "family": "Yozai Medium",
+      "role": "cjk",
+      "source": "local",
+      "variants": [
+        { "file": "src/assets/fonts/Yozai-Medium.ttf", "weight": 500, "style": "normal" }
+      ],
+      "fallback": ["system-ui", "sans-serif"],
+      "display": "swap",
+      "preload": false
+    },
+    {
+      "id": "jetbrains-mono",
+      "family": "JetBrains Mono Variable",
+      "role": "mono",
+      "source": "local",
+      "variants": [
+        { "file": "src/assets/fonts/kuhai-local/jetbrains-mono-latin-wght-normal.woff2", "weight": "100 800", "style": "normal" },
+        { "file": "src/assets/fonts/kuhai-local/jetbrains-mono-latin-wght-italic.woff2", "weight": "100 800", "style": "italic" }
+      ],
+      "fallback": ["ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", "monospace"],
+      "display": "swap",
+      "preload": false,
+      "licenseFile": "src/assets/fonts/kuhai-local/LICENSE-JetBrains-Mono.txt"
+    }
+  ],
+  "subsetting": {
+    "enable": true,
+    "includeContent": true,
+    "includeI18n": true,
+    "includeConfig": true,
+    "includeCommon": true,
+    "allowRemoteText": false
+  },
+  "budget": { "maxTotalBytes": 6291456, "maxFamilyBytes": 4194304 }
+}
