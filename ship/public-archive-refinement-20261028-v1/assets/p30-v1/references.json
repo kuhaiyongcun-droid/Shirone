@@ -1,0 +1,232 @@
+{
+  "schema_version": 1,
+  "sourceStage": "P30",
+  "source_scene_sha256": "545079b4e3b5ecb453574c11b998adfe5b4cfba8270d795c549fe24462fcf77e",
+  "audience": "offline-render-reference",
+  "frames": [
+    {
+      "kind": "offline-render-reference",
+      "source_scene_sha256": "545079b4e3b5ecb453574c11b998adfe5b4cfba8270d795c549fe24462fcf77e",
+      "scope": "exterior",
+      "view_id": "whole-ship",
+      "light": "neutral",
+      "resolution": [
+        1200,
+        750
+      ],
+      "asset": {
+        "uri": "./assets/p30-v1/references/after-neutral-whole-ship.png",
+        "bytes": 687511,
+        "sha256": "4f492ca1f4482524d9d29079aa3ee56c79563b88ab11fdd695850f07d9f0d9b7"
+      }
+    },
+    {
+      "kind": "offline-render-reference",
+      "source_scene_sha256": "545079b4e3b5ecb453574c11b998adfe5b4cfba8270d795c549fe24462fcf77e",
+      "scope": "exterior",
+      "view_id": "whole-ship",
+      "light": "space",
+      "resolution": [
+        1200,
+        750
+      ],
+      "asset": {
+        "uri": "./assets/p30-v1/references/after-space-whole-ship.png",
+        "bytes": 679564,
+        "sha256": "86ce97fbee01deed9e728871b88e1f7fdf7eaee2e89ac8af8792716cbf39412d"
+      }
+    },
+    {
+      "kind": "offline-render-reference",
+      "source_scene_sha256": "545079b4e3b5ecb453574c11b998adfe5b4cfba8270d795c549fe24462fcf77e",
+      "scope": "exterior",
+      "view_id": "whole-underside",
+      "light": "neutral",
+      "resolution": [
+        1200,
+        750
+      ],
+      "asset": {
+        "uri": "./assets/p30-v1/references/after-neutral-whole-underside.png",
+        "bytes": 607495,
+        "sha256": "73b7e53dc29ef3d0f4da864f3ec8b6df99c4e0c8ca1492e465d187abb5fa904a"
+      }
+    },
+    {
+      "kind": "offline-render-reference",
+      "source_scene_sha256": "545079b4e3b5ecb453574c11b998adfe5b4cfba8270d795c549fe24462fcf77e",
+      "scope": "exterior",
+      "view_id": "whole-underside",
+      "light": "space",
+      "resolution": [
+        1200,
+        750
+      ],
+      "asset": {
+        "uri": "./assets/p30-v1/references/after-space-whole-underside.png",
+        "bytes": 593975,
+        "sha256": "9f0c52da820cf47a8bb9e096574b19f6575b35374305fadd8f063410582510f6"
+      }
+    },
+    {
+      "kind": "offline-render-reference",
+      "source_scene_sha256": "545079b4e3b5ecb453574c11b998adfe5b4cfba8270d795c549fe24462fcf77e",
+      "scope": "exterior",
+      "view_id": "archive-locator",
+      "light": "neutral",
+      "resolution": [
+        1200,
+        750
+      ],
+      "asset": {
+        "uri": "./assets/p30-v1/references/after-neutral-archive-locator.png",
+        "bytes": 1026830,
+        "sha256": "a61ba0fe557105ae7d7072b976dbb4980965734aefff5f03ac6d5eac9287dbf0"
+      }
+    },
+    {
+      "kind": "offline-render-reference",
+      "source_scene_sha256": "545079b4e3b5ecb453574c11b998adfe5b4cfba8270d795c549fe24462fcf77e",
+      "scope": "exterior",
+      "view_id": "archive-locator",
+      "light": "space",
+      "resolution": [
+        1200,
+        750
+      ],
+      "asset": {
+        "uri": "./assets/p30-v1/references/after-space-archive-locator.png",
+        "bytes": 1022891,
+        "sha256": "8ecfe98b00a78a05f1928ccfb85cd0583c23ff9d97a49b957c724cf9b73dd969"
+      }
+    },
+    {
+      "kind": "offline-render-reference",
+      "source_scene_sha256": "545079b4e3b5ecb453574c11b998adfe5b4cfba8270d795c549fe24462fcf77e",
+      "scope": "archive",
+      "view_id": "archive-cutaway",
+      "light": "neutral",
+      "resolution": [
+        1200,
+        750
+      ],
+      "asset": {
+        "uri": "./assets/p30-v1/references/after-neutral-archive-cutaway.png",
+        "bytes": 1337287,
+        "sha256": "c5b84d30733b1d8740b0af7adc7850e11af368ea70437f4fccec9a8de5dbc1b4"
+      }
+    },
+    {
+      "kind": "offline-render-reference",
+      "source_scene_sha256": "545079b4e3b5ecb453574c11b998adfe5b4cfba8270d795c549fe24462fcf77e",
+      "scope": "archive",
+      "view_id": "archive-cutaway",
+      "light": "space",
+      "resolution": [
+        1200,
+        750
+      ],
+      "asset": {
+        "uri": "./assets/p30-v1/references/after-space-archive-cutaway.png",
+        "bytes": 1400820,
+        "sha256": "e29b509d2d47539ad2eb84a021db42774349897a500fc4977b28c839d4c92720"
+      }
+    },
+    {
+      "kind": "offline-render-reference",
+      "source_scene_sha256": "545079b4e3b5ecb453574c11b998adfe5b4cfba8270d795c549fe24462fcf77e",
+      "scope": "archive",
+      "view_id": "archive-entry",
+      "light": "neutral",
+      "resolution": [
+        1200,
+        750
+      ],
+      "asset": {
+        "uri": "./assets/p30-v1/references/after-neutral-archive-entry.png",
+        "bytes": 1159071,
+        "sha256": "c8877f115cfa6ef2a2a87c21af1035274106c4ca388d9a3fb9f22f75f6a5d984"
+      }
+    },
+    {
+      "kind": "offline-render-reference",
+      "source_scene_sha256": "545079b4e3b5ecb453574c11b998adfe5b4cfba8270d795c549fe24462fcf77e",
+      "scope": "archive",
+      "view_id": "archive-entry",
+      "light": "space",
+      "resolution": [
+        1200,
+        750
+      ],
+      "asset": {
+        "uri": "./assets/p30-v1/references/after-space-archive-entry.png",
+        "bytes": 1111229,
+        "sha256": "9dd1eb58d962d04f090d7ba281f2722597f334573e312836eba8492708d000cc"
+      }
+    },
+    {
+      "kind": "offline-render-reference",
+      "source_scene_sha256": "545079b4e3b5ecb453574c11b998adfe5b4cfba8270d795c549fe24462fcf77e",
+      "scope": "archive",
+      "view_id": "archive-upper",
+      "light": "neutral",
+      "resolution": [
+        1200,
+        750
+      ],
+      "asset": {
+        "uri": "./assets/p30-v1/references/after-neutral-archive-upper.png",
+        "bytes": 1114560,
+        "sha256": "d934068c67f55b4bcf274de9804961e09aa3cd5f16c45835c1f36ab0d04d8c85"
+      }
+    },
+    {
+      "kind": "offline-render-reference",
+      "source_scene_sha256": "545079b4e3b5ecb453574c11b998adfe5b4cfba8270d795c549fe24462fcf77e",
+      "scope": "archive",
+      "view_id": "archive-upper",
+      "light": "space",
+      "resolution": [
+        1200,
+        750
+      ],
+      "asset": {
+        "uri": "./assets/p30-v1/references/after-space-archive-upper.png",
+        "bytes": 1085430,
+        "sha256": "256a5c666ef3b06bb985e0528ba158f79bae3f022baca21a6d3d3ae42311450c"
+      }
+    },
+    {
+      "kind": "offline-render-reference",
+      "source_scene_sha256": "545079b4e3b5ecb453574c11b998adfe5b4cfba8270d795c549fe24462fcf77e",
+      "scope": "archive",
+      "view_id": "vestibule",
+      "light": "neutral",
+      "resolution": [
+        1200,
+        750
+      ],
+      "asset": {
+        "uri": "./assets/p30-v1/references/after-neutral-vestibule.png",
+        "bytes": 991309,
+        "sha256": "02e37ee3e817a47e7cb900033e194db8196befbbdb8742975748b165d6ada611"
+      }
+    },
+    {
+      "kind": "offline-render-reference",
+      "source_scene_sha256": "545079b4e3b5ecb453574c11b998adfe5b4cfba8270d795c549fe24462fcf77e",
+      "scope": "archive",
+      "view_id": "vestibule",
+      "light": "space",
+      "resolution": [
+        1200,
+        750
+      ],
+      "asset": {
+        "uri": "./assets/p30-v1/references/after-space-vestibule.png",
+        "bytes": 1006587,
+        "sha256": "ad5cf3b33da1ec1e669ce31c0c50c9e6855a0d7534c26c9f05db16a27abc73b5"
+      }
+    }
+  ]
+}

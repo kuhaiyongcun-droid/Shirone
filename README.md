@@ -67,7 +67,23 @@ python scripts/release.py --version my-release-01 --mode shared
 
 ## 三维资源范围
 
-当前网页资源固定在 P26–P27，模型源母版标识为 `dd35a7b43c94ba22a03aa0f27e0b88de549cce594971829c9e0e6913e04d0339`。入口默认展示静态海报，用户开启三维后才加载相应资源。
+### P30 档案室预览
+
+本预览分支使用 P30 v4 网页快照。新版材质和 12 件桌面物件位于档案室局部，浏览器补光按 P30 母版的 SHA-256 选择。历史验收覆盖桌面及 390×844 触控模拟、现有七个机位和主舰与档案室之间的切换。
+
+完成前文的博客构建后，在仓库根目录运行以下命令可打开独立预览。
+
+```text
+node ship/build.mjs --out=dist-p30-preview --snapshot=public-archive-refinement-20261028-v1/snapshot.json --snapshot-sha256=9f0226b9d9087d4482fdc17bd43d2a0b31d39b2411c56976f572aa648abec76a
+python scripts/assemble.py --ship-dist ship/dist-p30-preview --blog-dist blog/dist --out dist-p30-preview
+python -m http.server 4188 --directory dist-p30-preview
+```
+
+浏览器打开 [本机预览](http://localhost:4188/)，选择「开启三维探索」和「进入档案室」。
+
+### P26–P27 站点发布
+
+标准站点的静态发布流程使用 P26–P27 资源，模型源母版标识为 `dd35a7b43c94ba22a03aa0f27e0b88de549cce594971829c9e0e6913e04d0339`。入口默认展示静态海报，用户开启三维后才加载相应资源。
 
 `ship/public-p26p27-final-20261022-r1/` 保存网页所需 GLB、相机、灯光、参考图片和校验证据。RESERVED 区域保持封闭，其余规划舱室尚未装舰；当前室内浏览是有限机位和受约束的相机操作，不是全舰自由行走系统。
 

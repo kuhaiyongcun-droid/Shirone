@@ -1,0 +1,26 @@
+{
+  "schema": "ship-source-snapshot-v1",
+  "publicDirectory": "public-archive-refinement-20261028-v1",
+  "viewerInterface": "ship-seven-views-v1",
+  "source": {
+    "stage": "P30",
+    "sha256": "545079b4e3b5ecb453574c11b998adfe5b4cfba8270d795c549fe24462fcf77e"
+  },
+  "contract": {
+    "uri": "./assets/p23-asset-contract.json",
+    "bytes": 1958,
+    "sha256": "c9eb704e974711bc1ce837656af925f092d0cc4e4ad4f00c7803b80af60224d9"
+  },
+  "preparationEvidence": {
+    "path": "handoff-evidence/preparation.json",
+    "bytes": 24552,
+    "sha256": "56bd03cb6c8c7f8f8f113824853041fa6604b1670767d67effb09ca1536eb967"
+  },
+  "browserVerified": false,
+  "lightingCalibrated": false,
+  "fullHandoffAcceptance": false,
+  "limitations": [
+    "New local review snapshot; offline pixel review and real browser acceptance are separate pending records.",
+    "Not a deployment or a modification of frozen P26-P27 releases."
+  ]
+}

@@ -7,7 +7,7 @@ import { cutawayOpen,renderScale } from './interaction.mjs';
 import { makeSpace } from './space.mjs';
 import { applyContractCamera,captureView,restoreView,resizeContractCamera,frameSize,presentationPoints } from './contract-camera.mjs';
 import { createContractLighting } from './contract-lighting.mjs';
-import { BLOG_VISUAL_LIGHTING_PROFILE } from './visual-lighting-profile.mjs';
+import { visualProfileForSource } from './visual-lighting-profile.mjs';
 import { presentationInsets } from './presentation-layout.mjs';
 import { moveCameraByKey,installTouchDollyGuard } from './camera-navigation.mjs';
 import { disposeObject,verifiedBytes } from './resources.mjs';
@@ -33,7 +33,7 @@ export async function createViewer({viewport,hotspot,quality,state,onError,onPro
   const hull=[],shell=[],outline=new THREE.Group();outline.visible=false;scene.add(outline);const space=makeSpace();scene.add(space);
   const pointer=new THREE.Vector2(),ray=new THREE.Raycaster(),pmrem=new THREE.PMREMGenerator(renderer),environment=new RoomEnvironment();
   const environmentTarget=pmrem.fromScene(environment,.06);scene.environment=environmentTarget.texture;scene.environmentIntensity=recipe.environment_intensity;environment.dispose();pmrem.dispose();
-  const lights=createContractLighting(scene,quality,recipe,{profile:BLOG_VISUAL_LIGHTING_PROFILE});
+  const lights=createContractLighting(scene,quality,recipe,{profile:visualProfileForSource(contract.source_scene.sha256)});
   function request(){if(!dead&&!document.hidden&&!raf)raf=requestAnimationFrame(render);}
   function projectBeacon(){
     if(!ready||currentMode!=='ship'){hotspot.hidden=true;return;}scene.updateMatrixWorld(true);camera.updateMatrixWorld(true);const p=anchor.clone().project(camera);

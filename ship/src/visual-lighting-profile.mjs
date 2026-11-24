@@ -2,6 +2,8 @@
 // Keep neutral available as the unchanged reference and leave AgX/exposure alone.
 export const BLOG_VISUAL_LIGHTING_PROFILE='blog-visual-v1';
 export const VISUAL_LIGHTING_SOURCE_SHA256='dd35a7b43c94ba22a03aa0f27e0b88de549cce594971829c9e0e6913e04d0339';
+import { P30_LIGHTING_SOURCE_SHA256 } from './p30-lighting-pin.mjs';
+export const P30_VISUAL_LIGHTING_PROFILE='p30-archive-refinement-v1';
 
 function frozenRow(row){
   for(const key of ['modes','position_source','target_source','color_linear'])Object.freeze(row[key]);
@@ -29,9 +31,23 @@ const lights=Object.freeze([
 const sourceProfile=Object.freeze({id:'source-recipe',lights:Object.freeze([]),calibrated:false});
 const visualProfile=Object.freeze({id:BLOG_VISUAL_LIGHTING_PROFILE,sourceSceneSha256:VISUAL_LIGHTING_SOURCE_SHA256,
   lights,calibrated:false,extraShadowMaps:0});
+// Begin P30 with the exact existing artistic fills. Any later local adjustment
+// is made here only after paired pixels are inspected; source/neutral stays put.
+const p30Profile=Object.freeze({id:P30_VISUAL_LIGHTING_PROFILE,sourceSceneSha256:P30_LIGHTING_SOURCE_SHA256,
+  lights,calibrated:false,extraShadowMaps:0});
+
+export function visualProfileForSource(sourceSha256){
+  if(sourceSha256===VISUAL_LIGHTING_SOURCE_SHA256)return BLOG_VISUAL_LIGHTING_PROFILE;
+  if(typeof P30_LIGHTING_SOURCE_SHA256==='string'&&/^[a-f0-9]{64}$/.test(P30_LIGHTING_SOURCE_SHA256)&&sourceSha256===P30_LIGHTING_SOURCE_SHA256)return P30_VISUAL_LIGHTING_PROFILE;
+  throw Error('Browser lighting profile source identity differs');
+}
 
 export function resolveVisualLightingProfile(recipe,requested='source-recipe'){
   if(requested==='source-recipe')return sourceProfile;
+  if(requested===P30_VISUAL_LIGHTING_PROFILE){
+    if(visualProfileForSource(recipe.source_scene_sha256)!==P30_VISUAL_LIGHTING_PROFILE)throw Error('Browser lighting profile source identity differs');
+    return p30Profile;
+  }
   if(requested!==BLOG_VISUAL_LIGHTING_PROFILE)throw Error('Unknown browser lighting profile');
   // A profile for one measured layout must not silently illuminate another asset.
   if(recipe.source_scene_sha256!==VISUAL_LIGHTING_SOURCE_SHA256)throw Error('Browser lighting profile source identity differs');

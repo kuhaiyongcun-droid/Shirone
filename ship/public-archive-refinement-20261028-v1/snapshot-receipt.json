@@ -1,0 +1,32 @@
+{
+  "snapshot": {
+    "path": "workspace/production30/web-v1/authoring-v1/ship/public-archive-refinement-20261028-v1/snapshot.json",
+    "bytes": 917,
+    "sha256": "9f0226b9d9087d4482fdc17bd43d2a0b31d39b2411c56976f572aa648abec76a"
+  },
+  "source": {
+    "path": "workspace/production30/integration/v4/flagship-p30-archive-refinement.blend",
+    "bytes": 5184994,
+    "sha256": "545079b4e3b5ecb453574c11b998adfe5b4cfba8270d795c549fe24462fcf77e"
+  },
+  "contract": {
+    "uri": "./assets/p23-asset-contract.json",
+    "bytes": 1958,
+    "sha256": "c9eb704e974711bc1ce837656af925f092d0cc4e4ad4f00c7803b80af60224d9"
+  },
+  "models": {
+    "exterior": {
+      "uri": "./assets/p30-v1/flagship-p30-exterior.glb",
+      "bytes": 22167212,
+      "sha256": "f37d3e4a5b082100ade2d7f1f7a77b9fe70a9d2f98cda0b2c4ab9f48830b3bcb"
+    },
+    "archive": {
+      "uri": "./assets/p30-v1/flagship-p30-archive.glb",
+      "bytes": 7608676,
+      "sha256": "4b5be83bc1be685b0b3eaccad6942b98bb2e453f20194fa182105e79c1594d3e"
+    }
+  },
+  "reference_frames": 14,
+  "new_meshes": 12,
+  "browser_verified": false
+}

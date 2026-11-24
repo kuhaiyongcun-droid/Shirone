@@ -1,0 +1,1800 @@
+{
+  "schema_version": 1,
+  "source_coordinate_system": "Blender_Z_up",
+  "calibrated": false,
+  "exposure_stops": 0.65,
+  "environment_intensity": 0.06,
+  "shadow_budget": {
+    "standard_max_lights": 3,
+    "light_enabled": false
+  },
+  "group_labels": {
+    "exterior-service": {
+      "zh_CN": "外部工作灯",
+      "en": "Exterior task lights"
+    },
+    "vestibule": {
+      "zh_CN": "门厅灯",
+      "en": "Vestibule lights"
+    },
+    "archive-existing": {
+      "zh_CN": "回廊与阅读灯",
+      "en": "Gallery and reading lights"
+    },
+    "archive-retained": {
+      "zh_CN": "既有圆盘灯",
+      "en": "Retained disk lights"
+    },
+    "archive-west": {
+      "zh_CN": "西端局部灯",
+      "en": "West local lights"
+    }
+  },
+  "lights": [
+    {
+      "id": "space-source-00",
+      "type": "spot",
+      "scope": "archive",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        -57.150001525878906,
+        -38.5,
+        20.149999618530273
+      ],
+      "target_source": [
+        -57.150001525878906,
+        -38.5,
+        17.174999237060547
+      ],
+      "color_linear": [
+        1.0,
+        0.8600000143051147,
+        0.6700000166893005
+      ],
+      "intensity_web": 0.0054,
+      "angle_radians": 1.1,
+      "distance_source": 6,
+      "penumbra": 0.6,
+      "group": "vestibule",
+      "shadow": {
+        "enabled": false
+      },
+      "source_light_name": "ARCH16 / recessed worklight -57.15",
+      "source_energy_value": 180.0,
+      "source_energy_unit": "W",
+      "source_emitter_dimensions": [
+        1.100000023841858,
+        1.100000023841858
+      ],
+      "preview_method": "Uncalibrated art seed: .00003 relative energy weight; not a watt-to-candela conversion. AREA sources use a round cone approximation."
+    },
+    {
+      "id": "space-source-01",
+      "type": "spot",
+      "scope": "archive",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        -60.29999923706055,
+        -38.5,
+        20.149999618530273
+      ],
+      "target_source": [
+        -60.29999923706055,
+        -38.5,
+        17.174999237060547
+      ],
+      "color_linear": [
+        1.0,
+        0.8600000143051147,
+        0.6700000166893005
+      ],
+      "intensity_web": 0.0054,
+      "angle_radians": 1.1,
+      "distance_source": 6,
+      "penumbra": 0.6,
+      "group": "vestibule",
+      "shadow": {
+        "enabled": false
+      },
+      "source_light_name": "ARCH16 / recessed worklight -60.3",
+      "source_energy_value": 180.0,
+      "source_energy_unit": "W",
+      "source_emitter_dimensions": [
+        1.100000023841858,
+        1.100000023841858
+      ],
+      "preview_method": "Uncalibrated art seed: .00003 relative energy weight; not a watt-to-candela conversion. AREA sources use a round cone approximation."
+    },
+    {
+      "id": "space-source-02",
+      "type": "spot",
+      "scope": "archive",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        -93.0,
+        -34.349998474121094,
+        20.34000015258789
+      ],
+      "target_source": [
+        -93.0,
+        -39.099998474121094,
+        17.700000762939453
+      ],
+      "color_linear": [
+        1.0,
+        0.8399999737739563,
+        0.6499999761581421
+      ],
+      "intensity_web": 0.003,
+      "angle_radians": 1.1,
+      "distance_source": 10,
+      "penumbra": 0.6,
+      "group": "archive-existing",
+      "shadow": {
+        "enabled": false
+      },
+      "source_light_name": "ARCH18A_lower_reading_light_N_0_area",
+      "source_energy_value": 100.0,
+      "source_energy_unit": "W",
+      "source_emitter_dimensions": [
+        3.0,
+        0.10000000149011612
+      ],
+      "preview_method": "Uncalibrated art seed: .00003 relative energy weight; not a watt-to-candela conversion. AREA sources use a round cone approximation."
+    },
+    {
+      "id": "space-source-03",
+      "type": "spot",
+      "scope": "archive",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        -85.0,
+        -34.349998474121094,
+        20.34000015258789
+      ],
+      "target_source": [
+        -85.0,
+        -39.099998474121094,
+        17.700000762939453
+      ],
+      "color_linear": [
+        1.0,
+        0.8399999737739563,
+        0.6499999761581421
+      ],
+      "intensity_web": 0.003,
+      "angle_radians": 1.1,
+      "distance_source": 10,
+      "penumbra": 0.6,
+      "group": "archive-existing",
+      "shadow": {
+        "enabled": false
+      },
+      "source_light_name": "ARCH18A_lower_reading_light_N_1_area",
+      "source_energy_value": 100.0,
+      "source_energy_unit": "W",
+      "source_emitter_dimensions": [
+        3.0,
+        0.10000000149011612
+      ],
+      "preview_method": "Uncalibrated art seed: .00003 relative energy weight; not a watt-to-candela conversion. AREA sources use a round cone approximation."
+    },
+    {
+      "id": "space-source-04",
+      "type": "spot",
+      "scope": "archive",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        -77.0,
+        -34.349998474121094,
+        20.34000015258789
+      ],
+      "target_source": [
+        -77.0,
+        -39.099998474121094,
+        17.700000762939453
+      ],
+      "color_linear": [
+        1.0,
+        0.8399999737739563,
+        0.6499999761581421
+      ],
+      "intensity_web": 0.003,
+      "angle_radians": 1.1,
+      "distance_source": 10,
+      "penumbra": 0.6,
+      "group": "archive-existing",
+      "shadow": {
+        "enabled": false
+      },
+      "source_light_name": "ARCH18A_lower_reading_light_N_2_area",
+      "source_energy_value": 100.0,
+      "source_energy_unit": "W",
+      "source_emitter_dimensions": [
+        3.0,
+        0.10000000149011612
+      ],
+      "preview_method": "Uncalibrated art seed: .00003 relative energy weight; not a watt-to-candela conversion. AREA sources use a round cone approximation."
+    },
+    {
+      "id": "space-source-05",
+      "type": "spot",
+      "scope": "archive",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        -93.0,
+        -44.20000076293945,
+        20.34000015258789
+      ],
+      "target_source": [
+        -93.0,
+        -40.5,
+        17.700000762939453
+      ],
+      "color_linear": [
+        1.0,
+        0.8399999737739563,
+        0.6499999761581421
+      ],
+      "intensity_web": 0.003,
+      "angle_radians": 1.1,
+      "distance_source": 10,
+      "penumbra": 0.6,
+      "group": "archive-existing",
+      "shadow": {
+        "enabled": false
+      },
+      "source_light_name": "ARCH18A_lower_reading_light_S_0_area",
+      "source_energy_value": 100.0,
+      "source_energy_unit": "W",
+      "source_emitter_dimensions": [
+        3.0,
+        0.10000000149011612
+      ],
+      "preview_method": "Uncalibrated art seed: .00003 relative energy weight; not a watt-to-candela conversion. AREA sources use a round cone approximation."
+    },
+    {
+      "id": "space-source-06",
+      "type": "spot",
+      "scope": "archive",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        -85.0,
+        -44.20000076293945,
+        20.34000015258789
+      ],
+      "target_source": [
+        -85.0,
+        -40.5,
+        17.700000762939453
+      ],
+      "color_linear": [
+        1.0,
+        0.8399999737739563,
+        0.6499999761581421
+      ],
+      "intensity_web": 0.003,
+      "angle_radians": 1.1,
+      "distance_source": 10,
+      "penumbra": 0.6,
+      "group": "archive-existing",
+      "shadow": {
+        "enabled": false
+      },
+      "source_light_name": "ARCH18A_lower_reading_light_S_1_area",
+      "source_energy_value": 100.0,
+      "source_energy_unit": "W",
+      "source_emitter_dimensions": [
+        3.0,
+        0.10000000149011612
+      ],
+      "preview_method": "Uncalibrated art seed: .00003 relative energy weight; not a watt-to-candela conversion. AREA sources use a round cone approximation."
+    },
+    {
+      "id": "space-source-07",
+      "type": "spot",
+      "scope": "archive",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        -77.0,
+        -44.20000076293945,
+        20.34000015258789
+      ],
+      "target_source": [
+        -77.0,
+        -40.5,
+        17.700000762939453
+      ],
+      "color_linear": [
+        1.0,
+        0.8399999737739563,
+        0.6499999761581421
+      ],
+      "intensity_web": 0.003,
+      "angle_radians": 1.1,
+      "distance_source": 10,
+      "penumbra": 0.6,
+      "group": "archive-existing",
+      "shadow": {
+        "enabled": false
+      },
+      "source_light_name": "ARCH18A_lower_reading_light_S_2_area",
+      "source_energy_value": 100.0,
+      "source_energy_unit": "W",
+      "source_emitter_dimensions": [
+        3.0,
+        0.10000000149011612
+      ],
+      "preview_method": "Uncalibrated art seed: .00003 relative energy weight; not a watt-to-candela conversion. AREA sources use a round cone approximation."
+    },
+    {
+      "id": "space-source-08",
+      "type": "spot",
+      "scope": "archive",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        -90.0,
+        -32.400001525878906,
+        24.684999465942383
+      ],
+      "target_source": [
+        -90.0,
+        -32.400001525878906,
+        21.375
+      ],
+      "color_linear": [
+        1.0,
+        0.7200000286102295,
+        0.4300000071525574
+      ],
+      "intensity_web": 0.0033,
+      "angle_radians": 1.1,
+      "distance_source": 6,
+      "penumbra": 0.6,
+      "group": "archive-existing",
+      "shadow": {
+        "enabled": false
+      },
+      "source_light_name": "ARCH18A_worklight_N_0_area",
+      "source_energy_value": 110.0,
+      "source_energy_unit": "W",
+      "source_emitter_dimensions": [
+        1.899999976158142,
+        0.2199999988079071
+      ],
+      "preview_method": "Uncalibrated art seed: .00003 relative energy weight; not a watt-to-candela conversion. AREA sources use a round cone approximation."
+    },
+    {
+      "id": "space-source-09",
+      "type": "spot",
+      "scope": "archive",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        -82.0,
+        -32.400001525878906,
+        24.684999465942383
+      ],
+      "target_source": [
+        -82.0,
+        -32.400001525878906,
+        21.375
+      ],
+      "color_linear": [
+        1.0,
+        0.7200000286102295,
+        0.4300000071525574
+      ],
+      "intensity_web": 0.0033,
+      "angle_radians": 1.1,
+      "distance_source": 6,
+      "penumbra": 0.6,
+      "group": "archive-existing",
+      "shadow": {
+        "enabled": false
+      },
+      "source_light_name": "ARCH18A_worklight_N_1_area",
+      "source_energy_value": 110.0,
+      "source_energy_unit": "W",
+      "source_emitter_dimensions": [
+        1.899999976158142,
+        0.2199999988079071
+      ],
+      "preview_method": "Uncalibrated art seed: .00003 relative energy weight; not a watt-to-candela conversion. AREA sources use a round cone approximation."
+    },
+    {
+      "id": "space-source-10",
+      "type": "spot",
+      "scope": "archive",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        -90.0,
+        -46.400001525878906,
+        24.684999465942383
+      ],
+      "target_source": [
+        -90.0,
+        -46.400001525878906,
+        21.375
+      ],
+      "color_linear": [
+        1.0,
+        0.7200000286102295,
+        0.4300000071525574
+      ],
+      "intensity_web": 0.0033,
+      "angle_radians": 1.1,
+      "distance_source": 6,
+      "penumbra": 0.6,
+      "group": "archive-existing",
+      "shadow": {
+        "enabled": false
+      },
+      "source_light_name": "ARCH18A_worklight_S_0_area",
+      "source_energy_value": 110.0,
+      "source_energy_unit": "W",
+      "source_emitter_dimensions": [
+        1.899999976158142,
+        0.2199999988079071
+      ],
+      "preview_method": "Uncalibrated art seed: .00003 relative energy weight; not a watt-to-candela conversion. AREA sources use a round cone approximation."
+    },
+    {
+      "id": "space-source-11",
+      "type": "spot",
+      "scope": "archive",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        -82.0,
+        -46.400001525878906,
+        24.684999465942383
+      ],
+      "target_source": [
+        -82.0,
+        -46.400001525878906,
+        21.375
+      ],
+      "color_linear": [
+        1.0,
+        0.7200000286102295,
+        0.4300000071525574
+      ],
+      "intensity_web": 0.0033,
+      "angle_radians": 1.1,
+      "distance_source": 6,
+      "penumbra": 0.6,
+      "group": "archive-existing",
+      "shadow": {
+        "enabled": false
+      },
+      "source_light_name": "ARCH18A_worklight_S_1_area",
+      "source_energy_value": 110.0,
+      "source_energy_unit": "W",
+      "source_emitter_dimensions": [
+        1.899999976158142,
+        0.2199999988079071
+      ],
+      "preview_method": "Uncalibrated art seed: .00003 relative energy weight; not a watt-to-candela conversion. AREA sources use a round cone approximation."
+    },
+    {
+      "id": "space-source-12",
+      "type": "spot",
+      "scope": "archive",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        -100.19999694824219,
+        -43.5,
+        24.8799991607666
+      ],
+      "target_source": [
+        -104.0,
+        -35.70000076293945,
+        21.375
+      ],
+      "color_linear": [
+        1.0,
+        0.8199999928474426,
+        0.6200000047683716
+      ],
+      "intensity_web": 0.0036,
+      "angle_radians": 1.1,
+      "distance_source": 14,
+      "penumbra": 0.6,
+      "group": "archive-west",
+      "shadow": {
+        "enabled": true,
+        "map_size": 512,
+        "near_source": 0.05,
+        "far_source": 18,
+        "bias": -5e-05,
+        "normal_bias_source": 0.015
+      },
+      "source_light_name": "ARCH22A_west_stair_wash_area",
+      "source_energy_value": 120.0,
+      "source_energy_unit": "W",
+      "source_emitter_dimensions": [
+        1.2000000476837158,
+        0.18000000715255737
+      ],
+      "preview_method": "Uncalibrated art seed: .00003 relative energy weight; not a watt-to-candela conversion. AREA sources use a round cone approximation."
+    },
+    {
+      "id": "space-source-13",
+      "type": "spot",
+      "scope": "archive",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        -100.19999694824219,
+        -38.349998474121094,
+        24.899999618530273
+      ],
+      "target_source": [
+        -106.19999694824219,
+        -38.349998474121094,
+        22.299999237060547
+      ],
+      "color_linear": [
+        1.0,
+        0.8199999928474426,
+        0.6200000047683716
+      ],
+      "intensity_web": 0.0084,
+      "angle_radians": 1.1,
+      "distance_source": 14,
+      "penumbra": 0.6,
+      "group": "archive-west",
+      "shadow": {
+        "enabled": true,
+        "map_size": 512,
+        "near_source": 0.05,
+        "far_source": 18,
+        "bias": -5e-05,
+        "normal_bias_source": 0.015
+      },
+      "source_light_name": "ARCH22A_west_wall_wash_area",
+      "source_energy_value": 280.0,
+      "source_energy_unit": "W",
+      "source_emitter_dimensions": [
+        5.400000095367432,
+        0.23999999463558197
+      ],
+      "preview_method": "Uncalibrated art seed: .00003 relative energy weight; not a watt-to-candela conversion. AREA sources use a round cone approximation."
+    },
+    {
+      "id": "space-source-14",
+      "type": "spot",
+      "scope": "archive",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        -92.0,
+        -34.0,
+        24.700000762939453
+      ],
+      "target_source": [
+        -92.00000043408423,
+        -39.547001361846924,
+        16.379497528076172
+      ],
+      "color_linear": [
+        1.0,
+        0.6200000047683716,
+        0.30000001192092896
+      ],
+      "intensity_web": 0.003,
+      "angle_radians": 1.1,
+      "distance_source": 14,
+      "penumbra": 0.6,
+      "group": "archive-retained",
+      "shadow": {
+        "enabled": false
+      },
+      "source_light_name": "Archive recessed working light",
+      "source_energy_value": 100.0,
+      "source_energy_unit": "W",
+      "source_emitter_dimensions": [
+        3.0,
+        3.0
+      ],
+      "preview_method": "Uncalibrated art seed: .00003 relative energy weight; not a watt-to-candela conversion. AREA sources use a round cone approximation."
+    },
+    {
+      "id": "space-source-15",
+      "type": "spot",
+      "scope": "archive",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        -80.0,
+        -34.0,
+        24.700000762939453
+      ],
+      "target_source": [
+        -80.00000043408423,
+        -39.547001361846924,
+        16.379497528076172
+      ],
+      "color_linear": [
+        1.0,
+        0.6200000047683716,
+        0.30000001192092896
+      ],
+      "intensity_web": 0.003,
+      "angle_radians": 1.1,
+      "distance_source": 14,
+      "penumbra": 0.6,
+      "group": "archive-retained",
+      "shadow": {
+        "enabled": false
+      },
+      "source_light_name": "Archive recessed working light.001",
+      "source_energy_value": 100.0,
+      "source_energy_unit": "W",
+      "source_emitter_dimensions": [
+        3.0,
+        3.0
+      ],
+      "preview_method": "Uncalibrated art seed: .00003 relative energy weight; not a watt-to-candela conversion. AREA sources use a round cone approximation."
+    },
+    {
+      "id": "space-source-16",
+      "type": "spot",
+      "scope": "archive",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        -68.0,
+        -34.0,
+        24.700000762939453
+      ],
+      "target_source": [
+        -68.00000043408423,
+        -39.547001361846924,
+        16.379497528076172
+      ],
+      "color_linear": [
+        1.0,
+        0.6200000047683716,
+        0.30000001192092896
+      ],
+      "intensity_web": 0.003,
+      "angle_radians": 1.1,
+      "distance_source": 14,
+      "penumbra": 0.6,
+      "group": "archive-retained",
+      "shadow": {
+        "enabled": false
+      },
+      "source_light_name": "Archive recessed working light.002",
+      "source_energy_value": 100.0,
+      "source_energy_unit": "W",
+      "source_emitter_dimensions": [
+        3.0,
+        3.0
+      ],
+      "preview_method": "Uncalibrated art seed: .00003 relative energy weight; not a watt-to-candela conversion. AREA sources use a round cone approximation."
+    },
+    {
+      "id": "space-source-17",
+      "type": "spot",
+      "scope": "exterior",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        -210.0,
+        -82.16999816894531,
+        24.65999984741211
+      ],
+      "target_source": [
+        -207.47456431388855,
+        -74.81655287742615,
+        18.371199011802673
+      ],
+      "color_linear": [
+        1.0,
+        0.8799999952316284,
+        0.7099999785423279
+      ],
+      "intensity_web": 0.027,
+      "angle_radians": 0.8028514385223389,
+      "distance_source": 20,
+      "penumbra": 0.6,
+      "group": "exterior-service",
+      "shadow": {
+        "enabled": false
+      },
+      "source_light_name": "FORE10 / F1 / task beam",
+      "source_energy_value": 900.0,
+      "source_energy_unit": "W",
+      "source_emitter_dimensions": null,
+      "preview_method": "Original cone direction and half-angle; uncalibrated art intensity seed, not a photometric conversion."
+    },
+    {
+      "id": "space-source-18",
+      "type": "spot",
+      "scope": "exterior",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        -200.60000610351562,
+        -82.16999816894531,
+        24.65999984741211
+      ],
+      "target_source": [
+        -200.60000610351562,
+        -75.78115808963776,
+        16.96696901321411
+      ],
+      "color_linear": [
+        1.0,
+        0.8799999952316284,
+        0.7099999785423279
+      ],
+      "intensity_web": 0.078,
+      "angle_radians": 0.8377580642700195,
+      "distance_source": 20,
+      "penumbra": 0.6,
+      "group": "exterior-service",
+      "shadow": {
+        "enabled": false
+      },
+      "source_light_name": "FORE10 / F2 / task beam",
+      "source_energy_value": 2600.0,
+      "source_energy_unit": "W",
+      "source_emitter_dimensions": null,
+      "preview_method": "Original cone direction and half-angle; uncalibrated art intensity seed, not a photometric conversion."
+    },
+    {
+      "id": "space-source-19",
+      "type": "spot",
+      "scope": "exterior",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        -191.0,
+        -82.16999816894531,
+        24.65999984741211
+      ],
+      "target_source": [
+        -193.97996789216995,
+        -74.91549122333527,
+        18.455813765525818
+      ],
+      "color_linear": [
+        1.0,
+        0.8799999952316284,
+        0.7099999785423279
+      ],
+      "intensity_web": 0.027,
+      "angle_radians": 0.8028514385223389,
+      "distance_source": 20,
+      "penumbra": 0.6,
+      "group": "exterior-service",
+      "shadow": {
+        "enabled": false
+      },
+      "source_light_name": "FORE10 / F3 / task beam",
+      "source_energy_value": 900.0,
+      "source_energy_unit": "W",
+      "source_emitter_dimensions": null,
+      "preview_method": "Original cone direction and half-angle; uncalibrated art intensity seed, not a photometric conversion."
+    },
+    {
+      "id": "space-source-20",
+      "type": "spot",
+      "scope": "exterior",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        -181.1999969482422,
+        -30.040000915527344,
+        39.2400016784668
+      ],
+      "target_source": [
+        -181.57175905257463,
+        -25.69031798839569,
+        30.243221759796143
+      ],
+      "color_linear": [
+        1.0,
+        0.8199999928474426,
+        0.6100000143051147
+      ],
+      "intensity_web": 0.009000000000000001,
+      "angle_radians": 0.8726646304130554,
+      "distance_source": 20,
+      "penumbra": 0.6,
+      "group": "exterior-service",
+      "shadow": {
+        "enabled": false
+      },
+      "source_light_name": "LIGHT07 / Electronics hood task light",
+      "source_energy_value": 300.0,
+      "source_energy_unit": "W",
+      "source_emitter_dimensions": null,
+      "preview_method": "Original cone direction and half-angle; uncalibrated art intensity seed, not a photometric conversion."
+    },
+    {
+      "id": "space-source-21",
+      "type": "spot",
+      "scope": "exterior",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        -162.1999969482422,
+        -27.139999389648438,
+        43.38999938964844
+      ],
+      "target_source": [
+        -164.75581312179565,
+        -24.206372022628784,
+        34.17796206474304
+      ],
+      "color_linear": [
+        1.0,
+        0.8199999928474426,
+        0.6100000143051147
+      ],
+      "intensity_web": 0.027,
+      "angle_radians": 0.9075711965560913,
+      "distance_source": 20,
+      "penumbra": 0.6,
+      "group": "exterior-service",
+      "shadow": {
+        "enabled": false
+      },
+      "source_light_name": "LIGHT07 / Fluid bay hood task light",
+      "source_energy_value": 900.0,
+      "source_energy_unit": "W",
+      "source_emitter_dimensions": null,
+      "preview_method": "Original cone direction and half-angle; uncalibrated art intensity seed, not a photometric conversion."
+    },
+    {
+      "id": "space-source-22",
+      "type": "spot",
+      "scope": "exterior",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        -178.0,
+        -88.0,
+        54.0
+      ],
+      "target_source": [
+        -177.10487607121468,
+        -78.45201361179352,
+        51.16544330120087
+      ],
+      "color_linear": [
+        0.47999998927116394,
+        0.6200000047683716,
+        0.7599999904632568
+      ],
+      "intensity_web": 1.2,
+      "angle_radians": 0.593411922454834,
+      "distance_source": 90,
+      "penumbra": 0.6,
+      "group": "exterior-service",
+      "shadow": {
+        "enabled": false
+      },
+      "source_light_name": "LIGHT07 / Local cool reflected fill",
+      "source_energy_value": 40000.0,
+      "source_energy_unit": "W",
+      "source_emitter_dimensions": null,
+      "preview_method": "Original cone direction and half-angle; uncalibrated art intensity seed, not a photometric conversion."
+    },
+    {
+      "id": "space-source-23-exterior",
+      "type": "directional",
+      "scope": "exterior",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        -480.0,
+        -620.0,
+        310.0
+      ],
+      "target_source": [
+        89.29457187652588,
+        115.33874750137329,
+        -57.66916513442993
+      ],
+      "color_linear": [
+        0.4000000059604645,
+        0.550000011920929,
+        0.7200000286102295
+      ],
+      "intensity_web": 0.22,
+      "group": "fill",
+      "shadow": {
+        "enabled": false
+      },
+      "source_light_name": "ORBIT low camera-side art fill",
+      "source_position_source": [
+        -480.0,
+        -620.0,
+        310.0
+      ],
+      "source_energy_value": 5600000.0,
+      "preview_method": "Direction-preserving directional approximation; original AREA extent is not reproduced.",
+      "preview_shadow_frame_translated": false
+    },
+    {
+      "id": "space-source-23-archive",
+      "type": "directional",
+      "scope": "archive",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        -480.0,
+        -620.0,
+        310.0
+      ],
+      "target_source": [
+        89.29457187652588,
+        115.33874750137329,
+        -57.66916513442993
+      ],
+      "color_linear": [
+        0.4000000059604645,
+        0.550000011920929,
+        0.7200000286102295
+      ],
+      "intensity_web": 0.22,
+      "group": "fill",
+      "shadow": {
+        "enabled": false
+      },
+      "source_light_name": "ORBIT low camera-side art fill",
+      "source_position_source": [
+        -480.0,
+        -620.0,
+        310.0
+      ],
+      "source_energy_value": 5600000.0,
+      "preview_method": "Direction-preserving directional approximation; original AREA extent is not reproduced.",
+      "preview_shadow_frame_translated": false
+    },
+    {
+      "id": "space-source-24-exterior",
+      "type": "directional",
+      "scope": "exterior",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        807.60107421875,
+        645.561279296875,
+        -183.1150665283203
+      ],
+      "target_source": [
+        38.457194805145264,
+        30.741037368774414,
+        -8.71968412399292
+      ],
+      "color_linear": [
+        0.3100000023841858,
+        0.47999998927116394,
+        0.6800000071525574
+      ],
+      "intensity_web": 0.08,
+      "group": "fill",
+      "shadow": {
+        "enabled": false
+      },
+      "source_light_name": "ORBIT planet-direction fill proxy",
+      "source_position_source": [
+        807.60107421875,
+        645.561279296875,
+        -183.1150665283203
+      ],
+      "source_energy_value": 1200000.0,
+      "preview_method": "Direction-preserving directional approximation; original AREA extent is not reproduced.",
+      "preview_shadow_frame_translated": false
+    },
+    {
+      "id": "space-source-24-archive",
+      "type": "directional",
+      "scope": "archive",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        807.60107421875,
+        645.561279296875,
+        -183.1150665283203
+      ],
+      "target_source": [
+        38.457194805145264,
+        30.741037368774414,
+        -8.71968412399292
+      ],
+      "color_linear": [
+        0.3100000023841858,
+        0.47999998927116394,
+        0.6800000071525574
+      ],
+      "intensity_web": 0.08,
+      "group": "fill",
+      "shadow": {
+        "enabled": false
+      },
+      "source_light_name": "ORBIT planet-direction fill proxy",
+      "source_position_source": [
+        807.60107421875,
+        645.561279296875,
+        -183.1150665283203
+      ],
+      "source_energy_value": 1200000.0,
+      "preview_method": "Direction-preserving directional approximation; original AREA extent is not reproduced.",
+      "preview_shadow_frame_translated": false
+    },
+    {
+      "id": "space-source-25-exterior",
+      "type": "directional",
+      "scope": "exterior",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        120.3555679321289,
+        862.5482177734375,
+        491.451904296875
+      ],
+      "target_source": [
+        -3.814697265625e-05,
+        -1.430511474609375e-05,
+        -0.00013399124145507812
+      ],
+      "color_linear": [
+        1.0,
+        0.800000011920929,
+        0.6000000238418579
+      ],
+      "intensity_web": 3.0,
+      "group": "key",
+      "shadow": {
+        "enabled": true,
+        "map_size": 2048,
+        "near_source": 10,
+        "far_source": 2000,
+        "bias": -5e-05,
+        "normal_bias_source": 0.03,
+        "span_source": 310
+      },
+      "source_light_name": "ORBIT shared stellar key",
+      "source_position_source": [
+        120.3555679321289,
+        862.5482177734375,
+        491.451904296875
+      ],
+      "source_energy_value": 4.5,
+      "preview_method": "Direction-preserving directional approximation; original AREA extent is not reproduced.",
+      "preview_shadow_frame_translated": false
+    },
+    {
+      "id": "space-source-25-archive",
+      "type": "directional",
+      "scope": "archive",
+      "modes": [
+        "space"
+      ],
+      "position_source": [
+        36.35560607910156,
+        824.0482320785522,
+        512.4520382881165
+      ],
+      "target_source": [
+        -84,
+        -38.5,
+        21
+      ],
+      "color_linear": [
+        1.0,
+        0.800000011920929,
+        0.6000000238418579
+      ],
+      "intensity_web": 3.0,
+      "group": "key",
+      "shadow": {
+        "enabled": true,
+        "map_size": 512,
+        "near_source": 10,
+        "far_source": 2000,
+        "bias": -5e-05,
+        "normal_bias_source": 0.015,
+        "span_source": 45
+      },
+      "source_light_name": "ORBIT shared stellar key",
+      "source_position_source": [
+        120.3555679321289,
+        862.5482177734375,
+        491.451904296875
+      ],
+      "source_energy_value": 4.5,
+      "preview_method": "Direction-preserving directional approximation; original AREA extent is not reproduced.",
+      "preview_shadow_frame_translated": true
+    },
+    {
+      "id": "neutral-ship-key",
+      "type": "directional",
+      "scope": "exterior",
+      "modes": [
+        "neutral"
+      ],
+      "views": [
+        "whole-ship",
+        "archive-locator"
+      ],
+      "position_source": [
+        -700,
+        -850,
+        850
+      ],
+      "target_source": [
+        -12,
+        0,
+        13
+      ],
+      "color_linear": [
+        1,
+        1,
+        1
+      ],
+      "intensity_web": 2.2,
+      "group": "key",
+      "shadow": {
+        "enabled": true,
+        "map_size": 2048,
+        "near_source": 10,
+        "far_source": 2000,
+        "bias": -5e-05,
+        "normal_bias_source": 0.03,
+        "span_source": 310
+      },
+      "source_temporary_review_light": {
+        "id": "ship-key",
+        "position": [
+          -700,
+          -850,
+          850
+        ],
+        "target": [
+          -12,
+          0,
+          13
+        ],
+        "energy": 14000000,
+        "size": 500
+      },
+      "preview_method": "Uncalibrated directional approximation of the exact temporary offline neutral AREA direction."
+    },
+    {
+      "id": "neutral-ship-fill",
+      "type": "directional",
+      "scope": "exterior",
+      "modes": [
+        "neutral"
+      ],
+      "views": [
+        "whole-ship",
+        "archive-locator"
+      ],
+      "position_source": [
+        50,
+        -500,
+        380
+      ],
+      "target_source": [
+        -12,
+        0,
+        13
+      ],
+      "color_linear": [
+        0.86,
+        0.92,
+        1
+      ],
+      "intensity_web": 1.0,
+      "group": "fill",
+      "shadow": {
+        "enabled": false
+      },
+      "source_temporary_review_light": {
+        "id": "ship-fill",
+        "position": [
+          50,
+          -500,
+          380
+        ],
+        "target": [
+          -12,
+          0,
+          13
+        ],
+        "energy": 6500000,
+        "size": 450,
+        "color": [
+          0.86,
+          0.92,
+          1
+        ]
+      },
+      "preview_method": "Uncalibrated directional approximation of the exact temporary offline neutral AREA direction."
+    },
+    {
+      "id": "neutral-ship-rim",
+      "type": "directional",
+      "scope": "exterior",
+      "modes": [
+        "neutral"
+      ],
+      "views": [
+        "whole-ship",
+        "archive-locator"
+      ],
+      "position_source": [
+        500,
+        400,
+        650
+      ],
+      "target_source": [
+        -12,
+        0,
+        13
+      ],
+      "color_linear": [
+        1,
+        1,
+        1
+      ],
+      "intensity_web": 1.3,
+      "group": "fill",
+      "shadow": {
+        "enabled": false
+      },
+      "source_temporary_review_light": {
+        "id": "ship-rim",
+        "position": [
+          500,
+          400,
+          650
+        ],
+        "target": [
+          -12,
+          0,
+          13
+        ],
+        "energy": 8500000,
+        "size": 350
+      },
+      "preview_method": "Uncalibrated directional approximation of the exact temporary offline neutral AREA direction."
+    },
+    {
+      "id": "neutral-belly-whole-key",
+      "type": "directional",
+      "scope": "exterior",
+      "modes": [
+        "neutral"
+      ],
+      "views": [
+        "whole-underside"
+      ],
+      "position_source": [
+        -500,
+        -700,
+        -700
+      ],
+      "target_source": [
+        -12,
+        0,
+        0
+      ],
+      "color_linear": [
+        1,
+        1,
+        1
+      ],
+      "intensity_web": 2.2,
+      "group": "key",
+      "shadow": {
+        "enabled": true,
+        "map_size": 2048,
+        "near_source": 10,
+        "far_source": 2000,
+        "bias": -5e-05,
+        "normal_bias_source": 0.03,
+        "span_source": 310
+      },
+      "source_temporary_review_light": {
+        "id": "belly-whole-key",
+        "position": [
+          -500,
+          -700,
+          -700
+        ],
+        "target": [
+          -12,
+          0,
+          0
+        ],
+        "energy": 12000000,
+        "size": 500
+      },
+      "preview_method": "Uncalibrated directional approximation of the exact temporary offline neutral AREA direction."
+    },
+    {
+      "id": "neutral-belly-whole-fill",
+      "type": "directional",
+      "scope": "exterior",
+      "modes": [
+        "neutral"
+      ],
+      "views": [
+        "whole-underside"
+      ],
+      "position_source": [
+        300,
+        500,
+        -450
+      ],
+      "target_source": [
+        -12,
+        0,
+        0
+      ],
+      "color_linear": [
+        1,
+        1,
+        1
+      ],
+      "intensity_web": 1.0,
+      "group": "fill",
+      "shadow": {
+        "enabled": false
+      },
+      "source_temporary_review_light": {
+        "id": "belly-whole-fill",
+        "position": [
+          300,
+          500,
+          -450
+        ],
+        "target": [
+          -12,
+          0,
+          0
+        ],
+        "energy": 6500000,
+        "size": 450
+      },
+      "preview_method": "Uncalibrated directional approximation of the exact temporary offline neutral AREA direction."
+    },
+    {
+      "id": "neutral-belly-whole-rim",
+      "type": "directional",
+      "scope": "exterior",
+      "modes": [
+        "neutral"
+      ],
+      "views": [
+        "whole-underside"
+      ],
+      "position_source": [
+        450,
+        -200,
+        -450
+      ],
+      "target_source": [
+        -12,
+        0,
+        0
+      ],
+      "color_linear": [
+        1,
+        1,
+        1
+      ],
+      "intensity_web": 1.3,
+      "group": "fill",
+      "shadow": {
+        "enabled": false
+      },
+      "source_temporary_review_light": {
+        "id": "belly-whole-rim",
+        "position": [
+          450,
+          -200,
+          -450
+        ],
+        "target": [
+          -12,
+          0,
+          0
+        ],
+        "energy": 6000000,
+        "size": 350
+      },
+      "preview_method": "Uncalibrated directional approximation of the exact temporary offline neutral AREA direction."
+    },
+    {
+      "id": "neutral-archive-exterior-key",
+      "type": "directional",
+      "scope": "archive",
+      "modes": [
+        "neutral"
+      ],
+      "views": [
+        "archive-cutaway",
+        "archive-entry",
+        "archive-upper",
+        "vestibule"
+      ],
+      "position_source": [
+        -120,
+        -130,
+        100
+      ],
+      "target_source": [
+        -80,
+        -37,
+        18
+      ],
+      "color_linear": [
+        1,
+        1,
+        1
+      ],
+      "intensity_web": 0.8,
+      "group": "key",
+      "shadow": {
+        "enabled": true,
+        "map_size": 512,
+        "near_source": 10,
+        "far_source": 2000,
+        "bias": -5e-05,
+        "normal_bias_source": 0.015,
+        "span_source": 55
+      },
+      "source_temporary_review_light": {
+        "id": "exterior-key",
+        "position": [
+          -120,
+          -130,
+          100
+        ],
+        "target": [
+          -80,
+          -37,
+          18
+        ],
+        "energy": 700000,
+        "size": 80
+      },
+      "preview_method": "Uncalibrated approximation of the published temporary neutral AREA light; all original source lights are inactive in neutral mode."
+    },
+    {
+      "id": "neutral-archive-exterior-fill",
+      "type": "directional",
+      "scope": "archive",
+      "modes": [
+        "neutral"
+      ],
+      "views": [
+        "archive-cutaway",
+        "archive-entry",
+        "archive-upper",
+        "vestibule"
+      ],
+      "position_source": [
+        -20,
+        -15,
+        85
+      ],
+      "target_source": [
+        -80,
+        -37,
+        18
+      ],
+      "color_linear": [
+        1,
+        1,
+        1
+      ],
+      "intensity_web": 0.4,
+      "group": "fill",
+      "shadow": {
+        "enabled": false
+      },
+      "source_temporary_review_light": {
+        "id": "exterior-fill",
+        "position": [
+          -20,
+          -15,
+          85
+        ],
+        "target": [
+          -80,
+          -37,
+          18
+        ],
+        "energy": 350000,
+        "size": 60
+      },
+      "preview_method": "Uncalibrated approximation of the published temporary neutral AREA light; all original source lights are inactive in neutral mode."
+    },
+    {
+      "id": "neutral-archive-entry-fill",
+      "type": "spot",
+      "scope": "archive",
+      "modes": [
+        "neutral"
+      ],
+      "views": [
+        "archive-cutaway",
+        "archive-entry",
+        "archive-upper",
+        "vestibule"
+      ],
+      "position_source": [
+        -65,
+        -38.5,
+        21
+      ],
+      "target_source": [
+        -62,
+        -38.5,
+        17.2
+      ],
+      "color_linear": [
+        1,
+        1,
+        1
+      ],
+      "intensity_web": 0.0105,
+      "group": "fill",
+      "shadow": {
+        "enabled": false
+      },
+      "source_temporary_review_light": {
+        "id": "entry-fill",
+        "position": [
+          -65,
+          -38.5,
+          21
+        ],
+        "target": [
+          -62,
+          -38.5,
+          17.2
+        ],
+        "energy": 350,
+        "size": 3
+      },
+      "preview_method": "Uncalibrated approximation of the published temporary neutral AREA light; all original source lights are inactive in neutral mode.",
+      "angle_radians": 1.25,
+      "distance_source": 18,
+      "penumbra": 0.7
+    },
+    {
+      "id": "neutral-archive-vestibule-fill",
+      "type": "spot",
+      "scope": "archive",
+      "modes": [
+        "neutral"
+      ],
+      "views": [
+        "archive-cutaway",
+        "archive-entry",
+        "archive-upper",
+        "vestibule"
+      ],
+      "position_source": [
+        -58.8,
+        -38.5,
+        20.05
+      ],
+      "target_source": [
+        -58.8,
+        -38.5,
+        17.2
+      ],
+      "color_linear": [
+        1,
+        1,
+        1
+      ],
+      "intensity_web": 0.0066,
+      "group": "fill",
+      "shadow": {
+        "enabled": false
+      },
+      "source_temporary_review_light": {
+        "id": "vestibule-fill",
+        "position": [
+          -58.8,
+          -38.5,
+          20.05
+        ],
+        "target": [
+          -58.8,
+          -38.5,
+          17.2
+        ],
+        "energy": 220,
+        "size": 2.5
+      },
+      "preview_method": "Uncalibrated approximation of the published temporary neutral AREA light; all original source lights are inactive in neutral mode.",
+      "angle_radians": 1.25,
+      "distance_source": 18,
+      "penumbra": 0.7
+    },
+    {
+      "id": "neutral-archive-interior-mid",
+      "type": "spot",
+      "scope": "archive",
+      "modes": [
+        "neutral"
+      ],
+      "views": [
+        "archive-cutaway",
+        "archive-entry",
+        "archive-upper",
+        "vestibule"
+      ],
+      "position_source": [
+        -80,
+        -39,
+        24.6
+      ],
+      "target_source": [
+        -80,
+        -39,
+        17.2
+      ],
+      "color_linear": [
+        1,
+        1,
+        1
+      ],
+      "intensity_web": 0.042,
+      "group": "fill",
+      "shadow": {
+        "enabled": true,
+        "map_size": 512,
+        "near_source": 0.05,
+        "far_source": 18,
+        "bias": -5e-05,
+        "normal_bias_source": 0.015
+      },
+      "source_temporary_review_light": {
+        "id": "interior-mid",
+        "position": [
+          -80,
+          -39,
+          24.6
+        ],
+        "target": [
+          -80,
+          -39,
+          17.2
+        ],
+        "energy": 1400,
+        "size": 10
+      },
+      "preview_method": "Uncalibrated approximation of the published temporary neutral AREA light; all original source lights are inactive in neutral mode.",
+      "angle_radians": 1.25,
+      "distance_source": 18,
+      "penumbra": 0.7
+    },
+    {
+      "id": "neutral-archive-interior-west",
+      "type": "spot",
+      "scope": "archive",
+      "modes": [
+        "neutral"
+      ],
+      "views": [
+        "archive-cutaway",
+        "archive-entry",
+        "archive-upper",
+        "vestibule"
+      ],
+      "position_source": [
+        -98,
+        -39,
+        24.6
+      ],
+      "target_source": [
+        -98,
+        -39,
+        17.2
+      ],
+      "color_linear": [
+        1,
+        1,
+        1
+      ],
+      "intensity_web": 0.042,
+      "group": "fill",
+      "shadow": {
+        "enabled": true,
+        "map_size": 512,
+        "near_source": 0.05,
+        "far_source": 18,
+        "bias": -5e-05,
+        "normal_bias_source": 0.015
+      },
+      "source_temporary_review_light": {
+        "id": "interior-west",
+        "position": [
+          -98,
+          -39,
+          24.6
+        ],
+        "target": [
+          -98,
+          -39,
+          17.2
+        ],
+        "energy": 1400,
+        "size": 10
+      },
+      "preview_method": "Uncalibrated approximation of the published temporary neutral AREA light; all original source lights are inactive in neutral mode.",
+      "angle_radians": 1.25,
+      "distance_source": 18,
+      "penumbra": 0.7
+    }
+  ],
+  "sourceStage": "P30",
+  "source_scene_sha256": "545079b4e3b5ecb453574c11b998adfe5b4cfba8270d795c549fe24462fcf77e",
+  "recipe_inheritance": {
+    "source_sha256": "dd35a7b43c94ba22a03aa0f27e0b88de549cce594971829c9e0e6913e04d0339",
+    "lights_unchanged": true,
+    "source_light_preservation_verified": true
+  },
+  "limitations": [
+    "Uncalibrated WebGL approximation; AREA emission is not physically equivalent.",
+    "P30 browser-only artistic fills are declared separately.",
+    "Historical source UV and exported-contact limitations remain unresolved."
+  ]
+}
