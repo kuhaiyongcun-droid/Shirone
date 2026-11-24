@@ -15,10 +15,10 @@
       "url": "https://beian.miit.gov.cn/"
     },
     "publicSecurity": {
-      "approved": false,
-      "displayText": "",
-      "url": "",
-      "iconPath": ""
+      "approved": true,
+      "displayText": "新公网安备65400202000280号",
+      "url": "https://beian.mps.gov.cn/#/query/webSearch?code=65400202000280",
+      "iconPath": "/blog/images/filing/public-security.png"
     }
   }
 }

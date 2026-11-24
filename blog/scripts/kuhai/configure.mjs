@@ -23,9 +23,9 @@ export function renderFilingLinks(filing = {}) {
     const address = approved.url;
     let image = '';
     if (name === 'publicSecurity') {
-      image = `<img src="${escapeHtml(approved.iconPath)}" alt="" width="20" height="20" loading="lazy" /> `;
+      image = `<img class="shrink-0 object-contain" src="${escapeHtml(approved.iconPath)}" alt="" width="20" height="20" loading="lazy" />`;
     }
-    links.push(`<a href="${escapeHtml(address)}" target="_blank" rel="noopener noreferrer" data-no-swup>${image}${escapeHtml(approved.displayText)}</a>`);
+    links.push(`<a class="inline-flex items-center gap-1.5" href="${escapeHtml(address)}" target="_blank" rel="noopener noreferrer" data-no-swup>${image}${escapeHtml(approved.displayText)}</a>`);
   }
   return links.length ? `<div class="flex flex-wrap items-center justify-center gap-3">${links.join('\n')}</div>\n` : '<!-- No approved filing is configured. -->\n';
 }
