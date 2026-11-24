@@ -248,13 +248,12 @@ async function mount() {
     if (token !== generation || disposed) return;
     instance = await createViewer({ viewport, hotspot, quality: effectiveQuality(), review: reviewSettings(),
       initialSnapshot: previousSnapshot, signal: pendingViewer.signal, runtime, state: () => state,
-      onLoading: value => { if (token === generation && !disposed) { status(value ? 'Loading' : ''); updateUI(); } },
       onProgress: progress => { if (token === generation && !disposed) reportProgress(progress); },
       onError: error => { if (token === generation && !disposed) stop({ failed: true, error, focus: document.activeElement === viewport }); }
     });
     if (token !== generation || disposed) { instance.dispose(); return; }
     viewer = instance; loading = false; staticMode = false;
-    if (!viewer.snapshot().interiorLoading) status();
+    status();
     viewer.update(state); viewer.setReview(reviewSettings()); updateUI();
     if (document.activeElement === $('enable-3d') || document.activeElement === document.body) viewport.focus({ preventScroll: true });
   } catch (error) {

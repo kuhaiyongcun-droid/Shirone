@@ -53,6 +53,6 @@ test('viewer filters its valid initial exterior view before event registration a
   assert.ok(selection>=0&&selection<init);
   assert.ok(init<source.indexOf('observer.observe(viewport)'));
   assert.ok(init<source.indexOf("controls.addEventListener('change',request)"));
-  assert.ok(init<source.indexOf("resize();ship=await loadScope('exterior')"));
+  assert.ok(init<source.indexOf('const assets=await loadSceneAssets('));
   assert.match(source,/function applyLighting\(schedule=true\)\{[^\n]+lights\.setState\([^\n]+if\(schedule\)request\(\);\}/);
 });

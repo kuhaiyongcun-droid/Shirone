@@ -1,7 +1,7 @@
 import * as THREE from 'three';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
-import { DRACOLoader } from 'three/addons/loaders/DRACOLoader.js';
+import { SceneDracoLoader } from './scene-draco-loader.mjs';
 import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
 import { cutawayOpen,renderScale } from './interaction.mjs';
 import { makeSpace } from './space.mjs';
@@ -11,11 +11,11 @@ import { BLOG_VISUAL_LIGHTING_PROFILE } from './visual-lighting-profile.mjs';
 import { presentationInsets } from './presentation-layout.mjs';
 import { moveCameraByKey,installTouchDollyGuard } from './camera-navigation.mjs';
 import { disposeObject,verifiedBytes } from './resources.mjs';
-import { runAssetLoad } from './asset-loading.mjs';
+import { loadSceneAssets } from './scene-loading.mjs';
 import { parseGlbJson,validateAssetSemantics,sourcePointToWeb } from './asset-contract.mjs';
 import { snapshotCompatible,assertImportedSceneHasNoLights,visibilityForView } from './runtime-guards.mjs';
 
-export async function createViewer({viewport,hotspot,quality,state,onError,onLoading,onProgress,signal,review,initialSnapshot,runtime}) {
+export async function createViewer({viewport,hotspot,quality,state,onError,onProgress,signal,review,initialSnapshot,runtime}) {
   if(!runtime?.ready)throw Error('Complete pinned source asset contract required');
   const {contract,cameras,lighting:recipe}=runtime,scene=new THREE.Scene();scene.background=new THREE.Color(0x070b0f);
   let camera=new THREE.PerspectiveCamera(38,1,.0005,400);
@@ -24,10 +24,9 @@ export async function createViewer({viewport,hotspot,quality,state,onError,onLoa
   renderer.shadowMap.enabled=quality!=='light';renderer.shadowMap.type=THREE.PCFShadowMap;renderer.domElement.setAttribute('aria-hidden','true');renderer.domElement.hidden=true;viewport.prepend(renderer.domElement);
   const controls=new OrbitControls(camera,renderer.domElement);controls.enablePan=false;controls.enableDamping=false;controls.autoRotate=false;controls.rotateSpeed=.65;controls.minPolarAngle=.06;controls.maxPolarAngle=Math.PI-.06;
   const removeTouchDollyGuard=installTouchDollyGuard(controls);
-  const abort=new AbortController(),draco=new DRACOLoader();draco.setDecoderPath(new URL('./assets/draco/',document.baseURI).href);draco.setWorkerLimit(quality==='light'?1:2);
+  const abort=new AbortController(),draco=new SceneDracoLoader({signal:abort.signal});draco.setDecoderPath(new URL('./assets/draco/',document.baseURI).href);draco.setWorkerLimit(quality==='light'?1:2);
   const loader=new GLTFLoader().setDRACOLoader(draco),anchor=new THREE.Vector3().fromArray(sourcePointToWeb(cameras.archive_anchor_source));
-  let dead=false,ready=false,raf=0,currentMode='ship',ship=null,interior=null,interiorPromise=null,savedView=null,savedExteriorView=null;
-  let interiorEpoch=0,interiorController=null;
+  let dead=false,ready=false,raf=0,currentMode='ship',ship=null,interior=null,savedView=null,savedExteriorView=null;
   let exteriorPoints=null;
   let view=cameras.views.some(v=>v.id===review.view&&v.scope==='exterior')?review.view:cameras.defaults.exterior;
   let lightMode=review.lighting,group=review.group,matched=review.matched,gain=review.gain,frame=frameSize(1,1,false);
@@ -58,10 +57,7 @@ export async function createViewer({viewport,hotspot,quality,state,onError,onLoa
   const observer=new ResizeObserver(resize);observer.observe(viewport);controls.addEventListener('change',request);
   document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(raf);raf=0;}else request();},{signal:abort.signal});
   renderer.domElement.addEventListener('webglcontextlost',e=>{e.preventDefault();if(!dead)onError();},{signal:abort.signal});
-  async function loadScope(scope,scopeSignal){
-    const controller=new AbortController(),stop=()=>controller.abort();abort.signal.addEventListener('abort',stop,{once:true});
-    scopeSignal?.addEventListener('abort',stop,{once:true});if(abort.signal.aborted||scopeSignal?.aborted)controller.abort();
-    try{return await runAssetLoad(async load=>{
+  async function loadScope(scope,load){
       const descriptor=contract.assets[scope],url=new URL(descriptor.uri,document.baseURI);url.searchParams.set('v',descriptor.sha256.slice(0,16));
       const bytes=await verifiedBytes(url,descriptor,load.signal,{load}),json=parseGlbJson(bytes),assigned=validateAssetSemantics(scope,json,runtime.semantics);
       load.reportProgress({phase:'decoding',loaded:descriptor.bytes,total:descriptor.bytes});
@@ -79,22 +75,6 @@ export async function createViewer({viewport,hotspot,quality,state,onError,onLoa
         // GLB export_yup has already converted axes. Apply only the one scale.
         gltf.scene.scale.setScalar(contract.coordinate_system.root_scale);return gltf.scene;
       }catch(error){disposeObject(gltf.scene);throw error;}
-    },{signal:controller.signal,onProgress:progress=>{if(!dead)onProgress?.({...progress,scope});}});}
-    finally{abort.signal.removeEventListener('abort',stop);scopeSignal?.removeEventListener('abort',stop);}
-  }
-  function loadInterior(){
-    if(interiorPromise)return interiorPromise;if(interior)return Promise.resolve(interior);onLoading(true);
-    const epoch=++interiorEpoch;interiorController=new AbortController();
-    interiorPromise=loadScope('archive',interiorController.signal).then(object=>{
-      if(dead||epoch!==interiorEpoch){disposeObject(object);return null;}
-      interior=object;scene.add(interior);update(state());return interior;
-    }).catch(error=>{if(!dead&&epoch===interiorEpoch){console.warn(error);onError(error);}return null;})
-      .finally(()=>{if(!dead&&epoch===interiorEpoch){interiorPromise=null;interiorController=null;onLoading(false);}});return interiorPromise;
-  }
-  function unloadInterior(){
-    ++interiorEpoch;interiorController?.abort();interiorController=null;
-    if(interior){scene.remove(interior);disposeObject(interior);interior=null;}
-    interiorPromise=null;onLoading(false);
   }
   function applyVisibility(){
     if(!ready||!ship)return;
@@ -106,9 +86,9 @@ export async function createViewer({viewport,hotspot,quality,state,onError,onLoa
   function update(next){
     if(dead||!ready)return;if(next.mode!==currentMode){
       if(next.mode==='archive'){savedView=captureView(camera,controls);savedExteriorView=view;view=cameras.defaults.archive;currentMode=next.mode;fit();}
-      else{currentMode=next.mode;view=savedExteriorView||cameras.defaults.exterior;if(savedView)camera=restoreView(camera,controls,savedView,frame.width/frame.height);else fit();unloadInterior();}
+      else{currentMode=next.mode;view=savedExteriorView||cameras.defaults.exterior;if(savedView)camera=restoreView(camera,controls,savedView,frame.width/frame.height);else fit();}
       applyLighting();resize();}
-    const open=cutawayOpen(next);if(open&&!interior&&!interiorPromise)loadInterior();else if(!open&&interiorPromise&&!interior)unloadInterior();applyVisibility();request();
+    applyVisibility();request();
   }
   function hit(x,y){
     if(!ready||currentMode!=='ship')return false;const rect=renderer.domElement.getBoundingClientRect();if(x<rect.left||x>rect.right||y<rect.top||y>rect.bottom)return false;
@@ -120,13 +100,16 @@ export async function createViewer({viewport,hotspot,quality,state,onError,onLoa
     if(matched!==next.matched)savedView=null;
     if(nextView)view=nextView.id;lightMode=next.lighting;group=next.group;matched=next.matched;gain=next.gain;resize();if(changed)fit();applyVisibility();applyLighting();}
   function snapshot(){camera.updateMatrixWorld(true);ship?.updateMatrixWorld(true);return {revision:contract.revision,sourceSceneSha256:contract.source_scene.sha256,modelSha256:contract.assets.exterior.sha256,archiveSha256:contract.assets.archive.sha256,cameraRecipeSha256:contract.documents.cameras.sha256,
-    camera:captureView(camera,controls),cameraWorldMatrix:camera.matrixWorld.toArray(),cameraViewMatrix:camera.matrixWorldInverse.toArray(),cameraProjectionMatrix:camera.projectionMatrix.toArray(),savedView,savedExteriorView,mode:currentMode,shipMatrix:ship?.matrixWorld.toArray(),frame,view,lighting:lightMode,group,matched,gain,quality,interiorLoaded:!!interior,interiorLoading:!!interiorPromise&&!interior,
+    camera:captureView(camera,controls),cameraWorldMatrix:camera.matrixWorld.toArray(),cameraViewMatrix:camera.matrixWorldInverse.toArray(),cameraProjectionMatrix:camera.projectionMatrix.toArray(),savedView,savedExteriorView,mode:currentMode,shipMatrix:ship?.matrixWorld.toArray(),frame,view,lighting:lightMode,group,matched,gain,quality,sceneAssetsReady:ready&&!!ship&&!!interior,interiorLoaded:!!interior,interiorLoading:false,
     render:{...renderer.info.render},memory:{...renderer.info.memory},lightingProfile:lights.profileId,framingProfile:camera.userData.presentation?.kind||(matched?'reference':'source-presentation'),browserAcceptance:false,lightingCalibrated:false};}
-  function dispose(){if(dead)return;dead=true;abort.abort();interiorController?.abort();++interiorEpoch;observer.disconnect();cancelAnimationFrame(raf);signal?.removeEventListener('abort',dispose);lights.dispose();removeTouchDollyGuard();controls.dispose();draco.dispose();disposeObject(scene);environmentTarget.dispose();renderer.renderLists.dispose();renderer.dispose();renderer.forceContextLoss();renderer.domElement.remove();ship=null;interior=null;interiorPromise=null;}
+  function dispose(){if(dead)return;dead=true;abort.abort();observer.disconnect();cancelAnimationFrame(raf);signal?.removeEventListener('abort',dispose);lights.dispose();removeTouchDollyGuard();controls.dispose();draco.dispose();disposeObject(scene);environmentTarget.dispose();renderer.renderLists.dispose();renderer.dispose();renderer.forceContextLoss();renderer.domElement.remove();ship=null;interior=null;}
   try{
-    if(signal?.aborted)throw Error('Viewer disposed');signal?.addEventListener('abort',dispose,{once:true});resize();ship=await loadScope('exterior');
-    if(dead||signal?.aborted){disposeObject(ship);ship=null;throw Error('Viewer disposed');}
-    scene.add(ship);scene.updateMatrixWorld(true);exteriorPoints=presentationPoints(ship);
+    if(signal?.aborted)throw Error('Viewer disposed');signal?.addEventListener('abort',dispose,{once:true});resize();
+    const assets=await loadSceneAssets(['exterior','archive'].map(key=>({key,bytes:contract.assets[key].bytes})),{
+      load:loadScope,dispose:disposeObject,signal:abort.signal,onProgress:progress=>{if(!dead)onProgress?.(progress);},
+    });
+    if(dead||signal?.aborted){disposeObject(assets.exterior);disposeObject(assets.archive);throw Error('Viewer disposed');}
+    ship=assets.exterior;interior=assets.archive;scene.add(ship,interior);scene.updateMatrixWorld(true);exteriorPoints=presentationPoints(ship);
     ship.traverse(mesh=>{if(!mesh.isMesh)return;if(mesh.userData.p23Role==='archive_shell'){shell.push(mesh);
       const line=new THREE.LineSegments(new THREE.EdgesGeometry(mesh.geometry,24),new THREE.LineBasicMaterial({color:0xe8b775,transparent:true,opacity:.9}));line.matrixAutoUpdate=false;line.matrix.copy(mesh.matrixWorld);outline.add(line);
     }else hull.push(mesh);});if(!shell.length||!hull.length)throw Error('Missing exact exterior semantic groups');
