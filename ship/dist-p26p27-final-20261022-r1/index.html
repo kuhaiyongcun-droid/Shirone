@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#070b0f">
+  <meta name="description" content="kuhai 的个人博客。由主舰进入档案室，阅读文章与建站记录。">
+  <meta name="author" content="kuhai">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="主舰／档案室">
+  <meta property="og:description" content="kuhai 的个人博客。由主舰进入档案室，阅读文章与建站记录。">
+  <meta property="og:url" content="https://kuhaiyongcun.com/">
+  <link rel="canonical" href="https://kuhaiyongcun.com/">
+  <title>主舰／档案室 · kuhai</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./app.css">
+</head>
+<body data-room="ship" data-interactive="false">
+  <main id="experience" aria-labelledby="room-title">
+    <img id="poster" class="poster" src="./assets/p26-p27-v1/references/after-space-whole-ship.png" width="1600" height="1000" fetchpriority="high" alt="主舰的静态展示图">
+    <div id="viewport" tabindex="-1" role="region" aria-label="主舰／档案室" aria-describedby="keyboard-help"></div>
+    <div class="vignette" aria-hidden="true"></div>
+    <header class="masthead">
+      <a class="identity" href="/" id="home" aria-label="主舰／档案室"><span class="mark" aria-hidden="true">k.</span><span>kuhai</span></a>
+      <nav class="site-nav" aria-label="网站导航">
+        <a href="/blog/" data-copy="ShipArticles">阅读文章</a>
+        <a href="/blog/archive/" data-copy="ShipArchiveLink">文章归档</a>
+        <a href="/blog/about/" data-copy="ShipAbout">关于 kuhai</a>
+      </nav>
+      <div class="header-actions">
+        <button id="language" type="button" aria-label="语言" hidden>EN</button>
+        <button id="settings-toggle" type="button" aria-expanded="false" aria-controls="settings" aria-label="显示设置" hidden><span data-copy="Settings">显示设置</span></button>
+      </div>
+    </header>
+    <section id="settings" class="settings" aria-label="显示设置" hidden>
+      <label for="quality" data-copy="Quality">画面</label>
+      <select id="quality">
+        <option value="auto" data-copy="Auto">自动</option><option value="standard" data-copy="Standard">标准</option>
+        <option value="light" data-copy="Light">节能</option><option value="static" data-copy="Static">静态画面</option>
+      </select>
+      <label for="review-view" data-copy="View">视角</label><select id="review-view"></select>
+      <label for="review-light" data-copy="Lighting">照明</label><select id="review-light"><option value="space" data-copy="Space">太空</option><option value="neutral" data-copy="Neutral">明亮</option></select>
+      <div data-qa hidden>
+        <label class="check-row"><input type="checkbox" id="matched-frame"><span data-copy="MatchedFrame">固定画幅（8:5）</span></label>
+        <label for="service-group" data-copy="ServiceLights">检修灯</label><select id="service-group"><option value="all">全部</option><option value="off">关闭</option></select>
+        <label for="lamp-gain"><span data-copy="LampGain">检修灯亮度</span><output id="gain-value" for="lamp-gain">1.00</output></label><input id="lamp-gain" type="range" min="0" max="3" step="0.05" value="1">
+      </div>
+      <button id="reset" type="button" data-copy="Reset">复位视角</button>
+      <p id="keyboard-help" data-copy="KeyboardHelp">聚焦场景后可用方向键旋转、加减号缩放；Esc 返回主舰或关闭设置。</p>
+      <button id="settings-close" type="button" data-copy="Close">收起设置</button>
+    </section>
+    <button id="hotspot" type="button" aria-label="选择档案室" aria-expanded="false" hidden><span class="beacon" aria-hidden="true"></span><span class="hotspot-label" data-copy="Archive">档案室</span></button>
+    <section class="footer">
+      <div class="intro"><p class="eyebrow" id="eyebrow">KUHAI · LOGBOOK</p><h1 id="room-title" tabindex="-1">主舰／档案室</h1><p id="description" data-copy="Subtitle">kuhai 的个人博客，记录思考、制作与日常。</p></div>
+      <div class="journey">
+        <div class="journey-actions">
+          <a class="entry primary-entry" href="/blog/" id="read-articles"><span data-copy="ShipArticles">阅读文章</span><span aria-hidden="true">↗</span></a>
+          <button id="enable-3d" class="entry" type="button" data-copy="ShipEnable3D" hidden>开启三维探索</button>
+          <button id="enter" class="entry" type="button" hidden><span data-copy="Archive">档案室</span><span aria-hidden="true">↗</span></button>
+          <button id="back" class="entry" type="button" hidden><span aria-hidden="true">↙</span><span data-copy="Back">返回主舰</span></button>
+          <button id="disable-3d" type="button" data-copy="ShipDisable3D" hidden>关闭三维</button>
+        </div>
+        <p id="hint" data-copy="ShipStaticHint">静静看一会儿，或直接开始阅读。</p>
+      </div>
+    </section>
+    <p id="status" role="status" aria-live="polite"></p>
+    <p id="reference-note" data-copy="ReferenceImage">静态展示图</p>
+    <noscript><p class="no-script" data-copy="ShipNoScript">无需开启三维，也能阅读全部文章。</p></noscript>
+  </main>
+  <footer class="legal-footer"><span>© kuhai</span>
+<a href="/blog/about/">关于 kuhai</a></footer>
+  <script type="module" src="./app.js"></script>
+</body>
+</html>
+

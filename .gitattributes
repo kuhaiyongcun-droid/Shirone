@@ -1,0 +1,14 @@
+# This source snapshot includes exact-byte manifests for assets, deployment
+# files, licenses and scripts. Preserve original bytes on every platform.
+# Do not normalize pinned files without issuing new manifests and hashes.
+* -text
+
+*.glb -diff -merge
+*.wasm -diff -merge
+*.ttf -diff -merge
+*.woff -diff -merge
+*.woff2 -diff -merge
+*.png -diff -merge
+*.webp -diff -merge
+*.jpg -diff -merge
+*.jpeg -diff -merge

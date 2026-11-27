@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "site": {
+    "title": "主舰／档案室",
+    "author": "kuhai",
+    "url": "https://kuhaiyongcun.com",
+    "description": "kuhai 的个人博客。由主舰进入档案室，阅读文章与建站记录。",
+    "language": "zh-CN",
+    "blogBase": "/blog/"
+  },
+  "filing": {
+    "icp": {
+      "approved": true,
+      "displayText": "新ICP备2026009604号",
+      "url": "https://beian.miit.gov.cn/"
+    },
+    "publicSecurity": {
+      "approved": true,
+      "displayText": "新公网安备65400202000280号",
+      "url": "https://beian.mps.gov.cn/#/query/webSearch?code=65400202000280",
+      "iconPath": "/blog/images/filing/public-security.png"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "url": "https://raw.githubusercontent.com/lxgw/yozai-font/master/OFL.txt",
+  "upstream": "https://github.com/lxgw/yozai-font/blob/master/OFL.txt",
+  "retrieved_utc": "2026-10-22T04:29:00Z",
+  "method": "Official raw URL read using web tool; all 84 rendered text lines preserved with tool line labels removed. Whitespace follows web rendering; original HTTP byte equality is not asserted.",
+  "direct_fetch_result": "Local direct TLS request reset; no network settings changed. Web tool succeeded.",
+  "expected_holders": [
+    "LXGW",
+    "Y.Oz (Y.OzVox)"
+  ],
+  "license": "SIL Open Font License 1.1",
+  "installed_font_identity": "Separately inspected Yozai 0.863; no font downloaded."
+}

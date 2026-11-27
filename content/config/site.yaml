@@ -1,0 +1,54 @@
+{
+  "site": "https://kuhaiyongcun.com",
+  "base": "/blog/",
+  "title": "主舰／档案室",
+  "subtitle": "kuhai 的个人博客。由主舰进入档案室，阅读文章与建站记录。",
+  "lang": "zh_CN",
+  "timeZone": "Asia/Shanghai",
+  "topAppBar": {
+    "contentAlign": "left"
+  },
+  "themeColor": {
+    "hue": 220,
+    "style": "tonalSpot"
+  },
+  "wallpaperMode": {
+    "defaultMode": "none"
+  },
+  "texture": {
+    "enable": false
+  },
+  "displaySettings": {
+    "wallpaperMode": false,
+    "texture": false
+  },
+  "banner": {
+    "src": {
+      "desktop": [],
+      "mobile": []
+    },
+    "homeText": {
+      "enable": false,
+      "title": "主舰／档案室",
+      "subtitle": [
+        "kuhai 的个人博客。由主舰进入档案室，阅读文章与建站记录。"
+      ],
+      "typewriter": {
+        "enable": false,
+        "speed": 100,
+        "loop": false
+      }
+    },
+    "carousel": {
+      "enable": false
+    },
+    "waves": {
+      "enable": false
+    }
+  },
+  "favicon": [
+    {
+      "src": "/images/kuhai-mark.svg"
+    }
+  ]
+}

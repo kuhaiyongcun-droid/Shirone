@@ -1,2 +1,0 @@
-# Optional contact-sheet authoring only; not needed to open/build/render .blend.
-Pillow==12.3.0

@@ -1,0 +1,47 @@
+{
+  "schema": "ship-source-snapshot-v1",
+  "createdAt": "2026-10-22T11:02:50.218Z",
+  "publicDirectory": "public-p26p27-final-20261022-r1",
+  "source": {
+    "stage": "P26-P27",
+    "sha256": "dd35a7b43c94ba22a03aa0f27e0b88de549cce594971829c9e0e6913e04d0339"
+  },
+  "contract": {
+    "uri": "./assets/p23-asset-contract.json",
+    "bytes": 907332,
+    "sha256": "20a07fb29b2a5f2990681f1ef4cf5c4fc643e475010fec9d58940fa21736e7fd"
+  },
+  "viewerInterface": "ship-seven-views-v1",
+  "handoffSha256": "8789d860533ce7915bfcf634427f00f537fbd4d6ed2f5a070bcc375ef8eaebee",
+  "evidence": [
+    {
+      "kind": "geometry",
+      "status": "PASS",
+      "statusScope": "Previously executed affected geometry of saved P26 parent and P27 installation, under the exact accepted methods; no exported contact/support assertion.",
+      "sourceSceneSha256": "dd35a7b43c94ba22a03aa0f27e0b88de549cce594971829c9e0e6913e04d0339",
+      "path": "evidence/geometry.json",
+      "bytes": 844008,
+      "sha256": "977ba8aee79a85d39e0cd4dfe69036b6d2f121117ccfcd03bee64094347ad11c"
+    },
+    {
+      "kind": "protection",
+      "status": "PASS",
+      "statusScope": "Accepted preservation of authored state and non-UV evaluated state only; all affected derived-UV numeric equivalence is NOT_ESTABLISHED, with original strict failure retained.",
+      "sourceSceneSha256": "dd35a7b43c94ba22a03aa0f27e0b88de549cce594971829c9e0e6913e04d0339",
+      "path": "evidence/protection.json",
+      "bytes": 845193,
+      "sha256": "c2efd0567934197c063c5552635f74b631b97be796762359a085ab8db4e5597c"
+    },
+    {
+      "kind": "same-camera",
+      "status": "PASS",
+      "statusScope": "Actual fresh24 paired runtime exact16 camera grid and declared representative-form review; original main lighting LIMITED and eye-target BLOCKED are retained. Public14 references were individually inspected.",
+      "sourceSceneSha256": "dd35a7b43c94ba22a03aa0f27e0b88de549cce594971829c9e0e6913e04d0339",
+      "path": "evidence/same-camera.json",
+      "bytes": 956668,
+      "sha256": "158f1552b29f540dfcea4762f4a1a5afae1e55d4cd1eed40c27d3fd240faab10"
+    }
+  ],
+  "browserVerified": false,
+  "lightingCalibrated": false
+}

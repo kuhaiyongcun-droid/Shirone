@@ -1,0 +1,59 @@
+{
+  "revision": 4,
+  "created_utc": "2026-10-22T15:43:40.623054+00:00",
+  "scope": "Ten current deployment files, standard-library read-only HTTP checks; no server acceptance claimed",
+  "previous_manifest": "DELIVERY-SHA256-v3.json",
+  "previous_manifest_sha256": "a29a7d18e24cca16f14c3b4b65235a5197ec98540e34150bf5893a46fb8ff787",
+  "files": [
+    {
+      "path": "nginx/acme.conf",
+      "bytes": 298,
+      "sha256": "ce6a958c83e4fa70321e525d46077f68e9cea7d2faf34b66d51653212284fde1"
+    },
+    {
+      "path": "nginx/cache-maps.conf",
+      "bytes": 869,
+      "sha256": "bbc991a7ccb8a6f5dc13fc4a1b87e954ea367b349d945000544e8bcd9f773155"
+    },
+    {
+      "path": "nginx/http-bootstrap.conf",
+      "bytes": 250,
+      "sha256": "7c234da665848b7b9f4ee716c834a7a06d480ba89d56d30c52de77852db04712"
+    },
+    {
+      "path": "nginx/https-production.conf",
+      "bytes": 780,
+      "sha256": "5758d95b842c527c5f358666f105c6bb492a92b4d3dc81a2bfc056b171ab78b3"
+    },
+    {
+      "path": "nginx/mime.types",
+      "bytes": 865,
+      "sha256": "71c69a9996200e7fbf0f14d310e40da6b7db48851cad078fde4989c504211734"
+    },
+    {
+      "path": "nginx/site.conf",
+      "bytes": 1889,
+      "sha256": "71424f48c7354c82e6476af2c676b8b966fba3b87ed8deb58e77b1723206f991"
+    },
+    {
+      "path": "preflight.py",
+      "bytes": 3663,
+      "sha256": "28fc67274761230f53834452737398e0767e0591969908f87c504f0595b6c17c"
+    },
+    {
+      "path": "switch-release.sh",
+      "bytes": 2148,
+      "sha256": "f48e8fe610fcceb516086de6f577a43f6faee80a7a9de9c3d8bfa8702cfa5794"
+    },
+    {
+      "path": "部署与更新说明.txt",
+      "bytes": 16416,
+      "sha256": "bc2fdf70d8396432cf1fa971b477c7f26962e3280a94fa72b0214e0ae886c08e"
+    },
+    {
+      "path": "server-check.py",
+      "bytes": 10369,
+      "sha256": "3b406e61c4a3f0604c1634c3ff1764cdee90b3879f794df6c4345e519094dea6"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+主舰／档案室：独立开发与一键本地发布（v2）
+
+用途
+这是网站的作者工作区说明。静态部署 ZIP 只用于服务器运行，不能在里面写文章或重建。
+本开发包包含当前完整博客代码、文章与站点配置、固定 P26-P27 网页资产、已验收主舰构建和发布脚本。主舰三维与博客仍分别构建；不需要启动 Blender。
+博客来自完整 Shirone PR2 基线 998c68d85b21e86e7cbfa05ec170fc1ac1d298e0 的当前工作副本；没有用 fore14 覆盖整仓库。开发包保留网站维护所需代码、测试、文档及许可证，不携带 Git 元数据或一次性历史模型工具。
+旧母版、已交付静态 ZIP、旧预览不属于本轮修改范围。新发布只能产生全新版本，不连接服务器、不上传、不安装依赖、不更改正在运行的预览。
+
+开发包恢复
+同一交付目录包含源码 ZIP、Windows AMD64 离线依赖 ZIP、恢复开发包.py、PACKAGE-RESULT.json 和 SHA256SUMS.txt。
+先核对 ZIP 的 SHA256，再使用恢复脚本；不要用普通解压工具处理离线依赖后直接运行。依赖包把 pnpm 目录链接记录为相对目标，由恢复工具在新目录内重建；不会链接回旧作者目录。
+
+命令结构（先把方括号占位内容换成实际路径）：
+  python 恢复开发包.py restore --source "[源码ZIP路径]" --dependencies "[同目录离线依赖ZIP路径]" --target "[一个尚不存在的新目录]"
+也可加 --source-sha256 和 --dependencies-sha256，值取同目录 SHA256SUMS.txt。
+恢复先校验完整清单、大小、SHA256 和 CRC32，拒绝覆盖已有目录，拒绝路径穿越及外部目录链接；失败保留结果用于检查，不能把失败目录当作恢复完成。
+目标目录可以包含空格、中文。不要包含美元符、反引号、百分号、引号、括号或其它 shell 运算字符；这些路径不受当前 pnpm 启动脚本重定位支持。
+Windows 必须选择较短的新恢复根目录，例如 workspace/author-v3；不要把很长的版本名称层层嵌套。恢复工具在创建目标根目录前，对全部归档文件、父目录及目录链接路径按 UTF-16 code units 预检：完整文件路径必须小于 260，目录与链接路径保守要求小于 248。超限时直接拒绝并提示改用更短的新根，不修改系统长路径设置；此前失败的目录保留，不能覆盖重试。
+源码与依赖 ZIP 必须是一对；脚本校验依赖包绑定的源码 ZIP SHA256。离线依赖仅适用于匹配的 Windows AMD64 环境，不可当作 Linux/macOS 原生依赖。
+恢复完成记录在新目录 DEVELOPMENT-RESTORE.json。源码包也可以单独恢复，但需要用户自行准备与锁文件匹配的依赖后才能构建。
+恢复工具会自动创建博客所需的空目录 blog/public/assets；无需向 public 添加 .gitkeep 等占位文件。
+
+工具链
+Python、Node.js 和 pnpm 运行时不放进开发 ZIP。使用本机已有安装；脚本不会调用 npx/Corepack 下载，也不会自动安装未知依赖。
+Python 最低为 3.12，较旧版本会在恢复或发布前停止，以保证 Windows 目录链接检查不会静默降级。
+本轮实际环境为 Python 3.12.9、Node 24.19.0、pnpm 11.25.0。原博客声明 pnpm 11.28.2，锁文件与声明保留；检测程序会显示该差异。
+在新开发目录先运行：
+  python scripts/runtime_paths.py
+Node 可从 PATH 查找，pnpm 会查找安装后的实际 JS 入口。找不到时配置 KUHAI_NODE 和 KUHAI_PNPM，或根据 toolchain-local.example.json 新建不发布的 toolchain-local.json。
+KUHAI_NODE 指向实际 node/node.exe。KUHAI_PNPM 指向已安装 pnpm 包的 bin/pnpm.mjs 或 bin/pnpm.cjs，不是 pnpm.cmd 或 Corepack 启动器。
+配置仅保存工具路径，不填写任何账号、令牌或服务器密码；它不会进入开发包和静态部署包。
+发布工具不会读取用户 npm 配置。工作区或其父目录发现项目 .npmrc 时会直接停止，不读取或改写它；请在干净的恢复目录使用本流程，保留旧作者目录原样。
+主舰依赖为 esbuild 0.28.2、three 0.186.1，使用 ship 自己的 package.json/锁文件/node_modules；不再借用旁边的旧预览项目。
+换到其他操作系统，需要用户使用受控配置、对应平台运行时和现有锁文件显式安装依赖。确认采用锁定依赖并允许网络获取后，用户可分别执行 python scripts/run-pnpm.py install 和 python scripts/run-pnpm.py install --project ship；命令固定使用 frozen-lockfile 与 ignore-scripts，不会在日常发布时自动调用。本轮没有执行 Linux/macOS 开发构建，Windows 离线依赖不作跨平台保证。Linux 服务器运行静态站点不需要这些开发依赖。
+
+日常写作
+在 content/content/posts/ 编辑 Markdown；图片放 content/public/images/，网页路径为 /blog/images/文件名。
+保留 draft: true 为草稿，准备公开时改为 false。不要编辑 blog/src/content 中的同步副本。
+共享站名、域名、作者和备案显示在 site.json；其他博客设置在 content/config/。
+正式备案信息未获批时保持 approved=false。不得把申请参考数字当作完整正式号码。
+
+一键发布
+在开发目录根执行以下命令（版本号每次使用新值）：
+  python scripts/release.py --version 20261022-02 --check-only
+  python scripts/release.py --version 20261022-02
+
+第一条只检查发布计划，不构建。第二条执行版本检查、配置生成、内容校验与同步、Astro/类型/清单检查、博客构建、必要的主舰构建、组合和静态部署打包。任何必需步骤失败立即停止，不继续打成功包。
+默认 auto 模式：文章等博客内容更新复用固定且完整性通过的主舰构建；共享 site.json、主舰源代码等变化使用 shared 分支重新构建主舰。每次都传固定 P26-P27 快照和 SHA256，不会默认选回 P25。
+显式限制只改文章：
+  python scripts/release.py --version 20261022-03 --mode articles
+如果发现共享配置或主舰输入改变，这个模式会拒绝，而不是复用旧页脚或旧主舰。
+显式重建两端：
+  python scripts/release.py --version 20261022-04 --mode shared
+
+运行时使用工作区独占锁，避免两个发布同时写 blog/dist。已有版本目录、包目录不会覆盖；失败版本保留，修复后换一个新版本号。
+实际输出位置、每一步退出码、哈希及发布报告以脚本输出的 JSON 和 evidence 记录为准。新报告明确区分这次执行的构建/完整性检查和历史浏览器验收；一键打包不代表自动通过视觉、真实手机、服务器或备案审核。
+源代码或界面变更后仍应执行受影响的浏览器检查。仅因目录迁移或构建流程更新，不将此前浏览器结果冒称重新执行。
+
+固定三维版本
+源阶段：P26-P27。
+母版 SHA256：dd35a7b43c94ba22a03aa0f27e0b88de549cce594971829c9e0e6913e04d0339。
+快照：ship/public-p26p27-final-20261022-r1/snapshot.json。
+快照 SHA256：cda83ceb10a1618c23789c14df59ad12cb9957e6e9ff603216f59a6e6485154a。
+固定已验收主舰构建：ship/dist-p26p27-final-20261022-r1。
+这些文件由发布计划绑定；不能把修改后的内容冒充旧版本。未来切换几何应建立新计划和相关检查。
+直接使用 ship/build.mjs 也必须同时明确提供 --snapshot 与 --snapshot-sha256，并选择新 --out；日常更新推荐使用 release.py。
+
+部署和回滚
+发布脚本仅产出新的静态 ZIP，不上传、不切换服务器，也不会覆盖当前本地预览。
+服务器只使用静态包中的 dist/ 作为 webroot；源代码、开发依赖、清单、部署工具和报告放在 webroot 外。
+部署步骤沿用 deployment/部署与更新说明.txt。当前 Nginx 配置、证书、缓存、Range、切换及回滚仍须在真实服务器验收。
+已打开旧页面的延迟哈希资源需要随版本更新保留或核对；不要用旧 HTML/配置覆盖新版本，也不要仅因为旧 release 目录还在就认为旧资源 URL 仍可访问。
+后续发布会自动读取本工作区 release-plan/last-success.json，核验上一版文件并补入缺失的哈希命名资源，同名不同内容会停止。新恢复目录首次没有此前全站 dist 时，报告明确记 NO_PREVIOUS_DIST_AVAILABLE。若更新的是已部署旧站，先把对应旧 dist 和原 assembly 证据保存到开发目录，用 --previous-assembly evidence/该旧版实际清单.json 指定；不能拿任意旧文件夹当作已验证前版。未哈希资源和旧HTML/JSON不在自动保留范围。
+
+边界
+本开发包用于当前个人博客与 P26-P27 网页维护，不是历史所有 Blender 场景的迁移包。
+其他八类舱室没有因此装舰，九条规划路线及 RESERVED 保持原状态。
+本轮没有新增自动化持续开发任务，没有 GitHub 上传、PR 合并、服务器部署或凭据读取。
+
+后续补充：私稿写作流程
+新文章建议先使用 python scripts/writing.py new <slug> --title "标题"，私稿与配图保存在 authoring-private/<slug>/，不放入正式 content/public。
+python scripts/writing.py check <slug> 检查字段、配图与路径；python scripts/writing.py preview <slug> --version <新的预览版本名> 使用真实博客样式生成本地草稿预览。
+预览仅在本机访问，文件放 preview-work/，不会切换原 4175/4177 预览。停止草稿服务使用 python scripts/writing.py preview-stop。
+确认文章准备公开后，显式执行 python scripts/writing.py prepare-publish <slug>，才把文章和引用图片复制到正式内容目录；然后运行原 release.py 生成新的静态部署 ZIP。准备发布不会连接或上传服务器。
+开发包默认不包含 authoring-private/ 和 preview-work/。换电脑时，未发表的私稿目录需要另行备份；不要把它们上传到网站根目录。
+完整模板、图片规范和操作步骤见 authoring/写作指南.txt。未获用户确认的演示文章始终作为私稿，不自动转入正式内容。
+
+后续补充：第四部分网页视觉细化
+网页使用 blog-visual-v1 照明配置，为太空模式舰腹与档案室上部增加两盏无阴影补光；中性参考照明、模型文件、母版灯光与固定相机配方保持原样。参数位于 ship/src/visual-lighting-profile.mjs，修改后须重新检查相应机位、灯组与增益响应。
+普通手机纵屏采用适合竖向画幅的整舰观察角，完整模型包络限制构图；画布位于导航和阅读操作区之间。参考机位开关恢复固定 8:5 画幅和历史相机。切换模式、进出档案室与切换画质均须检查视角恢复。
+默认仍先显示固定资产中的静态海报，点击“开启三维探索”才加载模型。手机自动轻量画质存在可见锯齿，可在显示设置中切换标准画质；真实手机性能须另行确认。
+本地对照可执行 python scripts/manage-preview.py start dist-版本名 --port 4182；停止该端口只执行 python scripts/manage-preview.py stop --port 4182。默认端口仍为4177，每个端口记录各自进程身份，不自动停止旧预览。
+本轮视觉对照、实际Firefox检查与限制记录在工作区 coordination-20261022/visual-refinement-v1。原生Codex完整交互、真实手机、服务器环境没有因此获得验收结论。新的可部署静态包以 release.py 成功输出的版本与SHA256为准。
+
+相机操作修订（2026-10-23）
+普通室内模式可在发布机位附近小幅旋转和缩放；顶部“推荐视角”恢复当前机位并将焦点返回三维视口。四个室内机位分别配置边界，参考机位模式锁定旋转和缩放，返回主舰恢复之前保存的外部视角。这不是物理碰撞或自由行走系统。
+零间距双指输入保护位于ship/src/camera-navigation.mjs，针对锁定的Three 0.186.1 OrbitControls处理器。升级Three时必须复验真实处理器和DOM事件链；不能静默移除保护。发布前还应重跑相机边界、重置、返回、画质重建和资源释放检查。
+桌面Firefox触控模拟和合成PointerEvent不等于真实手机、多指硬件或原生Codex交互验收。具体通过项与限制以本轮交付报告为准。
+
+部署交付修订v5
+release.py和独立package-delivery.py默认优先使用 deployment/DELIVERY-SHA256-v5.json，缺少v5时选择v4，再沿用旧计划版本；记录其SHA256并在封包前重新核验。原固定模型计划不改写。可用 --deployment-manifest deployment/DELIVERY-SHA256-vN.json 显式指定完整性匹配的旧/新清单，旧清单不会自动适配已修改的文件。新的部署包包括标准库 server-check.py，具体只读服务器验收命令见deployment说明。v5补齐损坏gzip、请求超时和连接中断的失败记录，保留其它已执行检查；失败不会被写成通过。本轮无服务器部署/验收，v4历史清单、旧包和模型计划保持原样，新包另存。

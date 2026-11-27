@@ -1,0 +1,17 @@
+{
+  "schema": "ship-test-release-source-v1",
+  "snapshot": "public-p26p27-final-20261022-r1/snapshot.json",
+  "snapshotSha256": "cda83ceb10a1618c23789c14df59ad12cb9957e6e9ff603216f59a6e6485154a",
+  "source": {
+    "stage": "P26-P27",
+    "sha256": "dd35a7b43c94ba22a03aa0f27e0b88de549cce594971829c9e0e6913e04d0339"
+  },
+  "contract": {
+    "uri": "./assets/p23-asset-contract.json",
+    "bytes": 907332,
+    "sha256": "20a07fb29b2a5f2990681f1ef4cf5c4fc643e475010fec9d58940fa21736e7fd"
+  },
+  "expectedLights": 41,
+  "expectedShadowLights": 9,
+  "note": "Fixed actual release identity for reproducible tests; not a browser acceptance claim."
+}

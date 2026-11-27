@@ -1,0 +1,424 @@
+{
+  "schema_version": 1,
+  "sourceStage": "P26-P27",
+  "source_scene_sha256": "dd35a7b43c94ba22a03aa0f27e0b88de549cce594971829c9e0e6913e04d0339",
+  "source_coordinate_system": "Blender_Z_up",
+  "archive_anchor_source": [
+    -84,
+    -38.5,
+    21
+  ],
+  "reference_resolution": [
+    1200,
+    750
+  ],
+  "defaults": {
+    "exterior": "whole-ship",
+    "archive": "archive-cutaway"
+  },
+  "archive_locator_view": "archive-locator",
+  "distance_limits_source": {
+    "exterior": [
+      2,
+      2000
+    ],
+    "archive": [
+      0.5,
+      180
+    ]
+  },
+  "views": [
+    {
+      "id": "whole-ship",
+      "scope": "exterior",
+      "label": {
+        "zh_CN": "整舰",
+        "en": "Whole ship"
+      },
+      "target_source": [
+        -11.6999969,
+        0,
+        13
+      ],
+      "matrix_world": [
+        [
+          0.7371540069580078,
+          0.3269445300102234,
+          -0.5913639068603516,
+          -721.33642578125
+        ],
+        [
+          -0.6757248044013977,
+          0.3566666543483734,
+          -0.6451239585876465,
+          -774.1488037109375
+        ],
+        [
+          4.67967637973743e-08,
+          0.875154972076416,
+          0.48384276032447815,
+          593.611572265625
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projection": "ORTHO",
+      "sensor_fit": "AUTO",
+      "shift_x": 0,
+      "shift_y": 0,
+      "clip_start_source": 0.025,
+      "clip_end_source": 10000,
+      "lens_mm": 50.0,
+      "sensor_width_mm": 36.0,
+      "hidden_shell_nodes": [],
+      "ortho_scale_source": 584.9979248
+    },
+    {
+      "id": "whole-underside",
+      "scope": "exterior",
+      "label": {
+        "zh_CN": "整舰底部",
+        "en": "Whole underside"
+      },
+      "target_source": [
+        -12,
+        0,
+        0
+      ],
+      "matrix_world": [
+        [
+          0.7390794157981873,
+          -0.33827394247055054,
+          -0.5825223326683044,
+          -650.0
+        ],
+        [
+          -0.6736181974411011,
+          -0.3711468577384949,
+          -0.6391310095787048,
+          -700.0
+        ],
+        [
+          1.7438864574614854e-08,
+          0.8647662997245789,
+          -0.5021744966506958,
+          -550.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projection": "ORTHO",
+      "sensor_fit": "AUTO",
+      "shift_x": 0,
+      "shift_y": 0,
+      "clip_start_source": 0.025,
+      "clip_end_source": 10000,
+      "lens_mm": 50.0,
+      "sensor_width_mm": 36.0,
+      "hidden_shell_nodes": [],
+      "ortho_scale_source": 585
+    },
+    {
+      "id": "archive-locator",
+      "scope": "exterior",
+      "label": {
+        "zh_CN": "档案室位置",
+        "en": "Archive location"
+      },
+      "target_source": [
+        -84,
+        -39,
+        20
+      ],
+      "matrix_world": [
+        [
+          0.9642524123191833,
+          0.14634408056735992,
+          -0.22090880572795868,
+          -120.0
+        ],
+        [
+          -0.26498544216156006,
+          0.5325296521186829,
+          -0.8038625121116638,
+          -170.0
+        ],
+        [
+          -4.4093301454495304e-08,
+          0.8336639404296875,
+          0.5522720217704773,
+          110.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projection": "PERSP",
+      "sensor_fit": "AUTO",
+      "shift_x": 0,
+      "shift_y": 0,
+      "clip_start_source": 0.025,
+      "clip_end_source": 10000,
+      "lens_mm": 48.0,
+      "sensor_width_mm": 36.0,
+      "hidden_shell_nodes": []
+    },
+    {
+      "id": "archive-cutaway",
+      "scope": "archive",
+      "label": {
+        "zh_CN": "档案室剖视",
+        "en": "Archive cutaway"
+      },
+      "target_source": [
+        -84,
+        -39,
+        20
+      ],
+      "matrix_world": [
+        [
+          0.7483469843864441,
+          -0.30146870017051697,
+          0.5908412933349609,
+          -45.0
+        ],
+        [
+          0.6633074879646301,
+          0.34011876583099365,
+          -0.66659015417099,
+          -83.0
+        ],
+        [
+          -1.4083275345910806e-07,
+          0.8907501697540283,
+          0.45449328422546387,
+          50.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projection": "PERSP",
+      "sensor_fit": "AUTO",
+      "shift_x": 0,
+      "shift_y": 0,
+      "clip_start_source": 0.025,
+      "clip_end_source": 10000,
+      "lens_mm": 46.0,
+      "sensor_width_mm": 36.0,
+      "hidden_shell_nodes": [
+        "ARCH16 / ceiling edge bearing -35.1",
+        "ARCH16 / ceiling edge bearing -41.9",
+        "ARCH16 / ceiling light diffuser -57.15",
+        "ARCH16 / ceiling light diffuser -60.3",
+        "ARCH16 / ceiling light housing -57.15",
+        "ARCH16 / ceiling light housing -60.3",
+        "ARCH16 / ceiling panel",
+        "ARCH16 / ceiling transverse rib -57.1",
+        "ARCH16 / ceiling transverse rib -60.0",
+        "ARCH16 / end-wall ceiling bearing",
+        "ARCH16 / outboard side wall",
+        "FORM03 / Bay recessed service strip",
+        "FORM03 / Bay recessed service strip.001",
+        "FORM03 / Bay recessed service strip.002",
+        "FORM03 / Bay removable shaped outer wall",
+        "FORM03 / Bay roof lock",
+        "FORM03 / Bay roof lock.001",
+        "FORM03 / Bay small working light",
+        "FORM03 / Bay small working light.001",
+        "FORM03 / Port bay removable fitted roof",
+        "SURFACE02 / Archive maintenance cover",
+        "SURFACE02 / Captive fastener",
+        "SURFACE02 / Captive fastener.001",
+        "SURFACE02 / Captive fastener.002",
+        "SURFACE02 / Captive fastener.003",
+        "SURFACE02 / Hatch dark gasket",
+        "SURFACE02 / Hatch direction stripe",
+        "SURFACE02 / Latch exposed contact",
+        "SURFACE02 / Latch exposed contact.001",
+        "SURFACE02 / Latch pocket",
+        "SURFACE02 / Latch pocket.001",
+        "SURFACE02 / Recessed fastener pocket",
+        "SURFACE02 / Recessed fastener pocket.001",
+        "SURFACE02 / Recessed fastener pocket.002",
+        "SURFACE02 / Recessed fastener pocket.003",
+        "SURFACE02 / Service grille backing",
+        "SURFACE02 / Service grille louver",
+        "SURFACE02 / Service grille louver.001",
+        "SURFACE02 / Service grille louver.002",
+        "SURFACE02 / Service grille louver.003",
+        "SURFACE02 / Service grille louver.004",
+        "SURFACE02 / Service grille louver.005",
+        "SURFACE02 / Service grille louver.006",
+        "SURFACE02 / Service grille louver.007",
+        "SURFACE03 / archive plate 00",
+        "SURFACE03 / archive plate 01",
+        "SURFACE03 / archive plate 02",
+        "SURFACE03 / archive plate 03",
+        "SURFACE03 / archive plate 04",
+        "SURFACE03 / archive plate 05",
+        "SURFACE03 / archive plate 06",
+        "SURFACE03 / archive plate 07",
+        "SURFACE03 / archive plate 08"
+      ]
+    },
+    {
+      "id": "archive-entry",
+      "scope": "archive",
+      "label": {
+        "zh_CN": "档案室入口",
+        "en": "Archive entry"
+      },
+      "target_source": [
+        -100,
+        -37.8,
+        20.2
+      ],
+      "matrix_world": [
+        [
+          0.014284318313002586,
+          0.03853503242135048,
+          0.9991551637649536,
+          -65.0
+        ],
+        [
+          0.9998978972434998,
+          -0.0005504466244019568,
+          -0.014273709617555141,
+          -38.29999923706055
+        ],
+        [
+          -5.6315297314313284e-08,
+          0.9992570281028748,
+          -0.038538966327905655,
+          18.850000381469727
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projection": "PERSP",
+      "sensor_fit": "AUTO",
+      "shift_x": 0,
+      "shift_y": 0,
+      "clip_start_source": 0.025,
+      "clip_end_source": 10000,
+      "lens_mm": 20.0,
+      "sensor_width_mm": 36.0,
+      "hidden_shell_nodes": []
+    },
+    {
+      "id": "archive-upper",
+      "scope": "archive",
+      "label": {
+        "zh_CN": "档案室上层",
+        "en": "Archive upper gallery"
+      },
+      "target_source": [
+        -98,
+        -39,
+        22.1
+      ],
+      "matrix_world": [
+        [
+          -0.19002176821231842,
+          -0.02735121361911297,
+          0.9813988208770752,
+          -67.0
+        ],
+        [
+          0.9817798733711243,
+          -0.005293651483952999,
+          0.18994802236557007,
+          -33.0
+        ],
+        [
+          -1.2594685472322453e-07,
+          0.9996118545532227,
+          0.027858780696988106,
+          22.979999542236328
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projection": "PERSP",
+      "sensor_fit": "AUTO",
+      "shift_x": 0,
+      "shift_y": 0,
+      "clip_start_source": 0.025,
+      "clip_end_source": 10000,
+      "lens_mm": 24.0,
+      "sensor_width_mm": 36.0,
+      "hidden_shell_nodes": []
+    },
+    {
+      "id": "vestibule",
+      "scope": "archive",
+      "label": {
+        "zh_CN": "门厅",
+        "en": "Vestibule"
+      },
+      "target_source": [
+        -66,
+        -38.2,
+        18.55
+      ],
+      "matrix_world": [
+        [
+          0.20766258239746094,
+          -0.048053059726953506,
+          0.9770195484161377,
+          -57.04999923706055
+        ],
+        [
+          0.9782004952430725,
+          0.010201356373727322,
+          -0.20741185545921326,
+          -40.099998474121094
+        ],
+        [
+          -1.50137239529613e-07,
+          0.9987927079200745,
+          0.04912396892905235,
+          19.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "projection": "PERSP",
+      "sensor_fit": "AUTO",
+      "shift_x": 0,
+      "shift_y": 0,
+      "clip_start_source": 0.025,
+      "clip_end_source": 10000,
+      "lens_mm": 26.0,
+      "sensor_width_mm": 36.0,
+      "hidden_shell_nodes": []
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+// Owner content: deliberately empty; theme demo entries are not published.
+/**
+ * 技能页数据源（纯内容）。
+ * 页面展示与筛选规则由 src/config/skillsConfig.ts 控制。
+ */
+import type { SkillItem } from "@/types/skillsConfig";
+
+export const skillsData: SkillItem[] = [];
+
+/** 获取所有技能数据列表 */
+export function getSkillsList(): SkillItem[] {
+	return skillsData;
+}

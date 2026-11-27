@@ -1,0 +1,27 @@
+{
+  "links": [
+    {
+      "name": "$t:flagshipReviewBack",
+      "url": "/",
+      "fullReload": true,
+      "icon": "material-symbols:rocket-launch-outline-rounded",
+      "pageKey": "flagship"
+    },
+    {
+      "preset": "Home",
+      "name": "$t:flagshipReviewArchive"
+    },
+    {
+      "preset": "Archive"
+    },
+    {
+      "preset": "Categories"
+    },
+    {
+      "preset": "Tags"
+    },
+    {
+      "preset": "About"
+    }
+  ]
+}

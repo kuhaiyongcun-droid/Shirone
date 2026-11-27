@@ -1,0 +1,54 @@
+主舰／档案室：本地写作指南
+
+文章正文与配图均由作者确认；模板中的占位说明不是已经发表的文章。
+
+一、目录与备份
+私稿全文放 authoring-private/<slug>/post.md，配图放同目录 images/。这个目录不挂载到博客，不进入正式静态包或默认开发源码包。
+迁移电脑前请另行私密备份整个 authoring-private 目录。开发 ZIP 不能代替私稿备份。
+content/content/posts 是已准备公开的文章真源；blog/src/content 是生成的同步副本，日常不要在那里写稿。
+旧式 content 内 draft:true 文章及 content/public 内配图不能因此被认为私密：public 文件会公开复制，src 下图片也可能被构建扫描。
+
+二、新建与检查
+通过主入口的新建命令指定 slug 和标题，模板可选 note（默认）或 technical。slug 使用小写英文字母、数字、连字符，不能带路径，发布后对应 /blog/posts/<slug>/。
+工具只创建不存在的私稿目录，默认 draft:true，published 按 Asia/Shanghai 当前日期填写。改写真实正文后删除 AUTHORING_TEMPLATE 占位标记；未完成模板不能准备发布。
+私稿保持 draft:true。发布准备只改变公开副本，不会把原私稿改为 false 或删除它。
+标题、发布日期为必填；摘要、分类、标签、封面可按需要填写。publishedAt/updatedAt 如填写，必须带时区偏移并与对应日历日期在上海时区属于同一天。
+检查输出 JSON，passed:false 与退出码 1 表示需要处理；warnings 是建议，不等同阻断。普通长图只给建议，不自动缩放或裁剪。
+
+在开发根目录打开终端，使用 Python 3.12+；以下 python 代表已配置的解释器（Windows 也可用 py -3.12）：
+python scripts/writing.py new my-first-post --title "我的第一篇文章" --template note
+编辑 authoring-private/my-first-post/post.md 并放好配图后：
+python scripts/writing.py check my-first-post
+需要技术文章结构时，新建命令可选 --template technical。命令只创建私稿，不替作者填写或发表真实内容。
+
+三、配图
+先把图片放入私稿 images/，再用 ![能说明图片内容的文字](images/filename.webp "可选图注") 引用。也支持 Markdown 引用式图片及 frontmatter image: images/cover.webp。
+格式支持 PNG、JPEG、WebP、AVIF、GIF；检查文件真实格式、尺寸、大小、缺图和替代文字。SVG、HTML媒体、文件系统 include 与附件链接不走此首版自动公开流程，需要单独审阅。
+建议文件名简短、语义清楚；正文图优先适合网页的 WebP/AVIF/JPEG。图片超过 2 MiB 或尺寸较大时会提示；保留文字可读性，不为压缩强行降低清晰度。工具不修改原图。
+EXIF、动画等会在检查中提示。发布前由作者确认画面、来源、授权与附带信息适合公开。
+只复制实际被正文/封面引用的图片，未引用图片留在私稿目录；远端图片不自动下载。图片路径不能穿越目录，也不能通过符号链接或 junction 指向其他位置。
+
+四、发布准备与草稿预览
+prepare-publish 是显式的本地公开准备：验证后写入 content/content/posts/<slug>.md，并将其 draft 改为 false；引用配图写入 content/public/images/posts/<slug>/，文内地址改为 /blog/images/posts/<slug>/...。
+此步骤不上传、不部署。它会让这些正文与图片进入下一次正式构建，所以必须在作者确认公开后执行。任何已有目标文章或图片目录都会拒绝覆盖；已有文章的更新应走另行确认的编辑流程。
+export-preview 只写全新的 preview-work/<version>/content：复制当前公开内容与配置，在该副本加入选中私稿和引用配图。原 content、其他私稿及旧预览不会改变。副本中的 draft:false 仅用于本地预览，不代表作者同意公开。
+发布准备与导出预览必须通过持有共享发布锁的 Python 入口调用；直接运行 Node 且无锁会拒绝，避免和正式发布同时写入。
+私稿预览只应在本机使用；预览目录不得作为静态部署或开发交付来源。
+
+检查通过后，创建一个新版本的本地草稿预览（--version 必填，每次修改后用新版本名）：
+python scripts/writing.py preview my-first-post --version my-first-post-v1
+默认服务仅在本机 4180 端口，按命令输出的地址打开；若端口占用可显式加 --port 4181。此命令会构建独立副本，首次需要等待，不会安装依赖。
+python scripts/writing.py preview-status
+python scripts/writing.py preview-stop
+已构建预览需要再次启动时：
+python scripts/writing.py preview-start my-first-post-v1
+确认正文与配图可以公开后，才执行本地发布准备：
+python scripts/writing.py prepare-publish my-first-post
+该命令仍不上传服务器；下一次正式发布构建才会纳入这篇文章。停止预览只处理本工具登记的预览服务，不停止其他服务。
+
+维护者 Node 接口（Python 入口调用，不代替共享锁）
+node blog/scripts/kuhai/writing.mjs new <slug> --title "标题" --template note
+node blog/scripts/kuhai/writing.mjs check <slug>
+node blog/scripts/kuhai/writing.mjs prepare-publish <slug>
+node blog/scripts/kuhai/writing.mjs export-preview <slug> --out "绝对路径/preview-work/新版本/content"
+全部命令 stdout 输出单个 JSON，包含 passed、slug、title、route、sourceHashes、errors/warnings、copied/mapped/outputs。不会调用包管理器或安装依赖。

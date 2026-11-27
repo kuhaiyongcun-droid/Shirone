@@ -1,0 +1,22 @@
+{
+  "name": "kuhai-ship-homepage",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Independent local build of the kuhai ship homepage",
+  "packageManager": "pnpm@11.25.0",
+  "engines": {
+    "node": ">=22.12"
+  },
+  "scripts": {
+    "build": "node build.mjs",
+    "verify:assets": "node verify-assets.mjs",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "three": "0.186.1"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2"
+  }
+}

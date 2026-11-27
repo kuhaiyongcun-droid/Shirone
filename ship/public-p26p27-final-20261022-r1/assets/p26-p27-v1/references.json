@@ -1,0 +1,323 @@
+{
+  "schema_version": 1,
+  "sourceStage": "P26-P27",
+  "source_scene_sha256": "dd35a7b43c94ba22a03aa0f27e0b88de549cce594971829c9e0e6913e04d0339",
+  "audience": "public-web",
+  "reference_projection": {
+    "schema": "P26-public-PNG-text-metadata-projection-v1",
+    "text_chunks_removed_only": true,
+    "image_decoded": false,
+    "image_reencoded": false,
+    "pixel_content_changed": false
+  },
+  "frames": [
+    {
+      "kind": "offline-render-reference",
+      "source_scene_sha256": "dd35a7b43c94ba22a03aa0f27e0b88de549cce594971829c9e0e6913e04d0339",
+      "scope": "exterior",
+      "view_id": "whole-ship",
+      "light": "neutral",
+      "label": {
+        "zh_CN": "整舰 · 中性光（离线渲染参考）",
+        "en": "Whole ship · neutral (offline render reference)"
+      },
+      "resolution": [
+        1200,
+        750
+      ],
+      "original_private_png_sha256": "da46f8c0001c2cd993ab98b476bbf6192f6a2cb35481c95d569217e13a12c85b",
+      "pixel_content_preserved": true,
+      "asset": {
+        "uri": "./assets/p26-p27-v1/references/after-neutral-whole-ship.png",
+        "bytes": 687181,
+        "sha256": "bb17a6b0da00c9346bb24e1e08fa6da0f75691b92758e011ce8ae40b51d44237"
+      }
+    },
+    {
+      "kind": "offline-render-reference",
+      "source_scene_sha256": "dd35a7b43c94ba22a03aa0f27e0b88de549cce594971829c9e0e6913e04d0339",
+      "scope": "exterior",
+      "view_id": "whole-ship",
+      "light": "space",
+      "label": {
+        "zh_CN": "整舰 · 太空光（离线渲染参考）",
+        "en": "Whole ship · space (offline render reference)"
+      },
+      "resolution": [
+        1200,
+        750
+      ],
+      "original_private_png_sha256": "c29d5f74553197625abb6a511d831d0ead2cde2c05c02b9e9cbd6e4d199008c4",
+      "pixel_content_preserved": true,
+      "asset": {
+        "uri": "./assets/p26-p27-v1/references/after-space-whole-ship.png",
+        "bytes": 679888,
+        "sha256": "9e629d31181f89d10d396cde782813395a8a1bba174b1b2666e77f1e880e15e0"
+      }
+    },
+    {
+      "kind": "offline-render-reference",
+      "source_scene_sha256": "dd35a7b43c94ba22a03aa0f27e0b88de549cce594971829c9e0e6913e04d0339",
+      "scope": "exterior",
+      "view_id": "whole-underside",
+      "light": "neutral",
+      "label": {
+        "zh_CN": "整舰底部 · 中性光（离线渲染参考）",
+        "en": "Whole underside · neutral (offline render reference)"
+      },
+      "resolution": [
+        1200,
+        750
+      ],
+      "original_private_png_sha256": "1248d1f740a2dac10ebfeeb51fc2e72af3c56fa2020873e7590a66217db735d0",
+      "pixel_content_preserved": true,
+      "asset": {
+        "uri": "./assets/p26-p27-v1/references/after-neutral-whole-underside.png",
+        "bytes": 607093,
+        "sha256": "2b4a3de7cc68912094ce3a9f3ee59f8d2d9cc95162f6542b0a6dc068963940cc"
+      }
+    },
+    {
+      "kind": "offline-render-reference",
+      "source_scene_sha256": "dd35a7b43c94ba22a03aa0f27e0b88de549cce594971829c9e0e6913e04d0339",
+      "scope": "exterior",
+      "view_id": "whole-underside",
+      "light": "space",
+      "label": {
+        "zh_CN": "整舰底部 · 太空光（离线渲染参考）",
+        "en": "Whole underside · space (offline render reference)"
+      },
+      "resolution": [
+        1200,
+        750
+      ],
+      "original_private_png_sha256": "74b49b696cf1c13d18d34889b307d362fffd796517aedbfa92c95edf87e3cb0f",
+      "pixel_content_preserved": true,
+      "asset": {
+        "uri": "./assets/p26-p27-v1/references/after-space-whole-underside.png",
+        "bytes": 593544,
+        "sha256": "dc5ebaf2bd9e534e806fbacfab47bb679e0bad42c62aa5eac59cb1fc93e45a0d"
+      }
+    },
+    {
+      "kind": "offline-render-reference",
+      "source_scene_sha256": "dd35a7b43c94ba22a03aa0f27e0b88de549cce594971829c9e0e6913e04d0339",
+      "scope": "exterior",
+      "view_id": "archive-locator",
+      "light": "neutral",
+      "label": {
+        "zh_CN": "档案室位置 · 中性光（离线渲染参考）",
+        "en": "Archive location · neutral (offline render reference)"
+      },
+      "resolution": [
+        1200,
+        750
+      ],
+      "original_private_png_sha256": "8b181a129119c56467cfbacb7ce58b4860ffa43bc94c0c752b9a6b0142288d4b",
+      "pixel_content_preserved": true,
+      "asset": {
+        "uri": "./assets/p26-p27-v1/references/after-neutral-archive-locator.png",
+        "bytes": 1025879,
+        "sha256": "f12ebf9db07cbf1b20f5f2d275bae0fc101725c78b8a645de58082c3549d1892"
+      }
+    },
+    {
+      "kind": "offline-render-reference",
+      "source_scene_sha256": "dd35a7b43c94ba22a03aa0f27e0b88de549cce594971829c9e0e6913e04d0339",
+      "scope": "exterior",
+      "view_id": "archive-locator",
+      "light": "space",
+      "label": {
+        "zh_CN": "档案室位置 · 太空光（离线渲染参考）",
+        "en": "Archive location · space (offline render reference)"
+      },
+      "resolution": [
+        1200,
+        750
+      ],
+      "original_private_png_sha256": "eabb0db67fd8df1b0fca7d675906858a9df3d9ad72b841dd2fc998346e52ae88",
+      "pixel_content_preserved": true,
+      "asset": {
+        "uri": "./assets/p26-p27-v1/references/after-space-archive-locator.png",
+        "bytes": 1022680,
+        "sha256": "322725f0de86bf09094b1d13050aac24e7ecddcf9ad210e9664cf866d60d20b2"
+      }
+    },
+    {
+      "kind": "offline-render-reference",
+      "source_scene_sha256": "dd35a7b43c94ba22a03aa0f27e0b88de549cce594971829c9e0e6913e04d0339",
+      "scope": "archive",
+      "view_id": "archive-cutaway",
+      "light": "neutral",
+      "label": {
+        "zh_CN": "档案室剖视 · 中性光（离线渲染参考）",
+        "en": "Archive cutaway · neutral (offline render reference)"
+      },
+      "resolution": [
+        1200,
+        750
+      ],
+      "original_private_png_sha256": "9d9852333b5e76681710ae99150c4b4c6d936a1ffdff1784d0d4bd9beb146c3f",
+      "pixel_content_preserved": true,
+      "asset": {
+        "uri": "./assets/p26-p27-v1/references/after-neutral-archive-cutaway.png",
+        "bytes": 1301054,
+        "sha256": "9d44d6688e70b42516db49d160b78826d40889652bce6a930efa9fa7754a8eaa"
+      }
+    },
+    {
+      "kind": "offline-render-reference",
+      "source_scene_sha256": "dd35a7b43c94ba22a03aa0f27e0b88de549cce594971829c9e0e6913e04d0339",
+      "scope": "archive",
+      "view_id": "archive-cutaway",
+      "light": "space",
+      "label": {
+        "zh_CN": "档案室剖视 · 太空光（离线渲染参考）",
+        "en": "Archive cutaway · space (offline render reference)"
+      },
+      "resolution": [
+        1200,
+        750
+      ],
+      "original_private_png_sha256": "f26537e620b7dd9035ab08a7d42cf31539366245a5205ebe961d394650bf6827",
+      "pixel_content_preserved": true,
+      "asset": {
+        "uri": "./assets/p26-p27-v1/references/after-space-archive-cutaway.png",
+        "bytes": 1375864,
+        "sha256": "ab370c95ecf9620f671a06e4dd26e14f75748c707702c8c09ea7d7ce82f7153c"
+      }
+    },
+    {
+      "kind": "offline-render-reference",
+      "source_scene_sha256": "dd35a7b43c94ba22a03aa0f27e0b88de549cce594971829c9e0e6913e04d0339",
+      "scope": "archive",
+      "view_id": "archive-entry",
+      "light": "neutral",
+      "label": {
+        "zh_CN": "档案室入口 · 中性光（离线渲染参考）",
+        "en": "Archive entry · neutral (offline render reference)"
+      },
+      "resolution": [
+        1200,
+        750
+      ],
+      "original_private_png_sha256": "993d0dc71c02e9b0902b4fdd2418484cdb546a8f92f51060dd3360eee6d3c052",
+      "pixel_content_preserved": true,
+      "asset": {
+        "uri": "./assets/p26-p27-v1/references/after-neutral-archive-entry.png",
+        "bytes": 1154057,
+        "sha256": "6f3d1b3a5eeb605cbc200d5c4f6f2a5c0bee3f4d3420b2d751d533d114afcd95"
+      }
+    },
+    {
+      "kind": "offline-render-reference",
+      "source_scene_sha256": "dd35a7b43c94ba22a03aa0f27e0b88de549cce594971829c9e0e6913e04d0339",
+      "scope": "archive",
+      "view_id": "archive-entry",
+      "light": "space",
+      "label": {
+        "zh_CN": "档案室入口 · 太空光（离线渲染参考）",
+        "en": "Archive entry · space (offline render reference)"
+      },
+      "resolution": [
+        1200,
+        750
+      ],
+      "original_private_png_sha256": "68b3242b935907a2a330530dd17e16e1990fe5289e8d436b8d5f4fe20892fc55",
+      "pixel_content_preserved": true,
+      "asset": {
+        "uri": "./assets/p26-p27-v1/references/after-space-archive-entry.png",
+        "bytes": 1115215,
+        "sha256": "8a91fec7e5e9a15e764b9380b6e6692d1fbd68d79daa9a02a219d3d61ba936ec"
+      }
+    },
+    {
+      "kind": "offline-render-reference",
+      "source_scene_sha256": "dd35a7b43c94ba22a03aa0f27e0b88de549cce594971829c9e0e6913e04d0339",
+      "scope": "archive",
+      "view_id": "archive-upper",
+      "light": "neutral",
+      "label": {
+        "zh_CN": "档案室上层 · 中性光（离线渲染参考）",
+        "en": "Archive upper gallery · neutral (offline render reference)"
+      },
+      "resolution": [
+        1200,
+        750
+      ],
+      "original_private_png_sha256": "d95c8ca9e1bbd9ffef8fa0779929ff5cd0b2a71ab3ec6989387ee5ddabe599ae",
+      "pixel_content_preserved": true,
+      "asset": {
+        "uri": "./assets/p26-p27-v1/references/after-neutral-archive-upper.png",
+        "bytes": 1093350,
+        "sha256": "807153177e9bd5c94d4d78406856125310bc8c6eed522073c8fd0efb8ffc4aeb"
+      }
+    },
+    {
+      "kind": "offline-render-reference",
+      "source_scene_sha256": "dd35a7b43c94ba22a03aa0f27e0b88de549cce594971829c9e0e6913e04d0339",
+      "scope": "archive",
+      "view_id": "archive-upper",
+      "light": "space",
+      "label": {
+        "zh_CN": "档案室上层 · 太空光（离线渲染参考）",
+        "en": "Archive upper gallery · space (offline render reference)"
+      },
+      "resolution": [
+        1200,
+        750
+      ],
+      "original_private_png_sha256": "c00c5d4471703af634cd8d85d34cb7c6879dd93fe7358277a0881d7afa956498",
+      "pixel_content_preserved": true,
+      "asset": {
+        "uri": "./assets/p26-p27-v1/references/after-space-archive-upper.png",
+        "bytes": 1072315,
+        "sha256": "b7e5ef9b67f70c0fa9d95dea76bf3a11812031e05c7ae79fa8d9684d897b61c4"
+      }
+    },
+    {
+      "kind": "offline-render-reference",
+      "source_scene_sha256": "dd35a7b43c94ba22a03aa0f27e0b88de549cce594971829c9e0e6913e04d0339",
+      "scope": "archive",
+      "view_id": "vestibule",
+      "light": "neutral",
+      "label": {
+        "zh_CN": "门厅 · 中性光（离线渲染参考）",
+        "en": "Vestibule · neutral (offline render reference)"
+      },
+      "resolution": [
+        1200,
+        750
+      ],
+      "original_private_png_sha256": "df4e3421302b2bf040ad7a16bd696c00d34e8ce5b59d23d05d174dde6c1b3092",
+      "pixel_content_preserved": true,
+      "asset": {
+        "uri": "./assets/p26-p27-v1/references/after-neutral-vestibule.png",
+        "bytes": 998974,
+        "sha256": "2edc76479a3b23fa62c3045c06ee041fc7785b8b66914b8262cf7928e902fadc"
+      }
+    },
+    {
+      "kind": "offline-render-reference",
+      "source_scene_sha256": "dd35a7b43c94ba22a03aa0f27e0b88de549cce594971829c9e0e6913e04d0339",
+      "scope": "archive",
+      "view_id": "vestibule",
+      "light": "space",
+      "label": {
+        "zh_CN": "门厅 · 太空光（离线渲染参考）",
+        "en": "Vestibule · space (offline render reference)"
+      },
+      "resolution": [
+        1200,
+        750
+      ],
+      "original_private_png_sha256": "c17d40f5ca5d5c3a2933c887aa7c431501c04371aa8d883a43a747742be6813d",
+      "pixel_content_preserved": true,
+      "asset": {
+        "uri": "./assets/p26-p27-v1/references/after-space-vestibule.png",
+        "bytes": 1016222,
+        "sha256": "dcf844cd216dd53cdb5cc17d3837dc672ac9bacb1be9ebc8c5a922daab626649"
+      }
+    }
+  ]
+}
